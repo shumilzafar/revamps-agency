@@ -19,7 +19,7 @@ header.page{padding:64px 0 40px;text-align:center}
 h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
 .sub{font-size:1.05rem;max-width:640px;margin:0 auto;color:#4b5563}
 .ba-wrap{margin:48px 0 24px;position:relative}
-.ba{position:relative;width:100%;aspect-ratio:16/10;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
+.ba{position:relative;width:100%;aspect-ratio:16/22;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
 .ba-after{position:absolute;inset:0}
 .ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
 .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
@@ -52,6 +52,16 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
 .ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
 .ma-services span{font-size:.72rem;color:#6b7280}
+.ma-reviews{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:20px 32px;background:#f9fafb;border-top:1px solid #f3f4f6}
+.ma-reviews h4{grid-column:1/-1;font-size:.8rem;font-weight:600;color:#111827}
+.ma-review{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px}
+.ma-review .stars{color:#f59e0b;font-size:.72rem;letter-spacing:.06em}
+.ma-review p{font-size:.75rem;color:#4b5563;margin:6px 0;line-height:1.5}
+.ma-review span{font-size:.68rem;color:#9ca3af}
+.ma-contact{padding:26px 32px;text-align:center;background:#111827;color:#fff}
+.ma-contact h4{font-size:1rem;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+.ma-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:14px}
+.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;gap:12px;background:#fff}
 .fixes{padding:64px 0}
 .fixes h2{font-size:1.6rem;color:#111827;font-weight:700;margin-bottom:.6rem;letter-spacing:-.02em}
 .fixes .sub2{margin-bottom:2.5rem}
@@ -67,7 +77,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:999px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:4/5}.ma-services{grid-template-columns:1fr}}
+@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ma-services{grid-template-columns:1fr}.ma-reviews{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -88,12 +98,18 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <div class="ma-nav"><span class="ma-logo">Done Right Roofing</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">0418 804 934</span></div>
 <div class="ma-hero"><h3>Done right<br>the first time.</h3><p>30+ years roofing Adelaide. Repairs, re-roofing, gutters, inspections. One call and it is handled.</p><span class="ma-btn">Call 0418 804 934</span></div>
 <div class="ma-trust"><div><strong>30+ years</strong>In business</div><div><strong>Adelaide</strong>Local &amp; trusted</div><div><strong>Emergency</strong>Roofing available</div></div>
-<div class="ma-services"><div><b>Roof Repairs</b><span>Leaks &amp; damage</span></div><div><b>Re-roofing</b><span>Full replacements</span></div><div><b>Gutters</b><span>Replace &amp; repair</span></div></div>
+<div class="ma-services"><div><b>Roof Repairs</b><span>Leaks &amp; damage</span></div><div><b>Re-roofing</b><span>Full replacements</span></div><div><b>Gutters</b><span>Replace &amp; repair</span></div><div><b>Inspections</b><span>Free roof checks</span></div><div><b>Metal Roofing</b><span>Colorbond &amp; more</span></div><div><b>Storm Damage</b><span>Fast response</span></div></div>
+<div class="ma-reviews"><h4>What neighbors say</h4><div class="ma-review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"New roof done in three days. Clean site, fair price."</p><span>Homeowner in Seaton</span></div><div class="ma-review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They found the leak two other roofers missed."</p><span>Homeowner in Adelaide</span></div></div>
+<div class="ma-contact"><h4>Roof problem? Call now.</h4><p>Free quotes across Adelaide. Mon-Fri 8am-5pm.</p><span class="ma-btn">Call 0418 804 934</span></div>
+<div class="ma-footer"><span>Done Right Roofing</span><span>donerightSA@gmail.com &middot; 0418 804 934</span></div>
 </div></div>
 <div class="ba-before"><div class="mock-before">
 <h2>Contact Us</h2>
 <p>Get in touch for a free quote on your roofing needs information</p>
 <div class="stray">Stray text: a sentence just ends here.</div>
+<p>We do roof repairs and new roofs.</p>
+<p>Call for a free quote today.</p>
+<div class="foot"><b>Done Right Roofing</b> &middot; 0418 804 934 &middot; donerightSA@gmail.com<br>Mon-Fri 8am-5pm &middot; Roof repairs, re-roofing, gutters</div>
 <div class="foot"><b>Done Right Roofing</b> &middot; 0418 804 934 &middot; donerightSA@gmail.com<br>Mon-Fri 8am-5pm &middot; Roof repairs, re-roofing, gutters</div>
 <div class="foot"><b>Done Right Roofing</b> &middot; 0418 804 934 &middot; donerightSA@gmail.com<br>Mon-Fri 8am-5pm &middot; Roof repairs, re-roofing, gutters</div>
 <div class="foot"><b>Done Right Roofing</b> &middot; 0418 804 934 &middot; donerightSA@gmail.com<br>Mon-Fri 8am-5pm &middot; Roof repairs, re-roofing, gutters</div>

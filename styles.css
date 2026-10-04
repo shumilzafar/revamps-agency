@@ -126,15 +126,38 @@ img, svg { display: block; max-width: 100%; }
 .hero-proof strong { color: var(--ink); font-weight: 600; }
 .hero-dot { width: 4px; height: 4px; border-radius: 50%; background: #d1d5db; }
 
-/* Hero visual: floating browser */
-.hero-visual { margin-top: 4rem; position: relative; max-width: 860px; margin-left: auto; margin-right: auto; }
-.hero-browser {
-  border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
-  box-shadow: var(--shadow); background: #fff; text-align: left;
+/* Hero visual: collage */
+.hero-visual { margin-top: 4.5rem; position: relative; max-width: 900px; margin-left: auto; margin-right: auto; }
+.collage { position: relative; height: 480px; }
+.collage-blob {
+  position: absolute; top: 5%; left: 8%; width: 70%; height: 85%;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 60%, #f0fdf4 100%);
+  border-radius: 48% 52% 55% 45% / 55% 48% 52% 45%;
+  z-index: 0;
 }
-.hero-browser-body { padding: 28px 30px 34px; background: linear-gradient(135deg, #1e3a5f, #16283f); }
-.hero-browser-body .pv-h1 { font-size: 1.7rem; }
-.hero-browser-body .pv-p { font-size: 0.95rem; }
+.collage-browser {
+  position: absolute; top: 8%; left: 4%; width: 68%; z-index: 2;
+  border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow); background: #fff; text-align: left;
+  transform: rotate(-1.5deg);
+}
+.collage-browser-body { padding: 26px 28px 30px; background: linear-gradient(135deg, #1e3a5f, #16283f); }
+.collage-browser-body .pv-h1 { font-size: 1.5rem; }
+.collage-browser-body .pv-p { font-size: 0.88rem; }
+.collage-phone {
+  position: absolute; top: 22%; right: 6%; width: 24%; min-width: 170px; z-index: 3;
+  background: #fff; border: 1px solid var(--line); border-radius: 28px; padding: 10px;
+  box-shadow: var(--shadow);
+  transform: rotate(2deg);
+}
+.collage-card {
+  position: absolute; bottom: 6%; left: 12%; z-index: 3;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  padding: 1rem 1.4rem; box-shadow: var(--shadow-sm);
+  transform: rotate(-2deg); text-align: center;
+}
+.collage-card-num { display: block; font-size: 1.7rem; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+.collage-card-label { display: block; font-size: 0.78rem; color: var(--muted); }
 
 /* Services */
 .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
@@ -320,6 +343,11 @@ img, svg { display: block; max-width: 100%; }
   .hero-actions .btn { text-align: center; }
   .hero-proof { gap: 0.7rem; font-size: 0.85rem; }
   .hero-visual { margin-top: 2.5rem; }
+  .collage { height: 420px; }
+  .collage-browser { width: 76%; left: 0; }
+  .collage-phone { width: 30%; right: 0; min-width: 140px; }
+  .collage-card { left: 4%; bottom: 2%; padding: 0.8rem 1.1rem; }
+  .collage-card-num { font-size: 1.4rem; }
   .pv-services { grid-template-columns: 1fr; }
   .phone-grid { grid-template-columns: 1fr 1fr; gap: 1.1rem; }
   .service-card, .price-card { padding: 2rem 1.7rem; }

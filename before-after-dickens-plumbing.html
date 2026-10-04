@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Before / After: Dickens Plumbing Inc | Revamps Concept Rebuild</title>
-<meta name="description" content="Concept rebuild of Dickens Plumbing's website by Revamps. Drag the slider to see the transformation.">
+<meta name="description" content="Section-by-section concept rebuild of Dickens Plumbing's website by Revamps.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,151 +14,152 @@ body{font-family:"Inter",-apple-system,sans-serif;color:#4b5563;line-height:1.7;
 .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 .disclaimer{background:#fffbeb;border-bottom:1px solid #fde68a;padding:12px 0;font-size:.85rem;color:#92400e;text-align:center}
 .disclaimer strong{font-weight:600}
-header.page{padding:64px 0 40px;text-align:center}
+header.page{padding:64px 0 32px;text-align:center}
 .kicker{display:inline-block;font-size:.78rem;font-weight:600;color:#2563eb;background:#eff6ff;border:1px solid #dbeafe;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.4rem}
 h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
 .sub{font-size:1.05rem;max-width:640px;margin:0 auto;color:#4b5563}
-/* Slider */
-.ba-wrap{margin:48px 0 24px;position:relative}
-.ba{position:relative;width:100%;aspect-ratio:16/22;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
-.ba-after{position:absolute;inset:0}
-.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
-.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
-.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
-.ba-tag{position:absolute;top:16px;font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.45rem .9rem;border-radius:999px;z-index:4}
-.ba-tag.before{left:16px;background:rgba(0,0,0,.65);color:#fff}
-.ba-tag.after{right:16px;background:#2563eb;color:#fff}
-.ba-hint{text-align:center;font-size:.9rem;color:#9ca3af;margin-top:14px}
-/* Before mock: deliberately bare */
-.mock-before{background:#fff;height:100%;padding:36px 40px;font-family:Georgia,serif;color:#333;overflow:hidden}
-.mock-before h2{font-family:Georgia,serif;font-size:1.3rem;color:#000;margin-bottom:14px;font-weight:700}
-.mock-before p{font-size:.92rem;margin-bottom:8px;line-height:1.6}
-.mock-before .lic{font-size:.8rem;color:#666}
-/* After mock: modern rebuild */
-.mock-after{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
-.ma-nav{display:flex;align-items:center;gap:1rem;padding:14px 28px;border-bottom:1px solid #f3f4f6}
-.ma-logo{font-weight:700;color:#111827;font-size:.95rem;margin-right:auto}
-.ma-links{display:flex;gap:14px}
-.ma-links i{width:52px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
-.ma-call{background:#2563eb;color:#fff;font-size:.75rem;font-weight:600;padding:8px 18px;border-radius:999px}
-.ma-hero{background:linear-gradient(135deg,#1e40af,#1e3a8a);padding:40px 32px;color:#fff}
-.ma-hero h3{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
-.ma-hero p{font-size:.9rem;opacity:.9;margin-bottom:16px}
-.ma-btn{display:inline-block;background:#fff;color:#1e3a8a;font-size:.8rem;font-weight:600;padding:10px 22px;border-radius:999px}
-.ma-trust{display:flex;gap:20px;padding:18px 32px;border-bottom:1px solid #f3f4f6}
-.ma-trust div{font-size:.78rem;color:#6b7280}
-.ma-trust strong{display:block;color:#111827;font-size:.95rem}
-.ma-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:20px 32px}
-.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
-.ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
-.ma-services span{font-size:.72rem;color:#6b7280}
-.ma-reviews{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:20px 32px;background:#f9fafb;border-top:1px solid #f3f4f6}
-.ma-reviews h4{grid-column:1/-1;font-size:.8rem;font-weight:600;color:#111827}
-.ma-review{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px}
-.ma-review .stars{color:#f59e0b;font-size:.72rem;letter-spacing:.06em}
-.ma-review p{font-size:.75rem;color:#4b5563;margin:6px 0;line-height:1.5}
-.ma-review span{font-size:.68rem;color:#9ca3af}
-.ma-contact{padding:26px 32px;text-align:center;background:#111827;color:#fff}
-.ma-contact h4{font-size:1rem;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
-.ma-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:14px}
-.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;gap:12px;background:#fff}
-/* Fixes */
-.fixes{padding:64px 0}
-.fixes h2{font-size:1.6rem;color:#111827;font-weight:700;margin-bottom:.6rem;letter-spacing:-.02em}
-.fixes .sub2{margin-bottom:2.5rem}
-.fix-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-.fix{border:1px solid #e5e7eb;border-radius:14px;padding:1.6rem 1.5rem;background:#fff}
-.fix .no{font-size:.75rem;font-weight:600;color:#dc2626;letter-spacing:.08em;text-transform:uppercase}
-.fix .yes{font-size:.75rem;font-weight:600;color:#16a34a;letter-spacing:.08em;text-transform:uppercase}
-.fix h3{font-size:1.02rem;color:#111827;margin:.6rem 0 .4rem;font-weight:600}
-.fix p{font-size:.93rem}
+/* Comparison sections */
+.compare{padding:56px 0;border-top:1px solid #f3f4f6}
+.compare:first-of-type{border-top:0}
+.compare-label{font-size:.75rem;font-weight:600;color:#2563eb;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
+.compare h2{font-size:1.5rem;color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+.compare-desc{max-width:680px;margin-bottom:2rem;font-size:.98rem}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.panel{border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff}
+.panel-tag{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border-bottom:1px solid #e5e7eb}
+.panel.before .panel-tag{background:#fef2f2;color:#991b1b}
+.panel.after .panel-tag{background:#eff6ff;color:#1e40af}
+.panel-body{padding:1.4rem 1.2rem;min-height:220px}
+/* Before styles: bare text page */
+.bb-plain{font-family:Georgia,serif;color:#333}
+.bb-plain h4{font-size:1rem;color:#000;margin-bottom:10px}
+.bb-plain p{font-size:.82rem;margin-bottom:6px;line-height:1.6}
+.bb-plain .lic{font-size:.72rem;color:#777}
+.bb-nav{font-family:Georgia,serif;font-size:.8rem;color:#333}
+.bb-nav p{margin-bottom:4px}
+.bb-hero{font-family:Georgia,serif}
+.bb-hero h4{font-size:1.1rem;color:#000;margin-bottom:8px}
+.bb-hero p{font-size:.82rem;margin-bottom:6px}
+.bb-list{font-family:Georgia,serif;font-size:.82rem}
+.bb-list p{margin-bottom:6px}
+/* After styles: modern */
+.ab-nav{display:flex;align-items:center;gap:.8rem;padding:.6rem 0}
+.ab-logo{font-weight:700;color:#111827;font-size:.85rem;margin-right:auto}
+.ab-links{display:flex;gap:10px}
+.ab-links i{width:44px;height:7px;background:#e5e7eb;border-radius:4px;display:block}
+.ab-call{background:#2563eb;color:#fff;font-size:.7rem;font-weight:600;padding:7px 14px;border-radius:999px}
+.ab-hero{background:linear-gradient(135deg,#1e40af,#1e3a8a);border-radius:12px;padding:1.6rem 1.4rem;color:#fff}
+.ab-hero h4{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.25}
+.ab-hero p{font-size:.8rem;opacity:.9;margin-bottom:1rem}
+.ab-btn{display:inline-block;background:#fff;color:#1e3a8a;font-size:.75rem;font-weight:600;padding:9px 20px;border-radius:999px}
+.ab-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ab-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px}
+.ab-services b{display:block;font-size:.75rem;color:#111827;margin-bottom:2px}
+.ab-services span{font-size:.68rem;color:#6b7280}
+.ab-trust{display:flex;gap:16px;flex-wrap:wrap}
+.ab-trust div{font-size:.72rem;color:#6b7280}
+.ab-trust strong{display:block;color:#111827;font-size:.85rem}
+.ab-review{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.ab-review .stars{color:#f59e0b;font-size:.7rem;letter-spacing:.06em}
+.ab-review p{font-size:.76rem;color:#4b5563;margin:6px 0;font-style:italic}
+.ab-review span{font-size:.68rem;color:#9ca3af}
+.ab-contact{background:#111827;border-radius:12px;padding:1.6rem 1.4rem;text-align:center;color:#fff}
+.ab-contact h4{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.ab-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:1rem}
+.ab-contact .ab-btn{background:#2563eb;color:#fff}
+/* Verdict */
+.verdict{background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:2rem;margin:3rem 0}
+.verdict h3{font-size:1.1rem;color:#111827;font-weight:700;margin-bottom:.8rem}
+.verdict p{font-size:.95rem;margin-bottom:.6rem}
+.verdict p:last-child{margin-bottom:0}
 .cta{background:#111827;color:#fff;padding:80px 0;text-align:center}
 .cta h2{color:#fff;font-size:1.8rem;font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
 .cta p{color:#9ca3af;max-width:520px;margin:0 auto 2rem}
-.btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:999px;text-decoration:none}
+.btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ma-services{grid-template-columns:1fr}.ma-reviews{grid-template-columns:1fr}.mock-before{padding:24px}}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ab-services{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="disclaimer"><strong>Concept rebuild by Revamps.</strong> Dickens Plumbing Inc is a real business. This is our vision of what their site could be, not their actual website. We are not affiliated with them.</div>
+<div class="disclaimer"><strong>Concept rebuild by Revamps.</strong> Dickens Plumbing Inc is a real business in Winter Haven, FL. This is our vision of what their site could be. We are not affiliated with them.</div>
 
 <header class="page">
 <div class="wrap">
 <span class="kicker">Before / After &middot; Plumbing</span>
 <h1>Dickens Plumbing had 12 lines of text.<br>We gave them a website.</h1>
-<p class="sub">Their real site is a bare text page from another era. Drag the slider to see what a modern rebuild looks like for a Winter Haven plumber with 59 five-star reviews and nothing to show for it online.</p>
+<p class="sub">Their real site is a bare text page. 59 reviews at 4.8 stars, and nothing online to show for it. Here is the transformation, section by section.</p>
 </div>
 </header>
 
 <div class="wrap">
-<div class="ba-wrap">
-<div class="ba" id="ba">
-<div class="ba-after"><div class="mock-after">
-<div class="ma-nav"><span class="ma-logo">Dickens Plumbing Inc</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">(863) 294-6737</span></div>
-<div class="ma-hero"><h3>Winter Haven plumbers.<br>Here today, fixed today.</h3><p>Family-owned since 2000. Licensed CFC1429438. Same-day service across Polk County.</p><span class="ma-btn">Call (863) 294-6737</span></div>
-<div class="ma-trust"><div><strong>4.8 stars</strong>59 reviews</div><div><strong>Since 2000</strong>Family owned</div><div><strong>Licensed</strong>CFC1429438</div></div>
-<div class="ma-services"><div><b>Drain Cleaning</b><span>Clogs cleared fast</span></div><div><b>Water Heaters</b><span>Tank &amp; tankless</span></div><div><b>Leak Repair</b><span>Find it, fix it</span></div><div><b>Repiping</b><span>Whole-home updates</span></div><div><b>Sewer Lines</b><span>Camera inspection</span></div><div><b>Fixtures</b><span>Faucets &amp; toilets</span></div></div>
-<div class="ma-reviews"><h4>What neighbors say</h4><div class="ma-review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Fixed our leak the same day we called. Straightforward pricing."</p><span>Homeowner in Winter Haven</span></div><div class="ma-review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Showed up on time and the water heater works great."</p><span>Homeowner in Polk County</span></div></div>
-<div class="ma-contact"><h4>Plumbing problem? Call now.</h4><p>Same-day service across Polk County. Mon-Fri 8am-5pm.</p><span class="ma-btn">Call (863) 294-6737</span></div>
-<div class="ma-footer"><span>Dickens Plumbing Inc &middot; License #CFC1429438</span><span>2729 Crystal Beach Rd, Winter Haven, FL</span></div>
-</div></div>
-<div class="ba-before"><div class="mock-before">
-<h2>Dickens Plumbing Inc</h2>
-<p>2729 Crystal Beach Rd<br>Winter Haven, FL 33880</p>
-<p>Phone: (863) 294-6737</p>
-<p>Hours: Mon-Fri 8am-5pm</p>
-<p>SPECIALIZING IN ALL PLUMBING SERVICES.</p>
-<p>We do residential and commercial work.</p>
-<p>Call for estimates.</p>
-<p>About us: family owned and operated.</p>
-<p>Serving Winter Haven and nearby areas.</p>
-<p>Emergency calls taken during business hours.</p>
-<p>Thank you for visiting our website.</p>
-<p class="lic">License #CFC1429438</p>
-<p class="lic">Page last updated 2019</p>
-</div></div>
-<span class="ba-tag before">BEFORE</span>
-<span class="ba-tag after">AFTER</span>
-<div class="ba-handle" id="baHandle"><div class="ba-knob">&#8596;</div></div>
+
+<section class="compare">
+<p class="compare-label">Section 1</p>
+<h2>The navigation</h2>
+<p class="compare-desc">The old site has no navigation at all. No menu, no phone number in the header, no way to move around. A visitor lands and has nowhere to go.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-nav"><p>Dickens Plumbing Inc</p><p style="font-size:.72rem;color:#777;margin-top:8px">(no menu, no links, no phone number visible)</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-nav"><span class="ab-logo">Dickens Plumbing Inc</span><span class="ab-links"><i></i><i></i><i></i></span><span class="ab-call">(863) 294-6737</span></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Clear menu, tap-to-call button on every screen. The phone number is the most important thing on a plumber's site, so it is always one tap away.</p></div></div>
 </div>
-<p class="ba-hint">Drag the handle to compare</p>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 2</p>
+<h2>The first impression</h2>
+<p class="compare-desc">The old homepage is plain text on a white page. No headline, no photo, no reason to stay. Most visitors leave within seconds.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-hero"><h4>Dickens Plumbing Inc</h4><p>We are a plumbing company in Winter Haven, Florida.</p><p>Call us for your plumbing needs.</p><p style="font-size:.72rem;color:#777;margin-top:10px">(the entire homepage, roughly)</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><h4>Winter Haven plumbers.<br>Here today, fixed today.</h4><p>Family-owned. Licensed CFC1429438. Same-day service across Polk County.</p><span class="ab-btn">Call (863) 294-6737</span></div></div></div>
 </div>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 3</p>
+<h2>The services</h2>
+<p class="compare-desc">The old site lists services as a flat text paragraph, if at all. Customers cannot scan it, and Google cannot rank it.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-list"><p>We do repairs, water heaters, drain cleaning, and other plumbing services. Contact us for more information.</p><p style="font-size:.72rem;color:#777;margin-top:10px">(no structure, no detail, no pages per service)</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-services"><div><b>Emergency Repairs</b><span>Leaks, bursts, 24/7</span></div><div><b>Water Heaters</b><span>Install and repair</span></div><div><b>Drain Cleaning</b><span>Clogs cleared fast</span></div><div><b>Fixture Installs</b><span>Faucets, toilets, more</span></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Each service gets its own scannable card. Room to grow into full pages that rank on Google.</p></div></div>
+</div>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 4</p>
+<h2>The proof</h2>
+<p class="compare-desc">59 reviews at 4.8 stars, and the old site shows zero of them. All that trust is invisible to anyone who finds the website first.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p style="font-size:.82rem">(no reviews anywhere on the site)</p><p class="lic" style="margin-top:12px">License: CFC1429438</p><p class="lic">(buried at the bottom, no context)</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-trust"><div><strong>4.8 stars</strong>59 Google reviews</div><div><strong>Licensed</strong>CFC1429438</div><div><strong>Local</strong>Winter Haven, FL</div></div><div class="ab-review" style="margin-top:14px"><p class="stars">★★★★★</p><p>"Fixed our water heater the same day we called. Fair price, clean work."</p><span>Homeowner in Winter Haven</span></div></div></div>
+</div>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 5</p>
+<h2>The contact</h2>
+<p class="compare-desc">The old site has a phone number somewhere in the text. No click-to-call, no form, no hours. On mobile, which is where most customers are, it is nearly useless.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Phone: (863) 294-6737</p><p style="font-size:.72rem;color:#777;margin-top:10px">(plain text, not clickable on phones)</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Need a plumber today?</h4><p>Open Mon to Sat, 8am to 6pm. Emergency calls anytime.</p><span class="ab-btn">Call (863) 294-6737</span></div></div></div>
+</div>
+</section>
+
+<div class="verdict">
+<h3>The bottom line</h3>
+<p>Dickens Plumbing is a good business with an invisible website. The rebuild keeps everything they already earned, the reviews, the license, the local reputation, and puts it where customers can see it.</p>
+<p>No fake testimonials. No invented numbers. Just their real business, presented like it deserves.</p>
 </div>
 
-<section class="fixes"><div class="wrap">
-<h2>What we fixed</h2>
-<p class="sub2">Every change maps to a customer they were losing.</p>
-<div class="fix-grid">
-<div class="fix"><span class="no">Before</span><h3>No design at all</h3><p>Twelve lines of unstyled text. Visitors bounced in seconds, assuming the business was closed or unprofessional.</p></div>
-<div class="fix"><span class="yes">After</span><h3>A site that looks alive</h3><p>Modern layout, clear branding, service cards. It looks like a business you would trust with your home.</p></div>
-<div class="fix"><span class="no">Before</span><h3>Phone buried in text</h3><p>The number was one line among many. On mobile, nobody was going to hunt for it.</p></div>
-<div class="fix"><span class="yes">After</span><h3>Call button everywhere</h3><p>Click-to-call in the header and hero. One tap and the customer is talking to them.</p></div>
-<div class="fix"><span class="no">Before</span><h3>Zero trust signals</h3><p>59 five-star reviews, 25 years in business, a real license. None of it was on the site.</p></div>
-<div class="fix"><span class="yes">After</span><h3>Proof up front</h3><p>Reviews, years in business, and license number sit right below the hero. Credibility in five seconds.</p></div>
-<div class="fix"><span class="no">Before</span><h3>No services listed</h3><p>One vague line: "specializing in all plumbing services." Customers could not tell if they did what was needed.</p></div>
-<div class="fix"><span class="yes">After</span><h3>Services spelled out</h3><p>Drain cleaning, water heaters, leak repair. Each with a plain description. No guessing.</p></div>
 </div>
-</div></section>
 
-<section class="cta"><div class="wrap">
+<div class="cta">
+<div class="wrap">
 <h2>Your site could be next.</h2>
-<p>Free demo in 2 to 3 days. You see the rebuild before paying anything.</p>
-<a class="btn" href="https://revamps.studio/#contact">Get your free demo</a>
-</div></section>
+<p>We rebuild trade business websites for $199. Free demo first, you only pay when you love it.</p>
+<a class="btn" href="index.html">See what we do</a>
+</div>
+</div>
 
-<footer><div class="wrap">Concept rebuild by Revamps &middot; Not affiliated with Dickens Plumbing Inc</div></footer>
-
-<script>
-(function(){
-var ba=document.getElementById('ba'),h=document.getElementById('baHandle'),drag=false;
-function setPos(clientX){var r=ba.getBoundingClientRect(),p=((clientX-r.left)/r.width)*100;p=Math.max(2,Math.min(98,p));ba.style.setProperty('--pos',p+'%');}
-h.addEventListener('pointerdown',function(e){drag=true;h.setPointerCapture(e.pointerId);});
-window.addEventListener('pointermove',function(e){if(drag)setPos(e.clientX);});
-window.addEventListener('pointerup',function(){drag=false;});
-ba.addEventListener('pointerdown',function(e){setPos(e.clientX);});
-})();
-</script>
+<footer><div class="wrap"><p>Concept rebuild for demonstration only. Not affiliated with Dickens Plumbing Inc.</p></div></footer>
 </body>
 </html>

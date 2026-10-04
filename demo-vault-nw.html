@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>Vault NW Ltd | Locksmith Liverpool | 0151 733 6100</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e222e; --navy2:#132f40; --steel:#1b3a4d;
+  --amber:#e8a91c; --amber-dark:#c78d0a;
+  --paper:#f7f3eb; --paper2:#fffdf8; --ink:#16222b; --muted:#5a6b77;
+  --line:#e2dccf; --card:#ffffff;
+  --green:#1e7a4d;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --paper:#0f181e; --paper2:#121f28; --ink:#e8eef2; --muted:#9ab0be; --line:#23343f; --card:#16242f; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.topbar{background:var(--navy);color:#dbe6ec;font-size:13.5px}
+.topbar-inner{max-width:1120px;margin:0 auto;padding:7px 18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:600}
+.topbar .left{display:flex;gap:14px;flex-wrap:wrap}
+.badge-demo{background:#fff3d6;color:#6b4a00;border:1px solid #e8a91c;font-size:12px;font-weight:700;letter-spacing:.02em;padding:2px 8px;border-radius:99px}
+header.site{position:sticky;top:0;z-index:20;background:var(--paper2);border-bottom:1px solid var(--line);backdrop-filter:none}
+.head-inner{max-width:1120px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:46px;height:46px;background:var(--navy);color:#fff;display:grid;place-items:center;border-radius:8px;font-family:"Barlow Condensed";font-weight:700;font-size:22px;letter-spacing:.04em;border-bottom:4px solid var(--amber)}
+.logo-text{line-height:1}
+.logo-text strong{font-family:"Barlow Condensed";font-size:28px;letter-spacing:.03em;color:var(--navy)}
+@media(prefers-color-scheme:dark){.logo-text strong{color:#fff}}
+.logo-text span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:2px}
+nav.main{display:flex;gap:22px;font-weight:600;font-size:15px}
+nav.main a{text-decoration:none;color:var(--ink)}
+nav.main a:hover{color:var(--amber-dark)}
+.cta-head{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;border-radius:8px;padding:11px 16px;font-size:15px;border:1.5px solid transparent;cursor:pointer}
+.btn-amber{background:var(--amber);color:#1a1400;border-color:#d99a12;box-shadow:0 2px 0 #b67f09}
+.btn-amber:hover{background:#f2b52d}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-dark{background:var(--navy);color:#fff}
+.hero{background:var(--navy);color:#eef3f6;overflow:hidden}
+.hero-inner{max-width:1120px;margin:0 auto;padding:38px 18px 0;display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
+.hero h1{font-family:"Barlow Condensed";font-size:56px;line-height:.95;letter-spacing:.01em;margin:10px 0 14px;text-transform:uppercase}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero p.lead{font-size:18px;color:#c9d8df;max-width:540px;margin:0 0 20px}
+.hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px}
+.pill{border:1px solid #2e4a5e;background:#162f40;padding:7px 11px;border-radius:99px;font-size:13px;font-weight:600}
+.pill b{color:var(--amber)}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.phone-big{font-family:"Barlow Condensed";font-size:26px;letter-spacing:.03em}
+.hero-card{background:#fff;color:#16222b;border-radius:12px 12px 0 0;padding:18px 18px 16px;box-shadow:0 -6px 30px rgba(0,0,0,.25);border:1px solid #e6e0d2;border-bottom:none}
+.hero-card h3{margin:0 0 4px;font-size:16px}
+.hero-card p{margin:0;color:#5a6b77;font-size:14px}
+.mini-form{display:grid;gap:8px;margin-top:12px}
+.mini-form input,.mini-form select,.mini-form textarea{width:100%;padding:11px 12px;border:1.5px solid #ddd6c4;border-radius:8px;font:inherit;font-size:14.5px;background:#fffdf8}
+.mini-form input:focus,.mini-form select:focus,.mini-form textarea:focus{outline:2px solid var(--amber);border-color:transparent}
+.trustbar{background:var(--amber);color:#1d1700}
+.trustbar-inner{max-width:1120px;margin:0 auto;padding:10px 18px;display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;font-weight:700;font-size:14px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+section{padding:42px 0}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#8a6d12}
+h2{font-family:"Barlow Condensed";font-size:36px;line-height:1;margin:6px 0 10px;letter-spacing:.02em;text-transform:uppercase;color:var(--navy)}
+@media(prefers-color-scheme:dark){h2{color:#fff}}
+.sub{color:var(--muted);max-width:640px}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start}
+.services{border-top:2px solid var(--navy)}
+.svc-row{display:grid;grid-template-columns:56px 1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.svc-num{font-family:"Barlow Condensed";font-size:28px;color:var(--amber);line-height:1}
+.svc-row h3{margin:0 0 4px;font-size:18px}
+.svc-row p{margin:0;color:var(--muted);font-size:15px;max-width:620px}
+.tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:#eef3f6;border:1px solid var(--line);padding:6px 8px;border-radius:99px;white-space:nowrap}
+@media(prefers-color-scheme:dark){.tag{background:#1b2f3d}}
+.split-banner{background:var(--navy2);color:#eaf1f5;border-radius:14px;padding:22px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.split-banner h3{font-family:"Barlow Condensed";font-size:28px;margin:0 0 6px;text-transform:uppercase;letter-spacing:.02em}
+.split-banner p{color:#b9cbd5;margin:0}
+.checklist{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px}
+.checklist li{display:flex;gap:10px}
+.checklist li::before{content:"✓";width:22px;height:22px;flex:0 0 22px;background:var(--amber);color:#1a1400;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:13px;margin-top:1px}
+.prices{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.prices h4{margin:0 0 10px}
+.price-line{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.price-line:last-child{border:none}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stars{color:var(--amber);letter-spacing:2px;font-size:14px}
+.review p{font-size:15px;margin:8px 0}
+.review footer{font-size:13px;color:var(--muted);font-weight:600}
+.hours{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.hours table{width:100%;border-collapse:collapse;font-size:15px}
+.hours td,.hours th{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left}
+.hours tr:last-child td{border:none}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.info-box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.info-box h4{margin:0 0 6px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.info-box p{margin:0;font-weight:600}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.faq details+details{margin-top:10px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin:8px 0 0}
+.fixed-note{background:#fff8e1;border:1.5px dashed #d9a514;border-radius:12px;padding:16px}
+.fixed-note h4{margin:0 0 6px}
+.fixed-note ul{margin:6px 0 0 18px;color:#5a4630}
+@media(prefers-color-scheme:dark){.fixed-note{background:#2a2210;color:#f3e6c2}.fixed-note ul{color:#d8c99a}}
+footer.site{background:var(--navy);color:#c8d6de;margin-top:20px}
+.foot-inner{max-width:1120px;margin:0 auto;padding:28px 18px;display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:20px}
+footer.site a{color:#fff}
+.disclaimer{max-width:1120px;margin:0 auto;padding:0 18px 22px;font-size:12.5px;color:#8fa6b3;border-top:1px solid #1f3e52;padding-top:14px}
+.sticky-call{display:none}
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;padding-top:26px}
+  .hero h1{font-size:44px}
+  .grid2,.split-banner,.foot-inner{grid-template-columns:1fr}
+  .reviews,.info-grid{grid-template-columns:1fr}
+  nav.main{display:none}
+  .cta-head .btn-outline{display:none}
+  .sticky-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:10px}
+  .sticky-call a{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="left">
+      <span>📍 2A Westgate Road, Wavertree, Liverpool L15 5BA</span>
+      <span>Mon to Fri 9 to 5 · Sat 9 to 1</span>
+    </div>
+    <div>
+      <span class="badge-demo">CLEANED-UP DEMO</span>
+      <a href="tel:01517336100" style="margin-left:10px">0151 733 6100</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="head-inner">
+    <a class="logo" href="#top">
+      <span class="mark">V</span>
+      <span class="logo-text"><strong>VAULT NW</strong><span>Locksmith • Windows • Doors, Liverpool</span></span>
+    </a>
+    <nav class="main">
+      <a href="#services">Services</a>
+      <a href="#auto">Auto Keys</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <div class="cta-head">
+      <a class="btn btn-outline" href="mailto:info@vaultnw.co.uk">Email us</a>
+      <a class="btn btn-amber" href="tel:01517336100">Call 0151 733 6100</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <span style="background:#e8a91c;color:#1a1400;font-weight:800;font-size:12px;letter-spacing:.12em;padding:5px 8px;border-radius:99px">LIVERPOOL LOCKSMITHS</span>
+        <span style="color:#9fc0d1;font-size:13px;font-weight:600">Near Penny Lane, Wavertree</span>
+      </div>
+      <h1>Locked out?<br>We’ll get you<br><em>back in fast.</em></h1>
+      <p class="lead">Vault NW Ltd is your local Liverpool locksmith shop, emergency entry, lock repairs, car keys and uPVC door &amp; window repairs. Based at the Penny Lane / Smithdown junction, with a mobile service across Merseyside.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-amber" href="tel:01517336100" style="font-size:16px;padding:13px 18px">☎ Call now, 0151 733 6100</a>
+        <a class="btn" href="#quote" style="background:#fff;color:#0e222e">Get a quick quote</a>
+      </div>
+
+      <div class="hero-badges">
+        <span class="pill"><b>★ 4.5</b> from 23+ reviewers</span>
+        <span class="pill">No Fix <b>No Fee</b></span>
+        <span class="pill">No Call-Out Fee*</span>
+        <span class="pill">20+ years’ experience</span>
+      </div>
+
+      <p style="color:#8fb0c2;font-size:13.5px;margin:0">Locked yourself out, lost car keys, or a uPVC door that won’t lock? Give us a ring, we aim to have you back in your property within the hour, depending on location.</p>
+    </div>
+
+    <div class="hero-card" id="quote">
+      <h3>Need help right now?</h3>
+      <p>Tell us what’s happened and we’ll come back with a price and ETA. No obligation.</p>
+      <form class="mini-form" onsubmit="event.preventDefault();document.getElementById('formNote').textContent='Thanks, this demo form doesn’t send yet. In the live version this goes straight to info@vaultnw.co.uk. For now, call 0151 733 6100.';">
+        <input required placeholder="Your name" autocomplete="name">
+        <input required placeholder="Phone number" autocomplete="tel">
+        <select>
+          <option>Locked out of house / flat</option>
+          <option>Lost or broken car key</option>
+          <option>uPVC door won’t lock</option>
+          <option>Window repair / misted unit</option>
+          <option>Key cutting, spare keys</option>
+          <option>Something else</option>
+        </select>
+        <textarea rows="2" placeholder="Where are you in Liverpool? Any detail helps…"></textarea>
+        <button class="btn btn-dark" style="justify-content:center;width:100%">Request a callback</button>
+        <div id="formNote" style="font-size:13px;color:#7a6a2a"></div>
+      </form>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <a href="tel:01517336100" style="flex:1;text-align:center;background:#0e222e;color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-weight:700;font-size:14px">Tap to call</a>
+        <a href="mailto:info@vaultnw.co.uk" style="flex:1;text-align:center;border:1.5px solid #e2dccf;text-decoration:none;padding:10px;border-radius:8px;font-weight:700;font-size:14px">Email instead</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trustbar"><div class="trustbar-inner">
+  <span>✓ Non-destructive entry where possible</span>
+  <span>✓ Free quotations</span>
+  <span>✓ Home &amp; business covered</span>
+  <span>✓ Keys cut while you wait</span>
+</div></div>
+
+<div class="wrap">
+  <section id="services">
+    <div class="kicker">What we do</div>
+    <h2>Locksmith services, Liverpool</h2>
+    <p class="sub">One shop, one number. From a snapped key on Smithdown Road to a full lock upgrade after a move, we stock the parts so most jobs are finished on the first visit.</p>
+
+    <div class="services" style="margin-top:18px">
+      <div class="svc-row"><div class="svc-num">01</div><div><h3>Emergency entry &amp; lockouts</h3><p>Locked out of your house, flat or car? We use specialist non-destructive entry techniques first, no drilling unless there’s no other way. Mobile service across Liverpool and Merseyside.</p></div><span class="tag">Same day</span></div>
+      <div class="svc-row"><div class="svc-num">02</div><div><h3>Lock repair, replacement &amp; upgrades</h3><p>Faulty multipoint locks, slipped barrels, snapped keys. We repair or replace and can upgrade you to high-security Ultion and anti-snap cylinders. Keyed-alike service available, one key for every door.</p></div><span class="tag">Most popular</span></div>
+      <div class="svc-row" id="auto"><div class="svc-num">03</div><div><h3>Auto locksmith &amp; car keys</h3><p>Lost, broken or stolen car keys, we come to you at home, work or roadside. Key cutting, cloning, transponder programming and remote fobs for most makes. Lost keys deleted from the immobiliser for security.</p></div><span class="tag">We come to you</span></div>
+      <div class="svc-row"><div class="svc-num">04</div><div><h3>uPVC door &amp; window repairs</h3><p>Doors that won’t lock, dropped hinges, misted or broken double-glazed units, window locks and handles. 25 years’ manufacturing and repair experience. If it’s beyond repair we’ll quote for a replacement at a fair price.</p></div><span class="tag">Wavertree showroom</span></div>
+      <div class="svc-row"><div class="svc-num">05</div><div><h3>Key cutting, while you wait</h3><p>Premium key cutting on our Silca Futura Pro machine, cut to copy or cut to code, including high-security dimple keys. Spare house keys, Ultion keys and extra car keys cut in-store.</p></div><span class="tag">In-store</span></div>
+      <div class="svc-row"><div class="svc-num">06</div><div><h3>Home security upgrades</h3><p>Moving house? Recently burgled? We’ll check what you’ve got and fit proper high-security hardware where it matters, without selling you what you don’t need.</p></div><span class="tag">Free advice</span></div>
+    </div>
+  </section>
+
+  <section style="padding-top:6px">
+    <div class="split-banner">
+      <div>
+        <h3>Why people on Merseyside call Vault first</h3>
+        <p>We’re not a national call centre. We’re a proper Liverpool shop that’s been cutting keys and fixing doors around Penny Lane for over 20 years.</p>
+        <ul class="checklist">
+          <li><span><b>Local and quick</b>, based in Wavertree, so we’re actually nearby when you’re locked out.</span></li>
+          <li><span><b>Stock on the shelves</b>, ERA, Fuhr, Fullex, Saracen, Mila multipoint locks, hinges and handles in stock.</span></li>
+          <li><span><b>Straight pricing</b>, free quotations, no hidden charges, no fix no fee on applicable jobs.</span></li>
+        </ul>
+      </div>
+      <div class="prices">
+        <h4>Good to know</h4>
+        <div class="price-line"><span>Call-out</span><strong>No fee*</strong></div>
+        <div class="price-line"><span>Quotations</span><strong>Free</strong></div>
+        <div class="price-line"><span>Key cutting</span><strong>While you wait</strong></div>
+        <div class="price-line"><span>Mobile service</span><strong>Liverpool &amp; Merseyside</strong></div>
+        <div class="price-line"><span>Shop</span><strong>2A Westgate Rd, L15 5BA</strong></div>
+        <p style="font-size:12.5px;color:var(--muted);margin:10px 0 0">*As listed on current Vault NW service pages. Final price confirmed before work starts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" style="padding-top:10px">
+    <div class="kicker">Word of mouth</div>
+    <h2>Rated 4.5 stars locally</h2>
+    <p class="sub">23+ reviews on Chamber of Commerce and local directories. Here’s what neighbours actually said:</p>
+    <div class="reviews" style="margin-top:16px">
+      <article class="review"><div class="stars">★★★★★</div><p>“Just got some keys cut for my Ultion lock at Vault NW. Super friendly, helpful and quick. Also the cheapest price I found by far. Thanks for all your help.”</p><footer>Clare Warner, RecommendedCompany</footer></article>
+      <article class="review"><div class="stars">★★★★★</div><p>“Vault NW provide a brilliant service, I wouldn’t consider another locksmith in Liverpool after meeting Vault NW. They also stock supplies so you can buy and have them install your new locks at the same time.”</p><footer>Danny Pardoe, RecommendedCompany</footer></article>
+      <article class="review"><div class="stars">★★★★★</div><p>“I found Vault NW online, and asked for a quote for some Ultion locks/keys. Price was good and service was even better. I can’t recommend Vault enough, speedy honest answers which were fantastic.”</p><footer>Mike W., RecommendedCompany</footer></article>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:10px">More reviews on Google and Chamber of Commerce, <a href="https://www.chamberofcommerce.uk/business-directory/england/liverpool/locksmith/413168-vault-nw-ltd" target="_blank" rel="noopener">see the listing</a>.</p>
+  </section>
+
+  <section id="visit" style="padding-top:8px">
+    <div class="grid2">
+      <div>
+        <div class="kicker">Visit the shop</div>
+        <h2>Find us in Wavertree</h2>
+        <p class="sub">We’re at the Penny Lane and Smithdown Road junction, locksmith shop on Westgate Road, with the window &amp; door showroom on Smithdown Place. Pop in for keys cut while you wait, or for honest advice on a door that’s playing up.</p>
+        <div class="info-grid" style="margin-top:16px">
+          <div class="info-box"><h4>Shop address</h4><p>2A Westgate Road<br>Wavertree, Liverpool<br>L15 5BA</p></div>
+          <div class="info-box"><h4>Call us</h4><p><a href="tel:01517336100">0151 733 6100</a><br><span style="color:var(--muted);font-weight:500;font-size:14px">Mobile service across Merseyside</span></p></div>
+          <div class="info-box"><h4>Email</h4><p><a href="mailto:info@vaultnw.co.uk">info@vaultnw.co.uk</a><br><span style="color:var(--muted);font-weight:500;font-size:14px">For quotes &amp; bookings</span></p></div>
+        </div>
+        <div class="fixed-note" style="margin-top:16px">
+          <h4>What was fixed in this demo</h4>
+          <p style="margin:0;color:#5a4630;font-size:14.5px">Your current Locksmith Liverpool page repeats the same section twice and has broken formatting showing as **stars** in the text. This version:</p>
+          <ul>
+            <li>Removes the duplicated “Locksmith Services Liverpool” block, one clean version</li>
+            <li>Fixes the broken “locked yourself ou**t**” markup so it reads properly</li>
+            <li>Brings your phone number and quote form above the fold for emergency searches</li>
+            <li>Keeps your real services, address and reviews, just organised so people can act</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="hours">
+          <table>
+            <tr><th colspan="2">Opening hours, Westgate Road shop</th></tr>
+            <tr><td>Monday</td><td><strong>9:00 AM , 5:00 PM</strong></td></tr>
+            <tr><td>Tuesday</td><td><strong>9:00 AM , 5:00 PM</strong></td></tr>
+            <tr><td>Wednesday</td><td><strong>9:00 AM , 5:00 PM</strong></td></tr>
+            <tr><td>Thursday</td><td><strong>9:00 AM , 5:00 PM</strong></td></tr>
+            <tr><td>Friday</td><td><strong>9:00 AM , 5:00 PM</strong></td></tr>
+            <tr><td>Saturday</td><td><strong>9:00 AM , 1:00 PM</strong></td></tr>
+            <tr><td>Sunday</td><td>Closed, call for emergency</td></tr>
+          </table>
+        </div>
+        <div class="faq" style="margin-top:14px">
+          <details><summary>Can you get in without damaging my door?</summary><p>Yes, where possible we use non-destructive entry. We’ll always try picking / bypass methods first and only drill as a last resort, and we’ll tell you before we do.</p></details>
+          <details><summary>I’ve lost my car keys, can you help?</summary><p>Yes. Call 0151 733 6100 with your make and model. We can cut and programme a new key at your location and delete the lost key from the immobiliser so it can’t be used to start your car.</p></details>
+          <details><summary>Do you cut spare keys while I wait?</summary><p>Most standard and Ultion keys are cut while you wait in-store on Westgate Road. High-security keys cut to code can also be posted via Royal Mail First Class if you’re further afield.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="foot-inner">
+    <div>
+      <div style="font-family:'Barlow Condensed';font-size:26px;letter-spacing:.03em;color:#fff">VAULT NW LTD</div>
+      <p style="margin:6px 0 0;font-size:14.5px">Liverpool locksmiths, auto keys, uPVC door &amp; window repairs. Based in Wavertree, covering Merseyside with a mobile service.</p>
+    </div>
+    <div>
+      <strong style="color:#fff">Contact</strong>
+      <p style="margin:8px 0 0;font-size:14.5px">2A Westgate Road, Wavertree<br>Liverpool L15 5BA<br><a href="tel:01517336100">0151 733 6100</a><br><a href="mailto:info@vaultnw.co.uk">info@vaultnw.co.uk</a></p>
+    </div>
+    <div>
+      <strong style="color:#fff">Services</strong>
+      <p style="margin:8px 0 0;font-size:14.5px;line-height:1.9">Emergency entry<br>Lock upgrades &amp; Ultion<br>Car keys &amp; fobs<br>uPVC repairs<br>Key cutting</p>
+    </div>
+  </div>
+  <div class="disclaimer">Demo rebuild for Vault NW Ltd, created to show a cleaned-up version of the current locksmith-liverpool page. Details taken from vaultnw.co.uk and public listings (retrieved Oct 2026). Not the live Vault NW website.</div>
+</footer>
+
+<div class="sticky-call">
+  <a class="btn btn-amber" href="tel:01517336100">Call 0151 733 6100</a>
+  <a class="btn btn-dark" href="#quote">Quote</a>
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href').slice(1);
+    if(!id) return;
+    var el=document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script>
+</body>
+</html>

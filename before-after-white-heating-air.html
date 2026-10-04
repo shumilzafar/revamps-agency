@@ -19,7 +19,7 @@ header.page{padding:64px 0 40px;text-align:center}
 h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
 .sub{font-size:1.05rem;max-width:640px;margin:0 auto;color:#4b5563}
 .ba-wrap{margin:48px 0 24px;position:relative}
-.ba{position:relative;width:100%;aspect-ratio:16/10;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
+.ba{position:relative;width:100%;aspect-ratio:16/22;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
 .ba-after{position:absolute;inset:0}
 .ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
 .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
@@ -56,6 +56,16 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
 .ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
 .ma-services span{font-size:.72rem;color:#6b7280}
+.ma-reviews{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:20px 32px;background:#f9fafb;border-top:1px solid #f3f4f6}
+.ma-reviews h4{grid-column:1/-1;font-size:.8rem;font-weight:600;color:#111827}
+.ma-review{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px}
+.ma-review .stars{color:#f59e0b;font-size:.72rem;letter-spacing:.06em}
+.ma-review p{font-size:.75rem;color:#4b5563;margin:6px 0;line-height:1.5}
+.ma-review span{font-size:.68rem;color:#9ca3af}
+.ma-contact{padding:26px 32px;text-align:center;background:#111827;color:#fff}
+.ma-contact h4{font-size:1rem;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+.ma-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:14px}
+.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;gap:12px;background:#fff}
 .fixes{padding:64px 0}
 .fixes h2{font-size:1.6rem;color:#111827;font-weight:700;margin-bottom:.6rem;letter-spacing:-.02em}
 .fixes .sub2{margin-bottom:2.5rem}
@@ -71,7 +81,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:999px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:4/5}.ma-services{grid-template-columns:1fr}}
+@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ma-services{grid-template-columns:1fr}.ma-reviews{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -92,7 +102,10 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <div class="ma-nav"><span class="ma-logo">White Heating &amp; Air</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">406-248-2162</span></div>
 <div class="ma-hero"><h3>Billings trusts us<br>with their comfort.</h3><p>1,885 reviews at 4.9 stars. 24/7 service, 365 days a year. Furnaces, AC, and everything between.</p><span class="ma-btn">Call 406-248-2162</span></div>
 <div class="ma-trust"><div><strong>4.9 stars</strong>1,885 reviews</div><div><strong>24/7/365</strong>Always open</div><div><strong>Showroom</strong>Fireplaces on display</div></div>
-<div class="ma-services"><div><b>Furnaces</b><span>Install &amp; repair</span></div><div><b>AC Systems</b><span>Central air experts</span></div><div><b>Heat Pumps</b><span>Efficient comfort</span></div></div>
+<div class="ma-services"><div><b>Furnaces</b><span>Install &amp; repair</span></div><div><b>AC Systems</b><span>Central air experts</span></div><div><b>Heat Pumps</b><span>Efficient comfort</span></div><div><b>Water Heaters</b><span>Tank &amp; tankless</span></div><div><b>Ductwork</b><span>Cleaning &amp; repair</span></div><div><b>Fireplaces</b><span>Sales &amp; service</span></div></div>
+<div class="ma-reviews"><h4>What neighbors say</h4><div class="ma-review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Furnace died on a cold night. They had our heat back by morning."</p><span>Homeowner in Billings</span></div><div class="ma-review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest quote, clean install, no surprises on the bill."</p><span>Homeowner in Montana</span></div></div>
+<div class="ma-contact"><h4>No heat? No cool? Call now.</h4><p>24/7 service, 365 days a year. 1125 4th Ave N, Billings, MT.</p><span class="ma-btn">Call 406-248-2162</span></div>
+<div class="ma-footer"><span>White Heating &amp; Air Conditioning</span><span>1125 4th Ave N, Billings, MT 59101</span></div>
 </div></div>
 <div class="ba-before"><div class="mock-before">
 <div class="warn">&#9888; Not secure &mdash; this site loads over HTTP</div>
@@ -101,6 +114,13 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <div class="junk">#drawerPrimary #header-search-desktop</div>
 <p>Serving Billings with quality heating and cooling.</p>
 <p class="years">Trusted for <s>over 20 years</s> over 25 years in the community.</p>
+<div class="junk">#footer-widget-area .menu-item-4472</div>
+<p>We offer furnace repair, AC installation, and more.</p>
+<p>Call today for a free estimate on new equipment.</p>
+<div class="junk">[shortcode: contact-form-7 id="1294"]</div>
+<p class="years">Family owned for <s>20 years</s> 25 years and counting.</p>
+<p>Visit our showroom for fireplaces and stoves.</p>
+<div class="warn">&#9888; Your connection is not private</div>
 </div></div>
 <span class="ba-tag before">BEFORE</span>
 <span class="ba-tag after">AFTER</span>

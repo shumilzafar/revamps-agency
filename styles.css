@@ -76,9 +76,7 @@ img, svg { display: block; max-width: 100%; }
 .header-inner { display: flex; align-items: center; gap: 2rem; height: 68px; }
 .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; margin-right: auto; }
 .brand-mark {
-  width: 32px; height: 32px; background: var(--ink); color: #fff;
-  border-radius: 9px; display: inline-flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 1.1rem;
+  width: 32px; height: 32px; border-radius: 9px; display: inline-block;
 }
 .brand-name { color: var(--ink); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.01em; }
 .main-nav { display: flex; gap: 1.8rem; }
@@ -171,6 +169,7 @@ img, svg { display: block; max-width: 100%; }
 .ba-mini-after { background: linear-gradient(135deg,#1e40af,#1e3a8a); height: 100%; padding: 38px 16px 16px; color: #fff; }
 .ba-mini-after.ba-mini-hvac { background: linear-gradient(135deg,#0e7490,#155e75); }
 .ba-mini-after.ba-mini-roof { background: linear-gradient(135deg,#2c4a6b,#1a2f47); }
+.ba-mini-after.ba-mini-septic { background: linear-gradient(135deg,#15803d,#166534); }
 .ba-mini-logo { font-size: .68rem; font-weight: 700; margin-bottom: 8px; opacity: .85; }
 .ba-mini-h { font-size: .92rem; font-weight: 700; line-height: 1.3; margin-bottom: 10px; letter-spacing: -.01em; }
 .ba-mini-btn { display: inline-block; background: #fefefe; color: #111827; font-size: .68rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; }

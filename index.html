@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,129 +34,129 @@
 
 <main id="top">
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero: dark, bold -->
+  <section class="hero-dark">
     <div class="container">
-      <div class="hero-centered">
-        <p class="eyebrow eyebrow-center">For plumbers, roofers, HVAC, septic &amp; local trades</p>
-        <h1>Your website should bring you customers.<br>Ours do.</h1>
-        <p class="lead lead-center">We rebuild outdated trade websites and set up missed-call textback. You see a free demo before you pay a cent.</p>
-        <div class="hero-actions hero-actions-center">
-          <a class="btn btn-primary btn-large" href="#contact">Get your free demo</a>
-          <a class="btn btn-ghost btn-large" href="#work">See the work</a>
-        </div>
+      <p class="hero-kicker">For plumbers, roofers, HVAC, septic &amp; local trades</p>
+      <h1 class="hero-title">Your website is<br>losing you customers.</h1>
+      <p class="hero-sub">We rebuild it. You see the new version free before you pay anything.</p>
+      <div class="hero-actions">
+        <a class="btn btn-accent btn-large" href="#contact">Get your free demo</a>
+        <a class="btn btn-outline-light btn-large" href="#work">See the work</a>
+      </div>
+      <div class="hero-proof">
+        <span><strong>$150</strong> flat for a rebuild</span>
+        <span class="hero-dot"></span>
+        <span><strong>$300</strong> for missed-call textback</span>
+        <span class="hero-dot"></span>
+        <span><strong>Free</strong> demo first</span>
       </div>
     </div>
+    <div class="hero-glow"></div>
   </section>
 
   <!-- Services -->
-  <section class="section section-tight" id="services">
+  <section class="section" id="services">
     <div class="container">
+      <p class="eyebrow">What we do</p>
+      <h2>Two services. Both start free.</h2>
       <div class="services-grid">
         <div class="service-card">
-          <span class="service-tag">Most popular</span>
-          <h2>Website rebuilds</h2>
-          <p>Your old site rebuilt from scratch. Mobile-first, fast, with your phone number everywhere it matters. Free mockup first. You approve it, then we launch.</p>
-          <ul class="service-list">
-            <li>Free demo before you pay</li>
-            <li>Custom design, no templates</li>
-            <li>Launched on your domain</li>
-          </ul>
+          <div class="service-icon">◧</div>
+          <h3>Website rebuilds</h3>
+          <p>Your outdated site rebuilt from scratch. Mobile-first, fast, with your phone number front and center. Free mockup first, you approve it, then we launch.</p>
+          <a class="service-link" href="#work-websites">See examples →</a>
         </div>
         <div class="service-card">
-          <span class="service-tag service-tag-alt">Never miss a lead</span>
-          <h2>Missed-call textback</h2>
-          <p>When you miss a call on the job, we text the caller back in seconds, collect their details, and notify you. No more lost jobs to voicemail.</p>
-          <ul class="service-list">
-            <li>Instant text on missed calls</li>
-            <li>Collects name, issue &amp; contact</li>
-            <li>You get notified right away</li>
-          </ul>
+          <div class="service-icon">✆</div>
+          <h3>Missed-call textback</h3>
+          <p>When you miss a call on the job, we text the caller back in seconds, collect their details, and alert you. No more lost jobs to voicemail.</p>
+          <a class="service-link" href="#work-textback">See examples →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Work: Website rebuilds -->
-  <section class="section" id="work">
+  <!-- Work: Websites (large features) -->
+  <section class="section section-soft" id="work-websites">
     <div class="container">
       <p class="eyebrow">Selected work</p>
       <h2>Website rebuilds</h2>
-      <p class="section-sub">Free mockups we built for real trade businesses. Every one started as a demo before anyone paid.</p>
+      <p class="section-sub">Free mockups built for real trade businesses. Click any of them to explore the full demo.</p>
 
-      <div class="preview-grid">
-        <a class="preview-card" href="demo-ob-electrical.html">
-          <div class="preview-browser">
-            <div class="pv-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-url">ob-electrical.com</span></div>
-            <div class="pv-body pv-electrical">
-              <div class="pv-nav"><span class="pv-logo">OB Electrical</span><span class="pv-cta">Call now</span></div>
-              <div class="pv-hero"><span class="pv-h1">Licensed electricians you can trust.</span><span class="pv-p">Repairs, installs &amp; upgrades.</span><span class="pv-btn">Get a quote</span></div>
-              <div class="pv-row"><span></span><span></span><span></span></div>
-            </div>
-          </div>
-          <p class="preview-label"><strong>OB Electrical</strong> &middot; Electrical</p>
-        </a>
-
-        <a class="preview-card" href="demo-done-right-roofing.html">
-          <div class="preview-browser">
+      <div class="feature-list">
+        <a class="feature-card" href="demo-done-right-roofing.html">
+          <div class="feature-browser">
             <div class="pv-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-url">donerightroofing.com</span></div>
             <div class="pv-body pv-roofing">
-              <div class="pv-nav"><span class="pv-logo">Done Right Roofing</span><span class="pv-cta">Call now</span></div>
-              <div class="pv-hero"><span class="pv-h1">Done right the first time.</span><span class="pv-p">Roof replacement &amp; repairs.</span><span class="pv-btn">Get a quote</span></div>
-              <div class="pv-row"><span></span><span></span><span></span></div>
+              <div class="pv-nav"><span class="pv-logo">Done Right Roofing</span><span class="pv-links"><i></i><i></i><i></i></span><span class="pv-cta">Call now</span></div>
+              <div class="pv-hero"><span class="pv-h1">Done right the first time.</span><span class="pv-p">Roof replacement, repairs &amp; inspections. Serving the metro area for 15 years.</span><span class="pv-btn">Get a free quote</span></div>
+              <div class="pv-services"><span><b>Repairs</b><i>Leaks, shingles, flashing</i></span><span><b>Replacement</b><i>Full tear-off &amp; install</i></span><span><b>Inspections</b><i>Free storm checks</i></span></div>
             </div>
           </div>
-          <p class="preview-label"><strong>Done Right Roofing</strong> &middot; Roofing</p>
+          <div class="feature-meta"><h3>Done Right Roofing</h3><p>Roofing company &middot; full rebuild mockup</p></div>
         </a>
 
-        <a class="preview-card" href="demo-asti-heating-air.html">
-          <div class="preview-browser">
+        <a class="feature-card" href="demo-asti-heating-air.html">
+          <div class="feature-browser">
             <div class="pv-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-url">astiheatingair.com</span></div>
             <div class="pv-body pv-hvac">
-              <div class="pv-nav"><span class="pv-logo">Asti Heating &amp; Air</span><span class="pv-cta">Call now</span></div>
-              <div class="pv-hero"><span class="pv-h1">Comfort, all year round.</span><span class="pv-p">Heating &amp; cooling experts.</span><span class="pv-btn">Get a quote</span></div>
-              <div class="pv-row"><span></span><span></span><span></span></div>
+              <div class="pv-nav"><span class="pv-logo">Asti Heating &amp; Air</span><span class="pv-links"><i></i><i></i><i></i></span><span class="pv-cta">Call now</span></div>
+              <div class="pv-hero"><span class="pv-h1">Comfort, all year round.</span><span class="pv-p">Heating and cooling experts. Same-day service available.</span><span class="pv-btn">Get a free quote</span></div>
+              <div class="pv-services"><span><b>AC Repair</b><i>Fast diagnostics</i></span><span><b>Heating</b><i>Furnace &amp; heat pumps</i></span><span><b>Installs</b><i>New system quotes</i></span></div>
             </div>
           </div>
-          <p class="preview-label"><strong>Asti Heating &amp; Air</strong> &middot; HVAC</p>
+          <div class="feature-meta"><h3>Asti Heating &amp; Air</h3><p>HVAC company &middot; full rebuild mockup</p></div>
         </a>
 
-        <a class="preview-card" href="demo-ts-plumbing-heating.html">
-          <div class="preview-browser">
+        <a class="feature-card" href="demo-ts-plumbing-heating.html">
+          <div class="feature-browser">
             <div class="pv-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-url">tsplumbingheating.com</span></div>
             <div class="pv-body pv-plumbing">
-              <div class="pv-nav"><span class="pv-logo">TS Plumbing &amp; Heating</span><span class="pv-cta">Call now</span></div>
-              <div class="pv-hero"><span class="pv-h1">Plumbers who pick up.</span><span class="pv-p">Same-day service, honest pricing.</span><span class="pv-btn">Get a quote</span></div>
-              <div class="pv-row"><span></span><span></span><span></span></div>
+              <div class="pv-nav"><span class="pv-logo">TS Plumbing &amp; Heating</span><span class="pv-links"><i></i><i></i><i></i></span><span class="pv-cta">Call now</span></div>
+              <div class="pv-hero"><span class="pv-h1">Plumbers who actually pick up.</span><span class="pv-p">Same-day service, honest pricing, no surprises.</span><span class="pv-btn">Get a free quote</span></div>
+              <div class="pv-services"><span><b>Repairs</b><i>Leaks, clogs, fixtures</i></span><span><b>Water Heaters</b><i>Install &amp; repair</i></span><span><b>Heating</b><i>Boilers &amp; radiators</i></span></div>
             </div>
           </div>
-          <p class="preview-label"><strong>TS Plumbing &amp; Heating</strong> &middot; Plumbing</p>
+          <div class="feature-meta"><h3>TS Plumbing &amp; Heating</h3><p>Plumbing company &middot; full rebuild mockup</p></div>
         </a>
 
-        <a class="preview-card" href="demo-auzzie-pest-control.html">
-          <div class="preview-browser">
+        <a class="feature-card" href="demo-auzzie-pest-control.html">
+          <div class="feature-browser">
             <div class="pv-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-url">auzziepestcontrol.com</span></div>
             <div class="pv-body pv-pest">
-              <div class="pv-nav"><span class="pv-logo">Auzzie Pest Control</span><span class="pv-cta">Call now</span></div>
-              <div class="pv-hero"><span class="pv-h1">Pests gone. Guaranteed.</span><span class="pv-p">Residential &amp; commercial.</span><span class="pv-btn">Get a quote</span></div>
-              <div class="pv-row"><span></span><span></span><span></span></div>
+              <div class="pv-nav"><span class="pv-logo">Auzzie Pest Control</span><span class="pv-links"><i></i><i></i><i></i></span><span class="pv-cta">Call now</span></div>
+              <div class="pv-hero"><span class="pv-h1">Pests gone. Guaranteed.</span><span class="pv-p">Residential and commercial pest control that works.</span><span class="pv-btn">Get a free quote</span></div>
+              <div class="pv-services"><span><b>General Pest</b><i>Ants, roaches, spiders</i></span><span><b>Rodents</b><i>Removal &amp; prevention</i></span><span><b>Termites</b><i>Inspection &amp; treatment</i></span></div>
             </div>
           </div>
-          <p class="preview-label"><strong>Auzzie Pest Control</strong> &middot; Pest control</p>
+          <div class="feature-meta"><h3>Auzzie Pest Control</h3><p>Pest control &middot; full rebuild mockup</p></div>
+        </a>
+
+        <a class="feature-card" href="demo-ob-electrical.html">
+          <div class="feature-browser">
+            <div class="pv-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-url">ob-electrical.com</span></div>
+            <div class="pv-body pv-electrical">
+              <div class="pv-nav"><span class="pv-logo">OB Electrical</span><span class="pv-links"><i></i><i></i><i></i></span><span class="pv-cta">Call now</span></div>
+              <div class="pv-hero"><span class="pv-h1">Licensed electricians you can trust.</span><span class="pv-p">Repairs, panel upgrades, lighting and more.</span><span class="pv-btn">Get a free quote</span></div>
+              <div class="pv-services"><span><b>Repairs</b><i>Outlets, wiring, faults</i></span><span><b>Panels</b><i>Upgrades &amp; safety</i></span><span><b>Lighting</b><i>Indoor &amp; outdoor</i></span></div>
+            </div>
+          </div>
+          <div class="feature-meta"><h3>OB Electrical</h3><p>Electrical contractor &middot; full rebuild mockup</p></div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Work: Textback -->
-  <section class="section section-dark" id="textback">
+  <!-- Work: Textback (dark) -->
+  <section class="section section-dark" id="work-textback">
     <div class="container">
-      <p class="eyebrow">Selected work</p>
-      <h2>Missed-call textback</h2>
-      <p class="section-sub">Interactive demos showing exactly what your customers see when you miss their call.</p>
+      <p class="eyebrow eyebrow-accent">Selected work</p>
+      <h2 class="dark-h">Missed-call textback</h2>
+      <p class="section-sub dark-sub">Interactive demos. This is exactly what your customers see when you miss their call.</p>
 
-      <div class="preview-grid preview-grid-phone">
-        <a class="preview-card" href="textback-seal-pro-roofing/">
+      <div class="phone-grid">
+        <a class="phone-card" href="textback-seal-pro-roofing/">
           <div class="preview-phone">
             <div class="ph-notch"></div>
             <div class="ph-screen">
@@ -164,25 +164,27 @@
               <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What do you need help with?</div>
               <div class="ph-bubble ph-out">My roof is leaking near the chimney</div>
               <div class="ph-bubble ph-in">Got it. What is the best number to reach you?</div>
+              <div class="ph-bubble ph-out">555-0142, ask for Dave</div>
             </div>
           </div>
-          <p class="preview-label"><strong>Seal Pro Roofing</strong> &middot; Roofing</p>
+          <p class="phone-label"><strong>Seal Pro Roofing</strong><span>Roofing &middot; tap to try it</span></p>
         </a>
 
-        <a class="preview-card" href="textback-365-emergency-plumbing/">
+        <a class="phone-card" href="textback-365-emergency-plumbing/">
           <div class="preview-phone">
             <div class="ph-notch"></div>
             <div class="ph-screen">
               <p class="ph-header">365 Emergency Plumbing</p>
               <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What is going on?</div>
-              <div class="ph-bubble ph-out">Water heater burst, flooding garage</div>
+              <div class="ph-bubble ph-out">Water heater burst, garage is flooding</div>
               <div class="ph-bubble ph-in">Understood. We will call you right back.</div>
+              <div class="ph-bubble ph-out">Please hurry!</div>
             </div>
           </div>
-          <p class="preview-label"><strong>365 Emergency Plumbing</strong> &middot; Plumbing</p>
+          <p class="phone-label"><strong>365 Emergency Plumbing</strong><span>Plumbing &middot; tap to try it</span></p>
         </a>
 
-        <a class="preview-card" href="textback-third-coast-hvac/">
+        <a class="phone-card" href="textback-third-coast-hvac/">
           <div class="preview-phone">
             <div class="ph-notch"></div>
             <div class="ph-screen">
@@ -190,25 +192,27 @@
               <div class="ph-bubble ph-in">Hi! Sorry we missed your call. How can we help?</div>
               <div class="ph-bubble ph-out">AC stopped cooling yesterday</div>
               <div class="ph-bubble ph-in">Got it. What is your address?</div>
+              <div class="ph-bubble ph-out">418 Harbor Ln</div>
             </div>
           </div>
-          <p class="preview-label"><strong>Third Coast HVAC</strong> &middot; HVAC</p>
+          <p class="phone-label"><strong>Third Coast HVAC</strong><span>HVAC &middot; tap to try it</span></p>
         </a>
 
-        <a class="preview-card" href="textback-mannys-septic/">
+        <a class="phone-card" href="textback-mannys-septic/">
           <div class="preview-phone">
             <div class="ph-notch"></div>
             <div class="ph-screen">
               <p class="ph-header">Manny&rsquo;s Septic</p>
               <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What do you need?</div>
-              <div class="ph-bubble ph-out">Septic tank needs pumping</div>
+              <div class="ph-bubble ph-out">Septic tank needs pumping soon</div>
               <div class="ph-bubble ph-in">No problem. Best callback number?</div>
+              <div class="ph-bubble ph-out">555-8890 anytime</div>
             </div>
           </div>
-          <p class="preview-label"><strong>Manny&rsquo;s Septic</strong> &middot; Septic</p>
+          <p class="phone-label"><strong>Manny&rsquo;s Septic</strong><span>Septic &middot; tap to try it</span></p>
         </a>
 
-        <a class="preview-card" href="textback-trustmark-roofing/">
+        <a class="phone-card" href="textback-trustmark-roofing/">
           <div class="preview-phone">
             <div class="ph-notch"></div>
             <div class="ph-screen">
@@ -216,9 +220,10 @@
               <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What is the issue?</div>
               <div class="ph-bubble ph-out">Storm damaged some shingles</div>
               <div class="ph-bubble ph-in">We will get someone out. Your name?</div>
+              <div class="ph-bubble ph-out">Tom R.</div>
             </div>
           </div>
-          <p class="preview-label"><strong>Trustmark Roofing</strong> &middot; Roofing</p>
+          <p class="phone-label"><strong>Trustmark Roofing</strong><span>Roofing &middot; tap to try it</span></p>
         </a>
       </div>
     </div>
@@ -255,9 +260,9 @@
     <div class="container">
       <p class="eyebrow eyebrow-center">Pricing</p>
       <h2 class="text-center">Simple pricing. No surprises.</h2>
-      <p class="section-sub text-center">Two services. Flat prices. Split payments so you never pay for work you have not approved.</p>
+      <p class="section-sub text-center">Flat prices. Split payments so you never pay for work you have not approved.</p>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card price-featured">
           <p class="price-label">Website rebuild</p>
           <p class="price"><span class="price-amount">$150</span> <span class="price-once">one time</span></p>
           <ul class="price-list">

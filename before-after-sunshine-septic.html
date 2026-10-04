@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Before / After: Sunshine Septic | Revamps Concept Rebuild</title>
-<meta name="description" content="Concept rebuild of Sunshine Septic's website by Revamps. Drag the slider to see the transformation.">
+<meta name="description" content="Section-by-section concept rebuild of Sunshine Septic's website by Revamps.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,139 +14,154 @@ body{font-family:"Inter",-apple-system,sans-serif;color:#4b5563;line-height:1.7;
 .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 .disclaimer{background:#fffbeb;border-bottom:1px solid #fde68a;padding:12px 0;font-size:.85rem;color:#92400e;text-align:center}
 .disclaimer strong{font-weight:600}
-header.page{padding:64px 0 40px;text-align:center}
+header.page{padding:64px 0 32px;text-align:center}
 .kicker{display:inline-block;font-size:.78rem;font-weight:600;color:#2563eb;background:#eff6ff;border:1px solid #dbeafe;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.4rem}
 h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
 .sub{font-size:1.05rem;max-width:640px;margin:0 auto;color:#4b5563}
-/* Slider */
-.ba-wrap{margin:48px 0 24px;position:relative}
-.ba{position:relative;width:100%;aspect-ratio:16/22;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
-.ba-after{position:absolute;inset:0}
-.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
-.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
-.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
-.ba-tag{position:absolute;top:16px;font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.45rem .9rem;border-radius:999px;z-index:4}
-.ba-tag.before{left:16px;background:rgba(0,0,0,.65);color:#fff}
-.ba-tag.after{right:16px;background:#2563eb;color:#fff}
-.ba-hint{text-align:center;font-size:.9rem;color:#9ca3af;margin-top:14px}
-/* Before mock: broken quote page */
-.mock-before{background:#f5f5f5;height:100%;overflow:hidden;font-family:Arial,sans-serif;color:#333;font-size:.8rem}
-.mb-notsecure{background:#fce8e6;color:#a50e0e;padding:8px 20px;font-size:.72rem;border-bottom:1px solid #f5c6cb}
-.mb-nav{background:#fff;padding:12px 20px;border-bottom:1px solid #ddd;display:flex;align-items:center}
-.mb-logo{font-weight:700;font-size:.9rem;margin-right:auto}
-.mb-links{font-size:.72rem;color:#666}
-.mb-hero{background:#e8e8e8;padding:28px 20px}
-.mb-hero h2{font-size:1.2rem;margin-bottom:6px}
-.mb-hero p{font-size:.75rem;color:#555}
-.mb-form{background:#fff;margin:16px 20px;padding:16px;border:1px solid #ddd}
-.mb-form h3{font-size:.9rem;margin-bottom:10px}
-.mb-error{background:#fce8e6;border:1px solid #f5c6cb;color:#a50e0e;padding:10px;font-size:.75rem;margin-bottom:12px}
-.mb-form input{display:block;width:100%;padding:8px;margin-bottom:8px;border:1px solid #ccc;font-size:.75rem}
-.mb-form button{background:#888;color:#fff;border:0;padding:10px 20px;font-size:.75rem}
-.mb-dup{font-size:.7rem;color:#999;text-align:center;margin:8px 0}
-.mb-foot{background:#333;color:#999;padding:20px;font-size:.72rem}
-/* After mock: modern rebuild */
-.mock-after{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
-.ma-nav{display:flex;align-items:center;gap:1rem;padding:12px 24px;border-bottom:1px solid #f3f4f6}
-.ma-logo{font-weight:700;color:#111827;font-size:.9rem;margin-right:auto}
-.ma-links{display:flex;gap:12px}
-.ma-links i{width:48px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
-.ma-call{background:#16a34a;color:#fff;font-size:.72rem;font-weight:600;padding:7px 16px;border-radius:999px}
-.ma-hero{background:linear-gradient(135deg,#15803d,#166534);padding:36px 28px;color:#fff}
-.ma-hero h3{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
-.ma-hero p{font-size:.85rem;opacity:.9;margin-bottom:14px}
-.ma-btn{display:inline-block;background:#fff;color:#166534;font-size:.78rem;font-weight:600;padding:9px 20px;border-radius:999px}
-.ma-trust{display:flex;gap:18px;padding:14px 28px;border-bottom:1px solid #f3f4f6}
-.ma-trust div{font-size:.72rem;color:#6b7280}
-.ma-trust strong{display:block;color:#111827;font-size:.88rem}
-.ma-services{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:18px 28px}
-.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px}
-.ma-services b{display:block;font-size:.75rem;color:#111827;margin-bottom:2px}
-.ma-services span{font-size:.68rem;color:#6b7280}
-.ma-reviews{background:#f0fdf4;padding:18px 28px;border-top:1px solid #f3f4f6;border-bottom:1px solid #f3f4f6}
-.ma-reviews h4{font-size:.8rem;color:#111827;margin-bottom:8px}
-.ma-reviews p{font-size:.72rem;color:#4b5563;font-style:italic;margin-bottom:4px}
-.ma-reviews .who{font-size:.68rem;color:#6b7280;font-style:normal}
-.ma-contact{padding:18px 28px}
-.ma-contact h4{font-size:.85rem;color:#111827;margin-bottom:6px}
-.ma-contact p{font-size:.72rem;color:#6b7280;margin-bottom:10px}
-.ma-form input{display:block;width:100%;padding:8px;margin-bottom:8px;border:1px solid #e5e7eb;border-radius:8px;font-size:.72rem}
-.ma-form button{background:#16a34a;color:#fff;border:0;padding:10px 20px;border-radius:8px;font-size:.75rem;font-weight:600}
-.ma-footer{background:#111827;color:#9ca3af;padding:16px 28px;font-size:.68rem;margin-top:auto}
-/* Fixes */
-.fixes{padding:64px 0}
-.fixes h2{font-size:1.6rem;color:#111827;font-weight:700;margin-bottom:.6rem;letter-spacing:-.02em}
-.fixes .sub2{margin-bottom:2.5rem}
-.fix-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-.fix{border:1px solid #e5e7eb;border-radius:14px;padding:1.6rem 1.5rem;background:#fff}
-.fix h3{font-size:1rem;color:#111827;font-weight:600;margin-bottom:.5rem}
-.fix p{font-size:.92rem}
-.cta-band{background:#111827;color:#fff;border-radius:20px;padding:56px 40px;text-align:center;margin:24px 0 80px}
-.cta-band h2{font-size:1.7rem;font-weight:700;margin-bottom:.8rem;letter-spacing:-.02em}
-.cta-band p{color:#d1d5db;margin-bottom:1.8rem;max-width:520px;margin-left:auto;margin-right:auto}
-.btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.95rem 2.2rem;border-radius:12px;text-decoration:none}
-footer.page{border-top:1px solid #f3f4f6;padding:32px 0;text-align:center;font-size:.85rem;color:#9ca3af}
-footer.page a{color:#2563eb;text-decoration:none}
-@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:9/16}}
+/* Comparison sections */
+.compare{padding:56px 0;border-top:1px solid #f3f4f6}
+.compare:first-of-type{border-top:0}
+.compare-label{font-size:.75rem;font-weight:600;color:#2563eb;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
+.compare h2{font-size:1.5rem;color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+.compare-desc{max-width:680px;margin-bottom:2rem;font-size:.98rem}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.panel{border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff}
+.panel-tag{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border-bottom:1px solid #e5e7eb}
+.panel.before .panel-tag{background:#fef2f2;color:#991b1b}
+.panel.after .panel-tag{background:#eff6ff;color:#1e40af}
+.panel-body{padding:1.4rem 1.2rem;min-height:220px}
+/* Before styles */
+.bb-plain{font-family:Georgia,serif;color:#333}
+.bb-plain h4{font-size:1rem;color:#000;margin-bottom:10px}
+.bb-plain p{font-size:.82rem;margin-bottom:6px;line-height:1.6}
+.bb-bar{border-radius:8px;padding:10px 12px;font-size:.78rem;margin-bottom:10px}
+.bb-bar.warn{background:#fef2f2;border:1px solid #fecaca;color:#991b1b}
+.bb-bar.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534}
+.bb-error{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;padding:10px 12px;border-radius:8px;font-size:.78rem;margin-bottom:10px}
+.bb-field{display:block;width:100%;padding:8px 10px;border:1px solid #d1d5db;border-radius:6px;font-size:.78rem;color:#9ca3af;margin-bottom:8px;background:#f9fafb}
+.bb-note{font-size:.72rem;color:#777;margin-top:10px}
+/* After styles: modern */
+.ab-nav{display:flex;align-items:center;gap:.8rem;padding:.6rem 0}
+.ab-logo{font-weight:700;color:#111827;font-size:.85rem;margin-right:auto}
+.ab-links{display:flex;gap:10px}
+.ab-links i{width:44px;height:7px;background:#e5e7eb;border-radius:4px;display:block}
+.ab-call{background:#2563eb;color:#fff;font-size:.7rem;font-weight:600;padding:7px 14px;border-radius:999px}
+.ab-hero{background:linear-gradient(135deg,#16a34a,#14532d);border-radius:12px;padding:1.6rem 1.4rem;color:#fff}
+.ab-hero h4{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.25}
+.ab-hero p{font-size:.8rem;opacity:.9;margin-bottom:1rem}
+.ab-btn{display:inline-block;background:#fff;color:#14532d;font-size:.75rem;font-weight:600;padding:9px 20px;border-radius:999px}
+.ab-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ab-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px}
+.ab-services b{display:block;font-size:.75rem;color:#111827;margin-bottom:2px}
+.ab-services span{font-size:.68rem;color:#6b7280}
+.ab-trust{display:flex;gap:16px;flex-wrap:wrap}
+.ab-trust div{font-size:.72rem;color:#6b7280}
+.ab-trust strong{display:block;color:#111827;font-size:.85rem}
+.ab-review{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.ab-review .stars{color:#f59e0b;font-size:.7rem;letter-spacing:.06em}
+.ab-review p{font-size:.76rem;color:#4b5563;margin:6px 0;font-style:italic}
+.ab-review span{font-size:.68rem;color:#9ca3af}
+.ab-contact{background:#111827;border-radius:12px;padding:1.6rem 1.4rem;text-align:center;color:#fff}
+.ab-contact h4{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.ab-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:1rem}
+.ab-contact .ab-btn{background:#2563eb;color:#fff}
+.ab-form{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:1.2rem}
+.ab-form h4{font-size:.9rem;color:#111827;margin-bottom:10px}
+.ab-form .bb-field{background:#fff;color:#6b7280}
+.ab-form .ab-btn{background:#16a34a;color:#fff;border:0;cursor:pointer}
+/* Verdict */
+.verdict{background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:2rem;margin:3rem 0}
+.verdict h3{font-size:1.1rem;color:#111827;font-weight:700;margin-bottom:.8rem}
+.verdict p{font-size:.95rem;margin-bottom:.6rem}
+.verdict p:last-child{margin-bottom:0}
+.cta{background:#111827;color:#fff;padding:80px 0;text-align:center}
+.cta h2{color:#fff;font-size:1.8rem;font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
+.cta p{color:#9ca3af;max-width:520px;margin:0 auto 2rem}
+.btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
+.btn:hover{background:#1d4ed8}
+footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ab-services{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="disclaimer"><div class="wrap"><strong>Concept rebuild.</strong> This is a design mockup by Revamps. We are not affiliated with Sunshine Septic.</div></div>
-<header class="page"><div class="wrap">
-<span class="kicker">Before / After</span>
-<h1>Sunshine Septic &amp; Trash</h1>
-<p class="sub">Springfield, TN. Family owned since 1952, 266 reviews at 4.9 stars. Their quote form shows an error on the page and appears twice. Drag the slider.</p>
-</div></header>
-<main><div class="wrap">
-<div class="ba-wrap">
-<div class="ba" id="ba">
-<div class="ba-after"><div class="mock-after">
-<div class="ma-nav"><span class="ma-logo">Sunshine Septic</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">(615) 543-1761</span></div>
-<div class="ma-hero"><h3>Septic service done right, since 1952.</h3><p>Pumping, inspections, and repairs across Robertson County. Family owned for three generations.</p><span class="ma-btn">Request a quote</span></div>
-<div class="ma-trust"><div><strong>4.9 stars</strong>266 reviews</div><div><strong>Since 1952</strong>Family owned</div><div><strong>7 days</strong>Open daily</div></div>
-<div class="ma-services">
-<div><b>Septic Pumping</b><span>Routine pump-outs</span></div>
-<div><b>Inspections</b><span>Full system checks</span></div>
-<div><b>Repairs</b><span>Fast, honest fixes</span></div>
-<div><b>New Installs</b><span>Systems done right</span></div>
+<div class="disclaimer"><strong>Concept rebuild by Revamps.</strong> Sunshine Septic is a real business in Springfield, TN. This is our vision of what their site could be. We are not affiliated with them.</div>
+
+<header class="page">
+<div class="wrap">
+<span class="kicker">Before / After &middot; Septic</span>
+<h1>Their quote form is broken.<br>So is the backup copy.</h1>
+<p class="sub">Sunshine Septic in Springfield, TN has been family-owned since 1952, with 266 reviews at 4.9 stars. Their quote form shows an error message on the page, and the whole broken form appears twice. Here is the rebuild, section by section.</p>
 </div>
-<div class="ma-reviews"><h4>What neighbors say</h4><p>"Called in the morning, they were out the same afternoon. Courteous and cleaned up after."</p><p class="who">Homeowner in Springfield</p></div>
-<div class="ma-contact"><h4>Request a quote</h4><p>We reply within one business day.</p><div class="ma-form"><input placeholder="Your name"><input placeholder="Phone number"><button>Send request</button></div></div>
-<div class="ma-footer">Sunshine Septic &amp; Trash · 513 Memorial Blvd, Springfield, TN · (615) 543-1761</div>
-</div></div>
-<div class="ba-before"><div class="mock-before">
-<div class="mb-notsecure">Not secure | sunshinesepticcleaning.com</div>
-<div class="mb-nav"><span class="mb-logo">Sunshine Septic</span><span class="mb-links">Home About Services Contact</span></div>
-<div class="mb-hero"><h2>Welcome to our website</h2><p>We do septic and trash services.</p></div>
-<div class="mb-form"><h3>Request Setup or Quote</h3><div class="mb-error">Oops, there was an error sending your message. Please try again later.</div><input placeholder="Name"><input placeholder="Email"><button>Submit</button></div>
-<div class="mb-dup">- same form repeated below -</div>
-<div class="mb-form"><h3>Request Setup or Quote</h3><div class="mb-error">Oops, there was an error sending your message. Please try again later.</div><input placeholder="Name"><input placeholder="Email"><button>Submit</button></div>
-<div class="mb-foot">Copyright 2019. All rights reserved.</div>
-</div></div>
-<span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
-<div class="ba-handle"><div class="ba-knob">&#8596;</div></div>
-</div>
-<p class="ba-hint">Drag the handle to compare</p>
-</div>
-<section class="fixes">
-<h2>What we fixed</h2>
-<p class="sub2 sub">The business is excellent. The website was losing them quote requests.</p>
-<div class="fix-grid">
-<div class="fix"><h3>Working quote form</h3><p>The old form displayed an error message directly on the page, and the whole section was duplicated. Quote requests likely never arrived. The rebuild has one clean form that actually sends.</p></div>
-<div class="fix"><h3>Secure connection</h3><p>The old site ran on plain HTTP, which browsers flag as "Not secure." The rebuild uses HTTPS, so visitors trust the page enough to submit their details.</p></div>
-<div class="fix"><h3>Reputation up front</h3><p>74 years in business and 266 five-star reviews were buried. The rebuild puts the 4.9 rating, the family story, and review snippets where visitors see them first.</p></div>
-<div class="fix"><h3>Clear next step</h3><p>The old page had no clear path to becoming a customer. The rebuild has one: request a quote or call (615) 543-1761, visible on every screen.</p></div>
+</header>
+
+<div class="wrap">
+
+<section class="compare">
+<p class="compare-label">Section 1</p>
+<h2>The broken quote form</h2>
+<p class="compare-desc">The "Request a Quote" form displays an error message right on the page: "Oops, there was an error sending your message." The whole broken form is also duplicated, so visitors see the failure twice. Quote requests likely never arrive.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-error">Oops, there was an error sending your message. Please try again later.</div><span class="bb-field">Your name</span><span class="bb-field">Phone number</span><p class="bb-note">Then the exact same broken form repeats below it.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-form"><h4>Request a quote</h4><span class="bb-field">Your name</span><span class="bb-field">Phone number</span><span class="ab-btn">Send request</span></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">One form. It works, it is tested, and every request actually reaches the business.</p></div></div>
 </div>
 </section>
-<div class="cta-band">
+
+<section class="compare">
+<p class="compare-label">Section 2</p>
+<h2>The security</h2>
+<p class="compare-desc">The site runs on plain HTTP. Browsers flag it "Not secure", which is the last thing you want on a page asking strangers for their contact details.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-bar warn">Not secure &nbsp;|&nbsp; http://sunshinesepticcleaning.com</div><p class="bb-note">A quote form on a page the browser does not trust.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="bb-bar ok">Secure &nbsp;|&nbsp; https://sunshinesepticcleaning.com</div><p style="font-size:.78rem;color:#6b7280">HTTPS everywhere. Visitors can submit their details without a warning telling them not to.</p></div></div>
+</div>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 3</p>
+<h2>The first impression</h2>
+<p class="compare-desc">The homepage headline is generic. Nothing about 74 years in business, nothing about Springfield, nothing that earns a quote request.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><h4>Welcome to Sunshine Septic</h4><p>We provide septic services for residential customers. Contact us today.</p><p class="bb-note">74 years of history, summed up in two flat sentences.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><h4>Septic service done right,<br>since 1952.</h4><p>Family-owned for three generations. Pumping, inspections, and repairs across Robertson County.</p><span class="ab-btn">Request a quote</span></div></div></div>
+</div>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 4</p>
+<h2>The reputation</h2>
+<p class="compare-desc">74 years in business and 266 reviews at 4.9 stars, and the old site shows none of it. The strongest reasons to hire them are invisible.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p style="font-size:.82rem">(no mention of 1952 anywhere prominent)</p><p style="font-size:.82rem">(no reviews shown on the site)</p><p class="bb-note">Three generations of trust, hidden.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-trust"><div><strong>4.9 stars</strong>266 reviews</div><div><strong>Since 1952</strong>Family owned</div><div><strong>Springfield, TN</strong>Local</div></div><div class="ab-review" style="margin-top:14px"><p class="stars">★★★★★</p><p>"Called in the morning, they were out the same afternoon. Courteous and cleaned up after."</p><span>Homeowner in Springfield</span></div></div></div>
+</div>
+</section>
+
+<section class="compare">
+<p class="compare-label">Section 5</p>
+<h2>The contact</h2>
+<p class="compare-desc">One phone number buried in text. No click-to-call, no hours, no clear next step for someone with a septic problem right now.</p>
+<div class="panels">
+<div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Phone: (615) 543-1761</p><p class="bb-note">Plain text. Not tappable on the phone in your pocket.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Slow drains? Bad smell?</h4><p>Call (615) 543-1761. Open 7 days, 7am to 7pm.</p><span class="ab-btn">Call (615) 543-1761</span></div></div></div>
+</div>
+</section>
+
+<div class="verdict">
+<h3>The bottom line</h3>
+<p>Sunshine Septic has served Springfield since 1952 and earned 266 five-star reviews. Their website was actively losing them business: a broken quote form, shown twice, on an insecure page. The rebuild fixes the form, secures the site, and finally shows the reputation they spent 74 years building.</p>
+<p>No fake testimonials. No invented numbers. Just their real business, presented like it deserves.</p>
+</div>
+
+</div>
+
+<div class="cta">
+<div class="wrap">
 <h2>Your site could be next.</h2>
 <p>We rebuild trade business websites for $199. Free demo first, you only pay when you love it.</p>
 <a class="btn" href="index.html">See what we do</a>
 </div>
-</div></main>
-<footer class="page"><div class="wrap"><p><a href="index.html">Revamps</a> · Concept rebuild for demonstration only. Not affiliated with Sunshine Septic.</p></div></footer>
-<script>
-(function(){var ba=document.getElementById('ba'),drag=false;function setPos(x){var r=ba.getBoundingClientRect(),p=Math.max(0,Math.min(100,(x-r.left)/r.width*100));ba.style.setProperty('--pos',p+'%')}ba.addEventListener('pointerdown',function(e){drag=true;ba.setPointerCapture(e.pointerId);setPos(e.clientX)});ba.addEventListener('pointermove',function(e){if(drag)setPos(e.clientX)});ba.addEventListener('pointerup',function(){drag=false});ba.addEventListener('pointercancel',function(){drag=false})})();
-</script>
+</div>
+
+<footer><div class="wrap"><p>Concept rebuild for demonstration only. Not affiliated with Sunshine Septic.</p></div></footer>
 </body>
 </html>

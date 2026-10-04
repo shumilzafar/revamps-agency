@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trustmark Roofing & Building - Missed-call textback demo</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #111;
+    color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  .phone {
+    width: 380px;
+    max-width: 94vw;
+    background: #1c1c1e;
+    border-radius: 44px;
+    padding: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,.6), 0 0 0 2px #333;
+    position: relative;
+  }
+  .notch {
+    width: 120px; height: 26px;
+    background: #000;
+    border-radius: 14px;
+    margin: 0 auto 8px;
+  }
+  .screen {
+    background: #000;
+    border-radius: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 620px;
+  }
+  .phone-header {
+    background: #2c2c2e;
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid #3a3a3c;
+    flex-shrink: 0;
+  }
+  .phone-header .name { font-weight: 700; font-size: 16px; color: #fff; }
+  .phone-header .num { font-size: 13px; color: #9a9aa0; margin-top: 3px; }
+  .missed-banner {
+    background: #d43a2f;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    padding: 9px 12px;
+    transform: translateY(-110%);
+    transition: transform .45s ease;
+    flex-shrink: 0;
+  }
+  .missed-banner.show { transform: translateY(0); }
+  .messages {
+    flex: 1;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    background: #000;
+  }
+  .bubble {
+    max-width: 78%;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .35s ease, transform .35s ease;
+    word-wrap: break-word;
+  }
+  .bubble.show { opacity: 1; transform: translateY(0); }
+  .bubble.biz {
+    background: #2e2e33;
+    color: #fff;
+    align-self: flex-start;
+    border-bottom-left-radius: 6px;
+  }
+  .bubble.cust {
+    background: #0a84ff;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 6px;
+  }
+  .typing {
+    align-self: flex-start;
+    background: #2e2e33;
+    border-radius: 20px;
+    border-bottom-left-radius: 6px;
+    padding: 12px 16px;
+    display: inline-flex;
+    gap: 5px;
+    opacity: 0;
+    transition: opacity .25s ease;
+  }
+  .typing.show { opacity: 1; }
+  .typing span {
+    width: 8px; height: 8px;
+    background: #9a9aa0;
+    border-radius: 50%;
+    animation: blink 1.2s infinite;
+  }
+  .typing span:nth-child(2) { animation-delay: .2s; }
+  .typing span:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink {
+    0%, 60%, 100% { opacity: .3; transform: none; }
+    30% { opacity: 1; transform: translateY(-3px); }
+  }
+  .caption {
+    margin-top: 22px;
+    font-size: 15px;
+    color: #bdbdc2;
+    text-align: center;
+    max-width: 420px;
+    line-height: 1.5;
+  }
+  .replay {
+    margin-top: 18px;
+    background: #0a84ff;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease;
+  }
+  .replay:hover { background: #006fd6; }
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="notch"></div>
+  <div class="screen">
+    <div class="phone-header">
+      <div class="name">Trustmark Roofing & Building</div>
+      <div class="num">0191 489 5555</div>
+    </div>
+    <div class="missed-banner" id="banner">Missed call from (555) 014-2281</div>
+    <div class="messages" id="messages"></div>
+  </div>
+</div>
+
+<p class="caption">This happens automatically, 24/7 - even at 2am, even when you're on a roof.</p>
+<button class="replay" id="replay">Replay demo</button>
+
+<script>
+(function () {
+  var messages = document.getElementById('messages');
+  var banner = document.getElementById('banner');
+  var timers = [];
+
+  var BIZ1 = "Hi, this is Trustmark Roofing & Building - sorry we missed your call! What do you need help with?";
+  var CUST1 = "Roof's leaking into the bedroom - water's coming through";
+  var BIZ2 = "Got it - that's urgent. Our tech can be there today between 2-4pm. Does that work for you?";
+  var CUST2 = "Yes please";
+  var BIZ3 = "You're booked for today 2-4pm. We'll text you when we're on the way.";
+
+  function later(ms, fn) { timers.push(setTimeout(fn, ms)); }
+
+  function addBubble(text, cls) {
+    var d = document.createElement('div');
+    d.className = 'bubble ' + cls;
+    d.textContent = text;
+    messages.appendChild(d);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { d.classList.add('show'); });
+    });
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function addTyping() {
+    var d = document.createElement('div');
+    d.className = 'typing';
+    d.innerHTML = '<span></span><span></span><span></span>';
+    messages.appendChild(d);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { d.classList.add('show'); });
+    });
+    messages.scrollTop = messages.scrollHeight;
+    return d;
+  }
+
+  function bizMsg(text, at) {
+    later(at, function () {
+      var t = addTyping();
+      later(900, function () {
+        t.remove();
+        addBubble(text, 'biz');
+      });
+    });
+  }
+
+  function custMsg(text, at) {
+    later(at, function () { addBubble(text, 'cust'); });
+  }
+
+  function play() {
+    timers.forEach(clearTimeout);
+    timers = [];
+    messages.innerHTML = '';
+    banner.classList.remove('show');
+
+    later(700, function () { banner.classList.add('show'); });
+    bizMsg(BIZ1, 1600);
+    custMsg(CUST1, 4200);
+    bizMsg(BIZ2, 5400);
+    custMsg(CUST2, 8000);
+    bizMsg(BIZ3, 9200);
+  }
+
+  document.getElementById('replay').addEventListener('click', play);
+  window.addEventListener('load', play);
+  if (document.readyState === 'complete') play();
+})();
+</script>
+</body>
+</html>

@@ -129,7 +129,7 @@ img, svg { display: block; max-width: 100%; }
 
 /* Preview: browser mockups */
 .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.4rem; }
-.preview-card { min-width: 0; }
+.preview-card { min-width: 0; text-decoration: none; display: block; }
 .preview-browser {
   border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
   background: #fff; box-shadow: var(--shadow-sm);
@@ -154,10 +154,9 @@ img, svg { display: block; max-width: 100%; }
   padding: 4px 10px; border-radius: 6px;
 }
 .pv-roofing .pv-cta { background: #2c4a6b; }
-.pv-septic .pv-cta { background: #3d5a45; }
+.pv-hvac .pv-cta { background: #0e7490; }
 .pv-plumbing .pv-cta { background: var(--blue); }
 .pv-pest .pv-cta { background: #5b4a2c; }
-.pv-landscape .pv-cta { background: #2e6b34; }
 .pv-hero { margin-bottom: 14px; }
 .pv-h1 { display: block; font-size: 0.95rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 6px; }
 .pv-p { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.82); margin-bottom: 10px; }
@@ -166,10 +165,9 @@ img, svg { display: block; max-width: 100%; }
   background: #fff; padding: 6px 14px; border-radius: 7px;
 }
 .pv-roofing .pv-hero { background: linear-gradient(135deg, #2c4a6b, #1e3a5f); border-radius: 8px; padding: 16px 14px; }
-.pv-septic .pv-hero { background: linear-gradient(135deg, #3d5a45, #2a4230); border-radius: 8px; padding: 16px 14px; }
+.pv-hvac .pv-hero { background: linear-gradient(135deg, #0e7490, #155e75); border-radius: 8px; padding: 16px 14px; }
 .pv-plumbing .pv-hero { background: linear-gradient(135deg, #1d4ed8, #1840b0); border-radius: 8px; padding: 16px 14px; }
 .pv-pest .pv-hero { background: linear-gradient(135deg, #5b4a2c, #42351f); border-radius: 8px; padding: 16px 14px; }
-.pv-landscape .pv-hero { background: linear-gradient(135deg, #2e6b34, #1f4d24); border-radius: 8px; padding: 16px 14px; }
 .pv-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
 .pv-row span { height: 34px; background: var(--bg-soft); border: 1px solid var(--line-soft); border-radius: 6px; }
 .preview-label { margin-top: 0.8rem; font-size: 0.9rem; color: var(--muted); }

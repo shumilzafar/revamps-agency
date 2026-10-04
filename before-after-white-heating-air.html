@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before / After: White Heating &amp; Air | Revamps Concept Rebuild</title>
+<meta name="description" content="Concept rebuild of White Heating & Air Conditioning's website by Revamps. Drag the slider to see the transformation.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Inter",-apple-system,sans-serif;color:#4b5563;line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.disclaimer{background:#fffbeb;border-bottom:1px solid #fde68a;padding:12px 0;font-size:.85rem;color:#92400e;text-align:center}
+.disclaimer strong{font-weight:600}
+header.page{padding:64px 0 40px;text-align:center}
+.kicker{display:inline-block;font-size:.78rem;font-weight:600;color:#2563eb;background:#eff6ff;border:1px solid #dbeafe;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.4rem}
+h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
+.sub{font-size:1.05rem;max-width:640px;margin:0 auto;color:#4b5563}
+.ba-wrap{margin:48px 0 24px;position:relative}
+.ba{position:relative;width:100%;aspect-ratio:16/10;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
+.ba-after{position:absolute;inset:0}
+.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
+.ba-tag{position:absolute;top:16px;font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.45rem .9rem;border-radius:999px;z-index:4}
+.ba-tag.before{left:16px;background:rgba(0,0,0,.65);color:#fff}
+.ba-tag.after{right:16px;background:#2563eb;color:#fff}
+.ba-hint{text-align:center;font-size:.9rem;color:#9ca3af;margin-top:14px}
+/* Before mock: messy template */
+.mock-before{background:#f4f4f4;height:100%;padding:24px 32px;overflow:hidden;font-size:.85rem;color:#444}
+.mock-before .warn{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;font-size:.78rem;padding:8px 12px;border-radius:6px;margin-bottom:14px}
+.mock-before nav{background:#ddd;padding:10px 14px;margin-bottom:16px;font-size:.8rem}
+.mock-before nav span{margin-right:14px}
+.mock-before nav .dup{color:#991b1b;font-weight:700}
+.mock-before h2{font-size:1.2rem;color:#222;margin-bottom:8px}
+.mock-before .junk{font-family:monospace;font-size:.75rem;color:#999;background:#eee;padding:6px 10px;border-radius:4px;margin:10px 0}
+.mock-before .years{margin-top:10px;font-size:.85rem}
+.mock-before .years s{color:#991b1b}
+/* After mock */
+.mock-after{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
+.ma-nav{display:flex;align-items:center;gap:1rem;padding:14px 28px;border-bottom:1px solid #f3f4f6}
+.ma-logo{font-weight:700;color:#111827;font-size:.95rem;margin-right:auto}
+.ma-links{display:flex;gap:14px}
+.ma-links i{width:52px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
+.ma-call{background:#0e7490;color:#fff;font-size:.75rem;font-weight:600;padding:8px 18px;border-radius:999px}
+.ma-hero{background:linear-gradient(135deg,#0e7490,#155e75);padding:40px 32px;color:#fff}
+.ma-hero h3{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
+.ma-hero p{font-size:.9rem;opacity:.9;margin-bottom:16px}
+.ma-btn{display:inline-block;background:#fff;color:#155e75;font-size:.8rem;font-weight:600;padding:10px 22px;border-radius:999px}
+.ma-trust{display:flex;gap:20px;padding:18px 32px;border-bottom:1px solid #f3f4f6}
+.ma-trust div{font-size:.78rem;color:#6b7280}
+.ma-trust strong{display:block;color:#111827;font-size:.95rem}
+.ma-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:20px 32px}
+.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
+.ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
+.ma-services span{font-size:.72rem;color:#6b7280}
+.fixes{padding:64px 0}
+.fixes h2{font-size:1.6rem;color:#111827;font-weight:700;margin-bottom:.6rem;letter-spacing:-.02em}
+.fixes .sub2{margin-bottom:2.5rem}
+.fix-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.fix{border:1px solid #e5e7eb;border-radius:14px;padding:1.6rem 1.5rem;background:#fff}
+.fix .no{font-size:.75rem;font-weight:600;color:#dc2626;letter-spacing:.08em;text-transform:uppercase}
+.fix .yes{font-size:.75rem;font-weight:600;color:#16a34a;letter-spacing:.08em;text-transform:uppercase}
+.fix h3{font-size:1.02rem;color:#111827;margin:.6rem 0 .4rem;font-weight:600}
+.fix p{font-size:.93rem}
+.cta{background:#111827;color:#fff;padding:80px 0;text-align:center}
+.cta h2{color:#fff;font-size:1.8rem;font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
+.cta p{color:#9ca3af;max-width:520px;margin:0 auto 2rem}
+.btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:999px;text-decoration:none}
+.btn:hover{background:#1d4ed8}
+footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
+@media(max-width:640px){.fix-grid{grid-template-columns:1fr}.ba{aspect-ratio:4/5}.ma-services{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="disclaimer"><strong>Concept rebuild by Revamps.</strong> White Heating &amp; Air Conditioning is a real business. This is our vision of what their site could be, not their actual website. We are not affiliated with them.</div>
+
+<header class="page">
+<div class="wrap">
+<span class="kicker">Before / After &middot; HVAC</span>
+<h1>1,885 five-star reviews.<br>Zero of them visible on the site.</h1>
+<p class="sub">White Heating &amp; Air in Billings, MT is one of the best-reviewed HVAC companies in the state. Their website loads over unsecured HTTP, shows raw template code, and lists "Water Heaters" twice in the menu. Drag to see the fix.</p>
+</div>
+</header>
+
+<div class="wrap">
+<div class="ba-wrap">
+<div class="ba" id="ba">
+<div class="ba-after"><div class="mock-after">
+<div class="ma-nav"><span class="ma-logo">White Heating &amp; Air</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">406-248-2162</span></div>
+<div class="ma-hero"><h3>Billings trusts us<br>with their comfort.</h3><p>1,885 reviews at 4.9 stars. 24/7 service, 365 days a year. Furnaces, AC, and everything between.</p><span class="ma-btn">Call 406-248-2162</span></div>
+<div class="ma-trust"><div><strong>4.9 stars</strong>1,885 reviews</div><div><strong>24/7/365</strong>Always open</div><div><strong>Showroom</strong>Fireplaces on display</div></div>
+<div class="ma-services"><div><b>Furnaces</b><span>Install &amp; repair</span></div><div><b>AC Systems</b><span>Central air experts</span></div><div><b>Heat Pumps</b><span>Efficient comfort</span></div></div>
+</div></div>
+<div class="ba-before"><div class="mock-before">
+<div class="warn">&#9888; Not secure &mdash; this site loads over HTTP</div>
+<nav><span>Home</span><span>Services</span><span>Water Heaters</span><span class="dup">Water Heaters</span><span>Contact</span></nav>
+<h2>Welcome to White Heating</h2>
+<div class="junk">#drawerPrimary #header-search-desktop</div>
+<p>Serving Billings with quality heating and cooling.</p>
+<p class="years">Trusted for <s>over 20 years</s> over 25 years in the community.</p>
+</div></div>
+<span class="ba-tag before">BEFORE</span>
+<span class="ba-tag after">AFTER</span>
+<div class="ba-handle" id="baHandle"><div class="ba-knob">&#8596;</div></div>
+</div>
+<p class="ba-hint">Drag the handle to compare</p>
+</div>
+</div>
+
+<section class="fixes"><div class="wrap">
+<h2>What we fixed</h2>
+<p class="sub2">Sloppiness kills trust. Every fix is about credibility.</p>
+<div class="fix-grid">
+<div class="fix"><span class="no">Before</span><h3>"Not secure" warning</h3><p>The site loads over HTTP. Browsers flag it. Customers see a warning before they see the business.</p></div>
+<div class="fix"><span class="yes">After</span><h3>Secure by default</h3><p>HTTPS everywhere. No warnings, no friction. The padlock customers expect.</p></div>
+<div class="fix"><span class="no">Before</span><h3>Template code on screen</h3><p>Raw placeholders like #drawerPrimary visible in the page. It looks unfinished because it is.</p></div>
+<div class="fix"><span class="yes">After</span><h3>Clean, finished pages</h3><p>No artifacts, no leftovers. Every page looks intentional.</p></div>
+<div class="fix"><span class="no">Before</span><h3>Duplicate menu items</h3><p>"Water Heaters" appears twice in navigation. Small thing, big signal that nobody is maintaining the site.</p></div>
+<div class="fix"><span class="yes">After</span><h3>One clean menu</h3><p>Each service listed once. Navigation a customer can actually use.</p></div>
+<div class="fix"><span class="no">Before</span><h3>Reviews hidden</h3><p>1,885 reviews at 4.9 stars, and the site barely mentions them. Their best asset was invisible.</p></div>
+<div class="fix"><span class="yes">After</span><h3>Reviews front and center</h3><p>The rating sits under the hero. It is the first proof a visitor sees.</p></div>
+</div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+<h2>Your site could be next.</h2>
+<p>Free demo in 2 to 3 days. You see the rebuild before paying anything.</p>
+<a class="btn" href="https://revamps.studio/#contact">Get your free demo</a>
+</div></section>
+
+<footer><div class="wrap">Concept rebuild by Revamps &middot; Not affiliated with White Heating &amp; Air Conditioning</div></footer>
+
+<script>
+(function(){
+var ba=document.getElementById('ba'),h=document.getElementById('baHandle'),drag=false;
+function setPos(clientX){var r=ba.getBoundingClientRect(),p=((clientX-r.left)/r.width)*100;p=Math.max(2,Math.min(98,p));ba.style.setProperty('--pos',p+'%');}
+h.addEventListener('pointerdown',function(e){drag=true;h.setPointerCapture(e.pointerId);});
+window.addEventListener('pointermove',function(e){if(drag)setPos(e.clientX);});
+window.addEventListener('pointerup',function(){drag=false;});
+ba.addEventListener('pointerdown',function(e){setPos(e.clientX);});
+})();
+</script>
+</body>
+</html>

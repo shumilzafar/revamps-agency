@@ -1,4 +1,4 @@
-// Revamps site interactions: mobile nav, header shadow, FAQ is native <details>.
+// Revamps site interactions: mobile nav, header state. FAQ uses native <details>.
 
 (function () {
   var header = document.getElementById("siteHeader");
@@ -21,12 +21,12 @@
     }
   });
 
-  // Subtle shadow once the page scrolls
+  // Header shadow once the page scrolls
   function onScroll() {
     if (window.scrollY > 8) {
-      header.style.boxShadow = "0 2px 12px rgba(15, 23, 42, 0.08)";
+      header.classList.add("scrolled");
     } else {
-      header.style.boxShadow = "none";
+      header.classList.remove("scrolled");
     }
   }
   window.addEventListener("scroll", onScroll, { passive: true });

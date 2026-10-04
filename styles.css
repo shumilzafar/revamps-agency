@@ -93,7 +93,28 @@ img, svg { display: block; max-width: 100%; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; border-radius: 2px; transition: all 0.2s; }
 
 /* Hero */
-.hero { padding: 110px 0 90px; background: radial-gradient(ellipse 70% 45% at 50% 0%, rgba(29,78,216,0.06), transparent), var(--bg); }
+.hero {
+  padding: 110px 0 90px;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(29,78,216,0.07), transparent),
+    linear-gradient(180deg, #f8fafd 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(29,78,216,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,78,216,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 75%);
+  pointer-events: none;
+}
+.hero .container { position: relative; }
 .hero-centered { text-align: center; max-width: 800px; margin: 0 auto; }
 .hero h1 { margin-bottom: 1.5rem; }
 .lead { font-size: 1.18rem; color: var(--body); margin-bottom: 2.4rem; line-height: 1.7; }
@@ -127,8 +148,20 @@ img, svg { display: block; max-width: 100%; }
   font-weight: 700; font-size: 0.75rem;
 }
 
+/* Dark section (textback) */
+.section-dark {
+  background: #0e1b2c;
+  color: #c8d4e3;
+}
+.section-dark h2 { color: #fff; }
+.section-dark .eyebrow { color: #7aa2ff; }
+.section-dark .section-sub { color: #94a7c2; }
+.section-dark .preview-label { color: #94a7c2; }
+.section-dark .preview-label strong { color: #fff; }
+.section-dark .preview-phone { box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
 /* Preview: browser mockups */
-.preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.4rem; }
+.preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.6rem; }
 .preview-card { min-width: 0; text-decoration: none; display: block; }
 .preview-browser {
   border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
@@ -158,9 +191,9 @@ img, svg { display: block; max-width: 100%; }
 .pv-plumbing .pv-cta { background: var(--blue); }
 .pv-pest .pv-cta { background: #5b4a2c; }
 .pv-electrical .pv-cta { background: #b45309; }
-.pv-hero { margin-bottom: 14px; }
-.pv-h1 { display: block; font-size: 0.95rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 6px; }
-.pv-p { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.82); margin-bottom: 10px; }
+.pv-hero { margin-bottom: 16px; }
+.pv-h1 { display: block; font-size: 1.05rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 6px; }
+.pv-p { display: block; font-size: 0.72rem; color: rgba(255,255,255,0.82); margin-bottom: 10px; }
 .pv-btn {
   display: inline-block; font-size: 0.65rem; font-weight: 700; color: var(--ink);
   background: #fff; padding: 6px 14px; border-radius: 7px;

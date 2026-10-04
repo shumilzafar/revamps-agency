@@ -75,7 +75,42 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.panels{grid-template-columns:1fr}.ab-services{grid-template-columns:1fr}}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ab-services{grid-template-columns:1fr}}
+/* Full page slider */
+.full-slider-wrap{margin:48px 0 24px;position:relative}
+.ba{position:relative;width:100%;aspect-ratio:16/18;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
+.ba-after{position:absolute;inset:0}
+.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
+.ba-tag{position:absolute;top:16px;font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.45rem .9rem;border-radius:999px;z-index:4}
+.ba-tag.before{left:16px;background:rgba(0,0,0,.65);color:#fff}
+.ba-tag.after{right:16px;background:#2563eb;color:#fff}
+.ba-hint{text-align:center;font-size:.9rem;color:#9ca3af;margin-top:14px}
+.mock-before-full{background:#fff;height:100%;padding:36px 40px;font-family:Georgia,serif;color:#333;overflow:hidden}
+.mock-before-full h2{font-family:Georgia,serif;font-size:1.3rem;color:#000;margin-bottom:14px}
+.mock-before-full p{font-size:.92rem;margin-bottom:8px;line-height:1.6}
+.mock-before-full .lic{font-size:.8rem;color:#666}
+.mock-before-full .warn{background:#fce8e6;color:#a50e0e;padding:10px 14px;font-size:.8rem;margin-bottom:14px;font-family:Arial,sans-serif}
+.mock-before-full .junk{font-size:.78rem;color:#888;font-family:monospace;margin-bottom:6px}
+.mock-after-full{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
+.ma-nav{display:flex;align-items:center;gap:1rem;padding:14px 28px;border-bottom:1px solid #f3f4f6}
+.ma-logo{font-weight:700;color:#111827;font-size:.95rem;margin-right:auto}
+.ma-links{display:flex;gap:14px}
+.ma-links i{width:52px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
+.ma-call{background:#2563eb;color:#fff;font-size:.75rem;font-weight:600;padding:8px 18px;border-radius:999px}
+.ma-hero{padding:40px 32px;color:#fff}
+.ma-hero h3{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
+.ma-hero p{font-size:.9rem;opacity:.9;margin-bottom:16px}
+.ma-btn{display:inline-block;background:#fff;font-size:.8rem;font-weight:600;padding:10px 22px;border-radius:999px}
+.ma-trust{display:flex;gap:20px;padding:18px 32px;border-bottom:1px solid #f3f4f6}
+.ma-trust div{font-size:.78rem;color:#6b7280}
+.ma-trust strong{display:block;color:#111827;font-size:.95rem}
+.ma-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:20px 32px}
+.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
+.ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
+.ma-services span{font-size:.72rem;color:#6b7280}
+.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;margin-top:auto;background:#fff}
 </style>
 </head>
 <body>
@@ -91,6 +126,37 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 
 <div class="wrap">
 
+<div class="full-slider-wrap">
+<p class="compare-label">Full page comparison</p>
+<h2 style="font-size:1.5rem;color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem">Drag to see the whole transformation</h2>
+<p class="compare-desc" style="max-width:680px;margin-bottom:2rem;font-size:.98rem">The complete homepage, before and after. Drag the handle to compare.</p>
+<div class="ba" id="ba">
+<div class="ba-after"><div class="mock-after-full">
+<div class="ma-nav"><span class="ma-logo">Done Right Roofing</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">0418 804 934</span></div>
+<div class="ma-hero" style="background:linear-gradient(135deg,#334155,#0f172a)"><h3>Done right<br>the first time.</h3><p>Roof replacement, repairs &amp; inspections across Adelaide.</p><span class="ma-btn" style="color:#0f172a">Call 0418 804 934</span></div>
+<div class="ma-trust"><div><strong>Local</strong>Seaton, Adelaide</div><div><strong>Licensed</strong>&amp; insured</div><div><strong>Free</strong>Roof inspections</div></div>
+<div class="ma-services"><div><b>Repairs</b><span>Leaks, tiles, flashing</span></div><div><b>Replacement</b><span>Full re-roofing</span></div><div><b>Inspections</b><span>Free assessments</span></div></div>
+<div class="ma-footer"><span>Done Right Roofing</span><span>0418 804 934</span></div>
+</div></div>
+<div class="ba-before"><div class="mock-before-full">
+<h2>Done Right Roofing</h2>
+<p>Welcome to our website. We do roofing.</p>
+<p>Contact us for more information information.</p>
+<div style="border:1px dashed #999;padding:10px;margin:10px 0;font-size:.8rem">
+<p>Phone: 0418 804 934 | Email: donerightSA@gmail.com</p>
+</div>
+<div style="border:1px dashed #999;padding:10px;margin:10px 0;font-size:.8rem">
+<p>Phone: 0418 804 934 | Email: donerightSA@gmail.com</p>
+</div>
+<div style="border:1px dashed #999;padding:10px;margin:10px 0;font-size:.8rem">
+<p>Phone: 0418 804 934 | Email: donerightSA@gmail.com</p>
+</div>
+</div></div>
+<span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
+<div class="ba-handle"><div class="ba-knob">&#8596;</div></div>
+</div>
+<p class="ba-hint">Drag the handle to compare</p>
+</div>
 <section class="compare">
 <p class="compare-label">Section 1</p>
 <h2>The duplicated footer</h2>
@@ -158,5 +224,8 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 </div>
 
 <footer><div class="wrap"><p>Concept rebuild for demonstration only. Not affiliated with Done Right Roofing.</p></div></footer>
+<script>
+(function(){var ba=document.getElementById('ba'),drag=false;function setPos(x){var r=ba.getBoundingClientRect(),p=Math.max(0,Math.min(100,(x-r.left)/r.width*100));ba.style.setProperty('--pos',p+'%')}ba.addEventListener('pointerdown',function(e){drag=true;ba.setPointerCapture(e.pointerId);setPos(e.clientX)});ba.addEventListener('pointermove',function(e){if(drag)setPos(e.clientX)});ba.addEventListener('pointerup',function(){drag=false});ba.addEventListener('pointercancel',function(){drag=false})})();
+</script>
 </body>
 </html>

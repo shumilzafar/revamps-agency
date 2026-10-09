@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woolton Roofing Specialists | Roofers in Liverpool Since 1987</title>
+<meta name="description" content="Woolton Roofing Specialists have served Liverpool since 1987. New roofs, repairs, leadwork, slating, guttering and flat roofing. 191 TrustATrader reviews. Free surveys. 10 year guarantees.">
+<style>
+  :root{
+    --ink:#1b1d21;
+    --slate:#262a31;
+    --copper:#a86f32;
+    --copper-dark:#8a5a27;
+    --cream:#f6f3ec;
+    --paper:#fffdf8;
+    --stone:#64686f;
+    --line:#e2dccf;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.2}
+  a{color:var(--copper-dark)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* Top strip */
+  .topbar{background:var(--ink);color:#d8d3c6;font-size:13px;padding:9px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .topbar a{color:#fff;text-decoration:none;font-weight:600}
+  .topbar .est{letter-spacing:2px;text-transform:uppercase;font-size:11px;color:var(--copper)}
+
+  /* Header */
+  header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+  .brand{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.1}
+  .brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--copper-dark);font-weight:700;margin-top:2px}
+  nav{display:flex;gap:26px;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}
+  nav a:hover{color:var(--copper-dark)}
+  .btn{display:inline-block;background:var(--copper);color:#fff;text-decoration:none;font-weight:700;padding:13px 26px;font-size:15px;border:2px solid var(--copper)}
+  .btn:hover{background:var(--copper-dark);border-color:var(--copper-dark)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:#fff}
+  .btn.light{background:transparent;color:#fff;border-color:#fff}
+  .btn.light:hover{background:#fff;color:var(--ink)}
+
+  /* Hero */
+  .hero{background:var(--slate);color:#f0ece2;padding:88px 0 72px}
+  .hero .kicker{color:var(--copper);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+  .hero h1{font-size:52px;max-width:720px;margin-bottom:20px;color:#fff}
+  .hero p.lead{font-size:19px;max-width:640px;color:#cfc9ba;margin-bottom:34px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+  .trustrow{display:flex;gap:0;border-top:1px solid #3a3f47;flex-wrap:wrap}
+  .trustrow div{padding:20px 34px 4px 0;margin-right:34px;border-right:1px solid #3a3f47}
+  .trustrow div:last-child{border-right:none}
+  .trustrow strong{display:block;font-family:var(--serif);font-size:26px;color:#fff}
+  .trustrow span{font-size:13px;color:#a9a294}
+
+  /* Section base */
+  section{padding:72px 0}
+  .sec-head{max-width:680px;margin-bottom:44px}
+  .sec-head .kicker{color:var(--copper-dark);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+  .sec-head h2{font-size:38px;margin-bottom:14px}
+  .sec-head p{color:var(--stone);font-size:17px}
+
+  /* Services */
+  .services{background:var(--cream)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc{background:var(--paper);padding:30px 28px}
+  .svc h3{font-size:20px;margin-bottom:10px}
+  .svc p{font-size:14px;color:var(--stone)}
+  .svc .num{font-family:var(--serif);color:var(--copper);font-size:14px;letter-spacing:2px;margin-bottom:12px;display:block}
+
+  /* Heritage */
+  .heritage .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .heritage h2{font-size:38px;margin-bottom:18px}
+  .heritage p{color:#3c3f45;margin-bottom:16px}
+  .checklist{list-style:none;margin-top:24px}
+  .checklist li{padding:12px 0 12px 34px;position:relative;border-bottom:1px solid var(--line);font-weight:600}
+  .checklist li:before{content:"\2713";position:absolute;left:4px;color:var(--copper-dark);font-weight:700}
+  .badge-card{background:var(--ink);color:#e9e4d6;padding:40px 36px}
+  .badge-card .big{font-family:var(--serif);font-size:64px;color:var(--copper);line-height:1}
+  .badge-card h3{color:#fff;font-size:22px;margin:12px 0 16px}
+  .badge-card p{color:#b7b0a0;font-size:15px;margin-bottom:8px}
+
+  /* Before / After */
+  .before-after{background:var(--ink);color:#e9e4d6}
+  .before-after .sec-head h2{color:#fff}
+  .before-after .sec-head p{color:#a9a294}
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#3a3f47;border:1px solid #3a3f47;margin-bottom:36px}
+  .ba-col{background:var(--slate);padding:36px 34px}
+  .ba-col h3{font-size:15px;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;font-family:var(--sans)}
+  .ba-col.before h3{color:#c96a5a}
+  .ba-col.after h3{color:#8fc98f}
+  .ba-col ul{list-style:none}
+  .ba-col li{padding:11px 0 11px 30px;position:relative;font-size:15px;border-bottom:1px solid #3a3f47;color:#cfc9ba}
+  .ba-col.before li:before{content:"\2715";position:absolute;left:2px;color:#c96a5a;font-weight:700}
+  .ba-col.after li:before{content:"\2713";position:absolute;left:2px;color:#8fc98f;font-weight:700}
+  .ba-note{background:var(--slate);border:1px solid #3a3f47;padding:22px 26px;font-size:14px;color:#a9a294}
+  .ba-note strong{color:#fff}
+
+  /* Areas */
+  .areas-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .areas-grid span{border:1px solid var(--line);background:var(--paper);padding:10px 18px;font-size:14px;font-weight:600}
+
+  /* Reviews */
+  .reviews{background:var(--cream)}
+  .rev-card{background:var(--paper);border:1px solid var(--line);padding:44px;max-width:760px;margin:0 auto;text-align:center}
+  .rev-card .stars{color:var(--copper);font-size:30px;letter-spacing:6px;margin-bottom:14px}
+  .rev-card .score{font-family:var(--serif);font-size:52px;margin-bottom:6px}
+  .rev-card p{color:var(--stone);margin-bottom:22px}
+  .rev-card .src{font-size:13px;color:var(--stone)}
+
+  /* Contact */
+  .contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .contact h2{font-size:38px;margin-bottom:18px}
+  .contact-info{margin-top:28px}
+  .contact-info .row{padding:16px 0;border-bottom:1px solid var(--line)}
+  .contact-info .lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:4px}
+  .contact-info a.big{font-family:var(--serif);font-size:26px;color:var(--ink);text-decoration:none}
+  .contact-info a.big:hover{color:var(--copper-dark)}
+  form{background:var(--cream);border:1px solid var(--line);padding:36px}
+  form h3{font-size:22px;margin-bottom:6px}
+  form p.sub{font-size:14px;color:var(--stone);margin-bottom:24px}
+  label{display:block;font-size:13px;font-weight:700;margin:16px 0 6px}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);font-family:var(--sans);font-size:15px;background:#fff}
+  textarea{min-height:110px;resize:vertical}
+  .form-note{background:#fff;border:1px solid var(--line);padding:14px 16px;font-size:13px;color:var(--stone);margin:20px 0}
+  form .btn{width:100%;text-align:center;cursor:pointer;margin-top:8px}
+  .form-ok{display:none;background:#eef5ee;border:1px solid #9db89d;padding:18px;font-size:15px;margin-top:16px}
+
+  /* Footer */
+  footer{background:var(--ink);color:#a9a294;padding:56px 0 28px;font-size:14px}
+  footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  footer h4{color:#fff;font-family:var(--sans);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+  footer a{color:#cfc9ba;text-decoration:none;display:block;margin-bottom:8px}
+  footer a:hover{color:#fff}
+  .disclaimer{border-top:1px solid #3a3f47;padding-top:24px;font-size:13px;color:#8b8577}
+  .disclaimer strong{color:#cfc9ba}
+
+  /* Concept banner */
+  .concept-banner{background:#f3e9c8;border-bottom:2px solid var(--copper);padding:12px 0;font-size:13px;color:#5c4a1e;text-align:center}
+  .concept-banner strong{font-weight:700}
+
+  @media(max-width:860px){
+    .hero h1{font-size:36px}
+    .svc-grid{grid-template-columns:1fr}
+    .heritage .cols,.contact .cols,.ba-grid{grid-template-columns:1fr}
+    footer .cols{grid-template-columns:1fr}
+    nav{display:none}
+    .trustrow div{padding:14px 20px 4px 0;margin-right:20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="concept-banner">
+  <strong>Design concept.</strong> This page is a redesign proposal by Revamps Studio. It is not affiliated with Woolton Roofing and no enquiry submitted here is sent anywhere.
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="est">Est. 1987, Liverpool</span>
+    <span>Call us: <a href="tel:+441514287251">0151 428 7251</a> &nbsp;|&nbsp; <a href="tel:+447931225567">07931 225 567</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">Woolton Roofing<small>Specialists</small></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#heritage">About</a>
+      <a href="#before-after">Why redesign</a>
+      <a href="#areas">Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="btn" style="padding:10px 20px">Free Survey</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Roofing specialists, Liverpool</div>
+    <h1>The roofers Liverpool has trusted since 1987.</h1>
+    <p class="lead">New roofs, repairs, leadwork and guttering across Merseyside. 191 verified reviews on TrustATrader. Free surveys, honest quotations, and a 10 year guarantee on all work.</p>
+    <div class="ctas">
+      <a class="btn" href="tel:+441514287251">Call 0151 428 7251</a>
+      <a class="btn light" href="#contact">Request a free survey</a>
+    </div>
+    <div class="trustrow">
+      <div><strong>1987</strong><span>Established in Woolton</span></div>
+      <div><strong>191</strong><span>TrustATrader reviews</span></div>
+      <div><strong>4.97 / 5</strong><span>Average review score</span></div>
+      <div><strong>10 yrs</strong><span>Guarantee on all work</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">What we do</div>
+      <h2>Every roofing trade, under one roof.</h2>
+      <p>From a slipped slate to a full re-roof, one call covers it. We work with you one to one to find the right solution for your property and your budget.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><span class="num">01</span><h3>New Roofs &amp; Re-roofs</h3><p>Full strip and re-sheet, overclads, and complete new roof installations in slate and tile.</p></div>
+      <div class="svc"><span class="num">02</span><h3>Roof Repairs</h3><p>Leaks, storm damage and general repairs, handled quickly by roofers who know the trade.</p></div>
+      <div class="svc"><span class="num">03</span><h3>Leadwork Specialists</h3><p>Lead roofs, lead flashing and specialist lead detailing, fitted to last.</p></div>
+      <div class="svc"><span class="num">04</span><h3>Slating &amp; Tiling</h3><p>Traditional slating and tiling, matched to your property and the local streetscape.</p></div>
+      <div class="svc"><span class="num">05</span><h3>Flat Roofing</h3><p>Fibreglass resin, single ply membranes and felt systems. Flat to pitched conversions a speciality.</p></div>
+      <div class="svc"><span class="num">06</span><h3>Chimney Work</h3><p>Chimney repointing, repairs and rebuilds, keeping stacks sound and watertight.</p></div>
+      <div class="svc"><span class="num">07</span><h3>Guttering, Fascias &amp; Soffits</h3><p>Rooflines renewed: gutters, soffits and fascias repaired or replaced, plus gutter lining.</p></div>
+      <div class="svc"><span class="num">08</span><h3>Velux Roof Lights</h3><p>Roof light supply, replacement and cleaning, bringing daylight into lofts and extensions.</p></div>
+      <div class="svc"><span class="num">09</span><h3>Insurance &amp; Storm Damage</h3><p>Storm damage assessed and repaired, with documentation to support insurance claims.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage" id="heritage">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="sec-head" style="margin-bottom:20px">
+          <div class="kicker">Since 1987</div>
+          <h2>Nearly four decades on Liverpool roofs.</h2>
+        </div>
+        <p>Woolton Roofing Specialists have worked the roofs of south Liverpool and Merseyside since 1987. That kind of time in the trade cannot be faked: it shows in the detailing, the materials chosen, and the way a job is left at the end of each day.</p>
+        <p>Quality is the whole manifesto here. Products are fully guaranteed, prices stay fair through long standing supplier relationships, and every enquiry gets a personal, one to one service rather than a call centre.</p>
+        <ul class="checklist">
+          <li>Free survey and no obligation quotation</li>
+          <li>10 year guarantee with all work</li>
+          <li>Public liability insurance as standard</li>
+          <li>All major credit and debit cards accepted</li>
+          <li>Portfolio of completed work available on request</li>
+        </ul>
+      </div>
+      <div class="badge-card">
+        <div class="big">1987</div>
+        <h3>The year we started. The standard never changed.</h3>
+        <p>A roofing company that has survived since 1987 has done it one way: by doing the job properly. No shortcuts, no disappearing acts, no excuses.</p>
+        <p>When a roofer has been on the same streets for nearly forty years, their reputation is their advertising. Ours is written in 191 TrustATrader reviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="before-after" id="before-after">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker" style="color:var(--copper)">The problem this concept fixes</div>
+      <h2>A 1987 company with a website that hides it.</h2>
+      <p>Woolton Roofing has the reviews, the history and the trade. Their current website does not show any of it. Here is what is wrong, and what this concept changes.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col before">
+        <h3>Their current site</h3>
+        <ul>
+          <li>Generic template design, looks like hundreds of other sites</li>
+          <li>Contact email is a personal @icloud.com address</li>
+          <li>Pages end in .htm, a format from the early 2000s</li>
+          <li>Title tag stuffed with keywords, reads as spam to Google</li>
+          <li>Spelling and grammar errors in the service descriptions</li>
+          <li>191 five star reviews buried on a gallery page</li>
+          <li>No clear call to action above the fold</li>
+          <li>Established 1987 mentioned once, in a bullet list</li>
+        </ul>
+      </div>
+      <div class="ba-col after">
+        <h3>This concept</h3>
+        <ul>
+          <li>Distinctive heritage design built around the 1987 story</li>
+          <li>Professional business email presented properly</li>
+          <li>Clean, modern page structure throughout</li>
+          <li>One clear title that search engines and humans understand</li>
+          <li>Careful, professional copy in every section</li>
+          <li>Review count and score in the header, hero and reviews section</li>
+          <li>Call buttons and a free survey form on every screen</li>
+          <li>Heritage is the headline, not a footnote</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ba-note">
+      <strong>Why it matters:</strong> a homeowner comparing roofers will check the website before calling. A company with 191 reviews at 4.97 should look like the safest choice in Liverpool, not like a template. First impressions decide who gets the call.
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Where we work</div>
+      <h2>Covering Liverpool and Merseyside.</h2>
+      <p>Based in Woolton, working across the region every week. If your area is not listed, call us, we likely cover it.</p>
+    </div>
+    <div class="areas-grid">
+      <span>Woolton</span><span>Hunts Cross</span><span>Speke</span><span>Runcorn</span><span>Liverpool</span><span>Southport</span><span>Wirral</span><span>Warrington</span><span>All surrounding areas</span>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="score">4.97 / 5</div>
+      <p>Across <strong>191 verified reviews</strong> on TrustATrader. Customers rate the speed of response, the tidiness of the work, and fair pricing, job after job.</p>
+      <a class="btn ghost" href="https://www.trustatrader.com" target="_blank" rel="noopener">Read reviews on TrustATrader</a>
+      <div class="src" style="margin-top:16px">Review count and score are Woolton Roofing's published TrustATrader figures. No testimonials on this concept page are invented.</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="kicker" style="color:var(--copper-dark);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:12px">Get in touch</div>
+        <h2>Free survey, honest quote.</h2>
+        <p style="color:var(--stone)">Call for free expert advice, or send the form and we will get back to you. Every enquiry is answered personally.</p>
+        <div class="contact-info">
+          <div class="row">
+            <div class="lbl">Landline</div>
+            <a class="big" href="tel:+441514287251">0151 428 7251</a>
+          </div>
+          <div class="row">
+            <div class="lbl">Mobile</div>
+            <a class="big" href="tel:+447931225567">07931 225 567</a>
+          </div>
+          <div class="row">
+            <div class="lbl">Email</div>
+            <a class="big" style="font-size:20px" href="mailto:wooltonroofing@icloud.com">wooltonroofing@icloud.com</a>
+          </div>
+          <div class="row">
+            <div class="lbl">Address</div>
+            <div style="font-size:16px">226 Mackets Lane, Woolton,<br>Liverpool, L25 9NH</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id="quote-form" action="#" method="post" onsubmit="return false;">
+          <h3>Request your free survey</h3>
+          <p class="sub">No obligation. We reply to every enquiry personally.</p>
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <label for="f-phone">Phone number</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+          <label for="f-service">What do you need?</label>
+          <select id="f-service" name="service">
+            <option>New roof or re-roof</option>
+            <option>Roof repair</option>
+            <option>Leadwork</option>
+            <option>Slating or tiling</option>
+            <option>Flat roofing</option>
+            <option>Chimney work</option>
+            <option>Guttering, fascias or soffits</option>
+            <option>Velux roof light</option>
+            <option>Storm damage / insurance work</option>
+            <option>Something else</option>
+          </select>
+          <label for="f-msg">Tell us about the job</label>
+          <textarea id="f-msg" name="message" placeholder="e.g. Slipped slates on the rear slope, two storey semi in Woolton."></textarea>
+          <div class="form-note"><strong>Concept form.</strong> This is a design proposal, not the real Woolton Roofing website. Nothing you enter here is sent anywhere.</div>
+          <button class="btn" type="submit" id="form-btn">Request free survey</button>
+          <div class="form-ok" id="form-ok">Thank you. This is a concept demo, so nothing was sent. On the real site this would go straight to the Woolton Roofing team.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Woolton Roofing Specialists</h4>
+        <p style="max-width:340px">Roofing specialists serving Liverpool and Merseyside since 1987. New roofs, repairs, leadwork, slating, flat roofing and guttering.</p>
+        <p style="margin-top:16px">226 Mackets Lane, Woolton, Liverpool, L25 9NH<br>
+        <a href="tel:+441514287251">0151 428 7251</a>
+        <a href="tel:+447931225567">07931 225 567</a>
+        <a href="mailto:wooltonroofing@icloud.com">wooltonroofing@icloud.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">New roofs &amp; re-roofs</a>
+        <a href="#services">Roof repairs</a>
+        <a href="#services">Leadwork</a>
+        <a href="#services">Slating &amp; tiling</a>
+        <a href="#services">Flat roofing</a>
+        <a href="#services">Guttering &amp; fascias</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#heritage">About us</a>
+        <a href="#areas">Areas covered</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact">Free survey</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Concept redesign by Revamps Studio. Not affiliated with Woolton Roofing.</strong><br>
+      This page is a design proposal created to show what a rebuilt website could look like. All business facts shown (phone numbers, address, review counts, services) belong to the real Woolton Roofing Specialists. No enquiry submitted on this page is sent anywhere.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form-btn').addEventListener('click', function(){
+  var name = document.getElementById('f-name').value.trim();
+  var phone = document.getElementById('f-phone').value.trim();
+  if(!name || !phone){
+    alert('Please add your name and phone number so we can call you back.');
+    return;
+  }
+  document.getElementById('form-ok').style.display = 'block';
+  document.getElementById('quote-form').querySelectorAll('input,textarea,select').forEach(function(el){ el.value=''; });
+  document.getElementById('form-ok').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+
+</body>
+</html>

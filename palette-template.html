@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#F9F8F6;width:1080px;height:1350px;position:relative;overflow:hidden}
+.swatches{position:absolute;top:80px;right:80px;display:flex;flex-direction:column;gap:24px}
+.swatch{width:280px;height:360px;border-radius:8px;padding:28px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.swatch .sname{font-size:.82rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
+.swatch .shex{font-size:.85rem;font-weight:500;letter-spacing:.08em;opacity:.7}
+.s1{background:#F9F8F6;border:1px solid #EAE8E3}.s1 .sname,.s1 .shex{color:#121316}
+.s2{background:#C88A58}.s2 .sname,.s2 .shex{color:#fff}
+.s3{background:#121316}.s3 .sname,.s3 .shex{color:#F9F8F6}
+.mockup{position:absolute;bottom:80px;left:80px;right:80px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.12)}
+.mockup img{width:100%;height:420px;object-fit:cover;display:block}
+.mockup-text{padding:48px;text-align:center}
+.mockup-text .k{font-size:.78rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8A8A8E;margin-bottom:16px}
+.mockup-text h2{font-size:3.2rem;font-weight:700;letter-spacing:-.02em;color:#121316}
+.caption{position:absolute;bottom:24px;left:80px;right:80px;text-align:center;font-size:1rem;color:#8A8A8E}
+</style>
+</head>
+<body>
+<div class="swatches">
+  <div class="swatch s1"><div class="sname">Soft White</div><div class="shex">#F9F8F6</div></div>
+  <div class="swatch s2"><div class="sname">Brushed Brass</div><div class="shex">#C88A58</div></div>
+  <div class="swatch s3"><div class="sname">Deep Slate</div><div class="shex">#121316</div></div>
+</div>
+<div class="mockup">
+  <img src="images/palette-hero.webp" alt="Brass plumbing fixtures">
+  <div class="mockup-text">
+    <div class="k">Design for a calmer</div>
+    <h2>PLUMBING</h2>
+  </div>
+</div>
+<div class="caption">A little colour inspiration for your next project</div>
+</body>
+</html>

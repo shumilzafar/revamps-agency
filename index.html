@@ -4,249 +4,273 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revamps | Websites for local trades. See it before you pay.</title>
-  <meta name="description" content="Revamps builds websites and a missed-call rescue bot for plumbers, roofers, HVAC and other local trades. Free demo first.">
+  <meta name="description" content="Revamps rebuilds websites for plumbers, roofers, HVAC and other local trades. Free demo first, you pay only if you love it.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="site-nav" aria-label="Main navigation">
-  <div class="container nav-inner">
-    <a class="nav-brand" href="#top">Revamps<em>.</em></a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#main" aria-label="Revamps home">
+      <img class="brand-mark" src="logo.svg" alt="" width="32" height="32">
+      <span class="brand-name">Revamps</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
       <a href="#work">Work</a>
+      <a href="#how">How it works</a>
+      <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav-cta">Free demo</a>
-    </div>
+    </nav>
+    <a class="btn btn-primary btn-small header-cta" href="#contact">Get a free demo</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</nav>
+</header>
 
-<main id="top">
+<main id="main">
 
   <!-- Hero -->
   <section class="hero">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <span class="hero-kicker reveal">For plumbers, roofers, HVAC and local trades</span>
-          <h1 class="display-hero hero-title reveal">Your website should <span class="accent-word">bring you</span> customers.</h1>
-          <p class="text-lead hero-sub reveal">Most trade websites look like they were built in 2012. Customers notice, and they call your competitor instead. We rebuild your site so it wins the call. You see the finished demo free before paying a cent.</p>
-          <div class="hero-actions reveal">
-            <a class="btn btn-primary" href="#contact">Get your free demo</a>
-            <a class="btn btn-secondary" href="#work">See the work</a>
-          </div>
-          <div class="hero-proof reveal">
-            <div><strong>$199</strong><span>flat for a rebuild</span></div>
-            <div><strong>$299</strong><span>call automation bot</span></div>
-            <div><strong>Free</strong><span>demo first, always</span></div>
-          </div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Your website should win you jobs.</h1>
+        <p class="hero-sub">Most trade websites look a decade old. Customers notice, and they call your competitor. We rebuild your site so it wins the call. You see the finished demo free before paying anything.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="#contact">Get your free demo</a>
+          <a class="btn btn-ghost btn-large" href="#work">See the work</a>
         </div>
-        <div class="hero-visual reveal">
-          <div class="browser-mockup">
-            <div class="browser-bar">
-              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-              <span class="browser-url">yourbusiness.com</span>
-            </div>
-            <div class="browser-body">
-              <div class="mockup-nav">
-                <span class="mockup-logo">Your Business</span>
-                <div class="mockup-links"><i></i><i></i><i></i></div>
-              </div>
-              <div class="mockup-hero">
-                <h4>Winter Haven plumbers. Here today, fixed today.</h4>
-                <p>Licensed and insured. 4.9 stars from 200+ reviews.</p>
-                <span class="mockup-btn">Call now</span>
-              </div>
-              <div class="mockup-cards">
-                <span>Emergency<br>repairs</span>
-                <span>Water<br>heaters</span>
-                <span>Drain<br>cleaning</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="hero-note">Free demo. No call required. Reply to one email.</p>
       </div>
+      <div class="hero-visual">
+        <figure class="ba-compare">
+          <div class="ba-pane">
+            <span class="ba-tag">Before</span>
+            <img src="images/work/t-dickens-before.jpg" alt="Old Dickens Plumbing website: plain text listing with no design" width="640" height="324" loading="eager">
+          </div>
+          <div class="ba-pane">
+            <span class="ba-tag tag-after">After</span>
+            <img src="images/work/t-dickens-after.jpg" alt="Rebuilt Dickens Plumbing website: clean hero with call button" width="640" height="324" loading="eager">
+          </div>
+        </figure>
+        <figcaption>Dickens Plumbing, Winter Haven FL. Twelve lines of text became a full website.</figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The work</p>
+        <h2>Bad websites, made unrecognizable.</h2>
+        <p class="section-sub">Concept rebuilds of real businesses with real problems. Open any of them and drag the comparison.</p>
+      </div>
+      <div class="work-list">
+        <a class="work-row" href="before-after-white-heating-air.html">
+          <div class="work-shots">
+            <img src="images/work/t-whitehvac-before.jpg" alt="Old White Heating and Air website with template artifacts" width="640" height="324" loading="lazy">
+            <img src="images/work/t-whitehvac-after.jpg" alt="Rebuilt White Heating and Air website" width="640" height="324" loading="lazy">
+          </div>
+          <div class="work-meta">
+            <h3>White Heating &amp; Air</h3>
+            <p class="work-detail">HVAC, Billings MT</p>
+            <p class="work-fix">Template mess with visible code. Now a 4.9-star showcase.</p>
+            <span class="work-link">Open the comparison</span>
+          </div>
+        </a>
+        <a class="work-row" href="before-after-done-right-roofing.html">
+          <div class="work-shots">
+            <img src="images/work/t-doneright-before.jpg" alt="Old Done Right Roofing website with repeated footer" width="640" height="324" loading="lazy">
+            <img src="images/work/t-doneright-after.jpg" alt="Rebuilt Done Right Roofing website" width="640" height="324" loading="lazy">
+          </div>
+          <div class="work-meta">
+            <h3>Done Right Roofing</h3>
+            <p class="work-detail">Roofer, Adelaide AU</p>
+            <p class="work-fix">Footer repeated three times. Now clean and professional.</p>
+            <span class="work-link">Open the comparison</span>
+          </div>
+        </a>
+        <a class="work-row" href="before-after-sunshine-septic.html">
+          <div class="work-shots">
+            <img src="images/work/t-sunshine-before.jpg" alt="Old Sunshine Septic website with broken quote form" width="640" height="324" loading="lazy">
+            <img src="images/work/t-sunshine-after.jpg" alt="Rebuilt Sunshine Septic website" width="640" height="324" loading="lazy">
+          </div>
+          <div class="work-meta">
+            <h3>Sunshine Septic</h3>
+            <p class="work-detail">Septic, Springfield TN</p>
+            <p class="work-fix">Quote form showed an error. Now a working quote flow.</p>
+            <span class="work-link">Open the comparison</span>
+          </div>
+        </a>
+        <a class="work-row" href="before-after-dickens-plumbing.html">
+          <div class="work-shots">
+            <img src="images/work/t-dickens-before.jpg" alt="Old Dickens Plumbing website" width="640" height="324" loading="lazy">
+            <img src="images/work/t-dickens-after.jpg" alt="Rebuilt Dickens Plumbing website" width="640" height="324" loading="lazy">
+          </div>
+          <div class="work-meta">
+            <h3>Dickens Plumbing</h3>
+            <p class="work-detail">Plumber, Winter Haven FL</p>
+            <p class="work-fix">Twelve lines of text. Now a full website.</p>
+            <span class="work-link">Open the comparison</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section-soft" id="how">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Free demo first. Always.</h2>
+        <p class="section-sub">Agencies ask for money before showing you anything. We do it backwards.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <div>
+            <h3>We build your demo</h3>
+            <p>Send your business name and what you do. In 2 to 3 days you get a finished mockup built around your real services. Free.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <div>
+            <h3>You say yes or no</h3>
+            <p>Open it on your phone. Ask for changes. Love it, pay half and we start. Do not love it, walk away. Nothing owed.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-number" aria-hidden="true">3</span>
+          <div>
+            <h3>We launch it</h3>
+            <p>The finished site goes live on your domain. We test everything and hand it over. You pay the rest.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- Services -->
   <section class="section" id="services">
     <div class="container">
-      <span class="eyebrow reveal">What we do</span>
-      <h2 class="display-section reveal">Two problems.<br>Two fixes.</h2>
-      <p class="text-lead reveal">Most trade businesses lose customers in two places. An outdated website that sends people elsewhere. And missed calls that never come back. We fix both.</p>
-      <div class="services-list">
-        <a class="service-row reveal" href="#work">
-          <span class="service-num">01</span>
-          <div>
-            <h3>Website rebuilds</h3>
-            <p>We rebuild your outdated site from scratch. It loads fast, looks sharp on phones, and puts your number where customers can find it in seconds. You see the finished mockup free before you pay anything.</p>
-          </div>
-          <div class="service-meta">
-            <span class="service-price">$199</span>
-            <span class="service-price-note">flat, one time</span>
-            <span class="service-arrow">&rarr;</span>
-          </div>
-        </a>
-        <a class="service-row reveal" href="#pricing">
-          <span class="service-num">02</span>
-          <div>
-            <h3>Call Automation Bot</h3>
-            <p>You are on a roof or under a sink. You cannot pick up. Within seconds, the caller gets a text asking what they need. We capture their name and number and alert you right away.</p>
-          </div>
-          <div class="service-meta">
-            <span class="service-price">$299</span>
-            <span class="service-price-note">setup, you pay SMS costs</span>
-            <span class="service-arrow">&rarr;</span>
-          </div>
-        </a>
+      <div class="section-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Two problems. Two fixes.</h2>
+        <p class="section-sub">Trade businesses lose customers in two places: a website that sends people elsewhere, and missed calls that never come back.</p>
       </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Website rebuilds</h3>
+          <p class="service-price"><strong>$199</strong> flat, 50/50</p>
+          <p>We rebuild your outdated site from scratch. It loads fast, looks sharp on phones, and puts your number where customers find it in seconds. You see the finished mockup free before you pay anything.</p>
+        </div>
+        <div class="service-card">
+          <h3>Missed-call textback</h3>
+          <p class="service-price"><strong>$299</strong> setup, 50/50</p>
+          <p>You are on a roof or under a sink and cannot pick up. Within seconds the caller gets a text asking what they need. We capture their name and number and alert you. The job stays yours.</p>
+        </div>
+      </div>
+      <p class="services-note">Try the textback demos below. This is the exact conversation your customers have.</p>
     </div>
   </section>
 
-  <!-- Work -->
-  <section class="section" id="work" style="background: var(--paper-warm);">
+  <!-- Textback demos -->
+  <section class="section section-soft" id="textback">
     <div class="container">
-      <span class="eyebrow reveal">Real transformations</span>
-      <h2 class="display-section reveal">We take bad websites<br>and make them unrecognizable.</h2>
-      <p class="text-lead reveal">Concept rebuilds of real businesses with real problems. Every fix visible.</p>
-      <div class="work-grid">
-        <a class="work-card reveal" href="before-after-dickens-plumbing.html">
-          <div class="work-compare">
-            <div class="work-before">
-              <span class="work-tag">Before</span>
-              <p>Dickens Plumbing Inc<br>2729 Crystal Beach Rd<br>Phone: (863) 294-6737<br>Hours: Mon-Fri 8am-5pm</p>
-            </div>
-            <div class="work-after">
-              <span class="work-tag">After</span>
-              <h4>Winter Haven plumbers. Here today, fixed today.</h4>
-              <p>Full site, clear call to action, mobile first.</p>
-            </div>
-          </div>
-          <div class="work-info">
-            <h3>Dickens Plumbing</h3>
-            <p>Plumber, Winter Haven FL. 12 lines of text to full website.</p>
-          </div>
-        </a>
-        <a class="work-card reveal" href="before-after-white-heating-air.html">
-          <div class="work-compare">
-            <div class="work-before">
-              <span class="work-tag">Before</span>
-              <p>Not secure<br>Water Heaters<br>Water Heaters<br>Broken template</p>
-            </div>
-            <div class="work-after">
-              <span class="work-tag">After</span>
-              <h4>Billings trusts us with their comfort.</h4>
-              <p>Clean, secure, built to convert.</p>
-            </div>
-          </div>
-          <div class="work-info">
-            <h3>White Heating and Air</h3>
-            <p>HVAC, Billings MT. Template mess to professional showcase.</p>
-          </div>
-        </a>
-        <a class="work-card reveal" href="before-after-done-right-roofing.html">
-          <div class="work-compare">
-            <div class="work-before">
-              <span class="work-tag">Before</span>
-              <p>Contact Us<br>...information<br>Footer x3<br>Footer x3</p>
-            </div>
-            <div class="work-after">
-              <span class="work-tag">After</span>
-              <h4>Done right the first time.</h4>
-              <p>One clear message, one clear action.</p>
-            </div>
-          </div>
-          <div class="work-info">
-            <h3>Done Right Roofing</h3>
-            <p>Roofer, Adelaide AU. Triple footer to clean professional.</p>
-          </div>
-        </a>
-        <a class="work-card reveal" href="before-after-sunshine-septic.html">
-          <div class="work-compare">
-            <div class="work-before">
-              <span class="work-tag">Before</span>
-              <p>Oops, there was an error<br>Quote form x2<br>Not secure</p>
-            </div>
-            <div class="work-after">
-              <span class="work-tag">After</span>
-              <h4>Septic done right, since 1952.</h4>
-              <p>Working quote flow, trust built in.</p>
-            </div>
-          </div>
-          <div class="work-info">
-            <h3>Sunshine Septic</h3>
-            <p>Septic, Springfield TN. Broken form to working quote flow.</p>
-          </div>
-        </a>
+      <div class="section-head">
+        <p class="eyebrow">Missed-call textback</p>
+        <h2>Every missed call becomes a booked job.</h2>
+        <p class="section-sub">One missed roofing call can cost thousands. We catch it in seconds.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section" id="process">
-    <div class="container">
-      <span class="eyebrow reveal">How it works</span>
-      <h2 class="display-section reveal">Free demo first.<br>Always.</h2>
-      <p class="text-lead reveal">Most agencies ask for money before showing you anything. We do it backwards.</p>
-      <div class="process-grid">
-        <div class="process-card reveal">
-          <span class="step">1</span>
-          <h3>We build your demo</h3>
-          <p>Send your business name and what you do. In 2 to 3 days you get a finished mockup built around your real services. Free.</p>
-        </div>
-        <div class="process-card reveal">
-          <span class="step">2</span>
-          <h3>You say yes or no</h3>
-          <p>Open it on your phone. Ask for changes. If you love it, pay half and we start the real build. If not, walk away. Nothing owed.</p>
-        </div>
-        <div class="process-card reveal">
-          <span class="step">3</span>
-          <h3>We launch it</h3>
-          <p>The finished site goes live on your domain. We test everything and hand it over. You pay the rest. Done.</p>
-        </div>
+      <div class="phone-grid">
+        <a class="phone-card" href="textback-seal-pro-roofing/">
+          <div class="preview-phone">
+            <div class="ph-screen">
+              <p class="ph-header">Seal Pro Roofing</p>
+              <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What do you need help with?</div>
+              <div class="ph-bubble ph-out">My roof is leaking near the chimney</div>
+              <div class="ph-bubble ph-in">Got it. What is the best number to reach you?</div>
+              <div class="ph-bubble ph-out">555-0142, ask for Dave</div>
+            </div>
+          </div>
+          <p class="phone-label"><strong>Seal Pro Roofing</strong><span>Roofing, tap to try it</span></p>
+        </a>
+        <a class="phone-card" href="textback-365-emergency-plumbing/">
+          <div class="preview-phone">
+            <div class="ph-screen">
+              <p class="ph-header">365 Emergency Plumbing</p>
+              <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What is going on?</div>
+              <div class="ph-bubble ph-out">Water heater burst, garage is flooding</div>
+              <div class="ph-bubble ph-in">Understood. We will call you right back.</div>
+              <div class="ph-bubble ph-out">Please hurry!</div>
+            </div>
+          </div>
+          <p class="phone-label"><strong>365 Emergency Plumbing</strong><span>Plumbing, tap to try it</span></p>
+        </a>
+        <a class="phone-card" href="textback-third-coast-hvac/">
+          <div class="preview-phone">
+            <div class="ph-screen">
+              <p class="ph-header">Third Coast HVAC</p>
+              <div class="ph-bubble ph-in">Hi! Sorry we missed your call. How can we help?</div>
+              <div class="ph-bubble ph-out">AC stopped cooling yesterday</div>
+              <div class="ph-bubble ph-in">Got it. What is your address?</div>
+              <div class="ph-bubble ph-out">418 Harbor Ln</div>
+            </div>
+          </div>
+          <p class="phone-label"><strong>Third Coast HVAC</strong><span>HVAC, tap to try it</span></p>
+        </a>
+        <a class="phone-card" href="textback-mannys-septic/">
+          <div class="preview-phone">
+            <div class="ph-screen">
+              <p class="ph-header">Manny&rsquo;s Septic</p>
+              <div class="ph-bubble ph-in">Hi! Sorry we missed your call. What do you need?</div>
+              <div class="ph-bubble ph-out">Septic tank needs pumping soon</div>
+              <div class="ph-bubble ph-in">No problem. Best callback number?</div>
+              <div class="ph-bubble ph-out">555-8890 anytime</div>
+            </div>
+          </div>
+          <p class="phone-label"><strong>Manny&rsquo;s Septic</strong><span>Septic, tap to try it</span></p>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Pricing -->
-  <section class="section" id="pricing" style="background: var(--paper-warm);">
+  <section class="section" id="pricing">
     <div class="container">
-      <span class="eyebrow reveal">Pricing</span>
-      <h2 class="display-section reveal">One flat price.<br>No fine print.</h2>
-      <p class="text-lead reveal">You pay half when you approve the demo, half when it goes live. You never pay for work you have not seen.</p>
+      <div class="section-head">
+        <p class="eyebrow">Pricing</p>
+        <h2>One flat price. No fine print.</h2>
+        <p class="section-sub">Half when you approve the demo, half when it goes live. You never pay for work you have not seen.</p>
+      </div>
       <div class="pricing-grid">
-        <div class="price-card featured reveal">
-          <span class="price-label">Website rebuild</span>
-          <h3>Your new website</h3>
-          <span class="price-amount">$199</span>
-          <span class="price-term">one time, you own it outright</span>
-          <ul class="price-features">
+        <div class="price-card">
+          <p class="price-label">Website rebuild</p>
+          <p class="price"><span class="price-amount">$199</span> <span class="price-once">one time</span></p>
+          <ul class="price-list">
             <li>Free demo before you pay anything</li>
             <li>Custom design, not a template</li>
             <li>Mobile-friendly on every device</li>
             <li>Contact forms that actually work</li>
             <li>Launched on your domain</li>
-            <li>No monthly fees to us</li>
+            <li>You own the site outright</li>
           </ul>
           <div class="price-split">
             <div><strong>$100</strong><span>when you approve the demo</span></div>
             <div><strong>$99</strong><span>when the site goes live</span></div>
           </div>
-          <a class="btn btn-primary" href="#contact" style="width: 100%; justify-content: center;">Get your free demo</a>
+          <a class="btn btn-primary btn-large btn-block" href="#contact">Get your free demo</a>
         </div>
-        <div class="price-card reveal">
-          <span class="price-label">Call Automation Bot</span>
-          <h3>Never miss a job</h3>
-          <span class="price-amount">$299</span>
-          <span class="price-term">setup, works with your number</span>
-          <ul class="price-features">
+        <div class="price-card">
+          <p class="price-label">Missed-call textback</p>
+          <p class="price"><span class="price-amount">$299</span> <span class="price-once">setup</span></p>
+          <ul class="price-list">
             <li>Instant text the second you miss a call</li>
             <li>Captures name, issue and callback number</li>
             <li>Alerts you immediately with the details</li>
@@ -258,39 +282,41 @@
             <div><strong>$150</strong><span>to start the setup</span></div>
             <div><strong>$149</strong><span>when it is live and tested</span></div>
           </div>
-          <a class="btn btn-secondary" href="#contact" style="width: 100%; justify-content: center;">Get the Call Automation Bot</a>
+          <a class="btn btn-ghost btn-large btn-block" href="#contact">Get the textback</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <span class="eyebrow reveal">FAQ</span>
-      <h2 class="display-section reveal">Honest answers.</h2>
+  <section class="section section-soft" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Honest answers.</h2>
+      </div>
       <div class="faq-list">
-        <details class="faq-item reveal">
+        <details class="faq-item" open>
           <summary>Why only $199?</summary>
-          <p>No meetings, no account managers, no bloated process. We do one thing well and keep it lean. The free-demo model means we only spend time on people who actually want the work, so we can keep the price low.</p>
+          <p>No meetings, no account managers, no bloated process. We do one thing well and keep it lean. The free-demo model means we only spend time on people who actually want the work.</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item">
           <summary>What if I do not like the demo?</summary>
           <p>You pay nothing and keep your current site. The demo is genuinely free. We would rather you walk away than pay for something you do not love.</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item">
           <summary>Do I own the website?</summary>
-          <p>Yes. The domain is in your name, the files are yours, and there are no monthly fees to us. Take it anywhere, anytime.</p>
+          <p>Yes. The domain is in your name, the files are yours, and there are no monthly fees to us.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>How does the Call Automation Bot work?</summary>
-          <p>You miss a call. Within seconds the caller gets a text asking what they need. We capture their name and number and alert you immediately. You call them back when you are free. One saved job pays for the whole system many times over. You pay your own phone and SMS costs directly to the provider.</p>
+        <details class="faq-item">
+          <summary>How does the textback work?</summary>
+          <p>You miss a call. Within seconds the caller gets a text asking what they need. We capture their name and number and alert you immediately. One saved job pays for the whole system many times over. You pay your own phone and SMS costs directly to the provider.</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item">
           <summary>How long does it take?</summary>
-          <p>Your demo arrives in 2 to 3 days. Once you approve it, the finished site is live within a week. Call Automation Bot setup takes about a week including testing.</p>
+          <p>Your demo arrives in 2 to 3 days. Once you approve it, the finished site is live within a week.</p>
         </details>
-        <details class="faq-item reveal">
+        <details class="faq-item">
           <summary>What do you need from me?</summary>
           <p>Your business name, the services you offer, and your phone number. Photos help if you have them. We handle everything else.</p>
         </details>
@@ -298,27 +324,24 @@
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <div class="container">
-    <section class="final-cta reveal" id="contact">
-      <span class="eyebrow" style="justify-content: center; color: var(--gold);">Start</span>
-      <h2 class="display-section">Your free demo is<br>2 to 3 days away.</h2>
+  <!-- Contact -->
+  <section class="cta-band" id="contact">
+    <div class="container container-narrow">
+      <h2>Your free demo is 2 to 3 days away.</h2>
       <p>Email your business name and what you do. We build the demo. You decide if you want it.</p>
-      <a class="btn btn-primary" href="mailto:hello@revamps.studio?subject=Free%20demo%20request">Email us</a>
+      <a class="btn btn-primary btn-large" href="mailto:hello@revamps.studio?subject=Free%20demo%20request">Email us</a>
       <p class="cta-email">hello@revamps.studio</p>
-    </section>
-  </div>
+    </div>
+  </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span class="footer-brand">Revamps.</span>
     <p>&copy; 2026 Revamps. All rights reserved.</p>
   </div>
 </footer>
 
-<script src="hero-webgl.js"></script>
-<script src="site.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

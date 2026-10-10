@@ -50,12 +50,14 @@ a{color:inherit}
 .btn-primary:active{transform:scale(.98)}
 .btn-ghost{border:1.5px solid rgba(232,224,210,.35);color:var(--ivory);padding:16px 32px;border-radius:999px;text-decoration:none;font-weight:600;font-size:1.02rem;display:inline-block;transition:border-color .15s}
 .btn-ghost:hover{border-color:var(--ivory)}
-.hero-visual{position:relative}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-illustration{max-height:560px;width:auto;border-radius:18px;box-shadow:0 32px 80px rgba(0,0,0,.35)}
 .hero-card{background:var(--ivory);border-radius:var(--radius);padding:32px;color:var(--ink);box-shadow:0 24px 64px rgba(0,0,0,.25)}
 .hero-card h3{font-size:1.25rem;margin-bottom:8px;color:var(--navy)}
 .hero-card p{font-size:.95rem;color:#4A4A5A;margin-bottom:16px}
 .hero-phone{font-family:"Cabinet Grotesk";font-weight:800;font-size:1.8rem;color:var(--navy);text-decoration:none;display:block;margin-bottom:8px}
 .hero-hours{font-size:.85rem;color:#6A6A7A}
+.hero-emergency{margin-top:20px;font-size:.92rem;color:rgba(232,224,210,.7);max-width:44ch}
 .hero-badge{position:absolute;top:-16px;right:-8px;background:var(--amber);color:var(--navy-deep);font-weight:800;font-size:.82rem;padding:10px 18px;border-radius:999px;transform:rotate(3deg)}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:64px 24px}}
 
@@ -167,15 +169,11 @@ footer a{color:var(--amber);text-decoration:none}
         <a class="btn-primary" href="tel:+15078353030">Call (507) 835-3030</a>
         <a class="btn-ghost" href="#diagnostic">Find your fix</a>
       </div>
+      <p class="hero-emergency">Burst pipe at 2am? Furnace out in January? We answer. Mon-Fri 8am-5pm, emergency line always open.</p>
     </div>
     <div class="hero-visual">
+      <img src="images/britton-pipes.webp" alt="Detailed cutaway illustration of brass plumbing pipes, valves, and gauges" class="hero-illustration">
       <div class="hero-badge">Bryant Authorized Dealer</div>
-      <div class="hero-card">
-        <h3>24/7 Emergency Service</h3>
-        <p>Burst pipe at 2am? Furnace out in January? We answer.</p>
-        <a class="hero-phone" href="tel:+15078353030">(507) 835-3030</a>
-        <p class="hero-hours">Mon-Fri 8am-5pm · Emergency line always open</p>
-      </div>
     </div>
   </div>
 </section>

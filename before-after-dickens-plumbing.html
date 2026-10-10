@@ -20,8 +20,8 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .sub{font-size:1.05rem;max-width:640px;margin:0 auto;color:#4b5563}
 /* Full page slider */
 .full-slider-wrap{margin:48px 0 24px;position:relative}
-.ba{position:relative;width:100%;aspect-ratio:16/18;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
-.ba-after{position:absolute;inset:0}
+.ba{position:relative;width:100%;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
+.ba-after{position:relative}
 .ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
 .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
 .ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
@@ -35,7 +35,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .mock-before-full .lic{font-size:.8rem;color:#666}
 /* ---- AFTER: Heritage Craftsman ---- */
 :root{--hc-cream:#faf6ef;--hc-cream2:#f3ecdb;--hc-ink:#1a2332;--hc-brass:#b87333;--hc-brassdeep:#7c4f1f;--hc-brasslt:#d9a45b;--hc-line:#e6dabd;--hc-muted:#6f6555}
-.mock-after-full{background:var(--hc-cream);height:100%;overflow:hidden;display:flex;flex-direction:column;font-family:"Inter",-apple-system,sans-serif}
+.mock-after-full{background:var(--hc-cream);overflow:hidden;display:flex;flex-direction:column;font-family:"Inter",-apple-system,sans-serif}
 .ma-strip{background:var(--hc-ink);color:var(--hc-cream);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;padding:9px 24px}
 .ma-strip b{color:var(--hc-brasslt);font-weight:600}
 .ma-masthead{display:flex;align-items:center;gap:1rem;padding:16px 24px 14px;border-bottom:2px solid var(--hc-ink);flex-wrap:wrap}
@@ -70,7 +70,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .ma-svc .n{font-family:"Playfair Display",Georgia,serif;font-size:1rem;font-weight:700;color:var(--hc-brass);min-width:1.7em}
 .ma-svc b{font-size:.82rem;color:var(--hc-ink);font-weight:600}
 .ma-svc span{margin-left:auto;font-size:.74rem;color:var(--hc-muted);text-align:right}
-.ma-footer{margin-top:auto;background:var(--hc-ink);color:var(--hc-cream);padding:14px 24px;font-size:.66rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;line-height:1.6}
+.ma-footer{background:var(--hc-ink);color:var(--hc-cream);padding:14px 24px;font-size:.66rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;line-height:1.6}
 .ma-footer b{color:var(--hc-brasslt);font-weight:600}
 /* Comparison sections */
 .compare{padding:56px 0;border-top:1px solid #f3f4f6}

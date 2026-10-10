@@ -84,11 +84,9 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ab-services{grid-template-columns:1fr}}
-/* Full page slider */
-.full-slider-wrap{margin:48px 0 24px;position:relative}
-.ba{position:relative;width:100%;aspect-ratio:16/18;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
-.ba-after{position:absolute;inset:0}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{position:relative}
+.ba{position:relative;width:100%;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
+.ba-after{position:relative}
 .ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
 .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.3);z-index:5;cursor:ew-resize}
 .ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
@@ -102,7 +100,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 .mock-before-full .lic{font-size:.8rem;color:#666}
 .mock-before-full .warn{background:#fce8e6;color:#a50e0e;padding:10px 14px;font-size:.8rem;margin-bottom:14px;font-family:Arial,sans-serif}
 .mock-before-full .junk{font-size:.78rem;color:#888;font-family:monospace;margin-bottom:6px}
-.mock-after-full{background:#faf7f0;height:100%;overflow:hidden;display:flex;flex-direction:column;font-family:Georgia,serif}
+.mock-after-full{background:#faf7f0;overflow:hidden;display:flex;flex-direction:column;font-family:Georgia,serif}
 .ma-topbar{background:#1a3c2e;color:#e9e2cf;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 28px;display:flex;justify-content:space-between;font-family:Inter,sans-serif}
 .ma-mast{display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid #e7e2d6}
 .ma-word b{font-family:Fraunces,Georgia,serif;font-size:1.05rem;font-weight:600;color:#1a3c2e;display:block;line-height:1.1}
@@ -130,7 +128,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 .ma-quote h4{font-family:Fraunces,Georgia,serif;font-size:1.05rem;font-weight:600;color:#1a3c2e;margin-bottom:6px}
 .ma-quote p{font-size:.72rem;color:#6f665a;margin-bottom:12px;line-height:1.6}
 .ma-fields .fld{border:1px solid #d8d2c2;background:#fffdf8;border-radius:6px;padding:7px 10px;font-size:.66rem;color:#a39a86;margin-bottom:8px;font-family:Inter,sans-serif}
-.ma-footer{margin-top:auto;background:#1a3c2e;color:#b7ad93;padding:11px 28px;font-size:.62rem;letter-spacing:.08em;display:flex;justify-content:space-between;font-family:Inter,sans-serif}
+.ma-footer{background:#1a3c2e;color:#b7ad93;padding:11px 28px;font-size:.62rem;letter-spacing:.08em;display:flex;justify-content:space-between;font-family:Inter,sans-serif}
 @media(max-width:640px){.ma-quote{grid-template-columns:1fr}}
 </style>
 </head>

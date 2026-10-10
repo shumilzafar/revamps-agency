@@ -7,7 +7,7 @@
 <meta name="description" content="Section-by-section concept rebuild of Dickens Plumbing's website by Revamps.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Inter",-apple-system,sans-serif;color:#4b5563;line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
@@ -33,24 +33,45 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .mock-before-full h2{font-family:Georgia,serif;font-size:1.3rem;color:#000;margin-bottom:14px}
 .mock-before-full p{font-size:.92rem;margin-bottom:8px;line-height:1.6}
 .mock-before-full .lic{font-size:.8rem;color:#666}
-.mock-after-full{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
-.ma-nav{display:flex;align-items:center;gap:1rem;padding:14px 28px;border-bottom:1px solid #f3f4f6}
-.ma-logo{font-weight:700;color:#111827;font-size:.95rem;margin-right:auto}
-.ma-links{display:flex;gap:14px}
-.ma-links i{width:52px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
-.ma-call{background:#2563eb;color:#fff;font-size:.75rem;font-weight:600;padding:8px 18px;border-radius:999px}
-.ma-hero{background:linear-gradient(135deg,#1e40af,#1e3a8a);padding:40px 32px;color:#fff}
-.ma-hero h3{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
-.ma-hero p{font-size:.9rem;opacity:.9;margin-bottom:16px}
-.ma-btn{display:inline-block;background:#fff;color:#1e3a8a;font-size:.8rem;font-weight:600;padding:10px 22px;border-radius:999px}
-.ma-trust{display:flex;gap:20px;padding:18px 32px;border-bottom:1px solid #f3f4f6}
-.ma-trust div{font-size:.78rem;color:#6b7280}
-.ma-trust strong{display:block;color:#111827;font-size:.95rem}
-.ma-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:20px 32px}
-.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
-.ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
-.ma-services span{font-size:.72rem;color:#6b7280}
-.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;margin-top:auto;background:#fff}
+/* ---- AFTER: Heritage Craftsman ---- */
+:root{--hc-cream:#faf6ef;--hc-cream2:#f3ecdb;--hc-ink:#1a2332;--hc-brass:#b87333;--hc-brassdeep:#7c4f1f;--hc-brasslt:#d9a45b;--hc-line:#e6dabd;--hc-muted:#6f6555}
+.mock-after-full{background:var(--hc-cream);height:100%;overflow:hidden;display:flex;flex-direction:column;font-family:"Inter",-apple-system,sans-serif}
+.ma-strip{background:var(--hc-ink);color:var(--hc-cream);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;padding:9px 24px}
+.ma-strip b{color:var(--hc-brasslt);font-weight:600}
+.ma-masthead{display:flex;align-items:center;gap:1rem;padding:16px 24px 14px;border-bottom:2px solid var(--hc-ink);flex-wrap:wrap}
+.ma-brand{font-family:"Playfair Display",Georgia,serif;font-size:1.5rem;font-weight:800;color:var(--hc-ink);letter-spacing:-.01em;line-height:1}
+.ma-brand small{display:block;font-family:"Inter",sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.28em;color:var(--hc-brass);margin-top:6px}
+.ma-mastnav{margin-left:auto;display:flex;gap:18px;font-size:.74rem;font-weight:500;color:var(--hc-ink)}
+/* Tactile button: shaped face, firm edge, compressible depth */
+.tbtn{display:inline-block;background:var(--hc-brass);color:#fff8ec;font-family:"Inter",sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.02em;padding:13px 24px;border-radius:10px;border:0;cursor:pointer;box-shadow:0 5px 0 var(--hc-brassdeep),0 10px 18px rgba(26,35,50,.22);transition:transform .07s ease,box-shadow .07s ease;text-decoration:none;white-space:nowrap}
+.tbtn:active{transform:translateY(5px);box-shadow:0 0 0 var(--hc-brassdeep),0 3px 8px rgba(26,35,50,.18)}
+.tbtn.small{font-size:.7rem;padding:10px 17px;box-shadow:0 4px 0 var(--hc-brassdeep),0 8px 14px rgba(26,35,50,.2)}
+.tbtn.small:active{transform:translateY(4px);box-shadow:0 0 0 var(--hc-brassdeep),0 2px 6px rgba(26,35,50,.16)}
+.ma-hero{position:relative;padding:26px 24px 30px;overflow:hidden}
+.ma-kicker{font-size:.64rem;font-weight:600;letter-spacing:.24em;color:var(--hc-brass);text-transform:uppercase;margin-bottom:10px}
+.ma-hero h3{font-family:"Playfair Display",Georgia,serif;font-size:2.2rem;font-weight:800;color:var(--hc-ink);line-height:1.06;letter-spacing:-.015em;margin-bottom:10px;max-width:9em}
+.ma-hero p{font-size:.85rem;color:var(--hc-muted);max-width:25em;margin-bottom:18px;line-height:1.6}
+.ma-hero .tbtn{position:relative;z-index:2}
+.ma-plate{position:relative;z-index:1;background:var(--hc-ink);border-radius:6px;padding:26px 24px;margin:16px -24px -30px 22%;overflow:hidden}
+.ma-plate .mono{font-family:"Playfair Display",Georgia,serif;font-size:4.4rem;font-weight:800;color:var(--hc-brass);line-height:1;letter-spacing:-.02em}
+.ma-plate .plate-sub{font-size:.6rem;letter-spacing:.32em;color:var(--hc-cream);text-transform:uppercase;margin-top:10px}
+.ma-plate .rule{height:1px;background:var(--hc-brass);opacity:.55;margin-top:14px}
+/* Rubber stamp license badge */
+.stamp{position:absolute;width:118px;height:118px;transform:rotate(-10deg);opacity:.94;pointer-events:none;z-index:3}
+.stamp svg{width:100%;height:100%;display:block}
+.ma-hero .stamp{top:16px;right:18px}
+.ma-ledger{display:flex;border-top:1px solid var(--hc-line);border-bottom:1px solid var(--hc-line);background:var(--hc-cream)}
+.ma-ledger div{flex:1;padding:14px 20px;font-size:.72rem;color:var(--hc-muted);border-left:1px solid var(--hc-line);line-height:1.5}
+.ma-ledger div:first-child{border-left:0}
+.ma-ledger strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:1.05rem;color:var(--hc-ink);font-weight:700}
+.ma-services{padding:4px 24px}
+.ma-svc{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid var(--hc-line)}
+.ma-svc:last-child{border-bottom:0}
+.ma-svc .n{font-family:"Playfair Display",Georgia,serif;font-size:1rem;font-weight:700;color:var(--hc-brass);min-width:1.7em}
+.ma-svc b{font-size:.82rem;color:var(--hc-ink);font-weight:600}
+.ma-svc span{margin-left:auto;font-size:.74rem;color:var(--hc-muted);text-align:right}
+.ma-footer{margin-top:auto;background:var(--hc-ink);color:var(--hc-cream);padding:14px 24px;font-size:.66rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;line-height:1.6}
+.ma-footer b{color:var(--hc-brasslt);font-weight:600}
 /* Comparison sections */
 .compare{padding:56px 0;border-top:1px solid #f3f4f6}
 .compare:first-of-type{border-top:0}
@@ -75,31 +96,25 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .bb-hero p{font-size:.82rem;margin-bottom:6px}
 .bb-list{font-family:Georgia,serif;font-size:.82rem}
 .bb-list p{margin-bottom:6px}
-/* After styles: modern */
-.ab-nav{display:flex;align-items:center;gap:.8rem;padding:.6rem 0}
-.ab-logo{font-weight:700;color:#111827;font-size:.85rem;margin-right:auto}
-.ab-links{display:flex;gap:10px}
-.ab-links i{width:44px;height:7px;background:#e5e7eb;border-radius:4px;display:block}
-.ab-call{background:#2563eb;color:#fff;font-size:.7rem;font-weight:600;padding:7px 14px;border-radius:999px}
-.ab-hero{background:linear-gradient(135deg,#1e40af,#1e3a8a);border-radius:12px;padding:1.6rem 1.4rem;color:#fff}
-.ab-hero h4{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.25}
-.ab-hero p{font-size:.8rem;opacity:.9;margin-bottom:1rem}
-.ab-btn{display:inline-block;background:#fff;color:#1e3a8a;font-size:.75rem;font-weight:600;padding:9px 20px;border-radius:999px}
-.ab-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ab-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px}
-.ab-services b{display:block;font-size:.75rem;color:#111827;margin-bottom:2px}
-.ab-services span{font-size:.68rem;color:#6b7280}
-.ab-trust{display:flex;gap:16px;flex-wrap:wrap}
-.ab-trust div{font-size:.72rem;color:#6b7280}
-.ab-trust strong{display:block;color:#111827;font-size:.85rem}
-.ab-review{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px 14px;margin-bottom:10px}
-.ab-review .stars{color:#f59e0b;font-size:.7rem;letter-spacing:.06em}
-.ab-review p{font-size:.76rem;color:#4b5563;margin:6px 0;font-style:italic}
-.ab-review span{font-size:.68rem;color:#9ca3af}
-.ab-contact{background:#111827;border-radius:12px;padding:1.6rem 1.4rem;text-align:center;color:#fff}
-.ab-contact h4{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.ab-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:1rem}
-.ab-contact .ab-btn{background:#2563eb;color:#fff}
+/* After styles: Heritage Craftsman */
+.ab-nav{display:flex;align-items:center;gap:.9rem;background:var(--hc-cream);border:1px solid var(--hc-line);border-radius:10px;padding:.85rem 1rem;flex-wrap:wrap}
+.ab-brand{font-family:"Playfair Display",Georgia,serif;font-weight:800;color:var(--hc-ink);font-size:.95rem;margin-right:auto;line-height:1.15}
+.ab-brand small{display:block;font-family:"Inter",sans-serif;font-size:.55rem;font-weight:600;letter-spacing:.26em;color:var(--hc-brass);margin-top:4px}
+.ab-links{display:flex;gap:12px;font-size:.72rem;font-weight:500;color:var(--hc-ink)}
+.ab-hero{background:var(--hc-cream);border:1px solid var(--hc-line);border-radius:12px;padding:1.5rem 1.4rem;position:relative;overflow:hidden}
+.ab-kicker{font-size:.6rem;font-weight:600;letter-spacing:.24em;color:var(--hc-brass);text-transform:uppercase;margin-bottom:.6rem}
+.ab-hero h4{font-family:"Playfair Display",Georgia,serif;font-size:1.55rem;font-weight:800;color:var(--hc-ink);line-height:1.1;letter-spacing:-.01em;margin-bottom:.6rem;max-width:9em}
+.ab-hero p{font-size:.8rem;color:var(--hc-muted);margin-bottom:1.1rem;line-height:1.6;max-width:24em}
+.ab-hero .stamp{width:96px;height:96px;top:12px;right:12px}
+.ab-services{background:var(--hc-cream);border:1px solid var(--hc-line);border-radius:12px;padding:.3rem 1.2rem}
+.ab-trust{background:var(--hc-cream);border:1px solid var(--hc-line);border-radius:12px;padding:1.2rem 1.2rem;display:flex;gap:1.3rem;align-items:center;flex-wrap:wrap}
+.ab-trust .t{font-size:.72rem;color:var(--hc-muted);line-height:1.5}
+.ab-trust .t strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:1rem;color:var(--hc-ink);font-weight:700}
+.ab-trust .stamp{position:relative;top:auto;right:auto;width:104px;height:104px;margin-left:auto;flex:none}
+.ab-contact{background:var(--hc-ink);border-radius:12px;padding:1.8rem 1.4rem;text-align:center;color:var(--hc-cream)}
+.ab-contact h4{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.01em}
+.ab-contact p{font-size:.78rem;color:#b9ac93;margin-bottom:1.2rem;line-height:1.6}
+.ab-contact .lic{font-size:.62rem;letter-spacing:.22em;color:var(--hc-brasslt);margin-top:1.1rem;text-transform:uppercase}
 /* Verdict */
 .verdict{background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:2rem;margin:3rem 0}
 .verdict h3{font-size:1.1rem;color:#111827;font-weight:700;margin-bottom:.8rem}
@@ -111,7 +126,11 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.panels{grid-template-columns:1fr}.ab-services{grid-template-columns:1fr}}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ma-mastnav{display:none}}
+.ma-area{border-top:1px solid var(--hc-line);border-bottom:1px solid var(--hc-line);background:var(--hc-cream2);padding:14px 24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:.78rem;color:var(--hc-muted)}
+.ma-area-label{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hc-brassdeep)}
+.ma-area span{color:var(--hc-ink);font-weight:600}
+.ma-area i{color:var(--hc-brass);font-style:normal}
 </style>
 </head>
 <body>
@@ -133,11 +152,22 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc" style="max-width:680px;margin-bottom:2rem;font-size:.98rem">The complete homepage, before and after. Drag the handle to compare.</p>
 <div class="ba" id="ba">
 <div class="ba-after"><div class="mock-after-full">
-<div class="ma-nav"><span class="ma-logo">Dickens Plumbing Inc</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">(863) 294-6737</span></div>
-<div class="ma-hero"><h3>Winter Haven plumbers.<br>Here today, fixed today.</h3><p>Family-owned. Licensed CFC1429438. Same-day service across Polk County.</p><span class="ma-btn">Call (863) 294-6737</span></div>
-<div class="ma-trust"><div><strong>4.8 stars</strong>59 reviews</div><div><strong>Licensed</strong>CFC1429438</div><div><strong>Local</strong>Winter Haven</div></div>
-<div class="ma-services"><div><b>Repairs</b><span>Leaks, clogs, 24/7</span></div><div><b>Water Heaters</b><span>Install &amp; repair</span></div><div><b>Drains</b><span>Cleared fast</span></div></div>
-<div class="ma-footer"><span>Dickens Plumbing Inc</span><span>(863) 294-6737</span></div>
+<div class="ma-strip"><span>FL licensed plumber &nbsp;<b>CFC1429438</b></span><span>Winter Haven, Florida</span></div>
+<div class="ma-masthead"><div class="ma-brand">Dickens Plumbing<small>Plumbing Inc &middot; Winter Haven FL</small></div><nav class="ma-mastnav"><span>Services</span><span>Service Area</span><span>Reviews</span></nav><span class="tbtn small">Call (863) 294-6737</span></div>
+<div class="ma-hero"><div class="stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="stc1" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="57" fill="none" stroke="#b87333" stroke-width="3.5"/><circle cx="60" cy="60" r="38" fill="none" stroke="#b87333" stroke-width="1.5"/><text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.5" fill="#b87333"><textPath href="#stc1">FL LICENSED PLUMBER ★ CFC1429438 ★</textPath></text><text x="60" y="57" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="15" font-weight="800" fill="#b87333">DICKENS</text><text x="60" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" letter-spacing="3" fill="#b87333">PLUMBING</text></svg></div><p class="ma-kicker">Winter Haven, Florida</p>
+<h3>Winter Haven&rsquo;s plumber.</h3>
+<p>Repairs, water heaters, and drain cleaning. Licensed CFC1429438, serving Winter Haven and Polk County.</p>
+<span class="tbtn">Call (863) 294-6737</span>
+<div class="ma-plate"><div class="mono">DP</div><div class="plate-sub">Dickens Plumbing Inc</div><div class="rule"></div></div>
+</div>
+<div class="ma-ledger"><div><strong>4.8 stars</strong>59 Google reviews</div><div><strong>CFC1429438</strong>Florida license</div><div><strong>Polk County</strong>service area</div></div>
+<div class="ma-services">
+<div class="ma-svc"><span class="n">01</span><b>Emergency Repairs</b><span>Leaks, bursts, urgent fixes</span></div>
+<div class="ma-svc"><span class="n">02</span><b>Water Heaters</b><span>Installed and repaired</span></div>
+<div class="ma-svc"><span class="n">03</span><b>Drain Cleaning</b><span>Slow drains cleared fast</span></div>
+</div>
+<div class="ma-area"><span class="ma-area-label">Serving</span><span>Winter Haven</span><i>·</i><span>Auburndale</span><i>·</i><span>Lake Wales</span><i>·</i><span>Bartow</span><i>·</i><span>Haines City</span><i>·</i><span>Polk County</span></div>
+<div class="ma-footer"><span>Dickens Plumbing Inc &middot; <b>(863) 294-6737</b></span><span>FL License <b>CFC1429438</b> &middot; Winter Haven, FL</span></div>
 </div></div>
 <div class="ba-before"><div class="mock-before-full">
 <h2>Dickens Plumbing Inc</h2>
@@ -161,7 +191,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The old site has no navigation at all. No menu, no phone number in the header, no way to move around. A visitor lands and has nowhere to go.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-nav"><p>Dickens Plumbing Inc</p><p style="font-size:.72rem;color:#777;margin-top:8px">(no menu, no links, no phone number visible)</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-nav"><span class="ab-logo">Dickens Plumbing Inc</span><span class="ab-links"><i></i><i></i><i></i></span><span class="ab-call">(863) 294-6737</span></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Clear menu, tap-to-call button on every screen. The phone number is the most important thing on a plumber's site, so it is always one tap away.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-nav"><span class="ab-brand">Dickens Plumbing<small>Winter Haven, FL</small></span><span class="ab-links"><span>Services</span><span>Service Area</span><span>Reviews</span></span><span class="tbtn small">Call (863) 294-6737</span></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Clear menu, tap-to-call button on every screen. The phone number is the most important thing on a plumber's site, so it is always one tap away.</p></div></div>
 </div>
 </section>
 
@@ -171,7 +201,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The old homepage is plain text on a white page. No headline, no photo, no reason to stay. Most visitors leave within seconds.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-hero"><h4>Dickens Plumbing Inc</h4><p>We are a plumbing company in Winter Haven, Florida.</p><p>Call us for your plumbing needs.</p><p style="font-size:.72rem;color:#777;margin-top:10px">(the entire homepage, roughly)</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><h4>Winter Haven plumbers.<br>Here today, fixed today.</h4><p>Family-owned. Licensed CFC1429438. Same-day service across Polk County.</p><span class="ab-btn">Call (863) 294-6737</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><div class="stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="stc2" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="57" fill="none" stroke="#b87333" stroke-width="3.5"/><circle cx="60" cy="60" r="38" fill="none" stroke="#b87333" stroke-width="1.5"/><text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.5" fill="#b87333"><textPath href="#stc2">FL LICENSED PLUMBER ★ CFC1429438 ★</textPath></text><text x="60" y="57" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="15" font-weight="800" fill="#b87333">DICKENS</text><text x="60" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" letter-spacing="3" fill="#b87333">PLUMBING</text></svg></div><p class="ab-kicker">Winter Haven, Florida</p><h4>Winter Haven&rsquo;s plumber.</h4><p>Repairs, water heaters, and drain cleaning. Licensed CFC1429438, serving Winter Haven and Polk County.</p><span class="tbtn small">Call (863) 294-6737</span></div></div></div>
 </div>
 </section>
 
@@ -181,7 +211,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The old site lists services as a flat text paragraph, if at all. Customers cannot scan it, and Google cannot rank it.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-list"><p>We do repairs, water heaters, drain cleaning, and other plumbing services. Contact us for more information.</p><p style="font-size:.72rem;color:#777;margin-top:10px">(no structure, no detail, no pages per service)</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-services"><div><b>Emergency Repairs</b><span>Leaks, bursts, 24/7</span></div><div><b>Water Heaters</b><span>Install and repair</span></div><div><b>Drain Cleaning</b><span>Clogs cleared fast</span></div><div><b>Fixture Installs</b><span>Faucets, toilets, more</span></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Each service gets its own scannable card. Room to grow into full pages that rank on Google.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-services"><div class="ma-svc"><span class="n">01</span><b>Emergency Repairs</b><span>Leaks, bursts, urgent fixes</span></div><div class="ma-svc"><span class="n">02</span><b>Water Heaters</b><span>Installed and repaired</span></div><div class="ma-svc"><span class="n">03</span><b>Drain Cleaning</b><span>Slow drains cleared fast</span></div><div class="ma-svc"><span class="n">04</span><b>Fixture Installs</b><span>Faucets, toilets, and more</span></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Each service gets its own scannable ledger row. Room to grow into full pages that rank on Google.</p></div></div>
 </div>
 </section>
 
@@ -191,7 +221,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">59 reviews at 4.8 stars, and the old site shows zero of them. All that trust is invisible to anyone who finds the website first.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p style="font-size:.82rem">(no reviews anywhere on the site)</p><p class="lic" style="margin-top:12px">License: CFC1429438</p><p class="lic">(buried at the bottom, no context)</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-trust"><div><strong>4.8 stars</strong>59 Google reviews</div><div><strong>Licensed</strong>CFC1429438</div><div><strong>Local</strong>Winter Haven, FL</div></div><div class="ab-review" style="margin-top:14px"><p class="stars">★★★★★</p><p>"Fixed our water heater the same day we called. Fair price, clean work."</p><span>Homeowner in Winter Haven</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-trust"><div class="t"><strong>4.8 stars</strong>59 Google reviews</div><div class="t"><strong>CFC1429438</strong>Florida license</div><div class="t"><strong>Winter Haven</strong>Polk County, FL</div><div class="stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="stc3" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="57" fill="none" stroke="#b87333" stroke-width="3.5"/><circle cx="60" cy="60" r="38" fill="none" stroke="#b87333" stroke-width="1.5"/><text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.5" fill="#b87333"><textPath href="#stc3">FL LICENSED PLUMBER ★ CFC1429438 ★</textPath></text><text x="60" y="57" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="15" font-weight="800" fill="#b87333">DICKENS</text><text x="60" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" letter-spacing="3" fill="#b87333">PLUMBING</text></svg></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">The license is shown like a stamp, not buried in small print. Real numbers, up front.</p></div></div>
 </div>
 </section>
 
@@ -201,7 +231,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The old site has a phone number somewhere in the text. No click-to-call, no form, no hours. On mobile, which is where most customers are, it is nearly useless.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Phone: (863) 294-6737</p><p style="font-size:.72rem;color:#777;margin-top:10px">(plain text, not clickable on phones)</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Need a plumber today?</h4><p>Open Mon to Sat, 8am to 6pm. Emergency calls anytime.</p><span class="ab-btn">Call (863) 294-6737</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Need a plumber in Winter Haven?</h4><p>One call and the job gets scheduled. Real business, real phone number.</p><span class="tbtn">Call (863) 294-6737</span><p class="lic">FL License CFC1429438</p></div></div></div>
 </div>
 </section>
 

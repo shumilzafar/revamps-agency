@@ -7,7 +7,7 @@
 <meta name="description" content="Section-by-section concept rebuild of Done Right Roofing's website by Revamps.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Inter",-apple-system,sans-serif;color:#4b5563;line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
@@ -38,32 +38,27 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .bb-dup p{margin-bottom:2px}
 .bb-stray{display:inline-block;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;font-size:.75rem;padding:4px 10px;border-radius:6px;margin:4px 6px 4px 0}
 .bb-note{font-size:.72rem;color:#777;margin-top:10px}
-/* After styles: modern */
-.ab-nav{display:flex;align-items:center;gap:.8rem;padding:.6rem 0}
-.ab-logo{font-weight:700;color:#111827;font-size:.85rem;margin-right:auto}
-.ab-links{display:flex;gap:10px}
-.ab-links i{width:44px;height:7px;background:#e5e7eb;border-radius:4px;display:block}
-.ab-call{background:#2563eb;color:#fff;font-size:.7rem;font-weight:600;padding:7px 14px;border-radius:999px}
-.ab-hero{background:linear-gradient(135deg,#334155,#0f172a);border-radius:12px;padding:1.6rem 1.4rem;color:#fff}
-.ab-hero h4{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.25}
-.ab-hero p{font-size:.8rem;opacity:.9;margin-bottom:1rem}
-.ab-btn{display:inline-block;background:#fff;color:#0f172a;font-size:.75rem;font-weight:600;padding:9px 20px;border-radius:999px}
-.ab-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ab-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px}
-.ab-services b{display:block;font-size:.75rem;color:#111827;margin-bottom:2px}
-.ab-services span{font-size:.68rem;color:#6b7280}
-.ab-trust{display:flex;gap:16px;flex-wrap:wrap}
-.ab-trust div{font-size:.72rem;color:#6b7280}
-.ab-trust strong{display:block;color:#111827;font-size:.85rem}
-.ab-review{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px 14px;margin-bottom:10px}
-.ab-review .stars{color:#f59e0b;font-size:.7rem;letter-spacing:.06em}
-.ab-review p{font-size:.76rem;color:#4b5563;margin:6px 0;font-style:italic}
-.ab-review span{font-size:.68rem;color:#9ca3af}
-.ab-contact{background:#111827;border-radius:12px;padding:1.6rem 1.4rem;text-align:center;color:#fff}
-.ab-contact h4{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.ab-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:1rem}
-.ab-contact .ab-btn{background:#2563eb;color:#fff}
-.ab-footer{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px 14px;font-size:.72rem;color:#6b7280}
+/* After styles: Bold Industrial (charcoal / safety orange / off-white) */
+.ab-ind{background:#161616;border-radius:12px;padding:1.5rem 1.3rem;color:#f5f4f0;overflow:hidden}
+.ab-ind .k{font-family:"Oswald",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#ff5c00;margin-bottom:10px;display:block}
+.ab-ind h4{font-family:"Oswald",sans-serif;font-weight:700;font-size:1.55rem;line-height:1.05;text-transform:uppercase;letter-spacing:.02em;margin-bottom:10px;color:#f5f4f0}
+.ab-ind h4 .org{color:#ff5c00}
+.ab-ind p{font-family:"Inter",sans-serif;font-size:.82rem;color:#b8b5ad;margin-bottom:16px;line-height:1.6}
+.ab-rows{border-top:1px solid #2e2e2e}
+.ab-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #2e2e2e}
+.ab-row:last-child{border-bottom:0}
+.ab-row .n{font-family:"Oswald",sans-serif;font-weight:700;color:#ff5c00;font-size:1.15rem;min-width:34px;line-height:1}
+.ab-row b{font-family:"Oswald",sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#f5f4f0}
+.ab-row span{font-family:"Inter",sans-serif;font-size:.7rem;color:#8a877e;margin-left:auto;text-align:right}
+/* Tactile press button (Kitchen library idea): real depth, presses down */
+.press-btn{display:inline-block;background:#ff5c00;color:#161616;font-family:"Oswald",sans-serif;font-weight:700;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;padding:14px 30px;border-radius:8px;border:0;cursor:pointer;box-shadow:0 6px 0 #a83c00,0 12px 24px rgba(0,0,0,.45);transition:transform .07s ease,box-shadow .07s ease;text-decoration:none}
+.press-btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #a83c00,0 8px 16px rgba(0,0,0,.4)}
+.press-btn:active{transform:translateY(6px);box-shadow:0 0 0 #a83c00,0 2px 6px rgba(0,0,0,.4)}
+.press-btn.sm{font-size:.78rem;padding:10px 20px;box-shadow:0 4px 0 #a83c00,0 8px 16px rgba(0,0,0,.4)}
+.press-btn.sm:active{transform:translateY(4px);box-shadow:0 0 0 #a83c00}
+/* Rubber stamp badge */
+.stamp{display:inline-block;border:3px solid #ff5c00;color:#ff5c00;font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;line-height:1.3;padding:10px 18px;transform:rotate(-5deg);border-radius:6px;background:rgba(255,92,0,.06);box-shadow:inset 0 0 14px rgba(255,92,0,.18);opacity:.94}
+.stamp small{display:block;font-size:.58rem;letter-spacing:.24em;opacity:.85;font-weight:600}
 /* Verdict */
 .verdict{background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:2rem;margin:3rem 0}
 .verdict h3{font-size:1.1rem;color:#111827;font-weight:700;margin-bottom:.8rem}
@@ -75,7 +70,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ab-services{grid-template-columns:1fr}}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{aspect-ratio:4/9}}
 /* Full page slider */
 .full-slider-wrap{margin:48px 0 24px;position:relative}
 .ba{position:relative;width:100%;aspect-ratio:16/18;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
@@ -93,24 +88,30 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 .mock-before-full .lic{font-size:.8rem;color:#666}
 .mock-before-full .warn{background:#fce8e6;color:#a50e0e;padding:10px 14px;font-size:.8rem;margin-bottom:14px;font-family:Arial,sans-serif}
 .mock-before-full .junk{font-size:.78rem;color:#888;font-family:monospace;margin-bottom:6px}
-.mock-after-full{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
-.ma-nav{display:flex;align-items:center;gap:1rem;padding:14px 28px;border-bottom:1px solid #f3f4f6}
-.ma-logo{font-weight:700;color:#111827;font-size:.95rem;margin-right:auto}
-.ma-links{display:flex;gap:14px}
-.ma-links i{width:52px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
-.ma-call{background:#2563eb;color:#fff;font-size:.75rem;font-weight:600;padding:8px 18px;border-radius:999px}
-.ma-hero{padding:40px 32px;color:#fff}
-.ma-hero h3{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
-.ma-hero p{font-size:.9rem;opacity:.9;margin-bottom:16px}
-.ma-btn{display:inline-block;background:#fff;font-size:.8rem;font-weight:600;padding:10px 22px;border-radius:999px}
-.ma-trust{display:flex;gap:20px;padding:18px 32px;border-bottom:1px solid #f3f4f6}
-.ma-trust div{font-size:.78rem;color:#6b7280}
-.ma-trust strong{display:block;color:#111827;font-size:.95rem}
-.ma-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:20px 32px}
-.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
-.ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
-.ma-services span{font-size:.72rem;color:#6b7280}
-.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;margin-top:auto;background:#fff}
+/* Full-page after mock: Bold Industrial */
+.mock-after-full{background:#161616;height:100%;overflow:hidden;display:flex;flex-direction:column;font-family:"Oswald","Arial Narrow",sans-serif}
+.ma-topbar{background:#0d0d0d;color:#f5f4f0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 24px;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-bottom:2px solid #ff5c00}
+.ma-topbar .ma-phone{color:#ff5c00;font-weight:700;letter-spacing:.08em;white-space:nowrap}
+.ma-mast{padding:32px 28px 28px}
+.ma-kicker{display:inline-block;background:#ff5c00;color:#161616;font-weight:700;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;margin-bottom:16px}
+.ma-mast h3{font-weight:700;font-size:clamp(2.1rem,7.5vw,3.4rem);line-height:1.0;letter-spacing:.01em;text-transform:uppercase;color:#f5f4f0;margin-bottom:14px}
+.ma-mast h3 .org{color:#ff5c00}
+.ma-mast p{font-family:"Inter",sans-serif;font-size:.85rem;line-height:1.6;color:#b8b5ad;margin-bottom:22px;max-width:36ch}
+.ma-mast .press-btn{margin-bottom:20px}
+.ma-slash{background:#ff5c00;height:18px;transform:skewY(-1.6deg);margin:2px -10px;flex:none}
+.ma-services{background:#1c1c1c;padding:10px 28px 22px;flex:1}
+.ma-svc-label{font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#8a877e;margin:12px 0 2px}
+.ma-svc{display:flex;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid #2e2e2e}
+.ma-svc:last-child{border-bottom:0}
+.ma-svc .n{font-weight:700;font-size:1.9rem;color:#ff5c00;line-height:1;min-width:50px}
+.ma-svc b{display:block;font-weight:600;font-size:1rem;letter-spacing:.07em;text-transform:uppercase;color:#f5f4f0}
+.ma-svc span{font-family:"Inter",sans-serif;font-size:.7rem;color:#8a877e}
+.ma-svc .go{margin-left:auto;color:#ff5c00;font-size:1.3rem;font-weight:700}
+.ma-footer{background:#0d0d0d;border-top:2px solid #ff5c00;padding:12px 24px;display:flex;justify-content:space-between;gap:10px;font-family:"Inter",sans-serif;font-size:.66rem;color:#8a877e;flex:none}
+.ma-footer b{color:#f5f4f0;font-family:"Oswald",sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem}
+.ma-guar{background:#ff5c00;color:#161616;padding:20px 32px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.ma-guar strong{font-family:"Oswald",sans-serif;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.ma-guar span{font-size:.85rem;font-weight:600}
 </style>
 </head>
 <body>
@@ -132,11 +133,23 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc" style="max-width:680px;margin-bottom:2rem;font-size:.98rem">The complete homepage, before and after. Drag the handle to compare.</p>
 <div class="ba" id="ba">
 <div class="ba-after"><div class="mock-after-full">
-<div class="ma-nav"><span class="ma-logo">Done Right Roofing</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">0418 804 934</span></div>
-<div class="ma-hero" style="background:linear-gradient(135deg,#334155,#0f172a)"><h3>Done right<br>the first time.</h3><p>Roof replacement, repairs &amp; inspections across Adelaide.</p><span class="ma-btn" style="color:#0f172a">Call 0418 804 934</span></div>
-<div class="ma-trust"><div><strong>Local</strong>Seaton, Adelaide</div><div><strong>Licensed</strong>&amp; insured</div><div><strong>Free</strong>Roof inspections</div></div>
-<div class="ma-services"><div><b>Repairs</b><span>Leaks, tiles, flashing</span></div><div><b>Replacement</b><span>Full re-roofing</span></div><div><b>Inspections</b><span>Free assessments</span></div></div>
-<div class="ma-footer"><span>Done Right Roofing</span><span>0418 804 934</span></div>
+<div class="ma-topbar"><span>Roofing &middot; Seaton, Adelaide</span><span class="ma-phone">0418 804 934</span></div>
+<div class="ma-mast">
+<span class="ma-kicker">Seaton, Adelaide</span>
+<h3>Done right<br><span class="org">the first time.</span></h3>
+<p>Roof repairs, full replacements and inspections across Adelaide. Licensed, insured, local.</p>
+<span class="press-btn">Call 0418 804 934</span><br>
+<span class="stamp">Done right<small>the first time</small></span>
+</div>
+<div class="ma-slash"></div>
+<div class="ma-services">
+<p class="ma-svc-label">What we do</p>
+<div class="ma-svc"><span class="n">01</span><div><b>Roof repairs</b><span>Leaks, tiles, flashing</span></div><span class="go">&rarr;</span></div>
+<div class="ma-svc"><span class="n">02</span><div><b>Full replacement</b><span>Tear-off and install</span></div><span class="go">&rarr;</span></div>
+<div class="ma-svc"><span class="n">03</span><div><b>Inspections</b><span>Free assessments</span></div><span class="go">&rarr;</span></div>
+</div>
+<div class="ma-guar"><strong>Done right the first time.</strong><span>If it is not right, we come back and fix it free.</span></div>
+<div class="ma-footer"><b>Done Right Roofing</b><span>0418 804 934 &middot; donerightSA@gmail.com</span></div>
 </div></div>
 <div class="ba-before"><div class="mock-before-full">
 <h2>Done Right Roofing</h2>
@@ -163,7 +176,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The same contact block repeats three to four times down the page. It looks like the site glitched, and it pushes anything useful off the screen.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-dup"><p><b>Contact Us</b></p><p>0418 804 934</p><p>donerightSA@gmail.com</p></div><div class="bb-dup"><p><b>Contact Us</b></p><p>0418 804 934</p><p>donerightSA@gmail.com</p></div><div class="bb-dup"><p><b>Contact Us</b></p><p>0418 804 934</p><p>donerightSA@gmail.com</p></div><p class="bb-note">Same block, three times. The fourth copy is further down.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-footer"><b style="color:#111827">Done Right Roofing</b><br>Seaton, Adelaide &middot; 0418 804 934<br>donerightSA@gmail.com</div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">One footer. Everything a customer needs, exactly once, at the bottom where it belongs.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-ind"><span class="k">The footer</span><h4>One footer.<br><span class="org">Done once.</span></h4><p><b style="color:#f5f4f0">Done Right Roofing</b><br>Seaton, Adelaide &middot; 0418 804 934<br>donerightSA@gmail.com</p></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">One footer. Everything a customer needs, exactly once, at the bottom where it belongs.</p></div></div>
 </div>
 </section>
 
@@ -173,7 +186,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The homepage opens with vague text that says nothing about roofing, nothing about Adelaide, and nothing about why anyone should call.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><h4>Welcome</h4><p>We offer quality services for all your needs. Contact us for more information.</p><p class="bb-note">Could be a roofer. Could be a bakery.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><h4>Done right<br>the first time.</h4><p>Roof repairs and replacements across Adelaide. Licensed, insured, local.</p><span class="ab-btn">Call 0418 804 934</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-ind"><span class="k">Seaton, Adelaide</span><h4>Done right<br><span class="org">the first time.</span></h4><p>Roof repairs and replacements across Adelaide. Licensed, insured, local.</p><span class="press-btn sm">Call 0418 804 934</span></div></div></div>
 </div>
 </section>
 
@@ -183,7 +196,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">Services are listed as a flat paragraph. Customers cannot scan it, there is nothing to click, and Google has nothing to rank.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>We do roof repairs, roof replacement, guttering and other roofing services. Contact us for more information.</p><p class="bb-note">One paragraph. No structure, no detail.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-services"><div><b>Roof Repairs</b><span>Leaks fixed fast</span></div><div><b>Full Replacements</b><span>Tear-off and install</span></div><div><b>Guttering</b><span>Repair and replace</span></div><div><b>Inspections</b><span>Free storm checks</span></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Each service gets its own card. Clear, scannable, and ready to grow into full pages.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-ind"><span class="k">Services</span><div class="ab-rows"><div class="ab-row"><span class="n">01</span><b>Roof repairs</b><span>Leaks fixed fast</span></div><div class="ab-row"><span class="n">02</span><b>Full replacements</b><span>Tear-off and install</span></div><div class="ab-row"><span class="n">03</span><b>Guttering</b><span>Repair and replace</span></div><div class="ab-row"><span class="n">04</span><b>Inspections</b><span>Free storm checks</span></div></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">Numbered and scannable. Each one ready to grow into a full page.</p></div></div>
 </div>
 </section>
 
@@ -193,7 +206,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The phone number and email are scattered across the page in different formats. One section even has the stray word "information" sitting on its own line.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Call: 0418 804 934</p><p>Email: donerightSA@gmail.com</p><p><span class="bb-stray">information</span></p><p class="bb-note">A stray word with no sentence around it, live on the page.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Leak? Storm damage?</h4><p>Call 0418 804 934 or email donerightSA@gmail.com. We reply same day.</p><span class="ab-btn">Call 0418 804 934</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-ind"><span class="k">Storm damage? Leak?</span><h4>Call <span class="org">0418 804 934</span></h4><p>Or email donerightSA@gmail.com. We reply same day.</p><span class="press-btn sm">Call now</span></div></div></div>
 </div>
 </section>
 
@@ -203,7 +216,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">Stray text, repeated blocks, inconsistent styling. The whole page feels unfinished, which makes the business feel unfinished, even though the work itself is good.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Repeated footers, stray words, mismatched text sizes, no clear structure from top to bottom.</p><p class="bb-note">Death by a thousand small defects.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-trust"><div><strong>Adelaide</strong>Local roofer</div><div><strong>Direct line</strong>0418 804 934</div><div><strong>Seaton based</strong>Serving the metro</div></div><div class="ab-review" style="margin-top:14px"><p class="stars">★★★★★</p><p>"New roof looks great and the crew left the yard spotless. Would use them again."</p><span>Homeowner in Seaton</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-ind"><span class="k">The business, presented properly</span><div class="ab-rows"><div class="ab-row"><span class="n">A</span><b>Seaton based</b><span>Serving metro Adelaide</span></div><div class="ab-row"><span class="n">B</span><b>Direct line</b><span>0418 804 934</span></div><div class="ab-row"><span class="n">C</span><b>Licensed &amp; insured</b><span>Real roofer, real cover</span></div></div></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">No invented testimonials. Just their real details, stated plainly.</p></div></div>
 </div>
 </section>
 

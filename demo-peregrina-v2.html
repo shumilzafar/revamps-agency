@@ -96,6 +96,9 @@ img{display:block;max-width:100%}
   border:1px solid rgba(255,255,255,.07);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
   border-radius:20px;padding:28px;transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
 .card:hover{border-color:rgba(14,165,233,.35);transform:translateY(-4px)}
+.card-img{margin:-28px -28px 22px;border-radius:20px 20px 0 0;overflow:hidden;aspect-ratio:16/9}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.card:hover .card-img img{transform:scale(1.05)}
 .card .ic{width:40px;height:40px;color:var(--primary);margin-bottom:20px;transition:transform .3s}
 .card:hover .ic{transform:scale(1.12)}
 .card h3{font-size:17px;font-weight:700;margin-bottom:10px}
@@ -254,46 +257,55 @@ footer{border-top:1px solid var(--border);padding:64px 0 40px}
     <p class="sec-sub rv d2">Residential and commercial plumbing across Northern Virginia. If water runs through it, we can fix it.</p>
     <div class="svc-grid">
       <div class="card rv">
+        <div class="card-img"><img src="images/pp-site-emergency.jpg" alt="Emergency Plumbing - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.7 12 2.7z"/></svg>
         <h3>Emergency Plumbing</h3>
         <p>Burst pipes, major leaks, sewage backups. We answer around the clock and get there fast.</p>
       </div>
       <div class="card rv d1">
+        <div class="card-img"><img src="images/pp-site-repair.jpg" alt="Plumbing Repair - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
         <h3>Plumbing Repair</h3>
         <p>Leaky faucets, running toilets, low pressure. Diagnosed properly and fixed to last.</p>
       </div>
       <div class="card rv d2">
+        <div class="card-img"><img src="images/pp-site-install.jpg" alt="Installation - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
         <h3>Installation</h3>
         <p>New fixtures, appliances, and full system installs done clean and to code.</p>
       </div>
       <div class="card rv">
+        <div class="card-img"><img src="images/pp-site-sewer.jpg" alt="Sewer Repair - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c4-1 5-5 8-5s4 4 8 5"/><path d="M4 12c4-1 5-5 8-5s4 4 8 5"/><path d="M4 7c4-1 5-5 8-5s4 4 8 5"/></svg>
         <h3>Sewer Repair</h3>
         <p>Sewer line repair and replacement, with camera inspection so you see what we see.</p>
       </div>
       <div class="card rv d1">
+        <div class="card-img"><img src="images/pp-site-leak.jpg" alt="Leak Detection - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
         <h3>Leak Detection</h3>
         <p>Hidden leaks found fast with proper equipment, before they become real damage.</p>
       </div>
       <div class="card rv d2">
+        <div class="card-img"><img src="images/pp-site-heater.jpg" alt="Water Heaters - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 0 4 0V4a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.54a4 4 0 1 0 4 0V4"/></svg>
         <h3>Water Heaters</h3>
         <p>Repair and replacement of tank and tankless units. Hot water back the same day.</p>
       </div>
       <div class="card rv">
+        <div class="card-img"><img src="images/pp-site-drain.jpg" alt="Drain Cleaning - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
         <h3>Drain Cleaning</h3>
         <p>Clogged drains cleared properly, from kitchen sinks to main lines.</p>
       </div>
       <div class="card rv d1">
+        <div class="card-img"><img src="images/pp-site-remodel.jpg" alt="Remodels - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <h3>Remodels</h3>
         <p>Kitchen and bathroom plumbing for remodels, roughed in right the first time.</p>
       </div>
       <div class="card rv d2">
+        <div class="card-img"><img src="images/pp-site-commercial.jpg" alt="Commercial - Peregrina Plumbing" loading="lazy"></div>
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
         <h3>Commercial</h3>
         <p>Plumbing for offices, restaurants, and rental properties. Scheduled and on call.</p>

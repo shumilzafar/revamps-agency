@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peregrina Plumbing Co. | Alexandria, VA</title>
+<meta name="description" content="Precision plumbing for modern living. Emergency repair, luxury installations, and whole-home repiping in Alexandria, VA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>P</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F9F8F6; --slate:#121316; --brass:#C88A58; --brass-l:#E8C48A;
+  --sapphire:#0052FF; --ink2:#3A3A3C; --muted:#8A8A8E; --line:#EAE8E3;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--slate);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--brass);color:#fff}
+.serif{font-family:'Fraunces',Georgia,serif}
+/* floating nav */
+.navwrap{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:100;width:min(1280px,92vw)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 14px 14px 32px;background:rgba(255,255,255,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:100px;box-shadow:0 8px 32px rgba(18,19,22,.08)}
+.nav-logo{font-weight:800;font-size:1.05rem;letter-spacing:.06em}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:var(--ink2);text-decoration:none;font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:100px;transition:background .25s}
+.nav-links a:hover{background:rgba(18,19,22,.06)}
+.nav-cta{background:var(--slate);color:#fff!important;font-weight:700!important;padding:12px 26px!important}
+.nav-cta:hover{background:#2A2D33!important}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;gap:4vw;align-items:center;padding:160px 5vw 80px;max-width:1440px;margin:0 auto}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;font-weight:700;letter-spacing:.24em;color:var(--brass);margin-bottom:28px;text-transform:uppercase}
+.hero-kicker::before{content:"";width:32px;height:2px;background:var(--brass)}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(3rem,6vw,5.4rem);font-weight:900;line-height:1.02;letter-spacing:-.02em;margin-bottom:28px}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--brass)}
+.hero-sub{font-size:1.12rem;line-height:1.7;color:var(--ink2);max-width:46ch;margin-bottom:36px}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:#fff}
+.badge.dark{background:var(--slate);color:#fff;border-color:var(--slate)}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn-dark{display:inline-block;background:var(--slate);color:#fff;font-weight:700;padding:17px 36px;border-radius:100px;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(18,19,22,.25)}
+.btn-brass{display:inline-block;background:var(--brass);color:var(--slate);font-weight:700;padding:17px 36px;border-radius:100px;text-decoration:none;transition:transform .25s}
+.btn-brass:hover{transform:translateY(-2px)}
+.hero-vis{position:relative}
+.hero-vis img{width:100%;height:auto;border-radius:24px;box-shadow:0 40px 100px rgba(18,19,22,.15)}
+.hero-float{position:absolute;background:rgba(255,255,255,.85);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:16px;padding:16px 22px;box-shadow:0 16px 48px rgba(18,19,22,.12);animation:float 6s ease-in-out infinite}
+.hero-float.f1{top:8%;right:-4%}
+.hero-float.f2{bottom:10%;left:-6%;animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-float strong{display:block;font-size:.92rem;margin-bottom:4px}
+.hero-float span{font-size:.8rem;color:var(--muted)}
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden;white-space:nowrap;background:#fff}
+.mtrack{display:inline-flex;gap:56px;animation:scroll 26s linear infinite;padding-right:56px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.mtrack span{font-size:.85rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mtrack span i{color:var(--brass);font-style:normal;margin-right:56px}
+/* sections */
+section{padding:110px 5vw;max-width:1440px;margin:0 auto}
+.sec-kick{font-size:.76rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:20px}
+.sec-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:900;letter-spacing:-.02em;line-height:1.05;margin-bottom:18px}
+.sec-title em{font-style:italic;font-weight:400;color:var(--brass)}
+.sec-sub{color:var(--ink2);font-size:1.05rem;line-height:1.7;max-width:60ch;margin-bottom:56px}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s;position:relative;overflow:hidden;text-decoration:none;color:var(--slate);display:block}
+.bcard:hover{transform:scale(1.02);box-shadow:0 24px 60px rgba(18,19,22,.1)}
+.bcard.span7{grid-column:span 7}.bcard.span5{grid-column:span 5}.bcard.span4{grid-column:span 4}.bcard.span6{grid-column:span 6}
+.bcard .tag{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+.bcard h3{font-size:1.5rem;font-weight:800;margin-bottom:12px;letter-spacing:-.01em}
+.bcard p{color:var(--ink2);font-size:.94rem;line-height:1.65;margin-bottom:20px}
+.bcard .go{color:var(--sapphire);font-weight:700;font-size:.9rem}
+.bcard .go::after{content:" →";transition:margin .3s}
+.bcard:hover .go::after{margin-left:6px}
+.bcard img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:20px}
+/* why */
+.why-row{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:48px 0;border-bottom:1px solid var(--line);align-items:start;transition:padding .3s}
+.why-row:hover{padding-left:16px}
+.why-row:first-of-type{border-top:1px solid var(--line)}
+.why-num{font-family:'Fraunces',serif;font-size:3.6rem;font-weight:900;color:var(--brass);line-height:1}
+.why-row h3{font-size:1.6rem;font-weight:800;margin-bottom:10px}
+.why-row p{color:var(--ink2);line-height:1.7;max-width:56ch}
+/* testimonials */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testi{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px;transition:transform .3s}
+.testi:hover{transform:translateY(-4px)}
+.testi .stars{color:var(--brass);font-size:1.1rem;margin-bottom:18px;letter-spacing:2px}
+.testi p{font-size:1rem;line-height:1.7;margin-bottom:20px}
+.testi .who{font-size:.82rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+/* footer */
+.footer{background:var(--slate);color:#fff;border-radius:32px;margin:0 5vw 120px;padding:80px 5vw;max-width:1340px}
+.footer .sec-kick{color:var(--brass-l)}
+.footer-phone{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6vw,4.8rem);font-weight:900;letter-spacing:-.02em;margin:24px 0;color:#fff;text-decoration:none;display:block}
+.footer-phone:hover{color:var(--brass-l)}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;padding-top:48px;border-top:1px solid rgba(255,255,255,.1)}
+.footer-grid p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.94rem}
+/* dock */
+.dock{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:100px;padding:12px 12px 12px 28px;box-shadow:0 16px 48px rgba(18,19,22,.15)}
+.dock .status{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;white-space:nowrap}
+.dock .status .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;animation:pulse 2s infinite}
+.dock a{background:var(--sapphire);color:#fff;font-weight:700;padding:14px 32px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:transform .25s}
+.dock a:hover{transform:scale(1.04)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:140px}
+  .nav-links{display:none}
+  .bcard.span7,.bcard.span5,.bcard.span4,.bcard.span6{grid-column:span 12}
+  .testi-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .why-row{grid-template-columns:1fr;gap:12px}
+  section{padding:70px 5vw}
+  .dock{width:92vw;justify-content:space-between}
+  .dock .status span{display:none}
+}
+</style>
+</head>
+<body>
+<div class="navwrap"><nav>
+  <span class="nav-logo">PEREGRINA</span>
+  <div class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <a class="nav-cta" href="tel:+17035550140">Request Dispatch →</a>
+</nav></div>
+
+<header class="hero">
+  <div>
+    <div class="hero-kicker">Alexandria, VA · Licensed & Insured</div>
+    <h1>Precision plumbing for <em>modern living.</em></h1>
+    <p class="hero-sub">Emergency repair, luxury fixture installations, and whole-home repiping. Delivered with white-glove craftsmanship by people who treat your home like their own.</p>
+    <div class="hero-badges">
+      <span class="badge dark"><span class="dot"></span>24/7 Emergency Dispatch</span>
+      <span class="badge">Licensed & Insured</span>
+      <span class="badge">★ 4.9 Local Rating</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn-dark" href="#contact">Book Inspection</a>
+      <a class="btn-brass" href="tel:+17035550140">Call Now</a>
+    </div>
+  </div>
+  <div class="hero-vis">
+    <img src="images/peregrina-faucet.webp" alt="Luxury brass faucet installation">
+    <div class="hero-float f1"><strong>Touchless Brassware</strong><span>Installed in 45 mins</span></div>
+    <div class="hero-float f2"><strong>★ 4.9 Rating</strong><span>200+ local reviews</span></div>
+  </div>
+</header>
+
+<div class="marquee"><div class="mtrack">
+  <span><i>◆</i> Emergency Repair</span><span><i>◆</i> Water Filtration</span><span><i>◆</i> Repiping</span><span><i>◆</i> Drain & Sewer</span><span><i>◆</i> Water Heaters</span><span><i>◆</i> Fixture Install</span>
+  <span><i>◆</i> Emergency Repair</span><span><i>◆</i> Water Filtration</span><span><i>◆</i> Repiping</span><span><i>◆</i> Drain & Sewer</span><span><i>◆</i> Water Heaters</span><span><i>◆</i> Fixture Install</span>
+</div></div>
+
+<section id="services">
+  <div class="sec-kick reveal">Services</div>
+  <h2 class="sec-title reveal">Everything your home <em>needs.</em></h2>
+  <p class="sec-sub reveal">From emergency calls to full-home upgrades. One team, one standard: done right.</p>
+  <div class="bento">
+    <a class="bcard span7 reveal" href="tel:+17035550140">
+      <img src="images/peregrina-copper.webp" alt="Copper pipe installation">
+      <div class="tag">Repiping</div><h3>Whole-Home Repiping</h3>
+      <p>Copper and PEX-a systems with lifetime guarantee. We replace aging galvanized pipe with modern materials built to outlast the house.</p>
+      <span class="go">Book this service</span>
+    </a>
+    <a class="bcard span5 reveal" href="tel:+17035550140">
+      <div class="tag">Emergency</div><h3>Leak Detection</h3>
+      <p>Acoustic sensors and thermal imaging find hidden leaks without tearing up walls.</p>
+      <span class="go">Book this service</span>
+    </a>
+    <a class="bcard span4 reveal" href="tel:+17035550140">
+      <div class="tag">Hot Water</div><h3>Water Heaters</h3><p>Tank and tankless repair, replacement, and upgrades.</p><span class="go">Book</span>
+    </a>
+    <a class="bcard span4 reveal" href="tel:+17035550140">
+      <div class="tag">Drains</div><h3>Hydro Jetting</h3><p>Camera inspection and high-pressure clearing for stubborn blockages.</p><span class="go">Book</span>
+    </a>
+    <a class="bcard span4 reveal" href="tel:+17035550140">
+      <div class="tag">Water Quality</div><h3>Filtration & Softeners</h3><p>Whole-home systems for cleaner, softer water at every tap.</p><span class="go">Book</span>
+    </a>
+  </div>
+</section>
+
+<section id="why" style="padding-top:40px">
+  <div class="sec-kick reveal">Why Peregrina</div>
+  <h2 class="sec-title reveal">The <em>difference</em> is in the details.</h2>
+  <div style="margin-top:48px">
+    <div class="why-row reveal"><div class="why-num">01</div><div><h3>30-minute fast response</h3><p>We dispatch from Alexandria, not a call center three states away. When water is pouring, minutes matter.</p></div></div>
+    <div class="why-row reveal"><div class="why-num">02</div><div><h3>Transparent upfront pricing</h3><p>You approve the price before we pick up a wrench. No surprise overages, no mystery line items.</p></div></div>
+    <div class="why-row reveal"><div class="why-num">03</div><div><h3>Certified master technicians</h3><p>Background-checked, licensed, and trained on every system we service. The person at your door knows what they're doing.</p></div></div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:40px">
+  <div class="sec-kick reveal">Reviews</div>
+  <h2 class="sec-title reveal">Neighbors <em>trust us.</em></h2>
+  <p class="sec-sub reveal">Real reviews from real homes around Alexandria.</p>
+  <div class="testi-grid">
+    <div class="testi reveal"><div class="stars">★★★★★</div><p>"They found a leak two other companies missed. Diagnosed it in twenty minutes, fixed it the same day."</p><div class="who">Del Ray Resident</div></div>
+    <div class="testi reveal"><div class="stars">★★★★★</div><p>"Transparent pricing, clean work, showed up exactly on time. Gave us options instead of pushing the most expensive fix."</p><div class="who">Old Town Homeowner</div></div>
+    <div class="testi reveal"><div class="stars">★★★★★</div><p>"Water heater died on a Sunday morning. They had hot water running by dinner. Can't ask for more than that."</p><div class="who">Alexandria, VA</div></div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+  <div class="footer reveal">
+    <div class="sec-kick">Get in touch</div>
+    <h2 class="sec-title" style="color:#fff">Ready when <em>you are.</em></h2>
+    <a class="footer-phone" href="tel:+17035550140">(703) 555-0140</a>
+    <div class="footer-grid">
+      <p>Serving Alexandria and surrounding Northern Virginia. Licensed and insured. Emergency dispatch available 24 hours a day, 7 days a week.</p>
+      <p>Prefer to book online? Call the number above and we'll schedule your visit. Most non-emergency appointments available within 48 hours.</p>
+    </div>
+  </div>
+</section>
+
+<div class="dock">
+  <div class="status"><span class="dot"></span><span>Fast response active</span></div>
+  <a href="tel:+17035550140">24/7 Emergency Call</a>
+</div>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Before / After: White Heating &amp; Air | Revamps Concept Rebuild</title>
-<meta name="description" content="Section-by-section concept rebuild of White Heating & Air's website by Revamps.">
+<meta name="description" content="Section-by-section concept rebuild of White Heating &amp; Air's website by Revamps.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Inter",-apple-system,sans-serif;color:#4b5563;line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
@@ -28,7 +28,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .panel{border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff}
 .panel-tag{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border-bottom:1px solid #e5e7eb}
 .panel.before .panel-tag{background:#fef2f2;color:#991b1b}
-.panel.after .panel-tag{background:#eff6ff;color:#1e40af}
+.panel.after .panel-tag{background:#e0f2fe;color:#075985}
 .panel-body{padding:1.4rem 1.2rem;min-height:220px}
 /* Before styles */
 .bb-plain{font-family:Georgia,serif;color:#333}
@@ -36,38 +36,53 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .bb-plain p{font-size:.82rem;margin-bottom:6px;line-height:1.6}
 .bb-bar{border-radius:8px;padding:10px 12px;font-size:.78rem;margin-bottom:10px}
 .bb-bar.warn{background:#fef2f2;border:1px solid #fecaca;color:#991b1b}
-.bb-bar.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534}
+.bb-bar.ok{background:#e0f2fe;border:1px solid #bae6fd;color:#075985}
 .bb-junk{font-family:ui-monospace,monospace;font-size:.72rem;color:#991b1b;background:#fef2f2;padding:8px 10px;border-radius:6px;margin-bottom:6px}
 .bb-navlist{font-size:.82rem;color:#333}
 .bb-navlist p{margin-bottom:6px}
 .bb-note{font-size:.72rem;color:#777;margin-top:10px}
 .bb-years{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .bb-years div{border:1px solid #e5e7eb;border-radius:8px;padding:10px;font-size:.78rem}
-/* After styles: modern */
-.ab-nav{display:flex;align-items:center;gap:.8rem;padding:.6rem 0}
-.ab-logo{font-weight:700;color:#111827;font-size:.85rem;margin-right:auto}
-.ab-links{display:flex;gap:10px}
-.ab-links i{width:44px;height:7px;background:#e5e7eb;border-radius:4px;display:block}
-.ab-call{background:#2563eb;color:#fff;font-size:.7rem;font-weight:600;padding:7px 14px;border-radius:999px}
-.ab-hero{background:linear-gradient(135deg,#0e7490,#164e63);border-radius:12px;padding:1.6rem 1.4rem;color:#fff}
-.ab-hero h4{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.25}
-.ab-hero p{font-size:.8rem;opacity:.9;margin-bottom:1rem}
-.ab-btn{display:inline-block;background:#fff;color:#164e63;font-size:.75rem;font-weight:600;padding:9px 20px;border-radius:999px}
-.ab-services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ab-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px}
-.ab-services b{display:block;font-size:.75rem;color:#111827;margin-bottom:2px}
-.ab-services span{font-size:.68rem;color:#6b7280}
-.ab-trust{display:flex;gap:16px;flex-wrap:wrap}
-.ab-trust div{font-size:.72rem;color:#6b7280}
-.ab-trust strong{display:block;color:#111827;font-size:.85rem}
-.ab-review{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:12px 14px;margin-bottom:10px}
-.ab-review .stars{color:#f59e0b;font-size:.7rem;letter-spacing:.06em}
-.ab-review p{font-size:.76rem;color:#4b5563;margin:6px 0;font-style:italic}
-.ab-review span{font-size:.68rem;color:#9ca3af}
-.ab-contact{background:#111827;border-radius:12px;padding:1.6rem 1.4rem;text-align:center;color:#fff}
-.ab-contact h4{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.ab-contact p{font-size:.76rem;color:#9ca3af;margin-bottom:1rem}
-.ab-contact .ab-btn{background:#2563eb;color:#fff}
+/* ============ AFTER styles: Alpine Precision ============ */
+.alpine{--ice:#f8fafc;--slate:#0f172a;--glacier:#0ea5e9;--glacier-dark:#0284c7;--frost:#f1f5f9;--line:#e2e8f0;--muted:#64748b;font-family:"Inter",-apple-system,sans-serif;color:#334155}
+.alpine .sg{font-family:"Space Grotesk","Inter",sans-serif}
+/* shared thermostat dial */
+.dial{position:relative;display:inline-block;width:120px;height:120px;flex:none}
+.dial svg{width:100%;height:100%;display:block}
+.dial b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.9rem;color:#0f172a;letter-spacing:-.02em}
+.dial-cap{display:block;text-align:center;font-size:.62rem;font-weight:600;letter-spacing:.14em;color:#64748b;margin-top:6px;text-transform:uppercase}
+/* hold to confirm button (Kitchen idea, native build) */
+.hold-btn{position:relative;overflow:hidden;display:block;width:100%;background:#0f172a;color:#fff;border:0;border-radius:10px;padding:15px 20px;font-family:"Space Grotesk",sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.hold-fill{position:absolute;inset:0;width:0;background:#0ea5e9}
+.hold-btn.holding .hold-fill{width:100%;transition:width 1.2s linear}
+.hold-label{position:relative;z-index:1}
+.hold-btn.confirmed{background:#0ea5e9}
+.hold-btn.confirmed .hold-fill{display:none}
+.hold-status{margin-top:10px;font-size:.74rem;color:#64748b;min-height:1.2em}
+.hold-undo{background:none;border:0;color:#0284c7;font-size:.74rem;font-weight:600;cursor:pointer;text-decoration:underline;padding:0}
+@media (prefers-reduced-motion:reduce){.hold-btn.holding .hold-fill{transition:none;width:100%}}
+/* after panel: nav */
+.ab-nav{display:flex;align-items:center;gap:.8rem;padding:.4rem 0 .9rem;border-bottom:1px solid #e2e8f0}
+.ab-word{font-family:"Space Grotesk",sans-serif;font-weight:700;color:#0f172a;font-size:.88rem;margin-right:auto;letter-spacing:-.01em}
+.ab-links{display:flex;gap:12px}
+.ab-links i{width:40px;height:2px;background:#cbd5e1;display:block}
+.ab-phone{background:#0f172a;color:#fff;font-family:"Space Grotesk",sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.04em;padding:8px 14px;border-radius:8px;white-space:nowrap}
+/* after panel: temperature hero */
+.ab-temp{display:flex;gap:18px;align-items:center;padding:.4rem 0}
+.ab-temp .dial{width:104px;height:104px}
+.ab-temp .dial b{font-size:1.65rem}
+.ab-temp h4{font-family:"Space Grotesk",sans-serif;font-size:1.15rem;font-weight:700;color:#0f172a;letter-spacing:-.02em;margin-bottom:6px;line-height:1.25}
+.ab-temp p{font-size:.78rem;color:#64748b;margin-bottom:12px;line-height:1.6}
+/* after panel: stat band */
+.ab-stats{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;margin:.4rem 0 1rem}
+.ab-stats div{padding:12px 6px;text-align:left}
+.ab-stats div+div{border-left:1px solid #e2e8f0;padding-left:14px}
+.ab-stats strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:1.45rem;font-weight:700;color:#0f172a;letter-spacing:-.02em;line-height:1.1}
+.ab-stats span{font-size:.66rem;color:#64748b;letter-spacing:.06em;text-transform:uppercase}
+/* after panel: mini ticket */
+.ab-ticket{border:1px solid #e2e8f0;border-radius:12px;background:#fff;overflow:hidden}
+.ab-ticket-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:2px dashed #cbd5e1;font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#64748b}
+.ab-ticket-body{padding:14px}
 /* Verdict */
 .verdict{background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:2rem;margin:3rem 0}
 .verdict h3{font-size:1.1rem;color:#111827;font-weight:700;margin-bottom:.8rem}
@@ -79,7 +94,7 @@ h1{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#111827;font-weight:700;letter-spa
 .btn{display:inline-block;background:#2563eb;color:#fff;font-weight:600;padding:.9rem 2rem;border-radius:12px;text-decoration:none}
 .btn:hover{background:#1d4ed8}
 footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-top:1px solid #f3f4f6}
-@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{aspect-ratio:4/9}.ab-services{grid-template-columns:1fr}}
+@media(max-width:640px){.panels{grid-template-columns:1fr}.ba{aspect-ratio:4/9}}
 /* Full page slider */
 .full-slider-wrap{margin:48px 0 24px;position:relative}
 .ba{position:relative;width:100%;aspect-ratio:16/18;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 16px 40px rgba(0,0,0,.07);user-select:none;touch-action:none}
@@ -89,7 +104,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 .ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#111827;box-shadow:0 4px 16px rgba(0,0,0,.2);font-weight:600}
 .ba-tag{position:absolute;top:16px;font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.45rem .9rem;border-radius:999px;z-index:4}
 .ba-tag.before{left:16px;background:rgba(0,0,0,.65);color:#fff}
-.ba-tag.after{right:16px;background:#2563eb;color:#fff}
+.ba-tag.after{right:16px;background:#0ea5e9;color:#fff}
 .ba-hint{text-align:center;font-size:.9rem;color:#9ca3af;margin-top:14px}
 .mock-before-full{background:#fff;height:100%;padding:36px 40px;font-family:Georgia,serif;color:#333;overflow:hidden}
 .mock-before-full h2{font-family:Georgia,serif;font-size:1.3rem;color:#000;margin-bottom:14px}
@@ -97,24 +112,52 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 .mock-before-full .lic{font-size:.8rem;color:#666}
 .mock-before-full .warn{background:#fce8e6;color:#a50e0e;padding:10px 14px;font-size:.8rem;margin-bottom:14px;font-family:Arial,sans-serif}
 .mock-before-full .junk{font-size:.78rem;color:#888;font-family:monospace;margin-bottom:6px}
-.mock-after-full{background:#fff;height:100%;overflow:hidden;display:flex;flex-direction:column}
-.ma-nav{display:flex;align-items:center;gap:1rem;padding:14px 28px;border-bottom:1px solid #f3f4f6}
-.ma-logo{font-weight:700;color:#111827;font-size:.95rem;margin-right:auto}
-.ma-links{display:flex;gap:14px}
-.ma-links i{width:52px;height:8px;background:#e5e7eb;border-radius:4px;display:block}
-.ma-call{background:#2563eb;color:#fff;font-size:.75rem;font-weight:600;padding:8px 18px;border-radius:999px}
-.ma-hero{padding:40px 32px;color:#fff}
-.ma-hero h3{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
-.ma-hero p{font-size:.9rem;opacity:.9;margin-bottom:16px}
-.ma-btn{display:inline-block;background:#fff;font-size:.8rem;font-weight:600;padding:10px 22px;border-radius:999px}
-.ma-trust{display:flex;gap:20px;padding:18px 32px;border-bottom:1px solid #f3f4f6}
-.ma-trust div{font-size:.78rem;color:#6b7280}
-.ma-trust strong{display:block;color:#111827;font-size:.95rem}
-.ma-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:20px 32px}
-.ma-services div{background:#f9fafb;border:1px solid #f3f4f6;border-radius:10px;padding:14px}
-.ma-services b{display:block;font-size:.78rem;color:#111827;margin-bottom:2px}
-.ma-services span{font-size:.72rem;color:#6b7280}
-.ma-footer{padding:12px 32px;font-size:.68rem;color:#9ca3af;border-top:1px solid #f3f4f6;display:flex;justify-content:space-between;margin-top:auto;background:#fff}
+/* ============ AFTER full mock: Alpine Precision ============ */
+.mock-after-full{background:#f8fafc;height:100%;overflow:hidden;display:flex;flex-direction:column;font-family:"Inter",-apple-system,sans-serif;color:#334155}
+.ma-topbar{display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid #e2e8f0;background:#fff}
+.ma-brand{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.92rem;color:#0f172a;letter-spacing:-.01em}
+.ma-city{font-size:.66rem;font-weight:600;letter-spacing:.14em;color:#64748b;text-transform:uppercase}
+.ma-emg{margin-left:auto;font-size:.64rem;font-weight:700;letter-spacing:.1em;color:#0284c7;border:1px solid #bae6fd;background:#f0f9ff;padding:5px 10px;border-radius:6px;text-transform:uppercase;white-space:nowrap}
+.ma-call{background:#0f172a;color:#fff;font-family:"Space Grotesk",sans-serif;font-size:.74rem;font-weight:600;padding:8px 16px;border-radius:8px;letter-spacing:.03em;white-space:nowrap}
+.ma-hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:36px 32px 30px}
+.ma-hero .dial{width:150px;height:150px}
+.ma-hero .dial b{font-size:2.4rem}
+.ma-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.16em;color:#0284c7;text-transform:uppercase;margin-bottom:10px}
+.ma-hero h3{font-family:"Space Grotesk",sans-serif;font-size:2rem;font-weight:700;color:#0f172a;letter-spacing:-.03em;line-height:1.08;margin-bottom:10px}
+.ma-hero p{font-size:.92rem;color:#64748b;max-width:380px;line-height:1.6}
+.ma-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;background:#fff}
+.ma-stats div{padding:16px 32px}
+.ma-stats div+div{border-left:1px solid #e2e8f0}
+.ma-stats strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:2rem;font-weight:700;color:#0f172a;letter-spacing:-.03em;line-height:1}
+.ma-stats span{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#64748b}
+.ma-services{padding:8px 32px;flex:1}
+.ma-services h5{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#64748b;padding:14px 0 2px}
+.ma-row{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid #e2e8f0}
+.ma-row:last-child{border-bottom:0}
+.ma-idx{font-family:"Space Grotesk",sans-serif;font-size:.78rem;font-weight:600;color:#0ea5e9}
+.ma-row b{display:block;font-family:"Space Grotesk",sans-serif;font-size:.95rem;font-weight:600;color:#0f172a;letter-spacing:-.01em}
+.ma-row span{font-size:.78rem;color:#64748b}
+.ma-arrow{font-size:1rem;color:#94a3b8}
+.ma-ticket-zone{background:#eef4f8;padding:20px 32px}
+.ma-ticket{background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;max-width:560px;margin:0 auto}
+.ma-ticket-top{padding:16px 20px 14px}
+.ma-ticket-top .t-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.ma-ticket-top .t-name{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.9rem;color:#0f172a}
+.ma-ticket-top .t-tag{font-size:.62rem;font-weight:700;letter-spacing:.14em;color:#0284c7;text-transform:uppercase}
+.ma-ticket-top p{font-size:.82rem;color:#64748b}
+.ma-perf{position:relative;border-top:2px dashed #cbd5e1;height:0}
+.ma-perf::before,.ma-perf::after{content:"";position:absolute;top:-11px;width:20px;height:20px;border-radius:50%;background:#eef4f8}
+.ma-perf::before{left:-32px}
+.ma-perf::after{right:-32px}
+.ma-ticket-bottom{padding:16px 20px 18px;display:grid;grid-template-columns:1fr 120px;gap:18px;align-items:center}
+.ma-barcode{height:44px;background:repeating-linear-gradient(90deg,#0f172a 0 2px,transparent 2px 5px,#0f172a 5px 6px,transparent 6px 9px,#0f172a 9px 12px,transparent 12px 15px)}
+.ma-ticket-bottom .cap{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#64748b;margin-top:6px;font-weight:600}
+.ma-footer{padding:12px 32px;font-size:.68rem;color:#94a3b8;border-top:1px solid #e2e8f0;display:flex;justify-content:space-between;background:#fff;margin-top:auto}
+@media(max-width:640px){.ma-hero{grid-template-columns:1fr;gap:18px;padding:28px 22px}.ma-stats div{padding:12px 16px}.ma-stats strong{font-size:1.5rem}.ma-services{padding:8px 22px}.ma-ticket-zone{padding:16px 22px}.ma-ticket-bottom{grid-template-columns:1fr}.ma-barcode{display:none}.ma-topbar{flex-wrap:wrap}}
+.ma-emg{background:var(--slate);color:#fff;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ma-emg strong{font-family:"Space Grotesk",sans-serif;font-size:1rem;display:block;letter-spacing:-.01em}
+.ma-emg span{font-size:.8rem;color:#94a3b8}
+.ma-emg-call{background:var(--glacier);color:#fff;font-weight:700;font-size:.85rem;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -135,11 +178,24 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <h2 style="font-size:1.5rem;color:#111827;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem">Drag to see the whole transformation</h2>
 <p class="compare-desc" style="max-width:680px;margin-bottom:2rem;font-size:.98rem">The complete homepage, before and after. Drag the handle to compare.</p>
 <div class="ba" id="ba">
-<div class="ba-after"><div class="mock-after-full">
-<div class="ma-nav"><span class="ma-logo">White Heating &amp; Air</span><span class="ma-links"><i></i><i></i><i></i></span><span class="ma-call">406-248-2162</span></div>
-<div class="ma-hero" style="background:linear-gradient(135deg,#0e7490,#164e63)"><h3>Billings trusts us<br>with their comfort.</h3><p>Heating and cooling done right. Serving Billings for 25 years.</p><span class="ma-btn" style="color:#164e63">Call 406-248-2162</span></div>
-<div class="ma-trust"><div><strong>4.9 stars</strong>1,885 reviews</div><div><strong>25 years</strong>Serving Billings</div><div><strong>Local</strong>Family owned</div></div>
-<div class="ma-services"><div><b>AC Repair</b><span>Fast diagnostics</span></div><div><b>Heating</b><span>Furnaces &amp; heat pumps</span></div><div><b>Installs</b><span>New system quotes</span></div></div>
+<div class="ba-after"><div class="mock-after-full alpine">
+<div class="ma-topbar"><span class="ma-brand">White Heating &amp; Air</span><span class="ma-city">Billings, MT</span><span class="ma-emg">24/7 Emergency</span><span class="ma-call">406-248-2162</span></div>
+<div class="ma-hero">
+<div><span class="dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="60" cy="60" r="54" fill="none" stroke="#cbd5e1" stroke-width="9" stroke-dasharray="2 8.45" /><circle cx="60" cy="60" r="43" fill="none" stroke="#0ea5e9" stroke-width="5" stroke-linecap="round" stroke-dasharray="189 270" transform="rotate(128 60 60)"/></svg><b>72&deg;</b></span><span class="dial-cap">Set point</span></div>
+<div><p class="ma-eyebrow">Heating &amp; Cooling &middot; Billings, Montana</p><h3>Warmth, measured.</h3><p>Heating and cooling done right. One number to call when the furnace quits at midnight.</p></div>
+</div>
+<div class="ma-stats"><div><strong>4.9</strong><span>Google rating</span></div><div><strong>1,885</strong><span>Reviews</span></div><div><strong>25</strong><span>Years in Billings</span></div></div>
+<div class="ma-services"><h5>Services</h5>
+<div class="ma-row"><span class="ma-idx">01</span><div><b>AC Repair</b><span>Diagnostics and fixes, same day.</span></div><span class="ma-arrow">&rarr;</span></div>
+<div class="ma-row"><span class="ma-idx">02</span><div><b>Heating</b><span>Furnaces and heat pumps, tuned for Montana winters.</span></div><span class="ma-arrow">&rarr;</span></div>
+<div class="ma-row"><span class="ma-idx">03</span><div><b>Installs</b><span>Full system replacement, quoted up front.</span></div><span class="ma-arrow">&rarr;</span></div>
+</div>
+<div class="ma-ticket-zone"><div class="ma-ticket">
+<div class="ma-ticket-top"><div class="t-row"><span class="t-name">White Heating &amp; Air</span><span class="t-tag">Service ticket</span></div><p>No heat tonight? Hold the button to log a service request. We call you back.</p></div>
+<div class="ma-perf"></div>
+<div class="ma-ticket-bottom"><div><button class="hold-btn" type="button"><span class="hold-fill"></span><span class="hold-label">Hold to request service</span></button><p class="hold-status"><button class="hold-undo" type="button" hidden>Undo</button></p></div><div><div class="ma-barcode"></div><p class="cap">Billings, MT</p></div></div>
+</div></div>
+<div class="ma-emg"><div><strong>No heat at 2am?</strong><span>We answer around the clock in Billings.</span></div><a class="ma-emg-call" href="tel:4062482162">406-248-2162</a></div>
 <div class="ma-footer"><span>White Heating &amp; Air</span><span>406-248-2162</span></div>
 </div></div>
 <div class="ba-before"><div class="mock-before-full">
@@ -164,7 +220,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The site runs on HTTP, not HTTPS. Every visitor sees a "Not secure" warning in their browser before the page even loads. Plenty of people leave right there.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-bar warn">Not secure &nbsp;|&nbsp; http://whitehvac.com</div><p class="bb-note">This is the first thing visitors see. A heating company asking for trust while the browser says the opposite.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="bb-bar ok">Secure &nbsp;|&nbsp; https://whitehvac.com</div><p style="font-size:.78rem;color:#6b7280">HTTPS everywhere. No warning, no doubt, no reason to hit the back button before the page loads.</p></div></div>
+<div class="panel after alpine"><p class="panel-tag">After</p><div class="panel-body"><div class="bb-bar ok">Secure &nbsp;|&nbsp; https://whitehvac.com</div><p style="font-size:.78rem;color:#64748b">HTTPS everywhere. No warning, no doubt, no reason to hit the back button before the page loads.</p></div></div>
 </div>
 </section>
 
@@ -174,7 +230,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The menu lists "Water Heaters" twice, and unfinished template code leaks onto the live page: widget IDs and shortcodes a visitor should never see.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-navlist"><p>Home</p><p>Water Heaters</p><p>Water Heaters</p><p>Services</p><p>Contact</p></div><div class="bb-junk">#footer-widget-area .menu-item-4472</div><div class="bb-junk">[contact-form-7 id="204"]</div><p class="bb-note">Raw template code, visible to every visitor.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-nav"><span class="ab-logo">White Heating &amp; Air</span><span class="ab-links"><i></i><i></i><i></i></span><span class="ab-call">406-248-2162</span></div><p style="font-size:.78rem;color:#6b7280;margin-top:12px">One clean menu, no duplicates, no code showing. The phone number sits in the header on every page.</p></div></div>
+<div class="panel after alpine"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-nav"><span class="ab-word">White Heating &amp; Air</span><span class="ab-links"><i></i><i></i><i></i></span><span class="ab-phone">406-248-2162</span></div><p style="font-size:.78rem;color:#64748b;margin-top:12px">One clean menu, no duplicates, no code showing. The phone number sits in the header on every page.</p></div></div>
 </div>
 </section>
 
@@ -184,7 +240,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The homepage headline is generic template filler. It could belong to any company in any city, and it says nothing about why Billings should call them.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><h4>Welcome to White Heating &amp; Air</h4><p>We provide quality heating and cooling services for residential and commercial customers.</p><p class="bb-note">Template text. Zero local flavor, zero proof.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><h4>Billings trusts us<br>with their comfort.</h4><p>4.9 stars from 1,885 Google reviews. Heating and cooling done right.</p><span class="ab-btn">Call 406-248-2162</span></div></div></div>
+<div class="panel after alpine"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-temp"><div><span class="dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54" fill="none" stroke="#e2e8f0" stroke-width="9"/><circle cx="60" cy="60" r="54" fill="none" stroke="#cbd5e1" stroke-width="9" stroke-dasharray="2 8.45"/><circle cx="60" cy="60" r="43" fill="none" stroke="#0ea5e9" stroke-width="5" stroke-linecap="round" stroke-dasharray="189 270" transform="rotate(128 60 60)"/></svg><b>72&deg;</b></span><span class="dial-cap">Set point</span></div><div><h4>Warmth, measured.</h4><p>Heating and cooling done right in Billings. 4.9 stars from 1,885 reviews.</p><span class="ab-phone">Call 406-248-2162</span></div></div></div></div>
 </div>
 </section>
 
@@ -194,7 +250,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">One page says 20 years in business. Another says 25. When the numbers do not match, visitors stop trusting all of them, including the reviews.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-years"><div><b>20 years</b><br>of experience<br><span style="font-size:.68rem;color:#777">(homepage)</span></div><div><b>25 years</b><br>serving Billings<br><span style="font-size:.68rem;color:#777">(about page)</span></div></div><p class="bb-note">Which is it? A five-year gap nobody can explain.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-trust"><div><strong>4.9 stars</strong>1,885 Google reviews</div><div><strong>Billings, MT</strong>Local and proud</div><div><strong>Heating + Cooling</strong>Residential experts</div></div><div class="ab-review" style="margin-top:14px"><p class="stars">★★★★★</p><p>"Furnace died on the coldest night of the year. They had us warm again by morning."</p><span>Homeowner in Billings</span></div></div></div>
+<div class="panel after alpine"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-stats"><div><strong>4.9</strong><span>Google rating</span></div><div><strong>1,885</strong><span>Reviews</span></div><div><strong>25</strong><span>Years in Billings</span></div></div><p style="font-size:.78rem;color:#64748b">One consistent story, with the proof right up front. Real numbers, nothing invented.</p></div></div>
 </div>
 </section>
 
@@ -204,7 +260,7 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="compare-desc">The contact details are buried in the page. On a phone, the number is plain text, not tappable, so the most common thing a customer wants to do is the hardest thing to do.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Phone: 406-248-2162</p><p class="bb-note">Plain text. Not clickable on mobile, where most customers are.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>No heat tonight?</h4><p>Call now. Emergency service available across Billings.</p><span class="ab-btn">Call 406-248-2162</span></div></div></div>
+<div class="panel after alpine"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-ticket"><div class="ab-ticket-head"><span>Service ticket</span><span>Billings, MT</span></div><div class="ab-ticket-body"><p style="font-size:.78rem;color:#64748b;margin-bottom:12px">No heat tonight? Emergency service across Billings.</p><button class="hold-btn" type="button"><span class="hold-fill"></span><span class="hold-label">Hold to request service</span></button><p class="hold-status"><button class="hold-undo" type="button" hidden>Undo</button></p></div></div></div></div>
 </div>
 </section>
 
@@ -227,6 +283,22 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <footer><div class="wrap"><p>Concept rebuild for demonstration only. Not affiliated with White Heating &amp; Air.</p></div></footer>
 <script>
 (function(){var ba=document.getElementById('ba'),drag=false;function setPos(x){var r=ba.getBoundingClientRect(),p=Math.max(0,Math.min(100,(x-r.left)/r.width*100));ba.style.setProperty('--pos',p+'%')}ba.addEventListener('pointerdown',function(e){drag=true;ba.setPointerCapture(e.pointerId);setPos(e.clientX)});ba.addEventListener('pointermove',function(e){if(drag)setPos(e.clientX)});ba.addEventListener('pointerup',function(){drag=false});ba.addEventListener('pointercancel',function(){drag=false})})();
+/* Hold to confirm: press and hold ~1.2s, then timed undo (Kitchen "Hold to Confirm" idea, native build) */
+document.querySelectorAll('.hold-btn').forEach(function(btn){
+  var fill=btn.querySelector('.hold-fill'),label=btn.querySelector('.hold-label');
+  var status=btn.parentElement.querySelector('.hold-status'),undo=status?status.querySelector('.hold-undo'):null;
+  var t=null,done=false,cd=null;
+  function start(e){if(done)return;e.stopPropagation();e.preventDefault();btn.classList.add('holding');t=setTimeout(confirm,1200);}
+  function cancel(){if(done)return;btn.classList.remove('holding');clearTimeout(t);}
+  function confirm(){done=true;btn.classList.remove('holding');btn.classList.add('confirmed');label.textContent='Request logged';var n=5;if(undo){undo.hidden=false;undo.textContent='Undo ('+n+'s)';cd=setInterval(function(){n--;if(n<=0){clearInterval(cd);if(undo)undo.hidden=true;}else{undo.textContent='Undo ('+n+'s)';}},1000);}}
+  function reset(e){if(e)e.stopPropagation();clearInterval(cd);done=false;btn.classList.remove('confirmed');label.textContent='Hold to request service';if(undo)undo.hidden=true;}
+  btn.addEventListener('pointerdown',start);
+  btn.addEventListener('pointerup',cancel);
+  btn.addEventListener('pointerleave',cancel);
+  btn.addEventListener('pointercancel',cancel);
+  btn.addEventListener('contextmenu',function(e){e.preventDefault();});
+  if(undo)undo.addEventListener('click',reset);
+});
 </script>
 </body>
 </html>

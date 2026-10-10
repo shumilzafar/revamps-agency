@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Britton Plumbing & Heating | Waseca, MN Plumbers & HVAC</title>
+<meta name="description" content="Family-owned since 1992. Two master plumbers, Bryant Factory Authorized Dealer. Plumbing, heating, cooling in Waseca, MN. Call (507) 835-3030.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230E1D61'/><text x='16' y='22' font-size='18' text-anchor='middle' fill='%23E8E0D2' font-family='sans-serif' font-weight='bold'>B</text></svg>">
+<style>
+/* Britton Plumbing & Heating: redesign concept
+   Palette (from @uxui_shrut): Atlas Navy #0E1D61, Field Amber #B99D73, Atlas Ivory #E8E0D2
+   Type: Cabinet Grotesk (display), system sans (body) */
+@import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@500;700;800&display=swap');
+:root{
+  --navy:#0E1D61; --navy-deep:#0A1440; --amber:#B99D73; --amber-bright:#D4A95C;
+  --ivory:#E8E0D2; --ivory-dim:#D8D0BE; --ink:#1A1A2E; --white:#FFFFFF;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:"Cabinet Grotesk",-apple-system,sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.05}
+img{max-width:100%}
+a{color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(232,224,210,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(14,29,97,0.12);height:72px}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:1.1rem;color:var(--navy)}
+.brand-mark{width:38px;height:38px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--ivory);font-family:"Cabinet Grotesk";font-weight:800;font-size:1.2rem}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--ink)}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:var(--ivory);padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:transform .15s,background .15s}
+.nav-cta:hover{background:var(--navy-deep);transform:translateY(-1px)}
+.nav-cta:active{transform:scale(.98)}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--ivory);overflow:hidden;position:relative}
+.hero-inner{max-width:1200px;margin:0 auto;padding:96px 24px 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero-eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:20px}
+.hero h1{font-size:clamp(2.6rem,5vw,4.2rem);color:var(--ivory);margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero-sub{font-size:1.1rem;color:rgba(232,224,210,.82);max-width:44ch;margin-bottom:32px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--amber);color:var(--navy-deep);padding:16px 32px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1.02rem;display:inline-block;transition:transform .15s}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-primary:active{transform:scale(.98)}
+.btn-ghost{border:1.5px solid rgba(232,224,210,.35);color:var(--ivory);padding:16px 32px;border-radius:999px;text-decoration:none;font-weight:600;font-size:1.02rem;display:inline-block;transition:border-color .15s}
+.btn-ghost:hover{border-color:var(--ivory)}
+.hero-visual{position:relative}
+.hero-card{background:var(--ivory);border-radius:var(--radius);padding:32px;color:var(--ink);box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.hero-card h3{font-size:1.25rem;margin-bottom:8px;color:var(--navy)}
+.hero-card p{font-size:.95rem;color:#4A4A5A;margin-bottom:16px}
+.hero-phone{font-family:"Cabinet Grotesk";font-weight:800;font-size:1.8rem;color:var(--navy);text-decoration:none;display:block;margin-bottom:8px}
+.hero-hours{font-size:.85rem;color:#6A6A7A}
+.hero-badge{position:absolute;top:-16px;right:-8px;background:var(--amber);color:var(--navy-deep);font-weight:800;font-size:.82rem;padding:10px 18px;border-radius:999px;transform:rotate(3deg)}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:64px 24px}}
+
+/* Trust strip */
+.trust{background:var(--navy-deep);color:var(--ivory);border-top:1px solid rgba(232,224,210,.12)}
+.trust-inner{max-width:1200px;margin:0 auto;padding:28px 24px;display:flex;gap:48px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.trust-item{display:flex;align-items:center;gap:12px}
+.trust-item strong{font-family:"Cabinet Grotesk";font-size:1.4rem;font-weight:800;color:var(--amber)}
+.trust-item span{font-size:.88rem;color:rgba(232,224,210,.75);max-width:180px;line-height:1.4}
+
+/* Interactive home diagnostic */
+.diagnostic{padding:96px 0;background:var(--ivory)}
+.diagnostic h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:12px;max-width:20ch}
+.diagnostic-sub{font-size:1.05rem;color:#4A4A5A;margin-bottom:48px;max-width:60ch}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+@media(max-width:900px){.home-grid{grid-template-columns:1fr}}
+.house-map{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:0 8px 32px rgba(14,29,97,.08);position:relative;min-height:420px}
+.house-zone{position:absolute;border:2px dashed rgba(14,29,97,.25);border-radius:12px;padding:16px;cursor:pointer;transition:all .2s;background:rgba(232,224,210,.4);min-width:140px;text-align:center}
+.house-zone:hover{border-color:var(--amber);background:rgba(185,157,115,.15)}
+.house-zone.active{border-color:var(--navy);border-style:solid;background:var(--navy);color:var(--ivory)}
+.house-zone strong{display:block;font-family:"Cabinet Grotesk";font-size:1rem;margin-bottom:4px}
+.house-zone span{font-size:.8rem;opacity:.75}
+.zone-bath{top:24px;left:24px}
+.zone-kitchen{top:24px;right:24px}
+.zone-basement{bottom:24px;left:24px}
+.zone-outside{bottom:24px;right:24px}
+.zone-detail{background:var(--navy);color:var(--ivory);border-radius:var(--radius);padding:40px;min-height:420px}
+.zone-detail h3{font-size:1.6rem;margin-bottom:12px;color:var(--amber)}
+.zone-detail p{color:rgba(232,224,210,.85);margin-bottom:20px}
+.zone-detail ul{list-style:none;margin-bottom:24px}
+.zone-detail li{padding:10px 0;border-bottom:1px solid rgba(232,224,210,.15);font-size:.95rem}
+.zone-detail li:last-child{border-bottom:none}
+.zone-detail li::before{content:"✓ ";color:var(--amber);font-weight:700}
+
+/* Services */
+.services{padding:96px 0;background:var(--white)}
+.services h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:48px}
+.service-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid var(--navy);margin-bottom:0}
+.service-row:last-child{border-bottom:2px solid var(--navy)}
+.service-cell{padding:40px 32px}
+.service-cell:first-child{border-right:1px solid rgba(14,29,97,.15)}
+.service-cell h3{font-size:1.5rem;color:var(--navy);margin-bottom:12px}
+.service-cell p{color:#4A4A5A;font-size:.98rem;margin-bottom:16px}
+.service-cell a{color:var(--navy);font-weight:700;text-decoration:none;border-bottom:2px solid var(--amber)}
+.service-num{font-family:"Cabinet Grotesk";font-size:.85rem;font-weight:700;color:var(--amber);letter-spacing:.1em;margin-bottom:12px;display:block}
+@media(max-width:760px){.service-row{grid-template-columns:1fr}.service-cell:first-child{border-right:none;border-bottom:1px solid rgba(14,29,97,.15)}}
+
+/* Heritage */
+.heritage{background:var(--navy);color:var(--ivory);padding:96px 0}
+.heritage-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+@media(max-width:900px){.heritage-inner{grid-template-columns:1fr}}
+.heritage-year{font-family:"Cabinet Grotesk";font-weight:800;font-size:clamp(4rem,8vw,7rem);color:var(--amber);line-height:1}
+.heritage h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin:16px 0;color:var(--ivory)}
+.heritage p{color:rgba(232,224,210,.8);margin-bottom:16px;max-width:52ch}
+.awards{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+.award{display:flex;gap:16px;align-items:center;background:rgba(232,224,210,.06);border:1px solid rgba(232,224,210,.12);border-radius:12px;padding:16px 20px}
+.award-icon{width:44px;height:44px;background:var(--amber);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy-deep);flex-shrink:0}
+.award strong{display:block;font-size:.95rem}
+.award span{font-size:.85rem;color:rgba(232,224,210,.65)}
+
+/* Contact */
+.contact{padding:96px 0;background:var(--ivory)}
+.contact-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+@media(max-width:900px){.contact-inner{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:16px}
+.contact-info{background:var(--white);border-radius:var(--radius);padding:40px;box-shadow:0 8px 32px rgba(14,29,97,.08)}
+.contact-info h3{font-size:1.2rem;color:var(--navy);margin-bottom:20px}
+.info-row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(14,29,97,.1);font-size:.95rem}
+.info-row:last-child{border-bottom:none}
+.info-row strong{color:var(--navy)}
+.emergency{background:var(--navy);color:var(--ivory);border-radius:var(--radius);padding:40px;text-align:center}
+.emergency h3{font-size:1.4rem;margin-bottom:8px}
+.emergency p{color:rgba(232,224,210,.75);margin-bottom:24px;font-size:.95rem}
+.emergency .btn-primary{font-size:1.2rem;padding:18px 40px}
+
+/* Footer */
+footer{background:var(--navy-deep);color:rgba(232,224,210,.6);padding:40px 0;font-size:.88rem}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+footer a{color:var(--amber);text-decoration:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#"><span class="brand-mark">B</span> Britton Plumbing & Heating</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#diagnostic">Find Your Fix</a>
+      <a href="#heritage">Our Story</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:+15078353030">(507) 835-3030</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">Waseca, Minnesota: Since 1992</span>
+      <h1>Your home, <em>handled</em> by people who live here.</h1>
+      <p class="hero-sub">Plumbing, heating, and cooling from a family shop with two master plumbers and 33 years in the trade. No upsells. No surprises.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="tel:+15078353030">Call (507) 835-3030</a>
+        <a class="btn-ghost" href="#diagnostic">Find your fix</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-badge">Bryant Authorized Dealer</div>
+      <div class="hero-card">
+        <h3>24/7 Emergency Service</h3>
+        <p>Burst pipe at 2am? Furnace out in January? We answer.</p>
+        <a class="hero-phone" href="tel:+15078353030">(507) 835-3030</a>
+        <p class="hero-hours">Mon-Fri 8am-5pm · Emergency line always open</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><strong>33</strong><span>years serving Waseca and surrounding towns</span></div>
+    <div class="trust-item"><strong>2</strong><span>master plumbers on staff</span></div>
+    <div class="trust-item"><strong>100%</strong><span>Bryant satisfaction guarantee on parts and labor</span></div>
+  </div>
+</div>
+
+<section class="diagnostic" id="diagnostic">
+  <div class="container">
+    <h2>What is acting up? Tap the room.</h2>
+    <p class="diagnostic-sub">Pick where the problem is and we will tell you what we do about it. This is the same walkthrough our techs do on every call.</p>
+    <div class="home-grid">
+      <div class="house-map" id="houseMap">
+        <div class="house-zone zone-bath active" data-zone="bath"><strong>Bathroom</strong><span>Toilets, showers, sinks</span></div>
+        <div class="house-zone zone-kitchen" data-zone="kitchen"><strong>Kitchen</strong><span>Disposals, dishwashers, lines</span></div>
+        <div class="house-zone zone-basement" data-zone="basement"><strong>Basement</strong><span>Furnace, water heater</span></div>
+        <div class="house-zone zone-outside" data-zone="outside"><strong>Outside</strong><span>AC unit, sump pump</span></div>
+      </div>
+      <div class="zone-detail" id="zoneDetail">
+        <h3 id="zoneTitle">Bathroom</h3>
+        <p id="zoneDesc">Running toilets, slow drains, dripping faucets, low water pressure. We have fixed all of it thousands of times.</p>
+        <ul id="zoneList">
+          <li>Toilet repair and replacement</li>
+          <li>Shower and tub fixtures</li>
+          <li>Sink and faucet service</li>
+          <li>Drain cleaning</li>
+        </ul>
+        <a class="btn-primary" href="tel:+15078353030" style="font-size:.95rem;padding:14px 28px">Call about this</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2>Everything under your roof.</h2>
+    <div class="service-row">
+      <div class="service-cell">
+        <span class="service-num">PLUMBING</span>
+        <h3>Residential and commercial</h3>
+        <p>Leaky toilets, dead water heaters, clogged drains, repipes, gas lines, sump pumps. Two master plumbers, no job too small.</p>
+        <a href="tel:+15078353030">Get plumbing help</a>
+      </div>
+      <div class="service-cell">
+        <span class="service-num">HEATING</span>
+        <h3>Furnaces, boilers, geothermal</h3>
+        <p>We service all makes and models. Bryant Factory Authorized Dealer, so new installs come with a 100% satisfaction guarantee.</p>
+        <a href="tel:+15078353030">Get heating help</a>
+      </div>
+    </div>
+    <div class="service-row">
+      <div class="service-cell">
+        <span class="service-num">COOLING</span>
+        <h3>AC repair and replacement</h3>
+        <p>Central air, ductless mini-splits, heat pumps. We size every system to your home, not to a sales quota.</p>
+        <a href="tel:+15078353030">Get cooling help</a>
+      </div>
+      <div class="service-cell">
+        <span class="service-num">AIR QUALITY</span>
+        <h3>Breathe easier at home</h3>
+        <p>Air exchangers, humidifiers, dehumidifiers, filtration. Minnesota winters mean sealed houses and stale air. We fix that.</p>
+        <a href="tel:+15078353030">Get air quality help</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage" id="heritage">
+  <div class="heritage-inner">
+    <div>
+      <div class="heritage-year">1992</div>
+      <h2>Three decades. One family. Zero shortcuts.</h2>
+      <p>Britton Plumbing & Heating started as a family shop in Waseca and never turned into anything else. The owner has 30+ years in the trade. Our techs explain your options in plain language and let you decide. That is why neighbors keep calling.</p>
+      <div class="awards">
+        <div class="award"><div class="award-icon">B</div><div><strong>Bryant Circle of Champions</strong><span>2015 and 2017</span></div></div>
+        <div class="award"><div class="award-icon">M</div><div><strong>Bryant Medal of Excellence</strong><span>2016</span></div></div>
+        <div class="award"><div class="award-icon">F</div><div><strong>Factory Authorized Dealer</strong><span>Bryant heating and cooling</span></div></div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:1.15rem;line-height:1.7;color:rgba(232,224,210,.9)">"We will review your options with you, and once you have made a decision, resolve these problems as quickly as possible. And we will get the job done right the first time."</p>
+      <p style="margin-top:16px;color:var(--amber);font-weight:600">That is the whole business model. It has worked since 1992.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <h2>Talk to a real person.</h2>
+      <p style="color:#4A4A5A;margin-bottom:32px;max-width:44ch">Call during business hours and you will reach someone at the shop, not a call center. After hours, the emergency line goes to a tech.</p>
+      <div class="contact-info">
+        <h3>Britton Plumbing & Heating, LLC</h3>
+        <div class="info-row"><span>Address</span><strong>10740 340th Ave, Waseca, MN</strong></div>
+        <div class="info-row"><span>Phone</span><strong><a href="tel:+15078353030" style="color:var(--navy)">(507) 835-3030</a></strong></div>
+        <div class="info-row"><span>Hours</span><strong>Mon-Fri 8am-5pm</strong></div>
+        <div class="info-row"><span>Emergency</span><strong>24 hours, 7 days</strong></div>
+      </div>
+    </div>
+    <div class="emergency">
+      <h3>Pipe burst? No heat? No hot water?</h3>
+      <p>Do not wait until morning. Water damage gets worse by the hour.</p>
+      <a class="btn-primary" href="tel:+15078353030">Call (507) 835-3030</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Britton Plumbing & Heating, LLC. Waseca, MN.</span>
+    <span>Concept redesign by <a href="https://revamps.studio">Revamps</a></span>
+  </div>
+</footer>
+
+<script>
+const zones = {
+  bath: {
+    title: "Bathroom",
+    desc: "Running toilets, slow drains, dripping faucets, low water pressure. We have fixed all of it thousands of times.",
+    items: ["Toilet repair and replacement", "Shower and tub fixtures", "Sink and faucet service", "Drain cleaning"]
+  },
+  kitchen: {
+    title: "Kitchen",
+    desc: "Garbage disposals that jam, dishwashers that leak, water lines that need running. The busiest room deserves the most reliable plumbing.",
+    items: ["Garbage disposal install and repair", "Dishwasher hookups", "Faucet and sink replacement", "Water line service"]
+  },
+  basement: {
+    title: "Basement",
+    desc: "Your furnace and water heater live down here. When they quit in a Minnesota winter, you need someone fast.",
+    items: ["Furnace repair and replacement", "Water heater service", "Boiler systems", "Geothermal units"]
+  },
+  outside: {
+    title: "Outside",
+    desc: "AC condensers, sump pumps, and everything that keeps water out and cool air in.",
+    items: ["AC repair and installs", "Ductless mini-splits", "Sump pump service", "Heat pumps"]
+  }
+};
+document.querySelectorAll('.house-zone').forEach(zone => {
+  zone.addEventListener('click', () => {
+    document.querySelectorAll('.house-zone').forEach(z => z.classList.remove('active'));
+    zone.classList.add('active');
+    const d = zones[zone.dataset.zone];
+    document.getElementById('zoneTitle').textContent = d.title;
+    document.getElementById('zoneDesc').textContent = d.desc;
+    document.getElementById('zoneList').innerHTML = d.items.map(i => '<li>' + i + '</li>').join('');
+  });
+});
+</script>
+</body>
+</html>

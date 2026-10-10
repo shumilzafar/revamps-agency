@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avellino Plumbing | Spring Hill, TN</title>
+<meta name="description" content="Family-owned plumbing in Spring Hill, TN since 2004. 24/7 emergency service, upfront pricing, 160 five-star Google reviews. Call (615) 429-4481.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a2f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23c98a3d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --green:#1e3a2f;
+    --green-deep:#152a22;
+    --cream:#faf6ee;
+    --cream-dark:#f1e9d9;
+    --copper:#c07f2e;
+    --copper-dark:#a66a22;
+    --ink:#2b2b26;
+    --muted:#6b655a;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:700;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+    color:var(--green-deep);
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  /* Header */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    background:var(--green);
+    color:var(--cream);
+    border-bottom:3px solid var(--copper);
+  }
+  .header-inner{
+    max-width:1100px;margin:0 auto;
+    padding:0.8rem 1.25rem;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  }
+  .brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+  .brand-mark{
+    width:38px;height:38px;border-radius:8px;background:var(--copper);
+    display:flex;align-items:center;justify-content:center;
+    font-family:Georgia,serif;font-weight:bold;font-size:1.35rem;color:var(--green-deep);
+  }
+  .brand-name{font-family:Georgia,serif;font-size:1.15rem;font-weight:700;line-height:1.2}
+  .brand-name small{display:block;font-family:system-ui,sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:#d8cdb4}
+  .header-call{
+    display:inline-flex;align-items:center;gap:0.5rem;
+    background:var(--copper);color:var(--green-deep);
+    font-weight:700;text-decoration:none;
+    padding:0.65rem 1.1rem;border-radius:8px;
+    font-size:1rem;white-space:nowrap;
+  }
+  .header-call:hover{background:#d6933f}
+
+  /* Hero */
+  .hero{background:var(--green);color:var(--cream);overflow:hidden}
+  .hero-inner{
+    max-width:1100px;margin:0 auto;padding:3rem 1.25rem 3.5rem;
+    display:grid;gap:2.5rem;align-items:center;
+  }
+  @media(min-width:860px){.hero-inner{grid-template-columns:1.05fr 0.95fr;padding:4.5rem 1.25rem}}
+  .eyebrow{
+    display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--copper);margin-bottom:1rem;
+  }
+  .hero h1{color:var(--cream);font-size:2.6rem;margin-bottom:1.1rem}
+  @media(min-width:860px){.hero h1{font-size:3.6rem}}
+  .hero p.lead{font-size:1.12rem;color:#e6dcc4;margin-bottom:1.8rem;max-width:34rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:0.8rem;margin-bottom:2rem}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:700;
+    padding:0.9rem 1.6rem;border-radius:8px;font-size:1.05rem;
+  }
+  .btn-copper{background:var(--copper);color:var(--green-deep)}
+  .btn-copper:hover{background:#d6933f}
+  .btn-ghost{border:2px solid #8a8267;color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--copper);color:var(--copper)}
+  .trust-row{display:flex;flex-wrap:wrap;gap:0.6rem 1.4rem;font-size:0.92rem;color:#d8cdb4}
+  .trust-row .stars{color:var(--copper);letter-spacing:0.1em}
+  .hero-photo{
+    border-radius:14px;overflow:hidden;
+    border:1px solid rgba(255,255,255,0.14);
+    box-shadow:0 24px 60px rgba(0,0,0,0.35);
+  }
+  .hero-photo img{width:100%;height:auto;object-fit:cover;aspect-ratio:4/4.4}
+  @media(min-width:860px){.hero-photo img{aspect-ratio:3/3.4}}
+  .photo-cap{
+    background:var(--green-deep);color:#cbbf9f;
+    font-size:0.82rem;padding:0.7rem 1rem;
+  }
+
+  /* Sections */
+  .section{max-width:1100px;margin:0 auto;padding:3.5rem 1.25rem}
+  .section-label{
+    font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--copper-dark);margin-bottom:0.7rem;
+  }
+  .section h2{font-size:2rem;margin-bottom:0.9rem}
+  @media(min-width:860px){.section h2{font-size:2.5rem}}
+  .section-sub{color:var(--muted);max-width:40rem;margin-bottom:2.2rem;font-size:1.05rem}
+
+  /* Services */
+  .services{background:var(--white);border-top:1px solid #e5dcc8;border-bottom:1px solid #e5dcc8}
+  .services-inner{max-width:1100px;margin:0 auto;padding:3.5rem 1.25rem}
+  .svc-grid{display:grid;gap:1.1rem}
+  @media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+  .svc{
+    background:var(--cream);border:1px solid #e5dcc8;border-radius:12px;
+    padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;
+  }
+  .svc-num{
+    font-family:Georgia,serif;font-size:0.85rem;font-weight:700;color:var(--copper-dark);
+    letter-spacing:0.08em;
+  }
+  .svc h3{font-size:1.25rem}
+  .svc p{font-size:0.95rem;color:var(--muted)}
+  .svc a.call-link{
+    margin-top:auto;padding-top:0.6rem;font-weight:700;color:var(--green);
+    text-decoration:none;font-size:0.95rem;
+  }
+  .svc a.call-link:hover{color:var(--copper-dark)}
+
+  /* Why us */
+  .why-grid{display:grid;gap:1.1rem;margin-top:0.5rem}
+  @media(min-width:860px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+  .why-card{
+    background:var(--green);color:var(--cream);border-radius:12px;padding:1.8rem;
+  }
+  .why-card h3{color:var(--cream);font-size:1.35rem;margin-bottom:0.5rem}
+  .why-card p{color:#d8cdb4;font-size:0.98rem}
+  .why-card .big{
+    font-family:Georgia,serif;font-size:2.6rem;color:var(--copper);
+    display:block;margin-bottom:0.4rem;line-height:1;
+  }
+  .why-list{list-style:none;margin-top:1rem;display:grid;gap:0.7rem}
+  .why-list li{display:flex;gap:0.7rem;align-items:flex-start;font-size:0.98rem;color:#e6dcc4}
+  .why-list .tick{
+    color:var(--copper);font-weight:700;flex-shrink:0;
+  }
+
+  /* Reviews */
+  .reviews{background:var(--cream-dark);border-top:1px solid #e0d4b8;border-bottom:1px solid #e0d4b8}
+  .reviews-inner{max-width:1100px;margin:0 auto;padding:3.5rem 1.25rem}
+  .rev-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:0.6rem 1.2rem;margin-bottom:2rem}
+  .rev-head h2{margin-bottom:0}
+  .rev-score{font-size:1rem;color:var(--muted)}
+  .rev-score strong{color:var(--ink)}
+  .rev-score .stars{color:var(--copper-dark);letter-spacing:0.12em}
+  .rev-grid{display:grid;gap:1.1rem}
+  @media(min-width:860px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+  .rev{
+    background:var(--white);border:1px solid #e0d4b8;border-radius:12px;
+    padding:1.6rem;display:flex;flex-direction:column;gap:0.9rem;
+  }
+  .rev .stars{color:var(--copper-dark);letter-spacing:0.12em;font-size:0.9rem}
+  .rev blockquote{font-size:1rem;color:var(--ink)}
+  .rev cite{font-style:normal;font-size:0.88rem;color:var(--muted);margin-top:auto}
+  .rev cite strong{color:var(--green);display:block;font-size:0.92rem}
+
+  /* Areas */
+  .areas{display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1.4rem}
+  .area-pill{
+    background:var(--white);border:1px solid #d9cdae;border-radius:999px;
+    padding:0.45rem 1rem;font-size:0.9rem;color:var(--green);
+  }
+
+  /* Emergency banner */
+  .emergency{background:var(--green-deep);color:var(--cream)}
+  .emergency-inner{
+    max-width:1100px;margin:0 auto;padding:3rem 1.25rem;text-align:center;
+  }
+  .emergency h2{color:var(--cream);font-size:1.9rem;margin-bottom:0.8rem}
+  @media(min-width:860px){.emergency h2{font-size:2.4rem}}
+  .emergency p{color:#cbbf9f;max-width:36rem;margin:0 auto 1.6rem}
+  .emergency .btn{font-size:1.15rem;padding:1rem 2.2rem}
+
+  /* Footer */
+  footer{background:var(--green-deep);color:#b7ab8d;border-top:3px solid var(--copper)}
+  .footer-inner{
+    max-width:1100px;margin:0 auto;padding:2.8rem 1.25rem 2rem;
+    display:grid;gap:2rem;
+  }
+  @media(min-width:860px){.footer-inner{grid-template-columns:1.2fr 1fr 1fr}}
+  footer h4{color:var(--cream);font-family:Georgia,serif;font-size:1.05rem;margin-bottom:0.8rem}
+  footer p,footer li{font-size:0.92rem}
+  footer ul{list-style:none;display:grid;gap:0.35rem}
+  footer a{color:#e6dcc4;text-decoration:none}
+  footer a:hover{color:var(--copper)}
+  .footer-bottom{
+    max-width:1100px;margin:0 auto;padding:1.2rem 1.25rem 1.8rem;
+    border-top:1px solid rgba(255,255,255,0.1);
+    font-size:0.82rem;display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;justify-content:space-between;
+  }
+
+  /* Sticky mobile call bar */
+  .mobile-call{
+    position:fixed;bottom:0;left:0;right:0;z-index:60;
+    background:var(--green-deep);border-top:2px solid var(--copper);
+    padding:0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+    display:flex;gap:0.7rem;
+  }
+  @media(min-width:860px){.mobile-call{display:none}}
+  .mobile-call a{
+    flex:1;text-align:center;text-decoration:none;font-weight:700;
+    padding:0.8rem;border-radius:8px;font-size:1rem;
+  }
+  .mobile-call .call-now{background:var(--copper);color:var(--green-deep)}
+  .mobile-call .text-us{border:2px solid #8a8267;color:var(--cream)}
+  body{padding-bottom:76px}
+  @media(min-width:860px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">A</span>
+      <span class="brand-name">Avellino Plumbing<small>Spring Hill, TN &middot; Since 2004</small></span>
+    </a>
+    <a class="header-call" href="tel:+16154294481">&#9742; (615) 429-4481</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Family-owned &middot; Spring Hill, Tennessee</span>
+        <h1>Spring Hill&rsquo;s plumber since 2004.</h1>
+        <p class="lead">Jamie Avellino started this company with a truck and a simple rule: treat every home like it&rsquo;s your own. Twenty-plus years later, that&rsquo;s still how we work. Upfront pricing, honest advice, and we answer the phone around the clock.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-copper" href="tel:+16154294481">Call (615) 429-4481</a>
+          <a class="btn btn-ghost" href="#services">See what we do</a>
+        </div>
+        <div class="trust-row">
+          <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; 160 Google reviews</span>
+          <span>&#10003; Open 24/7, every day</span>
+          <span>&#10003; Licensed &amp; insured</span>
+        </div>
+      </div>
+      <div>
+        <div class="hero-photo">
+          <img src="images/avellino-team.webp" alt="The Avellino Plumbing team at work" width="1086" height="1448">
+          <div class="photo-cap">The Avellino crew, on the job in Spring Hill.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="section-label">What we do</div>
+      <h2>Everyday plumbing, done right.</h2>
+      <p class="section-sub">No upsells, no jargon. Just the work your home needs, priced before we start.</p>
+      <div class="svc-grid">
+        <div class="svc">
+          <span class="svc-num">01</span>
+          <h3>Emergency plumbing</h3>
+          <p>Burst pipe at 2 AM? We pick up. Real 24/7 response across Spring Hill and the surrounding counties.</p>
+          <a class="call-link" href="tel:+16154294481">Call now &#8594;</a>
+        </div>
+        <div class="svc">
+          <span class="svc-num">02</span>
+          <h3>Drain cleaning</h3>
+          <p>Slow drains, stubborn clogs, backups that keep coming back. We clear it and find out why it happened.</p>
+          <a class="call-link" href="tel:+16154294481">Call now &#8594;</a>
+        </div>
+        <div class="svc">
+          <span class="svc-num">03</span>
+          <h3>Water heaters</h3>
+          <p>Tank and tankless, repair or replacement. We&rsquo;ll tell you honestly which one your home actually needs.</p>
+          <a class="call-link" href="tel:+16154294481">Call now &#8594;</a>
+        </div>
+        <div class="svc">
+          <span class="svc-num">04</span>
+          <h3>Leak &amp; pipe repair</h3>
+          <p>Hidden leaks, dripping faucets, worn-out lines. We track the problem to its source and fix it for good.</p>
+          <a class="call-link" href="tel:+16154294481">Call now &#8594;</a>
+        </div>
+        <div class="svc">
+          <span class="svc-num">05</span>
+          <h3>Water filtration</h3>
+          <p>Whole-house filtration for cleaner, better-tasting water at every tap. Sized for your home, installed clean.</p>
+          <a class="call-link" href="tel:+16154294481">Call now &#8594;</a>
+        </div>
+        <div class="svc">
+          <span class="svc-num">06</span>
+          <h3>Kitchen &amp; bath</h3>
+          <p>Faucets, toilets, disposals, shower valves, and full rough-ins. The fixtures you touch every day, done properly.</p>
+          <a class="call-link" href="tel:+16154294481">Call now &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="section-label">Why Avellino</div>
+    <h2>A family name on every job.</h2>
+    <p class="section-sub">When you call us, you get the people whose name is on the truck. Not a call center, not a franchise.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="big">2004</span>
+        <h3>Family-run from day one</h3>
+        <p>Jamie Avellino founded this company in Spring Hill in 2004. It&rsquo;s still family-owned and operated, and every tech who walks through your door works to the standard Jamie set.</p>
+      </div>
+      <div class="why-card">
+        <span class="big">160</span>
+        <h3>Five-star Google reviews</h3>
+        <p>160 reviews, every one of them five stars. That doesn&rsquo;t happen by accident. It happens by showing up on time, charging what you quoted, and cleaning up after yourself.</p>
+      </div>
+      <div class="why-card" style="grid-column:1/-1">
+        <h3>How we work</h3>
+        <ul class="why-list">
+          <li><span class="tick">&#10003;</span> You approve the price before we touch a wrench. No surprises on the invoice.</li>
+          <li><span class="tick">&#10003;</span> A real person answers, day or night. Plumbing emergencies don&rsquo;t keep office hours.</li>
+          <li><span class="tick">&#10003;</span> We explain the problem in plain language and give you your options, not a sales pitch.</li>
+          <li><span class="tick">&#10003;</span> Licensed and insured, and we treat your home like it&rsquo;s our own.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="reviews-inner">
+      <div class="rev-head">
+        <h2>What neighbors say</h2>
+        <span class="rev-score"><strong>5.0</strong> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &middot; 160 Google reviews</span>
+      </div>
+      <div class="rev-grid">
+        <div class="rev">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote>&ldquo;Avellino Plumbing saved the day when our water heater broke right before family arrived for the holidays. They were fast, professional, and the price was exactly what they quoted.&rdquo;</blockquote>
+          <cite><strong>Sarah M.</strong>Franklin, TN</cite>
+        </div>
+        <div class="rev">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote>&ldquo;I&rsquo;ve used several plumbers in the area over the years, but Jamie and his team are by far the best. They explained everything clearly and fixed our persistent drain issue for good.&rdquo;</blockquote>
+          <cite><strong>James T.</strong>Brentwood, TN</cite>
+        </div>
+        <div class="rev">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote>&ldquo;Called them at 2 AM for a burst pipe. They arrived within 45 minutes, stopped the leak, and were incredibly courteous despite the hour.&rdquo;</blockquote>
+          <cite><strong>Emily R.</strong>Spring Hill, TN</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="areas">
+    <div class="section-label">Where we work</div>
+    <h2>Proudly serving our corner of Tennessee.</h2>
+    <p class="section-sub">Based in Spring Hill. On the road across Maury, Williamson, and Rutherford counties every day.</p>
+    <div class="areas">
+      <span class="area-pill">Spring Hill</span>
+      <span class="area-pill">Columbia</span>
+      <span class="area-pill">Franklin</span>
+      <span class="area-pill">Brentwood</span>
+      <span class="area-pill">Murfreesboro</span>
+      <span class="area-pill">Thompson&rsquo;s Station</span>
+      <span class="area-pill">Nolensville</span>
+      <span class="area-pill">Smyrna</span>
+      <span class="area-pill">Mount Pleasant</span>
+      <span class="area-pill">Maury County</span>
+      <span class="area-pill">Williamson County</span>
+      <span class="area-pill">Rutherford County</span>
+    </div>
+  </section>
+
+  <section class="emergency">
+    <div class="emergency-inner">
+      <h2>Water where it shouldn&rsquo;t be? Call now.</h2>
+      <p>We&rsquo;re open 24/7, Monday through Sunday. A burst pipe or a backed-up sewer can&rsquo;t wait until morning, and neither do we.</p>
+      <a class="btn btn-copper" href="tel:+16154294481">&#9742; (615) 429-4481</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>Avellino Plumbing</h4>
+      <p>Family-owned plumbing in Spring Hill, TN since 2004. Upfront pricing, honest work, and a phone that gets answered.</p>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="tel:+16154294481">&#9742; (615) 429-4481</a></li>
+        <li><a href="mailto:avellinoplumbing@gmail.com">&#9993; avellinoplumbing@gmail.com</a></li>
+        <li>Spring Hill, Tennessee</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul>
+        <li>Open 24/7</li>
+        <li>Monday through Sunday</li>
+        <li>Emergency service, always</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Avellino Plumbing. All rights reserved.</span>
+    <span>&#9733; 5.0 &middot; 160 Google reviews</span>
+  </div>
+</footer>
+
+<div class="mobile-call">
+  <a class="call-now" href="tel:+16154294481">&#9742; Call now</a>
+  <a class="text-us" href="#services">Our services</a>
+</div>
+
+</body>
+</html>

@@ -94,12 +94,33 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 .ba-tag.before{left:16px;background:rgba(0,0,0,.65);color:#fff}
 .ba-tag.after{right:16px;background:#2563eb;color:#fff}
 .ba-hint{text-align:center;font-size:.9rem;color:#9ca3af;margin-top:14px}
-.mock-before-full{background:#fff;height:100%;padding:36px 40px;font-family:Georgia,serif;color:#333;overflow:hidden}
-.mock-before-full h2{font-family:Georgia,serif;font-size:1.3rem;color:#000;margin-bottom:14px}
-.mock-before-full p{font-size:.92rem;margin-bottom:8px;line-height:1.6}
-.mock-before-full .lic{font-size:.8rem;color:#666}
-.mock-before-full .warn{background:#fce8e6;color:#a50e0e;padding:10px 14px;font-size:.8rem;margin-bottom:14px;font-family:Arial,sans-serif}
-.mock-before-full .junk{font-size:.78rem;color:#888;font-family:monospace;margin-bottom:6px}
+.mock-before-full{background:#fff;height:100%;overflow:hidden}
+.viz-label{background:#111827;color:#fbbf24;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 10px;font-family:Inter,sans-serif}
+/* Deliberately poor website, visualized: cheap-template look */
+.bad-site{background:#fff;color:#000;font-family:"Times New Roman",Times,serif}
+.bad-top{background:#0000cc;color:#fff;padding:10px 16px;text-align:center}
+.bad-top b{font-size:1.15rem;letter-spacing:.02em}
+.bad-top span{display:block;font-size:.7rem;margin-top:3px;font-family:Arial,sans-serif}
+.bad-nav{background:#e8e8e8;border-bottom:2px solid #0000cc;padding:6px 8px;text-align:center;font-family:Arial,sans-serif;font-size:.68rem}
+.bad-nav a{color:#0000cc;text-decoration:underline;margin:0 6px}
+.bad-marquee{background:#0000cc;color:#ffff00;font-family:Arial,sans-serif;font-size:.68rem;font-weight:bold;padding:5px 4px;text-align:center}
+.bad-hero{background:#ffffcc;border:2px solid #ff0000;margin:10px 12px;padding:14px 12px;text-align:center}
+.bad-hero h3{color:#0000cc;font-size:1.25rem;margin-bottom:6px;font-family:Arial,sans-serif}
+.bad-hero p{font-size:.76rem;color:#333;line-height:1.5}
+.bad-sec{padding:10px 16px;border-bottom:1px dashed #999}
+.bad-sec h4{font-family:Arial,sans-serif;font-size:.84rem;color:#ff0000;margin-bottom:6px;text-decoration:underline}
+.bad-sec p,.bad-sec li{font-size:.74rem;line-height:1.55}
+.bad-sec ul{margin:6px 0 4px 18px}
+.bad-form{background:#f0f0f0;border:2px outset #999;margin:10px 12px;padding:12px}
+.bad-form h4{font-family:Arial,sans-serif;font-size:.84rem;margin-bottom:8px}
+.bad-err{background:#fff;border:1px solid #ff0000;color:#ff0000;font-family:Arial,sans-serif;font-size:.7rem;padding:8px;margin-bottom:10px;font-weight:bold;line-height:1.5}
+.bad-field{border:1px solid #777;background:#fff;padding:6px 8px;font-size:.68rem;color:#999;margin-bottom:8px;font-family:Arial,sans-serif}
+.bad-btn{background:#c0c0c0;border:2px outset #fff;font-family:Arial,sans-serif;font-size:.7rem;padding:5px 18px}
+.bad-foot{background:#0000cc;color:#fff;text-align:center;font-family:Arial,sans-serif;font-size:.6rem;padding:10px 8px;line-height:1.8}
+.bad-foot .counter{display:inline-block;background:#000;color:#0f0;border:1px solid #666;font-family:monospace;font-size:.66rem;padding:2px 10px;margin-top:4px}
+/* Designer notes on after panels */
+.dnote{margin-top:14px;padding:10px 14px;border-left:3px solid #c9a227;background:#faf7f0;border-radius:0 8px 8px 0;font-size:.8rem;color:#6f665a;font-style:italic;line-height:1.65}
+.dnote b{display:block;font-style:normal;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#1a3c2e;margin-bottom:4px}
 .mock-after-full{background:#faf7f0;overflow:hidden;display:block;font-family:Georgia,serif}
 .ma-topbar{background:#1a3c2e;color:#e9e2cf;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 28px;display:flex;justify-content:space-between;font-family:Inter,sans-serif}
 .ma-mast{display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid #e7e2d6}
@@ -199,14 +220,18 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <div class="ma-footer"><span>SUNSHINE SEPTIC &middot; SPRINGFIELD, TN</span><span>(615) 543-1761</span></div>
 </div></div>
 <div class="ba-before"><div class="mock-before-full">
-<div class="warn">Not secure | sunshinesepticcleaning.com</div>
-<h2>Request Setup or Quote</h2>
-<div class="warn">Oops, there was an error sending your message. Please try again later.</div>
-<p>Name: [input]</p>
-<p>Email: [input]</p>
-<p style="font-size:.78rem;color:#888;margin-top:12px">(same form repeated below)</p>
-<h2>Request Setup or Quote</h2>
-<div class="warn">Oops, there was an error sending your message. Please try again later.</div>
+<div class="viz-label">Their current site, visualized</div>
+<div class="bad-site">
+<div class="bad-top"><b>SUNSHINE SEPTIC</b><span>Springfield, TN &middot; Call (615) 543-1761</span></div>
+<div class="bad-nav"><a>Home</a> | <a>About Us</a> | <a>Services</a> | <a>Contact Us</a></div>
+<div class="bad-marquee">&#9733; Family owned and operated since 1952! &#9733; Call today for all your septic needs! &#9733;</div>
+<div class="bad-hero"><h3>Welcome to Sunshine Septic!!!</h3><p>We provide septic tank services for residential customers in the Springfield area. Contact us today for more information about our services.</p></div>
+<div class="bad-sec"><h4>Our Services</h4><ul><li>Septic Tank Pumping</li><li>Septic Inspections</li><li>Septic System Repairs</li></ul></div>
+<div class="bad-form"><h4>Request Setup or Quote</h4><div class="bad-err">Oops, there was an error sending your message. Please try again later.</div><div class="bad-field">Name: [input]</div><div class="bad-field">Email: [input]</div><button class="bad-btn" type="button">Submit</button></div>
+<div class="bad-sec"><h4>About Our Company</h4><p>Sunshine Septic has been serving the Springfield, Tennessee area. We are a family owned business. We do septic pumping, inspections, and repairs. Call us at (615) 543-1761 for more information.</p></div>
+<div class="bad-form"><h4>Request Setup or Quote</h4><div class="bad-err">Oops, there was an error sending your message. Please try again later.</div><div class="bad-field">Name: [input]</div><div class="bad-field">Email: [input]</div><button class="bad-btn" type="button">Submit</button></div>
+<div class="bad-foot">Copyright &copy; 2019 Sunshine Septic. All rights reserved.<br>Best viewed at 800x600 in Internet Explorer<br><span class="counter">001337</span> visitors since 2019</div>
+</div>
 </div></div>
 <span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
 <div class="ba-handle"><div class="ba-knob">&#8596;</div></div>
@@ -214,52 +239,52 @@ footer{padding:2rem 0;text-align:center;font-size:.85rem;color:#9ca3af;border-to
 <p class="ba-hint">Drag the handle to compare</p>
 </div>
 <section class="compare">
-<p class="compare-label">Section 1</p>
-<h2>The broken quote form</h2>
-<p class="compare-desc">The "Request a Quote" form displays an error message right on the page: "Oops, there was an error sending your message." The whole broken form is also duplicated, so visitors see the failure twice. Quote requests likely never arrive.</p>
+<p class="compare-label">01 &middot; The money leak</p>
+<h2>The quote form was broken</h2>
+<p class="compare-desc">This is where jobs were being lost. The quote form, the single element that turns a visitor into a paying customer, loads with a red error message already showing. And the identical broken form repeats further down the page, so every visitor sees the failure twice. One working form would have paid for this entire rebuild.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-error">Oops, there was an error sending your message. Please try again later.</div><span class="bb-field">Your name</span><span class="bb-field">Phone number</span><p class="bb-note">Then the exact same broken form repeats below it.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-receipt"><div class="rhead"><b>SUNSHINE SEPTIC</b><br>Quote request</div><div class="rline"></div><div class="rrow"><span>Status</span><span>Received</span></div><div class="rrow"><span>Next step</span><span>We call you today</span></div><div class="rline"></div><div style="text-align:center"><span class="rstamp">WE CALL BACK SAME DAY</span></div></div><div class="ab-teeth"></div><p style="font-size:.78rem;color:#6f665a;margin-top:12px">One form. It works, it is tested, and every request prints a work order the office actually sees.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-receipt"><div class="rhead"><b>SUNSHINE SEPTIC</b><br>Quote request</div><div class="rline"></div><div class="rrow"><span>Status</span><span>Received</span></div><div class="rrow"><span>Next step</span><span>We call you today</span></div><div class="rline"></div><div style="text-align:center"><span class="rstamp">WE CALL BACK SAME DAY</span></div></div><div class="ab-teeth"></div><div class="dnote"><b>Designer note</b>I turned the form into a printed work order, because that is what their office already runs on. Same promise they have always made: we call you back the same day. Now the website makes it too.</div></div></div>
 </div>
 </section>
 
 <section class="compare">
-<p class="compare-label">Section 2</p>
-<h2>The security</h2>
-<p class="compare-desc">The site runs on plain HTTP. Browsers flag it "Not secure", which is the last thing you want on a page asking strangers for their contact details.</p>
+<p class="compare-label">02 &middot; The warning</p>
+<h2>The browser said don't trust this site</h2>
+<p class="compare-desc">The quote form asks strangers for their name, email, and phone number. The page it lives on runs over plain HTTP, so every browser prints "Not secure" next to the address. Visitors are told not to trust the page at the exact moment it asks for their details.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body"><div class="bb-bar warn">Not secure &nbsp;|&nbsp; http://sunshinesepticcleaning.com</div><p class="bb-note">A quote form on a page the browser does not trust.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="bb-bar ok">Secure &nbsp;|&nbsp; https://sunshinesepticcleaning.com</div><p style="font-size:.78rem;color:#6b7280">HTTPS everywhere. Visitors can submit their details without a warning telling them not to.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="bb-bar ok">Secure &nbsp;|&nbsp; https://sunshinesepticcleaning.com</div><div class="dnote"><b>Designer note</b>HTTPS everywhere, on every page. It is invisible when it works, which is exactly the point.</div></div></div>
 </div>
 </section>
 
 <section class="compare">
-<p class="compare-label">Section 3</p>
-<h2>The first impression</h2>
-<p class="compare-desc">The homepage headline is generic. Nothing about 74 years in business, nothing about Springfield, nothing that earns a quote request.</p>
+<p class="compare-label">03 &middot; The blank handshake</p>
+<h2>Seventy-four years, introduced in one flat sentence</h2>
+<p class="compare-desc">The old homepage opened with "Welcome to Sunshine Septic," followed by two generic sentences. Nothing about 1952. Nothing about Springfield. Nothing about three generations of the same family. A visitor learned nothing that would make them pick this company over the next name on Google.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><h4>Welcome to Sunshine Septic</h4><p>We provide septic services for residential customers. Contact us today.</p><p class="bb-note">74 years of history, summed up in two flat sentences.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="ab-seal">1952</span><span style="font-size:.66rem;letter-spacing:.12em;color:#8a7f63;font-weight:600">SINCE 1952 &middot; SPRINGFIELD, TN</span></div><h4>Septic service done right, since 1952.</h4><p>Family-owned for three generations. Pumping, inspections, and repairs across Robertson County.</p><span class="ab-btn">Request a quote</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-hero"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><span class="ab-seal">1952</span><span style="font-size:.66rem;letter-spacing:.12em;color:#8a7f63;font-weight:600">SINCE 1952 &middot; SPRINGFIELD, TN</span></div><h4>Septic service done right, since 1952.</h4><p>Family-owned for three generations. Pumping, inspections, and repairs across Robertson County.</p><span class="ab-btn">Request a quote</span></div><div class="dnote"><b>Designer note</b>The seal does the persuading. "Since 1952" set in a circle says more than any headline I could write, so I let it lead.</div></div></div>
 </div>
 </section>
 
 <section class="compare">
-<p class="compare-label">Section 4</p>
-<h2>The reputation</h2>
-<p class="compare-desc">74 years in business and 266 reviews at 4.9 stars, and the old site shows none of it. The strongest reasons to hire them are invisible.</p>
+<p class="compare-label">04 &middot; The hidden proof</p>
+<h2>Their best salespeople were invisible</h2>
+<p class="compare-desc">266 reviews at 4.9 stars. Seventy-four years in business. A family name three generations deep. All of it lived on Google, none of it on the website. Their strongest reasons to hire them were working for free somewhere else.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p style="font-size:.82rem">(no mention of 1952 anywhere prominent)</p><p style="font-size:.82rem">(no reviews shown on the site)</p><p class="bb-note">Three generations of trust, hidden.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-facts"><div class="row"><b>74 years</b><span>Serving Springfield, TN</span></div><div class="row"><b>4.9 &#9733;</b><span>Across 266 reviews</span></div><div class="row"><b>Family owned</b><span>Three generations, since 1952</span></div></div><p style="font-size:.78rem;color:#6f665a;margin-top:12px">The reputation leads now. No invented quotes, just the record.</p></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-facts"><div class="row"><b>74 years</b><span>Serving Springfield, TN</span></div><div class="row"><b>4.9 &#9733;</b><span>Across 266 reviews</span></div><div class="row"><b>Family owned</b><span>Three generations, since 1952</span></div></div><div class="dnote"><b>Designer note</b>I put the record where nobody can miss it and kept it plain. Real numbers do not need adjectives.</div></div></div>
 </div>
 </section>
 
 <section class="compare">
-<p class="compare-label">Section 5</p>
-<h2>The contact</h2>
-<p class="compare-desc">One phone number buried in text. No click-to-call, no hours, no clear next step for someone with a septic problem right now.</p>
+<p class="compare-label">05 &middot; The thumb test</p>
+<h2>One thumb, one emergency, no tap to call</h2>
+<p class="compare-desc">Septic problems happen at 7am on a Sunday, on a phone, with one thumb. The old site listed the number as plain text. Not tappable, not a button. The person most ready to hire had to memorize eleven digits and dial them by hand.</p>
 <div class="panels">
 <div class="panel before"><p class="panel-tag">Before</p><div class="panel-body bb-plain"><p>Phone: (615) 543-1761</p><p class="bb-note">Plain text. Not tappable on the phone in your pocket.</p></div></div>
-<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Slow drains? Bad smell?</h4><p>Call (615) 543-1761. Open 7 days, 7am to 7pm.</p><span class="ab-btn gold">Call (615) 543-1761</span></div></div></div>
+<div class="panel after"><p class="panel-tag">After</p><div class="panel-body"><div class="ab-contact"><h4>Slow drains? Bad smell?</h4><p>Call (615) 543-1761. Open 7 days, 7am to 7pm.</p><span class="ab-btn gold">Call (615) 543-1761</span></div><div class="dnote"><b>Designer note</b>One big gold button, thumb-sized, within reach on every screen. The call is the product. Everything else is the brochure.</div></div></div>
 </div>
 </section>
 

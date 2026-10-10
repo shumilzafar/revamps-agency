@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peregrina Plumbing Co. | Alexandria, VA</title>
+<meta name="description" content="Family-owned plumbing in Alexandria, VA. Emergency repair, installations, and honest work backed by 14+ years of experience. Call (703) 486-4333.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2316161A' d='M12 2.7s6.5 7 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.7 12 2.7z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF9F5;
+  --cream-2:#F5F1E8;
+  --ink:#16161A;
+  --ink-soft:#4A4A4E;
+  --muted:#8A8680;
+  --bronze:#B07D4C;
+  --line:rgba(22,22,26,.12);
+  --espresso:#241A12;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Playfair Display',serif}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* ============ NAV ============ */
+.nav{position:sticky;top:0;z-index:60;background:rgba(251,249,245,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font-family:'Playfair Display',serif;font-weight:700;font-size:21px;letter-spacing:.01em}
+.brand svg{width:22px;height:22px;color:var(--ink)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-acts{display:flex;align-items:center;gap:18px}
+.nav-acts a.ic{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);transition:border-color .2s,background .2s}
+.nav-acts a.ic:hover{border-color:var(--ink)}
+.nav-acts a.ic svg{width:16px;height:16px}
+.nav-badge{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:13px;font-weight:600}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+/* ============ HERO ============ */
+.hero{padding:64px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-bottom:22px}
+.hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(46px,5.6vw,78px);line-height:1.08;letter-spacing:-.01em}
+.hero-sub{font-size:15px;line-height:1.75;color:var(--ink-soft);max-width:400px;margin:24px 0 34px}
+.btn-pill{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff;border-radius:999px;padding:9px 9px 9px 26px;font-size:14px;font-weight:500;letter-spacing:.01em;transition:transform .25s,box-shadow .25s}
+.btn-pill:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(22,22,26,.22)}
+.btn-pill .chip{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
+.btn-pill .chip svg{width:16px;height:16px}
+.hero-arch{position:relative}
+.arch-frame{border-radius:220px 220px 26px 26px;overflow:hidden;aspect-ratio:4/4.7;background:var(--cream-2)}
+.arch-frame img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease,opacity .5s ease}
+.hero-arch:hover .arch-frame img{transform:scale(1.04)}
+
+/* hero bottom row */
+.hero-row{display:grid;grid-template-columns:200px 1fr auto;gap:40px;align-items:end;margin-top:56px}
+.mini-card{width:200px}
+.mini-img{border-radius:18px;overflow:hidden;aspect-ratio:1/1;background:var(--cream-2)}
+.mini-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.mini-card:hover .mini-img img{transform:scale(1.06)}
+.mini-card h4{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;margin:12px 0 4px}
+.mini-card p{font-size:12px;color:var(--muted);line-height:1.6}
+.badge-wrap{display:flex;justify-content:center}
+.spin-badge{position:relative;width:132px;height:132px}
+.spin-badge svg.ring{position:absolute;inset:0;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin-badge .core{position:absolute;inset:34px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center}
+.spin-badge .core svg{width:20px;height:20px}
+.dots{display:flex;gap:10px;align-items:center;padding-bottom:6px}
+.dot{width:26px;height:4px;border-radius:4px;background:var(--line);border:none;cursor:pointer;transition:background .3s;padding:0}
+.dot.on{background:var(--bronze)}
+
+/* ============ SECTIONS ============ */
+.sec{padding:96px 0}
+.kicker{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin-bottom:16px}
+.h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(34px,4vw,52px);line-height:1.12;letter-spacing:-.01em}
+.sec-sub{color:var(--ink-soft);font-size:15px;line-height:1.75;max-width:520px;margin-top:16px}
+
+/* services */
+.svc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:52px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(22,22,26,.1)}
+.svc-img{aspect-ratio:16/10;overflow:hidden;background:var(--cream-2)}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.svc:hover .svc-img img{transform:scale(1.07)}
+.svc-body{padding:24px 26px 28px}
+.svc-body h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin-bottom:8px}
+.svc-body p{font-size:13.5px;color:var(--ink-soft);line-height:1.7}
+.svc-tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);margin-bottom:10px}
+
+/* reviews */
+.reviews{background:var(--cream-2)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px 30px;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
+.rev:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(22,22,26,.08)}
+.rev .qmark{font-family:'Playfair Display',serif;font-size:44px;line-height:1;color:var(--bronze);margin-bottom:14px}
+.rev blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:16.5px;line-height:1.7;color:var(--ink);flex:1}
+.rev-who{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;gap:14px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:600;flex-shrink:0}
+.rev-who p{font-size:13.5px;font-weight:600}
+.rev-who small{font-size:12px;color:var(--muted)}
+
+/* areas */
+.areas{padding:72px 0 0}
+.area-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.area-pills span{font-size:12.5px;font-weight:500;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:#fff}
+
+/* cta band */
+.cta-band{background:var(--espresso);color:#F5EFE4;border-radius:28px;margin:96px auto 0;max-width:1180px;padding:72px 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.cta-band h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(32px,3.6vw,48px);line-height:1.15}
+.cta-band p{font-size:14.5px;line-height:1.75;color:rgba(245,239,228,.72);margin:18px 0 30px;max-width:420px}
+.btn-cream{display:inline-flex;align-items:center;gap:12px;background:#F5EFE4;color:var(--ink);border-radius:999px;padding:9px 9px 9px 26px;font-size:14px;font-weight:600;transition:transform .25s}
+.btn-cream:hover{transform:translateY(-2px)}
+.btn-cream .chip{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center}
+.btn-cream .chip svg{width:16px;height:16px}
+.cta-facts{border-left:1px solid rgba(245,239,228,.16);padding-left:48px}
+.cta-facts div{margin-bottom:22px}
+.cta-facts div:last-child{margin-bottom:0}
+.cta-facts .fl{font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);margin-bottom:6px}
+.cta-facts .fv{font-family:'Playfair Display',serif;font-size:19px}
+
+/* footer */
+footer{margin-top:96px;border-top:1px solid var(--line);padding:56px 0 40px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px}
+.foot-brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.foot-brand svg{width:24px;height:24px}
+.foot-grid p{font-size:13px;color:var(--ink-soft);line-height:1.8}
+.foot-h{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:10px}
+.foot-grid ul a{font-size:13.5px;color:var(--ink-soft);transition:color .2s}
+.foot-grid ul a:hover{color:var(--ink)}
+.foot-bottom{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.socials{display:flex;gap:12px;margin-top:18px}
+.socials a{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;transition:border-color .2s}
+.socials a:hover{border-color:var(--ink)}
+.socials svg{width:16px;height:16px}
+
+/* mobile call bar */
+.callbar{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:70;background:var(--ink);color:#fff;border-radius:999px;padding:14px 24px;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:15px;box-shadow:0 12px 32px rgba(22,22,26,.3)}
+.callbar svg{width:18px;height:18px}
+
+/* responsive */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .arch-frame{max-width:420px;margin:0 auto}
+  .hero-row{grid-template-columns:1fr 1fr;gap:24px}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr;max-width:560px}
+  .cta-band{grid-template-columns:1fr;padding:52px 32px;margin-left:16px;margin-right:16px}
+  .cta-facts{border-left:none;padding-left:0;border-top:1px solid rgba(245,239,228,.16);padding-top:36px}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:640px){
+  .wrap{padding:0 20px}
+  .nav-in{padding:0 20px}
+  .svc-grid{grid-template-columns:1fr}
+  .hero-row{grid-template-columns:1fr;justify-items:start}
+  .badge-wrap{justify-content:flex-start}
+  .callbar{display:inline-flex}
+  body{padding-bottom:76px}
+  .sec{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Peregrina Plumbing home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.7 12 2.7z"/></svg>
+      Peregrina
+    </a>
+    <ul class="nav-links">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="nav-acts">
+      <a class="ic" href="tel:+17034864333" aria-label="Call Peregrina Plumbing">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <span class="nav-badge">P</span>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow rv">Alexandria, Virginia · Family Owned</p>
+        <h1 class="rv d1">Timeless Craft<br>Meets Comfort</h1>
+        <p class="hero-sub rv d2">Family plumbers in Alexandria, Virginia. Honest work, fair prices, and a master plumber with 14+ years behind every job.</p>
+        <a class="btn-pill rv d3" href="#services">View All Services
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+        </a>
+      </div>
+      <div class="hero-arch rv d1">
+        <div class="arch-frame">
+          <img id="heroImg" src="images/pp-banner.jpg" alt="Peregrina Plumbing at work in Alexandria, Virginia">
+        </div>
+      </div>
+    </div>
+    <div class="hero-row">
+      <div class="mini-card rv">
+        <div class="mini-img"><img src="images/pp-site-emergency.jpg" alt="Emergency plumbing repair"></div>
+        <h4>Emergency Repair</h4>
+        <p>Fast response. Fair pricing.</p>
+      </div>
+      <div class="badge-wrap rv d1">
+        <a class="spin-badge" href="tel:+17034864333" aria-label="Call now, 24/7 emergency service">
+          <svg class="ring" viewBox="0 0 132 132">
+            <defs><path id="circ" d="M66,66 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs>
+            <text style="font-size:11.5px;font-weight:600;letter-spacing:3.5px;fill:#16161A">
+              <textPath href="#circ">24/7 EMERGENCY SERVICE · CALL NOW ·</textPath>
+            </text>
+          </svg>
+          <span class="core"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        </a>
+      </div>
+      <div class="dots rv d2" role="tablist" aria-label="Hero photos">
+        <button class="dot on" data-img="images/pp-banner.jpg" aria-label="Photo 1"></button>
+        <button class="dot" data-img="images/pp-site-emergency.jpg" aria-label="Photo 2"></button>
+        <button class="dot" data-img="images/pp-site-repair.jpg" aria-label="Photo 3"></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <p class="kicker rv">What We Do</p>
+        <h2 class="h2 rv d1">Every job,<br>done properly.</h2>
+      </div>
+      <a class="btn-pill rv d2" href="tel:+17034864333">Call (703) 486-4333
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+      </a>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv"><div class="svc-img"><img src="images/pp-site-emergency.jpg" alt="Emergency plumbing" loading="lazy"></div><div class="svc-body"><span class="svc-tag">24/7</span><h3>Emergency Plumbing</h3><p>Burst pipes, major leaks, sewage backups. We answer around the clock.</p></div></article>
+      <article class="svc rv d1"><div class="svc-img"><img src="images/pp-site-repair.jpg" alt="Plumbing repair" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Repair</span><h3>Plumbing Repair</h3><p>Leaky faucets, running toilets, low pressure. Diagnosed properly, fixed to last.</p></div></article>
+      <article class="svc rv d2"><div class="svc-img"><img src="images/pp-site-install.jpg" alt="Plumbing installation" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Install</span><h3>Installation</h3><p>New fixtures, appliances, and full system installs done clean and to code.</p></div></article>
+      <article class="svc rv"><div class="svc-img"><img src="images/pp-site-sewer.jpg" alt="Sewer repair" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Sewer</span><h3>Sewer Repair</h3><p>Sewer line repair and replacement, with camera inspection so you see what we see.</p></div></article>
+      <article class="svc rv d1"><div class="svc-img"><img src="images/pp-site-leak.jpg" alt="Leak detection" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Detection</span><h3>Leak Detection</h3><p>Hidden leaks found fast with proper equipment, before they become real damage.</p></div></article>
+      <article class="svc rv d2"><div class="svc-img"><img src="images/pp-site-heater.jpg" alt="Water heaters" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Hot Water</span><h3>Water Heaters</h3><p>Repair and replacement of tank and tankless units. Hot water back the same day.</p></div></article>
+      <article class="svc rv"><div class="svc-img"><img src="images/pp-site-drain.jpg" alt="Drain cleaning" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Drains</span><h3>Drain Cleaning</h3><p>Clogged drains cleared properly, from kitchen sinks to main lines.</p></div></article>
+      <article class="svc rv d1"><div class="svc-img"><img src="images/pp-site-remodel.jpg" alt="Remodel plumbing" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Remodels</span><h3>Remodels</h3><p>Kitchen and bathroom plumbing for remodels, roughed in right the first time.</p></div></article>
+      <article class="svc rv d2"><div class="svc-img"><img src="images/pp-site-commercial.jpg" alt="Commercial plumbing" loading="lazy"></div><div class="svc-body"><span class="svc-tag">Business</span><h3>Commercial</h3><p>Plumbing for offices, restaurants, and rental properties. Scheduled and on call.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <p class="kicker rv">Reviews</p>
+    <h2 class="h2 rv d1">Do not take<br>our word for it.</h2>
+    <div class="rev-grid">
+      <article class="rev rv">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>So happy Luis was recommended to us. Scheduling and communication were great and easy, the job was done fast and well. We will definitely use Peregrina Plumbing in the future.</blockquote>
+        <div class="rev-who"><span class="avatar">AH</span><div><p>Alexandria Homeowner</p><small>Google Review</small></div></div>
+      </article>
+      <article class="rev rv d1">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>Can't go wrong with them. So helpful, informative, and care about you getting the best possible result whatever the situation.</blockquote>
+        <div class="rev-who"><span class="avatar">JA</span><div><p>Jacob Ames</p><small>Google Review</small></div></div>
+      </article>
+      <article class="rev rv d2">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>On time, professional, and super informative. Really appreciate the help.</blockquote>
+        <div class="rev-who"><span class="avatar">KA</span><div><p>Kyrstin Allison</p><small>Google Review</small></div></div>
+      </article>
+    </div>
+    <div class="areas" id="areas">
+      <p class="kicker rv">Service Areas</p>
+      <h2 class="h2 rv d1" style="font-size:clamp(26px,3vw,36px)">Proudly serving Northern Virginia.</h2>
+      <div class="area-pills rv d2">
+        <span>Alexandria</span><span>Burke</span><span>Springfield</span><span>Fairfax</span><span>Vienna</span><span>McLean</span><span>Arlington</span><span>Falls Church</span><span>Lorton</span><span>Woodbridge</span><span>Centreville</span><span>Manassas</span><span>Reston</span><span>Herndon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="wrap" id="contact">
+  <section class="cta-band rv">
+    <div>
+      <h2>Plumbing emergency?<br>We will be there.</h2>
+      <p>One call and a real person picks up. Tell us what is wrong and we will give you an honest take on what it takes to fix it.</p>
+      <a class="btn-cream" href="tel:+17034864333">Call (703) 486-4333
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+      </a>
+    </div>
+    <div class="cta-facts">
+      <div><div class="fl">Experience</div><div class="fv">14+ years, master plumber</div></div>
+      <div><div class="fl">Availability</div><div class="fv">Open 24/7 for emergencies</div></div>
+      <div><div class="fl">Licensed</div><div class="fv">VA Master #2710075866</div></div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.7 12 2.7z"/></svg>
+          Peregrina
+        </div>
+        <p>Peregrina Plumbing Company Inc<br>3203 Campbell Drive<br>Alexandria, VA 22303<br><a href="tel:+17034864333" style="font-weight:600;color:var(--ink)">(703) 486-4333</a></p>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100090788732203" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/peregrinaplumbing/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">Services</div>
+        <ul>
+          <li><a href="#services">Emergency Plumbing</a></li>
+          <li><a href="#services">Plumbing Repair</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Sewer Repair</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Company</div>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Peregrina Plumbing Company Inc</span>
+      <span>VA Master #2710075866 · Contractor #2705188029</span>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile call bar -->
+<a class="callbar" href="tel:+17034864333">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call (703) 486-4333
+</a>
+
+<script>
+// scroll reveals
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+// hero image carousel via dots
+var heroImg = document.getElementById('heroImg');
+var dots = document.querySelectorAll('.dot');
+dots.forEach(function(d){
+  d.addEventListener('click', function(){
+    dots.forEach(function(x){ x.classList.remove('on'); });
+    d.classList.add('on');
+    heroImg.style.opacity = 0;
+    setTimeout(function(){
+      heroImg.src = d.getAttribute('data-img');
+      heroImg.onload = function(){ heroImg.style.opacity = 1; };
+      setTimeout(function(){ heroImg.style.opacity = 1; }, 600);
+    }, 250);
+  });
+});
+
+// mobile menu toggle (simple: scroll to top links via anchor)
+var burger = document.querySelector('.burger');
+var navLinks = document.querySelector('.nav-links');
+burger.addEventListener('click', function(){
+  var open = navLinks.style.display === 'flex';
+  navLinks.style.display = open ? '' : 'flex';
+  navLinks.style.position = 'absolute';
+  navLinks.style.top = '72px';
+  navLinks.style.left = '0';
+  navLinks.style.right = '0';
+  navLinks.style.background = '#FBF9F5';
+  navLinks.style.flexDirection = 'column';
+  navLinks.style.padding = '20px 32px 28px';
+  navLinks.style.gap = '18px';
+  navLinks.style.borderBottom = '1px solid rgba(22,22,26,.12)';
+  if(open){ navLinks.style.display=''; }
+});
+navLinks.addEventListener('click', function(e){
+  if(e.target.tagName === 'A' && window.innerWidth <= 960){ navLinks.style.display=''; }
+});
+</script>
+</body>
+</html>

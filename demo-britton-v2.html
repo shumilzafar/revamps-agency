@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Britton Plumbing & Heating | Waseca, MN</title>
+<meta name="description" content="Family-owned plumbing, heating, and cooling in Waseca, Minnesota since 1992.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>B</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F0E8; --paper2:#EDE6D8; --ink:#2C2416; --ink2:#4A3F2F;
+  --muted:#8B7355; --brass:#B8945A; --brass-d:#8A6E3E;
+  --line:rgba(44,36,22,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',system-ui,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--brass);color:var(--paper)}
+.serif{font-family:'Newsreader',Georgia,serif}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;background:rgba(245,240,232,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.nav-mark{width:40px;height:40px;border-radius:10px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.25rem}
+.nav-name{font-weight:800;font-size:.98rem;letter-spacing:-.01em}
+.nav-name small{display:block;font-weight:500;font-size:.62rem;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--ink2);text-decoration:none;font-size:.86rem;font-weight:500}
+.nav-links a:hover{color:var(--brass-d)}
+.nav-call{background:var(--ink);color:var(--paper)!important;padding:12px 24px;border-radius:100px;font-weight:700!important;transition:transform .25s}
+.nav-call:hover{transform:translateY(-2px)}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;padding:130px 5vw 70px;position:relative}
+.hero-kicker{font-size:.78rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.8rem);font-weight:900;line-height:.96;letter-spacing:-.025em;margin-bottom:28px}
+.hero h1 em{font-family:'Newsreader',serif;font-style:italic;font-weight:400}
+.hero-sub{font-size:1.12rem;line-height:1.7;color:var(--ink2);max-width:44ch;margin-bottom:36px}
+.hero-sub strong{color:var(--ink)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.btn-solid{display:inline-block;background:var(--ink);color:var(--paper);font-weight:700;padding:16px 34px;border-radius:100px;text-decoration:none;transition:transform .25s}
+.btn-solid:hover{transform:translateY(-2px)}
+.btn-line{display:inline-block;border:1.5px solid var(--ink);color:var(--ink);font-weight:600;padding:15px 32px;border-radius:100px;text-decoration:none;transition:background .25s}
+.btn-line:hover{background:rgba(44,36,22,.06)}
+.hero-meta{display:flex;gap:36px;flex-wrap:wrap}
+.meta-item .n{font-size:1.9rem;font-weight:900;letter-spacing:-.02em}
+.meta-item .l{font-size:.78rem;color:var(--muted);margin-top:4px}
+.hero-art{position:relative}
+.hero-art img{width:100%;height:auto;border-radius:20px;box-shadow:0 30px 80px rgba(44,36,22,.18);border:1px solid var(--line)}
+.hero-caption{position:absolute;bottom:-18px;left:32px;background:var(--ink);color:var(--paper);padding:12px 22px;border-radius:12px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+/* divider */
+.rule{border:none;border-top:1px solid var(--line);margin:0 5vw}
+/* sections */
+section{padding:100px 5vw}
+.sec-kicker{font-size:.76rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.sec-title{font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:900;letter-spacing:-.02em;line-height:1.05;margin-bottom:20px;max-width:22ch}
+.sec-title em{font-family:'Newsreader',serif;font-style:italic;font-weight:400}
+.sec-sub{font-size:1.05rem;color:var(--ink2);line-height:1.7;max-width:60ch;margin-bottom:56px}
+/* rooms */
+.rooms-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.room-tab{background:transparent;border:1.5px solid var(--line);border-radius:100px;padding:14px 28px;font-family:inherit;font-size:.95rem;font-weight:600;color:var(--ink2);cursor:pointer;transition:all .3s}
+.room-tab:hover{border-color:var(--brass)}
+.room-tab.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.room-stage{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--paper2)}
+.room-img{position:relative;min-height:520px;background:var(--ink)}
+.room-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.room-img img.on{opacity:1}
+.room-copy{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.room-copy .rk{font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-d);margin-bottom:16px}
+.room-copy h3{font-size:2.2rem;font-weight:900;letter-spacing:-.02em;margin-bottom:16px;line-height:1.1}
+.room-copy .rd{color:var(--ink2);line-height:1.7;margin-bottom:28px}
+.room-list{list-style:none;display:grid;gap:10px;margin-bottom:32px}
+.room-list li{padding:12px 18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px;font-size:.94rem;font-weight:500;display:flex;align-items:center;gap:12px}
+.room-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brass);flex-shrink:0}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .35s,box-shadow .35s;text-decoration:none;color:var(--ink);display:block}
+.svc:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(44,36,22,.12)}
+.svc img{width:100%;height:220px;object-fit:cover}
+.svc-body{padding:32px}
+.svc-tag{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-d);margin-bottom:12px}
+.svc-body h3{font-size:1.45rem;font-weight:800;margin-bottom:12px;letter-spacing:-.01em}
+.svc-body p{color:var(--ink2);font-size:.94rem;line-height:1.65;margin-bottom:18px}
+.svc-link{color:var(--brass-d);font-weight:700;font-size:.9rem}
+/* story */
+.story{background:var(--ink);color:var(--paper);border-radius:32px;margin:0 5vw;padding:90px 6vw;display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.story .sec-kicker{color:var(--brass)}
+.story-year{font-size:clamp(4.5rem,8vw,7.5rem);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--brass);margin-bottom:28px}
+.story h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:24px}
+.story h2 em{font-family:'Newsreader',serif;font-style:italic;font-weight:400;color:var(--brass)}
+.story p{color:rgba(245,240,232,.72);line-height:1.75;margin-bottom:20px}
+.story-quote{font-family:'Newsreader',serif;font-style:italic;font-size:1.35rem;line-height:1.6;border-left:3px solid var(--brass);padding-left:28px;margin:36px 0;color:var(--paper)}
+.awards{display:grid;gap:12px;margin-top:32px}
+.award{display:flex;gap:16px;align-items:center;background:rgba(245,240,232,.05);border:1px solid rgba(245,240,232,.12);padding:18px 22px;border-radius:14px}
+.award-mark{width:46px;height:46px;border-radius:12px;background:rgba(184,148,90,.18);border:1px solid rgba(184,148,90,.4);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--brass);flex-shrink:0}
+.award strong{display:block;font-size:.95rem}
+.award span{font-size:.82rem;color:rgba(245,240,232,.55)}
+/* contact */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact-rows{border-top:1px solid var(--line);margin-top:36px}
+.contact-row{display:flex;justify-content:space-between;padding:22px 4px;border-bottom:1px solid var(--line)}
+.contact-row .k{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600}
+.contact-row .v{font-weight:700}
+.cta-card{background:var(--ink);color:var(--paper);border-radius:24px;padding:52px;text-align:center}
+.cta-card h3{font-size:1.7rem;font-weight:900;margin-bottom:14px}
+.cta-card p{color:rgba(245,240,232,.65);line-height:1.65;margin-bottom:28px}
+.cta-card .btn-solid{background:var(--brass);color:var(--ink)}
+footer{padding:40px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:.84rem}
+footer a{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:110px}
+  .room-stage,.story,.contact-wrap{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .nav-links a:not(.nav-call){display:none}
+  .story{margin:0 3vw;padding:60px 6vw}
+  section{padding:70px 5vw}
+  .room-img{min-height:300px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-brand" href="#top"><span class="nav-mark">B</span><span class="nav-name">Britton Plumbing & Heating<small>Waseca, Minnesota</small></span></a>
+  <div class="nav-links">
+    <a href="#rooms">The House</a><a href="#services">Services</a><a href="#story">Story</a><a href="#contact">Contact</a>
+    <a class="nav-call" href="tel:+15078353030">(507) 835-3030</a>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <div>
+    <div class="hero-kicker">Family owned · Since 1992</div>
+    <h1>Your home, <em>handled</em> by people who live here.</h1>
+    <p class="hero-sub">Plumbing, heating, and cooling from a family shop with <strong>two master plumbers</strong> and 33 years in the trade. We explain your options in plain language. <strong>No upsells. No surprises.</strong></p>
+    <div class="hero-ctas">
+      <a class="btn-solid" href="tel:+15078353030">Call (507) 835-3030</a>
+      <a class="btn-line" href="#rooms">Walk through the house</a>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item"><div class="n">33</div><div class="l">years in Waseca</div></div>
+      <div class="meta-item"><div class="n">2</div><div class="l">master plumbers</div></div>
+      <div class="meta-item"><div class="n">24/7</div><div class="l">emergency line</div></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="images/britton-pipes.webp" alt="Detailed illustration of brass plumbing pipes and valves">
+    <div class="hero-caption">Bryant Factory Authorized Dealer</div>
+  </div>
+</header>
+<hr class="rule">
+<section id="rooms">
+  <div class="sec-kicker reveal">An illustrated walkthrough</div>
+  <h2 class="sec-title reveal">Every room has <em>a story.</em></h2>
+  <p class="sec-sub reveal">Tap a room to see what our techs see behind the walls, and what we do when it breaks.</p>
+  <div class="rooms-tabs reveal">
+    <button class="room-tab on" data-room="bathroom">Bathroom</button>
+    <button class="room-tab" data-room="kitchen">Kitchen</button>
+    <button class="room-tab" data-room="basement">Basement</button>
+    <button class="room-tab" data-room="outside">Outside</button>
+  </div>
+  <div class="room-stage reveal">
+    <div class="room-img">
+      <img data-ri="bathroom" src="images/room-bathroom.webp" alt="Bathroom plumbing illustration" class="on">
+      <img data-ri="kitchen" src="images/room-kitchen.webp" alt="Kitchen plumbing illustration">
+      <img data-ri="basement" src="images/room-basement.webp" alt="Basement furnace illustration">
+      <img data-ri="outside" src="images/room-outside.webp" alt="Outdoor utilities illustration">
+    </div>
+    <div class="room-copy" id="roomCopy"></div>
+  </div>
+</section>
+<hr class="rule">
+<section id="services">
+  <div class="sec-kicker reveal">What we do</div>
+  <h2 class="sec-title reveal">Everything under <em>your roof.</em></h2>
+  <p class="sec-sub reveal">One call covers the whole house.</p>
+  <div class="svc-grid">
+    <a class="svc reveal" href="tel:+15078353030">
+      <img src="images/room-bathroom.webp" alt="Plumbing">
+      <div class="svc-body"><div class="svc-tag">Plumbing</div><h3>Residential & commercial</h3><p>Toilets, water heaters, drains, repipes, gas lines. Two master plumbers, no guessing.</p><span class="svc-link">Get plumbing help →</span></div>
+    </a>
+    <a class="svc reveal" href="tel:+15078353030">
+      <img src="images/britton-furnace.webp" alt="Heating">
+      <div class="svc-body"><div class="svc-tag">Heating</div><h3>Furnaces, boilers, geothermal</h3><p>Bryant Factory Authorized Dealer. 100% satisfaction guarantee on new installs.</p><span class="svc-link">Get heating help →</span></div>
+    </a>
+    <a class="svc reveal" href="tel:+15078353030">
+      <img src="images/britton-water.webp" alt="Cooling and air">
+      <div class="svc-body"><div class="svc-tag">Cooling & Air</div><h3>AC, ductless, air quality</h3><p>Central air, mini-splits, heat pumps, filtration for sealed Minnesota winters.</p><span class="svc-link">Get cooling help →</span></div>
+    </a>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="story reveal">
+    <div>
+      <div class="sec-kicker">Our story</div>
+      <div class="story-year">1992</div>
+      <h2>Three decades. One family. <em>Zero shortcuts.</em></h2>
+      <p>Britton started as a family shop in Waseca and never turned into anything else. The owner has 30+ years in the trade. Techs explain your options in plain language and let you decide.</p>
+      <div class="awards">
+        <div class="award"><span class="award-mark">B</span><div><strong>Bryant Circle of Champions</strong><span>2015 and 2017</span></div></div>
+        <div class="award"><span class="award-mark">M</span><div><strong>Bryant Medal of Excellence</strong><span>2016</span></div></div>
+      </div>
+    </div>
+    <div>
+      <p class="story-quote">"We will review your options with you, and once you have made a decision, resolve these problems as quickly as possible. And we will get the job done right the first time."</p>
+      <p>That is the whole business model. No padded dispatch fees. No commission-driven techs. Just neighbors who have been doing this since 1992.</p>
+      <p>When your furnace dies in a Minnesota January, you do not want a call center. You want someone who picks up.</p>
+    </div>
+  </div>
+</section>
+<section id="contact" style="padding-top:40px">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <div class="sec-kicker">Contact</div>
+      <h2 class="sec-title">Talk to a <em>real person.</em></h2>
+      <p class="sec-sub" style="margin-bottom:0">Call during business hours and reach someone at the shop. After hours, the emergency line goes to a tech.</p>
+      <div class="contact-rows">
+        <div class="contact-row"><span class="k">Address</span><span class="v">10740 340th Ave, Waseca, MN</span></div>
+        <div class="contact-row"><span class="k">Phone</span><span class="v">(507) 835-3030</span></div>
+        <div class="contact-row"><span class="k">Hours</span><span class="v">Mon-Fri 8am-5pm</span></div>
+        <div class="contact-row"><span class="k">Emergency</span><span class="v">24 hours, 7 days</span></div>
+      </div>
+    </div>
+    <div class="cta-card reveal">
+      <h3>Pipe burst? No heat?</h3>
+      <p>Do not wait until morning. Water damage gets worse by the hour.</p>
+      <a class="btn-solid" href="tel:+15078353030">Call (507) 835-3030</a>
+    </div>
+  </div>
+</section>
+<footer><span>Britton Plumbing & Heating, LLC · Waseca, Minnesota</span><span>Concept by <a href="https://revamps.studio">Revamps</a></span></footer>
+<script>
+const rooms = {
+  bathroom:{k:'Room 01',t:'Behind every tile',d:'A toilet runs all night and your water bill doubles. The trap, the fill valve, the wax ring. We have rebuilt all of it, hundreds of times.',items:['Toilet repair and replacement','Shower valves and cartridges','Sink and faucet service','Drain cleaning']},
+  kitchen:{k:'Room 02',t:'Where water works hardest',d:'The disposal jams on a Sunday. The dishwasher line weeps behind the cabinet for months. Kitchens hide their plumbing until it fails loud.',items:['Garbage disposal replacement','Dishwasher hookup and leaks','Faucet and sprayer service','Ice maker lines']},
+  basement:{k:'Room 03',t:'The engine room',d:'Your furnace and water heater live here, out of sight. In a Minnesota January, this room is the difference between a cold snap and a crisis.',items:['Furnace repair and replacement','Water heater service','Boiler systems','Sump pumps','Geothermal units']},
+  outside:{k:'Room 04',t:'Past the foundation',d:'The condenser baking through July. The sewer line with forty years of roots. The hose bib that split last winter.',items:['AC repair and replacement','Ductless mini-splits','Sewer line service','Frost-proof hose bibs']}
+};
+const copy = document.getElementById('roomCopy');
+const tabs = document.querySelectorAll('.room-tab');
+const imgs = document.querySelectorAll('[data-ri]');
+function show(k){
+  const r = rooms[k];
+  copy.innerHTML = '<div class="rk">'+r.k+'</div><h3>'+r.t+'</h3><p class="rd">'+r.d+'</p><ul class="room-list">'+r.items.map(i=>'<li>'+i+'</li>').join('')+'</ul><a class="btn-solid" href="tel:+15078353030">Call about this room</a>';
+  tabs.forEach(t=>t.classList.toggle('on',t.dataset.room===k));
+  imgs.forEach(i=>i.classList.toggle('on',i.dataset.ri===k));
+}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.room)));
+show('bathroom');
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

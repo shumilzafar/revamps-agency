@@ -54,9 +54,8 @@ a{color:inherit;text-decoration:none}
 .btn-pill .chip{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 .btn-pill .chip svg{width:16px;height:16px}
 .hero-arch{position:relative}
-.arch-frame{clip-path:url(#veluno-arch);overflow:hidden;aspect-ratio:1/1.08;background:var(--cream-2)}
-.arch-frame img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform .8s ease,opacity .5s ease}
-.hero-arch:hover .arch-frame img{transform:scale(1.04)}
+.arch-frame{border-radius:24px;overflow:hidden;aspect-ratio:2/1;background:var(--cream-2)}
+.arch-frame img{width:100%;height:100%;object-fit:cover;object-position:center;transition:opacity .5s ease}
 .hero-row{display:grid;grid-template-columns:200px 1fr auto;gap:40px;align-items:end;margin-top:56px}
 .mini-card{width:200px}
 .mini-img{border-radius:18px;overflow:hidden;aspect-ratio:1/1;background:var(--cream-2)}
@@ -157,7 +156,7 @@ footer{margin-top:96px;border-top:1px solid var(--line);padding:56px 0 40px}
   .nav-links{display:none}
   .burger{display:block}
   .hero-grid{grid-template-columns:1fr;gap:40px}
-  .arch-frame{max-width:420px;margin:0 auto}
+  .arch-frame{max-width:100%;margin:0}
   .hero-row{grid-template-columns:1fr 1fr;gap:24px}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .rev-grid{grid-template-columns:1fr;max-width:560px}
@@ -215,7 +214,6 @@ footer{margin-top:96px;border-top:1px solid var(--line);padding:56px 0 40px}
         <a class="btn-pill rv d3" href="services.html">View All Services <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></span></a>
       </div>
       <div class="hero-arch rv d1">
-        <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="veluno-arch" clipPathUnits="objectBoundingBox"><path d="M0.16,1 L0.93,1 Q1,1 1,0.93 L1,0.4 C1,0.18 0.78,0 0.5,0 C0.22,0 0,0.18 0,0.4 L0,0.78 C0,0.88 0.06,0.96 0.16,1 Z"/></clipPath></defs></svg>
         <div class="arch-frame">
           <img id="heroImg" src="../images/lin-team.jpg" alt="The Lindsay family, your neighborhood plumbers in Cypress Texas">
         </div>

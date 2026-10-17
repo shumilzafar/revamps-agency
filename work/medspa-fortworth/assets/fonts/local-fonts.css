@@ -1,0 +1,7 @@
+/* Self-hosted fonts (Fontshare, OFL). GDPR-friendly: no third-party font servers. */
+@font-face{font-family:'Cabinet Grotesk';src:url('f1.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Cabinet Grotesk';src:url('f2.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Cabinet Grotesk';src:url('f3.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Satoshi';src:url('s3.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Satoshi';src:url('s2.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Satoshi';src:url('s1.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

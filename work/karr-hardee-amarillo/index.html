@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karr &amp; Hardee Dentistry, Amarillo TX | Website Concept by Revamps Studio</title>
+<meta name="description" content="Interactive website concept for Karr & Hardee Dentistry of Amarillo, Texas: a premium, booking-first rebuild for a 5.0-star practice. Prepared by Revamps Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E3A2B'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='%23F4F6F2' text-anchor='middle'%3EKH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+/* ============ STYLE GUIDE (locked) ============
+   Palette: deep pine + cool paper + restrained gold.
+   No blue/purple. No beige+brass default. One accent (gold), used sparingly.
+   Type: Sora (display) + Manrope (body). Self-hosted.
+   Radius: cards 16px, buttons/inputs 10px, badges pill.
+   ============================================ */
+:root{
+  --pine:#0E3A2B; --pine-deep:#092619; --paper:#F4F6F2; --card:#FFFFFF;
+  --ink:#12241B; --muted:#55665C; --gold:#B98A2F; --gold-soft:#F3E9D2;
+  --line:#DFE6DE; --star:#C9962E;
+  --r-card:16px; --r-btn:10px;
+  --font-d:'Sora',Georgia,serif; --font-b:'Manrope',-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--font-d);line-height:1.12;letter-spacing:-0.02em}
+::selection{background:var(--pine);color:var(--paper)}
+
+/* Concept bar */
+.concept-bar{background:var(--pine-deep);color:#DCE7DF;font-size:13px;padding:10px 0;position:sticky;top:0;z-index:50}
+.concept-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.concept-bar strong{color:#fff;font-weight:700}
+.concept-bar .tag{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:2px 12px;font-size:12px;white-space:nowrap}
+
+/* Buttons: 10px radius, never pill as primary CTA */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-b);font-weight:700;font-size:16px;padding:15px 28px;border-radius:var(--r-btn);border:0;cursor:pointer;text-decoration:none;transition:transform .16s ease,box-shadow .16s ease,background .16s ease;white-space:nowrap}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-primary{background:var(--pine);color:#fff;box-shadow:0 6px 18px rgba(14,58,43,.28)}
+.btn-primary:hover{background:#15503B}
+.btn-ghost{background:transparent;color:var(--pine);border:2px solid var(--pine)}
+.btn-ghost:hover{background:rgba(14,58,43,.07)}
+.btn-light{background:#fff;color:var(--pine)}
+.btn-sm{font-size:14px;padding:11px 20px}
+
+/* ============ PITCH ============ */
+.pitch{padding:88px 0 40px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);margin-bottom:18px}
+.pitch h1{font-size:clamp(2.3rem,5.2vw,3.9rem);max-width:16ch;font-weight:700}
+.pitch h1 .hl{color:var(--pine)}
+.pitch .sub{margin-top:18px;font-size:18px;color:var(--muted);max-width:56ch}
+.fact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;margin-top:36px}
+.fact{background:var(--card);padding:22px 24px}
+.fact .n{font-family:var(--font-d);font-size:30px;font-weight:700;color:var(--pine)}
+.fact .l{font-size:13.5px;color:var(--muted);margin-top:4px}
+.fact.bad .n{color:#A33B2E}
+
+/* ============ BEFORE / AFTER SLIDER (signature interaction) ============ */
+.compare-sec{padding:56px 0 72px}
+.compare-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.compare-head h2{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+.compare-head p{color:var(--muted);max-width:52ch;margin-top:8px}
+.ba{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(14,58,43,.14);user-select:none;touch-action:pan-y;background:#fff}
+.ba-pane{width:100%}
+.ba-after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--pos,50%));background:var(--paper)}
+.ba-tag{position:absolute;top:16px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:999px;z-index:5;pointer-events:none}
+.ba-tag.before{left:16px;background:#1F2937;color:#fff}
+.ba-tag.after{right:16px;background:var(--pine);color:#fff}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;z-index:6;box-shadow:0 0 0 1px rgba(0,0,0,.12);cursor:ew-resize}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--pine);font-size:18px}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:7;margin:0}
+.ba-frame{min-height:560px;padding:0}
+.ba-caption{display:flex;gap:10px;justify-content:center;margin-top:16px;color:var(--muted);font-size:14px}
+
+/* --- BEFORE mock (their current site, recreated) --- */
+.mock-before{background:#fff;font-size:14px;color:#334155}
+.mock-before .mb-top{background:#0B5FA5;color:#fff;text-align:center;font-size:12.5px;padding:8px 16px}
+.mock-before .mb-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:1px solid #E2E8F0}
+.mock-before .mb-logo{font-weight:800;font-size:17px;color:#0B5FA5}
+.mock-before .mb-links{display:flex;gap:18px;font-size:13px;color:#475569}
+.mock-before .mb-phone{font-weight:700;color:#0B5FA5;text-decoration:none}
+.mock-before .mb-hero{background:linear-gradient(135deg,#0B5FA5,#3B82C4);color:#fff;text-align:center;padding:56px 28px}
+.mock-before .mb-hero h3{font-family:var(--font-b);font-size:30px;font-weight:800;letter-spacing:0;margin-bottom:12px}
+.mock-before .mb-hero p{max-width:60ch;margin:0 auto 22px;font-size:14.5px;opacity:.95}
+.mock-before .mb-btn{display:inline-block;background:#F59E0B;color:#1F2937;font-weight:800;padding:12px 30px;border-radius:6px;text-decoration:none;font-size:14px}
+.mock-before .mb-faq{padding:34px 28px;max-width:760px;margin:0 auto}
+.mock-before .mb-faq h4{font-size:19px;margin-bottom:6px;color:#0F172A}
+.mock-before .mb-faq .q{font-weight:700;margin:16px 0 4px;color:#0F172A;font-size:14px}
+.mock-before .mb-faq .a{color:#475569;font-size:13.5px}
+.mock-before .mb-form{background:#F1F5F9;padding:30px 28px;text-align:center}
+.mock-before .mb-form h4{font-size:18px;margin-bottom:6px;color:#0F172A}
+.mock-before .mb-form p{font-size:13px;color:#64748B;margin-bottom:16px}
+.mock-before .mb-form .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.mock-before .mb-form input{padding:11px 14px;border:1px solid #CBD5E1;border-radius:6px;font-size:13.5px;width:210px}
+.mock-before .mb-form button{background:#0B5FA5;color:#fff;border:0;border-radius:6px;padding:11px 26px;font-weight:700;font-size:13.5px}
+.mock-before .mb-note{background:#FEF3C7;color:#92400E;font-size:12.5px;padding:10px;text-align:center;font-weight:600}
+
+/* --- AFTER mock (premium hero, recreated) --- */
+.mock-after{background:var(--paper)}
+.mock-after .ma-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 120px 16px 30px;background:rgba(244,246,242,.92)}
+.mock-after .ma-brand{display:flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:700;font-size:17px;color:var(--pine)}
+.mock-after .ma-mark{width:34px;height:34px;border-radius:9px;background:var(--pine);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.mock-after .ma-cta{background:var(--pine);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none}
+.mock-after .ma-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:44px 30px 50px;max-width:1060px;margin:0 auto}
+.mock-after .ma-kicker{font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--pine);text-transform:uppercase;margin-bottom:14px}
+.mock-after .ma-hero h3{font-family:var(--font-d);font-size:clamp(1.7rem,3.4vw,2.6rem);color:var(--ink);letter-spacing:-0.02em;margin-bottom:14px}
+.mock-after .ma-hero p{color:var(--muted);font-size:15px;margin-bottom:24px;max-width:44ch}
+.mock-after .ma-actions{display:flex;gap:12px;flex-wrap:wrap}
+.mock-after .ma-book{background:var(--pine);color:#fff;font-weight:700;padding:14px 26px;border-radius:10px;text-decoration:none;font-size:14.5px}
+.mock-after .ma-call{border:2px solid var(--pine);color:var(--pine);font-weight:700;padding:12px 24px;border-radius:10px;text-decoration:none;font-size:14.5px}
+.mock-after .ma-photo{border-radius:16px;overflow:hidden;box-shadow:0 18px 44px rgba(14,58,43,.2)}
+.mock-after .ma-trust{display:flex;gap:26px;flex-wrap:wrap;padding:0 30px 44px;max-width:1060px;margin:0 auto;font-size:13.5px;color:var(--muted)}
+.mock-after .ma-trust strong{color:var(--ink)}
+.stars{color:var(--star);letter-spacing:2px}
+
+/* ============ WALKTHROUGH ============ */
+.walk{padding:40px 0 80px}
+.walk h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:10px}
+.walk .lede{color:var(--muted);max-width:60ch;margin-bottom:44px;font-size:17px}
+.change{border-top:1px solid var(--line);padding:38px 0;display:grid;grid-template-columns:120px 1fr;gap:28px}
+.change:last-child{border-bottom:1px solid var(--line)}
+.change .num{font-family:var(--font-d);font-size:15px;font-weight:700;color:var(--pine);border:2px solid var(--pine);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.change h3{font-size:22px;margin-bottom:10px}
+.change p{color:var(--muted);font-size:16px;max-width:68ch;margin-bottom:10px}
+.change p strong{color:var(--ink)}
+.change .was{font-size:14px;color:#8A97A0}
+.change .was span{text-decoration:line-through}
+
+/* ============ AFTER: the rebuilt site ============ */
+.rebuild{border-top:1px solid var(--line);padding:72px 0 0;background:var(--paper)}
+.rebuild-intro{text-align:left;margin-bottom:8px}
+.rebuild-intro h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:10px}
+.rebuild-intro p{color:var(--muted);max-width:60ch;font-size:17px}
+.site{margin-top:36px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(14,58,43,.12)}
+.site-nav{background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand-mark{width:36px;height:36px;border-radius:10px;background:var(--pine);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:700;font-size:15px}
+.brand-name{font-family:var(--font-d);font-weight:700;font-size:17px;color:var(--ink);line-height:1.15}
+.brand-name small{display:block;font-family:var(--font-b);font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink)}
+.nav-links a:hover{color:var(--pine)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px}
+
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;padding:72px 0 64px}
+.hero .kicker{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);margin-bottom:16px}
+.hero h2{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:700;margin-bottom:18px}
+.hero .sub{font-size:18px;color:var(--muted);max-width:46ch;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-photo{border-radius:20px;overflow:hidden;box-shadow:0 24px 55px rgba(14,58,43,.22)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
+.trust-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.trust-strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:26px 24px;gap:18px}
+.trust-item .t{font-family:var(--font-d);font-size:24px;font-weight:700;color:var(--pine)}
+.trust-item .s{font-size:13.5px;color:var(--muted)}
+
+.sec{padding:76px 0}
+.sec h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:12px}
+.sec .lede{color:var(--muted);max-width:62ch;margin-bottom:40px;font-size:17px}
+.svc-list{border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;padding:24px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.svc h3{font-size:19px;font-weight:700}
+.svc p{color:var(--muted);font-size:15.5px}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden}
+.doc img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:top}
+.doc .pad{padding:26px 28px}
+.doc h3{font-size:21px;margin-bottom:6px}
+.doc .role{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);margin-bottom:12px}
+.doc p{color:var(--muted);font-size:15.5px}
+.tech{background:var(--pine);color:#EAF2ED;border-radius:20px;padding:52px 48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.tech h3{font-size:19px;margin-bottom:8px;color:#fff}
+.tech p{font-size:15px;color:#BFD2C6}
+.tech .t-head{grid-column:1/-1}
+.tech .t-head h2{color:#fff;margin-bottom:8px}
+.tech .t-head p{color:#BFD2C6;max-width:56ch}
+.quote-sec{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:56px 52px;position:relative}
+.quote-mark{font-family:var(--font-d);font-size:88px;line-height:1;color:var(--gold-soft);position:absolute;top:26px;left:40px}
+.quote-sec blockquote{font-family:var(--font-d);font-size:clamp(1.25rem,2.6vw,1.7rem);line-height:1.45;max-width:34ch;margin:26px 0 22px;position:relative}
+.quote-attr{display:flex;align-items:center;gap:12px}
+.quote-attr .who{font-weight:700}
+.quote-attr .src{color:var(--muted);font-size:14px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.visit-info{padding:52px 48px}
+.visit-info h2{margin-bottom:20px}
+.hours{width:100%;border-collapse:collapse;margin:6px 0 26px;font-size:16px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.visit-info address{font-style:normal;color:var(--muted);font-size:16px;margin-bottom:8px}
+.visit-info .map-link{color:var(--pine);font-weight:700}
+.visit-map{background:var(--pine-deep);color:#DCE7DF;padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+.visit-map h3{color:#fff;font-size:22px;margin-bottom:12px}
+.visit-map p{color:#A9BFAF;font-size:15.5px;margin-bottom:24px}
+
+/* Booking widget */
+.booking{background:var(--pine-deep);border-radius:20px;padding:60px 52px;color:#EAF2ED;margin-top:76px}
+.booking h2{color:#fff;margin-bottom:10px}
+.booking .lede{color:#A9BFAF;max-width:58ch;margin-bottom:36px;font-size:17px}
+.bk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:8px}
+.bk-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px;min-height:150px}
+.bk-step .lbl{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9DB8A8;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#EAF2ED;font-family:var(--font-b);font-size:13.5px;font-weight:600;padding:9px 14px;border-radius:999px;cursor:pointer;transition:all .15s ease}
+.chip:hover{border-color:#fff}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#1D1405}
+.day-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.day{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#EAF2ED;border-radius:10px;padding:10px 6px;font-size:12.5px;font-weight:600;cursor:pointer;text-align:center;line-height:1.35;font-family:var(--font-b)}
+.day small{display:block;font-weight:400;color:#9DB8A8;font-size:11px}
+.day:hover{border-color:#fff}
+.day.on{background:var(--gold);border-color:var(--gold);color:#1D1405}
+.day.on small{color:#1D1405}
+.day.off{opacity:.32;cursor:not-allowed}
+.bk-fields{display:grid;grid-template-columns:1fr;gap:12px}
+.bk-fields label{display:block;font-size:12.5px;font-weight:600;color:#9DB8A8;margin-bottom:6px}
+.bk-fields input{width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-radius:var(--r-btn);color:#fff;padding:12px 14px;font-size:15px;font-family:var(--font-b)}
+.bk-fields input::placeholder{color:#7E9787}
+.bk-fields input:focus{outline:none;border-color:var(--gold)}
+.field-err{font-size:12.5px;color:#F2B8A0;margin-top:6px;display:none}
+.bk-confirm{margin-top:22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.bk-note{font-size:13px;color:#7E9787}
+.bk-done{display:none;background:rgba(255,255,255,.07);border:1px solid var(--gold);border-radius:14px;padding:28px;margin-top:8px}
+.bk-done h3{color:#fff;font-size:21px;margin-bottom:8px}
+.bk-done p{color:#BFD2C6;font-size:15.5px}
+.bk-done .fine{font-size:13px;color:#7E9787;margin-top:12px}
+.site-footer{background:var(--pine-deep);color:#A9BFAF;padding:52px 0 32px;margin-top:0}
+.site-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.site-footer h4{color:#fff;font-size:15px;margin-bottom:14px;font-family:var(--font-b);font-weight:700}
+.site-footer p,.site-footer a{font-size:14.5px;color:#A9BFAF;text-decoration:none}
+.site-footer a:hover{color:#fff}
+.site-footer .fine{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Demo outro */
+.outro{padding:80px 0 90px;text-align:left}
+.outro h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:14px;max-width:22ch}
+.outro p{color:var(--muted);max-width:60ch;font-size:17px;margin-bottom:28px}
+
+/* Reveal on scroll */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+
+/* Responsive */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;padding:52px 0 48px}
+  .mock-after .ma-hero{grid-template-columns:1fr}
+  .fact-row{grid-template-columns:1fr 1fr}
+  .trust-strip .wrap{grid-template-columns:1fr 1fr}
+  .docs{grid-template-columns:1fr}
+  .tech{grid-template-columns:1fr;padding:40px 30px}
+  .visit{grid-template-columns:1fr}
+  .bk-steps{grid-template-columns:1fr 1fr}
+  .quote-sec{padding:44px 30px}
+  .booking{padding:44px 28px}
+  .change{grid-template-columns:1fr;gap:14px}
+}
+@media(max-width:720px){
+  .mock-before .mb-links{display:none}
+  .mock-before .mb-nav{padding:12px 18px}
+  .nav-links{position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:8px 24px 20px;gap:0;border-bottom:1px solid var(--line);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;border-bottom:1px solid var(--line);width:100%}
+  .nav-links .btn{margin-top:12px;border:0}
+  .burger{display:block}
+  .bk-steps{grid-template-columns:1fr}
+  .bk-fields{grid-template-columns:1fr}
+  .fact-row{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr}
+  .site-footer .cols{grid-template-columns:1fr}
+  .ba-frame{min-height:640px}
+  .pitch{padding:60px 0 30px}
+}
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap">
+    <div><strong>Revamps Studio</strong> &nbsp;·&nbsp; Website concept for Karr &amp; Hardee Dentistry, Amarillo TX</div>
+    <div class="tag">Interactive demo, drag the slider</div>
+  </div>
+</div>
+
+<!-- ================= PITCH ================= -->
+<section class="pitch">
+  <div class="wrap">
+    <div class="eyebrow rv">The gap</div>
+    <h1 class="rv"><span class="hl">274 five-star reviews.</span> Zero ways to book online.</h1>
+    <p class="sub rv">Karr &amp; Hardee is Amarillo's highest-rated dental practice. Their website still asks every new patient to call during office hours or fill out a form and wait for a callback. Drag the slider to see what that costs them, and what changes.</p>
+    <div class="fact-row rv">
+      <div class="fact"><div class="n">5.0</div><div class="l">Google rating, 274 reviews, shown on their own site</div></div>
+      <div class="fact"><div class="n">$$$</div><div class="l">Price tier. Implants, veneers and ortho patients shop online first</div></div>
+      <div class="fact bad"><div class="n">0</div><div class="l">Online booking options. Only a callback form</div></div>
+      <div class="fact bad"><div class="n">Oct 2025</div><div class="l">Latest blog post. The site reads abandoned</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section class="compare-sec">
+  <div class="wrap">
+    <div class="compare-head">
+      <div>
+        <h2 class="rv">Before and after</h2>
+        <p class="rv">Left: their current homepage, recreated with their real copy. Right: the rebuild. Drag to compare.</p>
+      </div>
+    </div>
+    <div class="ba rv" id="baSlider" style="--pos:50%">
+      <span class="ba-tag before">Before</span>
+      <span class="ba-tag after">After</span>
+
+      <!-- BEFORE -->
+      <div class="ba-pane ba-frame mock-before" aria-hidden="true">
+        <div class="mb-top">Now welcoming new patients at our Amarillo dental practice</div>
+        <div class="mb-nav">
+          <div class="mb-logo">Karr &amp; Hardee Dentistry</div>
+          <div class="mb-links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span>Contact</span></div>
+          <a class="mb-phone" href="tel:+18063522800">(806) 352-2800</a>
+        </div>
+        <div class="mb-hero">
+          <h3>Dentist in Amarillo, TX</h3>
+          <p>We are a patient-focused dental team committed to providing gentle, personalized care for every age and stage of life. From a child's first visit, a cosmetic touch-up, to advanced restorative work, our goal is to make every appointment comfortable and stress-free.</p>
+          <a class="mb-btn" href="tel:+18063522800">Request Appointment</a>
+        </div>
+        <div class="mb-faq">
+          <h4>Frequently Asked Questions</h4>
+          <div class="q">Q: How Can I Schedule an Appointment?</div>
+          <div class="a">A: Scheduling an appointment at Karr &amp; Hardee Dentistry is easy. You can give our office a call at 806-352-2800 during our business hours, and a member of our team will be happy to assist you. You can also request an appointment online through our official website, and we'll get back to you shortly.</div>
+          <div class="q">Q: Do You Accept Dental Insurance?</div>
+          <div class="a">A: Yes, we work with many major dental insurance providers. Our team is happy to help you understand your benefits and file claims on your behalf to maximize your coverage.</div>
+          <div class="q">Q: Will My Treatment Be Pain-Free?</div>
+          <div class="a">A: Our top priority is your comfort. Using modern techniques, advanced technology, and gentle anesthetics, we work hard to ensure that your treatment is as comfortable as possible.</div>
+        </div>
+        <div class="mb-form">
+          <h4>Request an Appointment</h4>
+          <p>Fill out the form below and our team will get back to you shortly.</p>
+          <div class="row"><input type="text" value="" placeholder="Your name"><input type="text" value="" placeholder="Phone number"><button type="button">Submit Request</button></div>
+        </div>
+        <div class="mb-note">Latest blog post: October 2025</div>
+      </div>
+
+      <!-- AFTER -->
+      <div class="ba-pane ba-frame ba-after mock-after" aria-hidden="true">
+        <div class="ma-nav">
+          <div class="ma-brand"><span class="ma-mark">KH</span> Karr &amp; Hardee</div>
+          <a class="ma-cta" href="tel:+18063522800">Book Online</a>
+        </div>
+        <div class="ma-hero">
+          <div>
+            <div class="ma-kicker">Amarillo, Texas</div>
+            <h3>A healthier smile, on your schedule.</h3>
+            <p>Family, cosmetic and implant dentistry from Dr. Karr and Dr. Hardee. Rated 5.0 from 274 Google reviews. Book your visit in under a minute, no phone call needed.</p>
+            <div class="ma-actions">
+              <a class="ma-book" href="tel:+18063522800">Book Online</a>
+              <a class="ma-call" href="tel:+18063522800">(806) 352-2800</a>
+            </div>
+          </div>
+          <div class="ma-photo"><img src="assets/team.webp" alt="The Karr and Hardee Dentistry team"></div>
+        </div>
+        <div class="ma-trust">
+          <div><strong>5.0</strong> <span class="stars">★★★★★</span> 274 Google reviews</div>
+          <div><strong>Dr. Thomas Karr</strong> and <strong>Dr. Clint Hardee</strong></div>
+          <div>Mon 8 to 5, Tue to Thu 7 to 6, Fri 8 to 12</div>
+        </div>
+      </div>
+
+      <div class="ba-handle" id="baHandle"><div class="ba-knob">↔</div></div>
+      <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+    </div>
+    <div class="ba-caption"><span>Tip: drag the handle, or use left and right arrow keys.</span></div>
+  </div>
+</section>
+
+<!-- ================= WALKTHROUGH ================= -->
+<section class="walk">
+  <div class="wrap">
+    <h2 class="rv">What changed, and why it wins patients</h2>
+    <p class="lede rv">Every change below maps to a real weakness on their current site. Nothing decorative, everything earns its place.</p>
+
+    <div class="change rv">
+      <div class="num">01</div>
+      <div>
+        <h3>Booking moves front and center</h3>
+        <p class="was">Was: <span>a "Request Appointment" form. A patient fills it out and waits for a callback, only during office hours.</span></p>
+        <p><strong>Now:</strong> a real booking flow in the hero and the nav. Pick a service, pick a time, done in under a minute.</p>
+        <p>This is the money change. Implant and veneer patients research at 10pm. Every extra step between "I want this" and "I'm booked" is a patient choosing the practice down the road that lets them book online.</p>
+      </div>
+    </div>
+
+    <div class="change rv">
+      <div class="num">02</div>
+      <div>
+        <h3>The 5.0 rating stops hiding in the footer</h3>
+        <p class="was">Was: <span>274 five-star reviews, buried at the bottom of the page where nobody scrolls.</span></p>
+        <p><strong>Now:</strong> rating, stars and review count sit directly under the hero, next to the booking button.</p>
+        <p>Trust has to arrive before the ask. A new patient deciding in eight seconds sees the proof at the exact moment they decide.</p>
+      </div>
+    </div>
+
+    <div class="change rv">
+      <div class="num">03</div>
+      <div>
+        <h3>The doctors get a face</h3>
+        <p class="was">Was: <span>generic template illustrations. The practice is named after two real dentists patients never see.</span></p>
+        <p><strong>Now:</strong> Dr. Thomas Karr and Dr. Clint Hardee, photographed, named, introduced. Their real team photo leads the page.</p>
+        <p>People choose dentists, not dental offices. When the name on the door matches the face on the site, the practice feels accountable and personal.</p>
+      </div>
+    </div>
+
+    <div class="change rv">
+      <div class="num">04</div>
+      <div>
+        <h3>Services written for humans</h3>
+        <p class="was">Was: <span>a wall of FAQ text written for search engines, not for a nervous patient.</span></p>
+        <p><strong>Now:</strong> cleanings, veneers, whitening, implants, crowns, Invisalign, children's dentistry and emergency care, each in one plain sentence.</p>
+        <p>A patient with a chipped tooth should find "we fix that" in seconds, not wade through keyword paragraphs.</p>
+      </div>
+    </div>
+
+    <div class="change rv">
+      <div class="num">05</div>
+      <div>
+        <h3>One real review beats ten polished claims</h3>
+        <p class="was">Was: <span>marketing adjectives about "gentle, personalized care" with no patient voice.</span></p>
+        <p><strong>Now:</strong> a single verbatim Google review from a real patient, with her name on it. Nothing invented.</p>
+        <p>Patients trust patients. One specific story ("he transformed my smile") outperforms a page of adjectives.</p>
+      </div>
+    </div>
+
+    <div class="change rv">
+      <div class="num">06</div>
+      <div>
+        <h3>Hours and location in one glance</h3>
+        <p class="was">Was: <span>hours scattered across pages. A patient on mobile should not hunt for "are you open Friday?"</span></p>
+        <p><strong>Now:</strong> Mon 8 to 5, Tue to Thu 7 to 6, Fri 8 to 12. Address, map link and click-to-call phone in one block.</p>
+        <p>Half of dental searches happen on a phone, often with a toothache. Friction here is not a design flaw, it is a lost patient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE REBUILD ================= -->
+<section class="rebuild">
+  <div class="wrap">
+    <div class="rebuild-intro">
+      <div class="eyebrow rv">The rebuild</div>
+      <h2 class="rv">The full concept, top to bottom</h2>
+      <p class="rv">This is the proposed new site. Real photos, real doctors, real reviews, real hours. Scroll it like a patient would.</p>
+    </div>
+
+    <div class="site rv">
+      <!-- nav -->
+      <nav class="site-nav" aria-label="Site">
+        <div class="wrap">
+          <a class="brand" href="#top" aria-label="Karr and Hardee Dentistry, back to top">
+            <span class="brand-mark">KH</span>
+            <span class="brand-name">Karr &amp; Hardee<small>DENTISTRY · AMARILLO TX</small></span>
+          </a>
+          <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+          <div class="nav-links" id="navLinks">
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#visit">Visit</a>
+            <a class="btn btn-primary btn-sm" href="#book">Book Online</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero -->
+      <div class="wrap" id="top">
+        <div class="hero">
+          <div>
+            <div class="kicker">Family and cosmetic dentistry · Amarillo, Texas</div>
+            <h2>A healthier smile, on your schedule.</h2>
+            <p class="sub">From your child's first visit to implants and veneers, Dr. Karr and Dr. Hardee keep the whole family smiling. Book in under a minute. No phone tag.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#book">Book Online</a>
+              <a class="btn btn-ghost" href="tel:+18063522800">Call (806) 352-2800</a>
+            </div>
+          </div>
+          <div class="hero-photo"><img src="assets/team.webp" alt="The dental team at Karr and Hardee Dentistry in Amarillo"></div>
+        </div>
+      </div>
+
+      <!-- trust strip -->
+      <div class="trust-strip">
+        <div class="wrap">
+          <div class="trust-item"><div class="t">5.0 <span class="stars">★★★★★</span></div><div class="s">274 Google reviews</div></div>
+          <div class="trust-item"><div class="t">2</div><div class="s">Dentists who own the practice: Dr. Karr and Dr. Hardee</div></div>
+          <div class="trust-item"><div class="t">$$$</div><div class="s">Premium care, clear pricing, financing available</div></div>
+          <div class="trust-item"><div class="t">All ages</div><div class="s">Toddlers to grandparents, under one roof</div></div>
+        </div>
+      </div>
+
+      <!-- services -->
+      <div class="wrap">
+        <div class="sec" id="services">
+          <h2>Everything your smile needs, in one place</h2>
+          <p class="lede">No jargon. If you are unsure what you need, book a checkup and we will map it out together.</p>
+          <div class="svc-list">
+            <div class="svc"><h3>Checkups and cleanings</h3><p>Routine exams, digital X-rays and professional cleanings for the whole family.</p></div>
+            <div class="svc"><h3>Veneers and whitening</h3><p>Cosmetic work that looks natural, from a brighter shade to a full smile refresh.</p></div>
+            <div class="svc"><h3>Dental implants</h3><p>Permanent tooth replacement, planned with 3D imaging for a precise fit.</p></div>
+            <div class="svc"><h3>Crowns and bridges</h3><p>Restorative work that looks and feels like your own teeth.</p></div>
+            <div class="svc"><h3>Children's dentistry</h3><p>Gentle first visits, sealants and preventive care that kids actually enjoy.</p></div>
+            <div class="svc"><h3>Invisalign and orthodontics</h3><p>Clear aligners and braces for teens and adults who want straighter teeth.</p></div>
+            <div class="svc"><h3>Root canals and extractions</h3><p>Comfortable treatment for teeth that need more than a filling.</p></div>
+            <div class="svc"><h3>Toothaches and emergencies</h3><p>Prompt attention when it hurts. Call and we will find you the earliest opening.</p></div>
+          </div>
+        </div>
+
+        <!-- doctors -->
+        <div class="sec" id="doctors" style="padding-top:20px">
+          <h2>The names on the door</h2>
+          <p class="lede">Dr. Thomas Karr and Dr. Clint Hardee own this practice. When the dentists' names are the brand, every review is personal.</p>
+          <div class="docs">
+            <div class="doc">
+              <img src="assets/dr-karr.jpg" alt="Dr. Thomas Karr">
+              <div class="pad">
+                <h3>Dr. Thomas Karr</h3>
+                <div class="role">Co-owner, Dentist</div>
+                <p>Part of the team behind Amarillo's 274 five-star reviews, treating families across the Texas Panhandle.</p>
+              </div>
+            </div>
+            <div class="doc">
+              <img src="assets/dr-hardee.jpg" alt="Dr. Clint Hardee">
+              <div class="pad">
+                <h3>Dr. Clint Hardee</h3>
+                <div class="role">Co-owner, Dentist</div>
+                <p>Known by patients for transforming smiles. The review below is about his work, in a patient's own words.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- technology -->
+      <div class="wrap">
+        <div class="sec" style="padding-top:0">
+          <div class="tech">
+            <div class="t-head">
+              <h2>Modern tools, gentler visits</h2>
+              <p>Technology is not the point. Shorter appointments and more accurate treatment are.</p>
+            </div>
+            <div><h3>Digital X-rays</h3><p>Clear images with far less radiation than traditional film.</p></div>
+            <div><h3>Intraoral cameras</h3><p>See exactly what the dentist sees, on screen, in real time.</p></div>
+            <div><h3>3D imaging</h3><p>Precise planning for implants and complex treatment.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- review -->
+      <div class="wrap">
+        <div class="sec" id="reviews" style="padding-top:20px">
+          <div class="quote-sec">
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote>Dr. Hardee is a blessing to me and my family. He transformed my smile, and for that, I am very grateful.</blockquote>
+            <div class="quote-attr">
+              <div><div class="who">Sara Hernandez</div><div class="src">Google review</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- visit -->
+      <div class="wrap">
+        <div class="sec" id="visit" style="padding-top:0">
+          <div class="visit">
+            <div class="visit-info">
+              <h2>Visit us</h2>
+              <table class="hours">
+                <tr><td>Monday</td><td>8:00am to 5:00pm</td></tr>
+                <tr><td>Tuesday</td><td>7:00am to 6:00pm</td></tr>
+                <tr><td>Wednesday</td><td>7:00am to 6:00pm</td></tr>
+                <tr><td>Thursday</td><td>7:00am to 6:00pm</td></tr>
+                <tr><td>Friday</td><td>8:00am to 12:00pm</td></tr>
+                <tr><td>Saturday to Sunday</td><td>Closed</td></tr>
+              </table>
+              <address>3501 S Soncy Rd #123<br>Amarillo, TX 79119</address>
+              <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Karr+%26+Hardee+Dentistry+Amarillo+TX" target="_blank" rel="noopener">Find us on Google Maps</a>
+            </div>
+            <div class="visit-map">
+              <h3>Southwest Amarillo</h3>
+              <p>Easy to reach from Canyon, Bushland, Westover Village, The Colonies and The Greenways. Free parking right outside.</p>
+              <div class="hero-actions">
+                <a class="btn btn-light" href="#book">Book Online</a>
+                <a class="btn btn-ghost" style="color:#fff;border-color:#fff" href="tel:+18063522800">(806) 352-2800</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- booking -->
+          <div class="booking" id="book">
+            <h2>Book your visit</h2>
+            <p class="lede">Pick a service, pick a time. Under a minute, no phone call. Concept booking flow.</p>
+            <div class="bk-steps">
+              <div class="bk-step">
+                <div class="lbl">1 · Service</div>
+                <div class="chips" id="bkServices">
+                  <button class="chip" type="button">Cleaning</button>
+                  <button class="chip" type="button">Checkup</button>
+                  <button class="chip" type="button">Whitening</button>
+                  <button class="chip" type="button">Veneers consult</button>
+                  <button class="chip" type="button">Implants consult</button>
+                  <button class="chip" type="button">Toothache</button>
+                  <button class="chip" type="button">Kids visit</button>
+                </div>
+              </div>
+              <div class="bk-step">
+                <div class="lbl">2 · Day</div>
+                <div class="day-grid" id="bkDays"></div>
+              </div>
+              <div class="bk-step">
+                <div class="lbl">3 · Time</div>
+                <div class="chips" id="bkTimes"></div>
+              </div>
+              <div class="bk-step">
+                <div class="lbl">4 · Your details</div>
+                <div class="bk-fields">
+                  <div><label for="bkName">Full name</label><input id="bkName" type="text" placeholder="Jane Smith" autocomplete="name"><div class="field-err" id="errName">Please enter your name.</div></div>
+                  <div><label for="bkPhone">Phone</label><input id="bkPhone" type="tel" placeholder="(806) 555-0123" autocomplete="tel"><div class="field-err" id="errPhone">Please enter a valid phone number.</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="bk-confirm">
+              <button class="btn btn-light" id="bkConfirm" type="button">Confirm Booking</button>
+              <span class="bk-note">Free cancellation up to 24 hours before.</span>
+            </div>
+            <div class="bk-done" id="bkDone">
+              <h3>You are booked.</h3>
+              <p id="bkSummary"></p>
+              <p class="fine">Concept demo only: no real appointment was made and nothing was sent to the practice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- closing CTA -->
+      <div class="wrap">
+        <div class="sec" style="text-align:center;padding-bottom:88px">
+          <h2 style="max-width:20ch;margin:0 auto 14px">Toothache can't wait.<br>Neither should booking.</h2>
+          <p class="lede" style="margin:0 auto 30px;text-align:center">New patients welcome. Most appointments available within the week.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-primary" href="#book">Book Online</a>
+            <a class="btn btn-ghost" href="tel:+18063522800">Call (806) 352-2800</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer class="site-footer">
+        <div class="wrap">
+          <div class="cols">
+            <div>
+              <h4>Karr &amp; Hardee Dentistry</h4>
+              <p>Family and cosmetic dentistry in Southwest Amarillo, led by Dr. Thomas Karr and Dr. Clint Hardee.</p>
+            </div>
+            <div>
+              <h4>Visit</h4>
+              <p>3501 S Soncy Rd #123<br>Amarillo, TX 79119<br><a href="tel:+18063522800">(806) 352-2800</a></p>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon 8am to 5pm<br>Tue to Thu 7am to 6pm<br>Fri 8am to 12pm<br>Sat to Sun closed</p>
+            </div>
+          </div>
+          <div class="fine">
+            <span>© 2026 Karr &amp; Hardee Dentistry. Website concept prepared by Revamps Studio.</span>
+            <span>5.0 from 274 Google reviews</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUTRO ================= -->
+<section class="outro">
+  <div class="wrap">
+    <h2 class="rv">A 5.0-star practice deserves a 5.0-star website.</h2>
+    <p class="rv">This concept was built from their real photos, real reviews and real hours. The pitch writes itself: the reputation is already there, the website just has to stop hiding it.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Before / After slider ---------- */
+  var ba = document.getElementById('baSlider');
+  var range = document.getElementById('baRange');
+  function setPos(p){
+    p = Math.max(2, Math.min(98, p));
+    ba.style.setProperty('--pos', p + '%');
+    range.value = Math.round(p);
+  }
+  range.addEventListener('input', function(){ setPos(parseFloat(range.value)); });
+  range.addEventListener('keydown', function(e){
+    var v = parseFloat(range.value);
+    if(e.key === 'ArrowLeft'){ setPos(v - 4); e.preventDefault(); }
+    if(e.key === 'ArrowRight'){ setPos(v + 4); e.preventDefault(); }
+  });
+  var dragging = false;
+  function posFromEvent(e){
+    var r = ba.getBoundingClientRect();
+    var x = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX);
+    return ((x - r.left) / r.width) * 100;
+  }
+  ba.addEventListener('pointerdown', function(e){
+    if(e.target === range) return;
+    dragging = true; setPos(posFromEvent(e));
+    ba.setPointerCapture && ba.setPointerCapture(e.pointerId);
+  });
+  ba.addEventListener('pointermove', function(e){ if(dragging) setPos(posFromEvent(e)); });
+  window.addEventListener('pointerup', function(){ dragging = false; });
+
+  /* ---------- Mock panes: not interactive ---------- */
+  document.querySelectorAll('.ba-pane a, .ba-pane button').forEach(function(el){
+    el.setAttribute('tabindex', '-1');
+  });
+  document.querySelectorAll('.ba-pane input').forEach(function(el){
+    if(el.type !== 'range'){ el.disabled = true; }
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  var rvEls = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold: 0.12});
+    rvEls.forEach(function(el){ io.observe(el); });
+  } else {
+    rvEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- Mobile nav ---------- */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') navLinks.classList.remove('open');
+  });
+
+  /* ---------- Booking widget ---------- */
+  var state = { service: null, day: null, time: null };
+  var svcBox = document.getElementById('bkServices');
+  var dayBox = document.getElementById('bkDays');
+  var timeBox = document.getElementById('bkTimes');
+
+  function pick(container, btn, key){
+    container.querySelectorAll('.on').forEach(function(b){ b.classList.remove('on'); });
+    btn.classList.add('on');
+    state[key] = btn.dataset.val;
+    if(key === 'day') renderTimes();
+  }
+  svcBox.addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    b.dataset.val = b.textContent.trim();
+    pick(svcBox, b, 'service');
+  });
+
+  /* Practice hours: Mon 8-17, Tue-Thu 7-18, Fri 8-12, Sat/Sun closed */
+  var HOURS = {0:null, 1:[8,17], 2:[7,18], 3:[7,18], 4:[7,18], 5:[8,12], 6:null};
+  var SLOTS = [["7:00 AM",7],["8:00 AM",8],["9:30 AM",9.5],["11:00 AM",11],["1:00 PM",13],["2:30 PM",14.5],["4:00 PM",16],["5:00 PM",17]];
+  var DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function renderDays(){
+    dayBox.innerHTML = '';
+    var today = new Date();
+    for(var i = 0; i < 8; i++){
+      var d = new Date(today); d.setDate(today.getDate() + i);
+      var h = HOURS[d.getDay()];
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'day' + (h ? '' : ' off');
+      b.innerHTML = DOW[d.getDay()] + '<small>' + MON[d.getMonth()] + ' ' + d.getDate() + '</small>';
+      if(h){
+        (function(btn, date, hrs){
+          btn.dataset.val = DOW[date.getDay()] + ', ' + MON[date.getMonth()] + ' ' + date.getDate();
+          btn.addEventListener('click', function(){
+            state.hours = hrs;
+            pick(dayBox, btn, 'day');
+          });
+        })(b, d, h);
+      } else {
+        b.disabled = true;
+        b.title = 'Closed';
+      }
+      dayBox.appendChild(b);
+    }
+  }
+  function renderTimes(){
+    timeBox.innerHTML = '';
+    state.time = null;
+    if(!state.hours){
+      timeBox.innerHTML = '<span style="font-size:13px;color:#9DB8A8">Pick a day first.</span>';
+      return;
+    }
+    var open = state.hours[0], close = state.hours[1];
+    var any = false;
+    SLOTS.forEach(function(s){
+      if(s[1] >= open && s[1] + 1 <= close){
+        any = true;
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'chip'; b.textContent = s[0]; b.dataset.val = s[0];
+        b.addEventListener('click', function(){ pick(timeBox, b, 'time'); });
+        timeBox.appendChild(b);
+      }
+    });
+    if(!any) timeBox.innerHTML = '<span style="font-size:13px;color:#9DB8A8">No slots left that day.</span>';
+  }
+  renderDays(); renderTimes();
+
+  var nameI = document.getElementById('bkName');
+  var phoneI = document.getElementById('bkPhone');
+  function showErr(id, on){ document.getElementById(id).style.display = on ? 'block' : 'none'; }
+
+  document.getElementById('bkConfirm').addEventListener('click', function(){
+    var ok = true;
+    var name = nameI.value.trim();
+    var digits = phoneI.value.replace(/\D/g, '');
+    showErr('errName', !name); if(!name) ok = false;
+    showErr('errPhone', digits.length < 10); if(digits.length < 10) ok = false;
+    if(!state.service || !state.day || !state.time){
+      ok = false;
+      timeBox.style.outline = '2px solid #F2B8A0'; timeBox.style.borderRadius = '10px';
+      setTimeout(function(){ timeBox.style.outline = ''; }, 1600);
+    }
+    if(!ok) return;
+    document.getElementById('bkSummary').textContent =
+      state.service + ' on ' + state.day + ' at ' + state.time +
+      ', for ' + name + '. Confirmation text goes to ' + phoneI.value.trim() + '.';
+    document.getElementById('bkDone').style.display = 'block';
+    document.getElementById('bkDone').scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work | Revamps Studio</title>
+<meta name="description" content="Before and after website rebuilds for real practices: a Fort Worth medspa, a Nampa dental practice, and a Tulsa dentist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316130D'/%3E%3Crect x='8' y='8' width='16' height='16' fill='%23E8490F'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="wordmark" href="../index.html"><span class="dot"></span>Revamps Studio</a>
+  <div class="nav-links">
+    <a href="index.html">Work</a>
+    <a href="../index.html#pricing">Pricing</a>
+    <a href="../index.html#contact">Contact</a>
+    <a class="btn" href="../index.html#contact">Start a project</a>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:24px">
+  <div class="hero-kicker reveal">Selected work</div>
+  <h1 class="reveal">Before and <span class="ember">after.</span></h1>
+  <p class="hero-sub reveal">Every rebuild below starts from a real practice's actual site. Open one and drag the slider: the before is what they had, the after is what we would build them.</p>
+</header>
+
+<section class="section" style="padding-top:24px">
+
+  <a class="work-row reveal" href="medspa-fortworth/">
+    <div>
+      <div class="work-meta">Medspa, Fort Worth TX</div>
+      <h3>A Nurse's Touch Skin Care and Medspa</h3>
+      <p>500+ five-star reviews, an industry award three years running, and a homepage with a typo in it. We closed the gap between the reputation and the site.</p>
+      <span class="work-link">Open the rebuild <span class="arrow">→</span></span>
+    </div>
+    <div class="work-visual">Before / After<br>Medspa</div>
+  </a>
+
+  <a class="work-row flip reveal" href="southridge-nampa/">
+    <div>
+      <div class="work-meta">Dental practice, Nampa ID</div>
+      <h3>Southridge Dental</h3>
+      <p>421 Google reviews on a site untouched in two years, with a dead blog and phone-only booking. We made the site earn the reviews.</p>
+      <span class="work-link">Open the rebuild <span class="arrow">→</span></span>
+    </div>
+    <div class="work-visual">Before / After<br>Dental</div>
+  </a>
+
+  <a class="work-row reveal" href="mcdougall-tulsa/">
+    <div>
+      <div class="work-meta">Dental practice, Tulsa OK</div>
+      <h3>McDougall DDS</h3>
+      <p>A dentist who is also a licensed psychologist, hiding behind stock photos and a misspelled name. We built the whole site around the one story nobody can copy.</p>
+      <span class="work-link">Open the rebuild <span class="arrow">→</span></span>
+    </div>
+    <div class="work-visual">Before / After<br>Dental</div>
+  </a>
+
+  <a class="work-row flip reveal" href="karr-hardee-amarillo/">
+    <div>
+      <div class="work-meta">Dental practice, Amarillo TX</div>
+      <h3>Karr and Hardee Dentistry</h3>
+      <p>274 five-star reviews and premium pricing, with no online booking at all. We put the front desk online.</p>
+      <span class="work-link">Open the rebuild <span class="arrow">→</span></span>
+    </div>
+    <div class="work-visual">Before / After<br>Dental</div>
+  </a>
+
+</section>
+
+<section class="contact" id="contact">
+  <div class="section">
+    <h2 class="reveal">Your practice could be <span class="ember">next.</span></h2>
+    <p class="reveal">Rebuilds start at $297. 50% to start, 50% when it launches.</p>
+    <div class="hero-cta reveal">
+      <a class="mail-link" href="mailto:hello@revamps.studio">hello@revamps.studio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="wordmark" href="../index.html"><span class="dot"></span>Revamps Studio</a>
+  <span>hello@revamps.studio</span>
+  <span>© <span id="year">2026</span> Revamps Studio</span>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>

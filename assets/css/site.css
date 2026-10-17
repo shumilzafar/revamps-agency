@@ -58,6 +58,19 @@ img{max-width:100%;display:block}
 .hero{
   padding:clamp(72px,10vw,140px) clamp(20px,4vw,56px) clamp(56px,7vw,96px);
   max-width:1280px;margin:0 auto;
+  position:relative;overflow:clip;
+}
+.hero::before{
+  content:"";position:absolute;top:-160px;right:-140px;
+  width:clamp(320px,40vw,560px);height:clamp(320px,40vw,560px);
+  background:radial-gradient(circle,rgba(232,73,15,.16),transparent 65%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;bottom:-200px;left:-160px;
+  width:clamp(280px,32vw,440px);height:clamp(280px,32vw,440px);
+  background:radial-gradient(circle,rgba(232,73,15,.08),transparent 65%);
+  pointer-events:none;
 }
 .hero-kicker{
   font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
@@ -79,12 +92,20 @@ img{max-width:100%;display:block}
 .strip{
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   background:var(--paper-deep);
-  padding:20px clamp(20px,4vw,56px);
-  display:flex;gap:clamp(24px,4vw,64px);flex-wrap:wrap;
+  padding:20px 0;
+  overflow:hidden;
   font-weight:600;font-size:15px;
 }
-.strip span{display:flex;align-items:center;gap:12px}
-.strip .tick{color:var(--ember);font-weight:700}
+.marquee{
+  display:flex;width:max-content;
+  animation:marquee 28s linear infinite;
+}
+.marquee span{
+  display:flex;align-items:center;gap:12px;white-space:nowrap;
+  margin-right:clamp(56px,7vw,110px);
+}
+.marquee .tick{color:var(--ember);font-weight:700}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
 /* ---------- sections ---------- */
 .section{padding:clamp(64px,8vw,120px) clamp(20px,4vw,56px);max-width:1280px;margin:0 auto}
@@ -121,16 +142,38 @@ img{max-width:100%;display:block}
 .work-visual{
   aspect-ratio:16/10;background:var(--paper-deep);
   border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--display);font-weight:500;font-size:clamp(20px,2.4vw,30px);
-  letter-spacing:-.01em;color:var(--ink);text-align:center;padding:24px;
   position:relative;overflow:hidden;
+  box-shadow:10px 10px 0 rgba(22,19,13,.07);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.work-row:hover .work-visual{
+  box-shadow:14px 14px 0 rgba(232,73,15,.16);
+  transform:translate(-2px,-2px);
 }
 .work-visual::after{
   content:"";position:absolute;left:0;bottom:0;height:6px;width:100%;background:var(--ember);
-  transform:scaleX(0);transform-origin:left;transition:transform .3s ease;
+  transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:3;
 }
 .work-row:hover .work-visual::after{transform:scaleX(1)}
+/* browser-frame mockup holding a real screenshot of the rebuild */
+.browser{height:100%;display:flex;flex-direction:column;background:#fff}
+.browser-bar{
+  display:flex;align-items:center;gap:7px;flex-shrink:0;
+  padding:11px 14px;background:var(--ink);
+}
+.browser-bar i{width:9px;height:9px;border-radius:50%;background:#5A5344;display:block}
+.browser-bar i:first-child{background:var(--ember)}
+.browser-bar span{
+  margin-left:8px;font-size:11.5px;color:#B9B09A;letter-spacing:.02em;
+  background:#2A251B;border-radius:3px;padding:3px 10px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:72%;
+}
+.browser-screen{overflow:hidden;flex:1;position:relative;background:#fff;min-height:0}
+.browser-screen img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+  transition:object-position 2.4s cubic-bezier(.25,.6,.25,1);
+}
+.work-row:hover .browser-screen img{object-position:bottom center}
 
 /* ---------- ink section ---------- */
 .ink-section{background:var(--ink);color:var(--paper)}
@@ -147,6 +190,7 @@ img{max-width:100%;display:block}
   padding:clamp(32px,4vw,56px);
   display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);
   position:relative;
+  box-shadow:14px 14px 0 var(--paper-deep);
 }
 .price-card::before{
   content:"";position:absolute;top:-2px;left:-2px;width:56px;height:56px;
@@ -176,7 +220,15 @@ img{max-width:100%;display:block}
 .faq details p{margin-top:12px;max-width:62ch;color:var(--ink-soft)}
 
 /* ---------- contact ---------- */
-.contact{background:var(--ink);color:var(--paper);text-align:left}
+.contact{background:var(--ink);color:var(--paper);text-align:left;overflow:hidden}
+.contact .section{position:relative}
+.contact .section::after{
+  content:"hello";position:absolute;right:-12px;bottom:-56px;
+  font-family:var(--display);font-weight:600;
+  font-size:clamp(130px,19vw,280px);line-height:1;letter-spacing:-.03em;
+  color:transparent;-webkit-text-stroke:1px #3A342A;
+  pointer-events:none;user-select:none;
+}
 .contact h2{
   font-family:var(--display);font-weight:500;letter-spacing:-.025em;
   font-size:clamp(40px,6vw,88px);line-height:1.03;max-width:16ch;
@@ -206,6 +258,8 @@ footer .wordmark{font-size:17px}
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
+  .marquee{animation:none}
+  .browser-screen img{transition:none}
 }
 
 /* ---------- responsive ---------- */

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Your Treatment | A Nurse's Touch Skin Care &amp; Medspa</title>
+<meta name="description" content="Answer three quick questions and find the right treatment at A Nurse's Touch, Fort Worth's nurse-led medspa. Call (682) 200-3278.">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">A Nurse's <em>Touch</em><small>Skin Care &amp; Medspa</small></a>
+    <button class="menu-toggle" aria-label="Open menu" onclick="this.closest('.nav').querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="injectables.html">Injectables</a>
+      <a href="skin.html">Skin</a>
+      <a href="laser.html">Laser</a>
+      <a href="permanent-makeup.html">Permanent Makeup</a>
+      <a href="finder.html">Find Your Treatment</a>
+    </nav>
+    <div class="nav-call">
+      <a class="btn" href="tel:+16822003278">Call (682) 200-3278</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="quiz" id="quiz">
+      <p class="eyebrow" style="text-align:center">The treatment finder</p>
+      <div class="quiz-progress" id="progress"><i></i><i></i><i></i></div>
+
+      <div class="quiz-q" data-q="1">
+        <h3>What bothers you most when you look in the mirror?</h3>
+        <p class="q-sub">Pick the one that bugs you first. Be honest.</p>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-v="lines">Lines and wrinkles<small>Forehead, crow's feet, frown lines</small></button>
+          <button class="quiz-opt" data-v="volume">Lost volume<small>Thinner lips, flatter cheeks, tired eyes</small></button>
+          <button class="quiz-opt" data-v="skin">Dull, uneven, or textured skin<small>Pores, spots, roughness, breakouts</small></button>
+          <button class="quiz-opt" data-v="hair">Unwanted hair<small>Legs, underarms, bikini, face, back</small></button>
+          <button class="quiz-opt" data-v="pmu">Sparse brows or pale lips<small>Makeup that never stays put</small></button>
+        </div>
+      </div>
+
+      <div class="quiz-q" data-q="2">
+        <h3>How fast do you want to see a change?</h3>
+        <p class="q-sub">Some treatments work this week. The best ones take time.</p>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-v="fast">As soon as possible<small>I have an event, or I am just impatient</small></button>
+          <button class="quiz-opt" data-v="gradual">I will build gradually<small>Natural-looking change over weeks or months</small></button>
+        </div>
+      </div>
+
+      <div class="quiz-q" data-q="3">
+        <h3>How do you feel about needles?</h3>
+        <p class="q-sub">No judgment. It changes the recommendation.</p>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-v="ok">Fine with them<small>Small pinches don't bother me</small></button>
+          <button class="quiz-opt" data-v="avoid">I'd rather avoid them<small>Show me the needle-free options</small></button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="result">
+        <p class="eyebrow">Your match</p>
+        <h3 id="r-title"></h3>
+        <p id="r-desc"></p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+          <a class="btn" id="r-link" href="#">See the treatments</a>
+          <a class="btn light" href="tel:+16822003278">Call (682) 200-3278</a>
+        </div>
+        <p style="margin-top:22px;font-size:14px;color:var(--muted)">Every plan starts with a free consult. Your nurse confirms the match before anything happens.</p>
+        <button class="quiz-back" id="restart">Start over</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">A Nurse's <em>Touch</em></p>
+        <p style="color:#CBBFA9;font-size:15px;margin-top:12px;max-width:36ch">Fort Worth's nurse-led medspa. Honest consults, plain pricing, and skin you don't have to think about.</p>
+        <p style="margin-top:16px"><a href="tel:+16822003278" style="color:#fff;font-weight:600">(682) 200-3278</a></p>
+      </div>
+      <div>
+        <h4>Treatments</h4>
+        <a href="injectables.html">Injectables</a>
+        <a href="skin.html">Skin</a>
+        <a href="laser.html">Laser</a>
+        <a href="permanent-makeup.html">Permanent Makeup</a>
+        <a href="finder.html">Find Your Treatment</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="index.html">4255 Bryant Irvin Rd, Suite 211</a>
+        <a href="index.html">Fort Worth, TX 76109</a>
+        <a href="mailto:anursestouchfortworth@gmail.com">anursestouchfortworth@gmail.com</a></div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 A Nurse's Touch Skin Care &amp; Medspa. All rights reserved.</span>
+      <span class="concept">Concept rebuild by Revamps Studio.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var answers={}, step=1;
+  var qs=document.querySelectorAll('.quiz-q');
+  var bars=document.querySelectorAll('#progress i');
+  var result=document.getElementById('result');
+  function show(n){
+    step=n;
+    qs.forEach(function(q){q.classList.toggle('active',+q.dataset.q===n)});
+    bars.forEach(function(b,i){b.classList.toggle('done',i<n)});
+    result.classList.remove('show');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  var outcomes={
+    hair:{t:"Laser hair removal",d:"Six to ten comfortable sessions with our 2026 FDA-cleared diode laser, safe for every skin tone. Then you are done shaving, waxing, and thinking about it.",l:"laser.html"},
+    pmu:{t:"Permanent makeup",d:"Brows, lip blushing, or eyeliner mapped to your face by a certified artist. Wake up finished, every single day.",l:"permanent-makeup.html"}
+  };
+  function decide(){
+    var a=answers;
+    if(outcomes[a.q1]) return outcomes[a.q1];
+    if(a.q1==="lines"){
+      if(a.q2==="fast"&&a.q3==="ok") return {t:"Wrinkle relaxers (Botox and friends)",d:"Botox, Dysport, Jeuveau, or Daxxify softens forehead lines, crow's feet, and frown lines in days. Your nurse picks the right one for your timeline.",l:"injectables.html"};
+      return {t:"Skin correction: BioRePeel or microneedling",d:"You want lines softened without needles. A BioRePeel series or microneedling rebuilds texture and fine lines gradually, with real, lasting change.",l:"skin.html"};
+    }
+    if(a.q1==="volume"){
+      if(a.q3==="ok") return {t:"Dermal fillers or Sculptra",d:"Restylane, RHA, or Versa restore lips and cheeks instantly. Sculptra rebuilds your own collagen over months. Your nurse maps exactly what you need at your consult.",l:"injectables.html"};
+      return {t:"Skin tightening",d:"You want more structure without needles. Our laser skin tightening firms and lifts gradually. Book a consult and we will tell you honestly how much it can do for you.",l:"laser.html"};
+    }
+    if(a.q1==="skin"){
+      if(a.q2==="fast") return {t:"Hydrafacial",d:"Thirty minutes, zero downtime, and you walk out glowing. The Deluxe ($250) or Platinum ($280) is the fastest visible change we offer.",l:"skin.html"};
+      return {t:"The Transformation package",d:"You want real correction, not a quick fix. A sequenced package of Hydrafacials, microneedling, peels, and BioRePeel, planned by your esthetician for maximum change.",l:"skin.html"};
+    }
+    return {t:"A free Glow Consultation",d:"Your answers point a few directions, which is exactly what the consult is for. Thirty minutes, honest answers, a real plan.",l:"skin.html"};
+  }
+  document.querySelectorAll('.quiz-opt').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var q=+btn.closest('.quiz-q').dataset.q;
+      answers['q'+q]=btn.dataset.v;
+      if(q<3){show(q+1);}
+      else{
+        var o=decide();
+        document.getElementById('r-title').textContent=o.t;
+        document.getElementById('r-desc').textContent=o.d;
+        document.getElementById('r-link').href=o.l;
+        qs.forEach(function(x){x.classList.remove('active')});
+        bars.forEach(function(b){b.classList.add('done')});
+        result.classList.add('show');
+        window.scrollTo({top:0,behavior:'smooth'});
+      }
+    });
+  });
+  document.getElementById('restart').addEventListener('click',function(){answers={};show(1);});
+  show(1);
+})();
+</script>
+</body>
+</html>

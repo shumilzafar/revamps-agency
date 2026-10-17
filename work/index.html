@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>McDougall DDS, Tulsa OK | Calm, Anxiety-Free Dentistry</title>
+<meta name="description" content="Concept rebuild: Dr. Hugh McDougall, PhD, DDS in Tulsa, OK. A dentist also licensed in psychology, built around calm, anxiety-free dental care. Call (918) 742-8775.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123A32'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23F7F3EA' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<style>
+@font-face{
+  font-family:'Newsreader';font-style:normal;font-weight:400 600;font-display:swap;
+  src:url('assets/fonts/newsreader-latin.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;
+  src:url('assets/fonts/newsreader-italic-latin.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;
+  src:url('assets/fonts/inter-latin.woff2') format('woff2');
+}
+:root{
+  --spruce:#123A32;
+  --spruce-deep:#0C2A24;
+  --paper:#F7F3EA;
+  --paper-warm:#EFE7D3;
+  --sage:#A9C6AE;
+  --sage-soft:#DFE9DE;
+  --ink:#1D2A25;
+  --muted:#5C6D63;
+  --clay:#A9602F;
+  --line:rgba(18,58,50,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--paper);color:var(--ink);
+  line-height:1.65;font-size:17px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--clay)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.serif{font-family:'Newsreader',Georgia,serif}
+
+/* ---------- demo banner ---------- */
+.demo-bar{
+  background:var(--spruce-deep);color:#EDE7D6;
+  font-size:12.5px;letter-spacing:.04em;
+  padding:9px 20px;text-align:center;
+}
+.demo-bar strong{font-weight:600;color:#fff}
+
+/* ---------- nav ---------- */
+.site-nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,243,234,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--spruce)}
+.brand-mark{
+  width:38px;height:38px;border-radius:10px;background:var(--spruce);
+  color:var(--paper);display:grid;place-items:center;
+  font-family:'Newsreader',Georgia,serif;font-size:22px;line-height:1;
+}
+.brand-name{font-family:'Newsreader',Georgia,serif;font-size:21px;font-weight:600;letter-spacing:.01em}
+.brand-name small{display:block;font-family:'Inter',sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink);font-size:15px;font-weight:500}
+.nav-links a:hover{color:var(--clay)}
+.nav-cta{
+  display:inline-block;background:var(--spruce);color:#fff;text-decoration:none;
+  font-weight:600;font-size:15px;padding:12px 22px;border-radius:6px;
+  transition:background .18s ease,transform .18s ease;
+}
+.nav-cta:hover{background:var(--spruce-deep);transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--spruce);margin:5px 0}
+
+/* ---------- hero ---------- */
+.hero{padding:96px 0 72px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.eyebrow{
+  display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--clay);margin-bottom:22px;
+}
+.hero h1{
+  font-family:'Newsreader',Georgia,serif;font-weight:500;
+  font-size:clamp(44px,5.6vw,72px);line-height:1.06;letter-spacing:-.01em;
+  color:var(--spruce);margin-bottom:26px;
+}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero p.lede{font-size:19.5px;color:var(--ink);max-width:34em;margin-bottom:16px}
+.hero p.lede strong{color:var(--spruce)}
+.hero-actions{display:flex;gap:18px;align-items:center;margin-top:34px;flex-wrap:wrap}
+.btn{
+  display:inline-block;background:var(--spruce);color:#fff;text-decoration:none;
+  font-weight:600;font-size:16.5px;padding:16px 30px;border-radius:6px;border:0;cursor:pointer;
+  transition:background .18s ease,transform .18s ease;
+}
+.btn:hover{background:var(--spruce-deep);transform:translateY(-1px)}
+.text-link{font-weight:600;color:var(--spruce);text-decoration:underline;text-underline-offset:4px;font-size:16px}
+.text-link:hover{color:var(--clay)}
+.hero-art{
+  background:linear-gradient(150deg,var(--sage-soft),var(--sage) 70%);
+  border-radius:18px;min-height:480px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.hero-art .quote-card{
+  background:rgba(247,243,234,.96);margin:28px;padding:30px 32px;border-radius:12px;
+  box-shadow:0 18px 50px rgba(12,42,36,.16);max-width:420px;
+}
+.hero-art .quote-card p{font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.45;color:var(--spruce);font-style:italic}
+.hero-art .quote-card cite{display:block;margin-top:14px;font-style:normal;font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
+.blob-1{width:220px;height:220px;background:#fff;top:-60px;right:-40px;opacity:.35}
+.blob-2{width:150px;height:150px;background:var(--spruce);bottom:120px;left:-50px;opacity:.12}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--spruce);color:#EDE7D6;padding:26px 0}
+.trust-inner{display:flex;gap:44px;justify-content:center;flex-wrap:wrap;text-align:center}
+.trust-item{font-size:15px;max-width:320px}
+.trust-item strong{display:block;color:#fff;font-size:16px;margin-bottom:4px}
+
+/* ---------- sections ---------- */
+.section{padding:96px 0}
+.section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{max-width:720px;margin-bottom:56px}
+.section-head h2{
+  font-family:'Newsreader',Georgia,serif;font-weight:500;color:var(--spruce);
+  font-size:clamp(32px,3.6vw,46px);line-height:1.12;letter-spacing:-.01em;margin-bottom:18px;
+}
+.section-head p{font-size:18.5px;color:var(--muted)}
+
+/* calm approach: editorial list */
+.principle{display:grid;grid-template-columns:40px 1fr;gap:28px;padding:38px 0;border-top:1px solid var(--line)}
+.principle:last-child{border-bottom:1px solid var(--line)}
+.principle-dot{width:14px;height:14px;border-radius:50%;background:var(--sage);margin-top:12px}
+.principle h3{font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:600;color:var(--spruce);margin-bottom:10px}
+.principle p{max-width:44em;color:var(--ink)}
+.principle p em{color:var(--clay);font-style:normal;font-weight:600}
+
+/* doctor */
+.doctor-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.doctor-card{
+  background:var(--spruce);color:#EDE7D6;border-radius:18px;padding:44px 40px;
+  position:sticky;top:110px;
+}
+.doctor-card .initials{
+  width:76px;height:76px;border-radius:50%;background:var(--sage);color:var(--spruce-deep);
+  display:grid;place-items:center;font-family:'Newsreader',Georgia,serif;font-size:28px;margin-bottom:24px;
+}
+.doctor-card h3{font-family:'Newsreader',Georgia,serif;font-size:30px;font-weight:500;color:#fff;margin-bottom:6px}
+.doctor-card .creds{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:20px}
+.doctor-card p{font-size:16px;color:#D8D2BE}
+.doctor-card .src{margin-top:22px;font-size:13px;color:#A9A48E}
+.doctor-copy p{margin-bottom:20px;font-size:18px}
+.doctor-copy p.lead{font-family:'Newsreader',Georgia,serif;font-size:24px;line-height:1.5;color:var(--spruce)}
+.pullquote{
+  border-left:3px solid var(--clay);padding:6px 0 6px 28px;margin:36px 0;
+  font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:22px;line-height:1.5;color:var(--spruce);
+}
+
+/* care list */
+.care-list{list-style:none;columns:2;column-gap:56px}
+.care-list li{
+  break-inside:avoid;padding:20px 0;border-bottom:1px solid var(--line);
+  display:flex;gap:16px;align-items:baseline;
+}
+.care-list li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--sage);transform:translateY(-1px)}
+.care-list strong{display:block;font-size:17.5px;color:var(--spruce);font-weight:600}
+.care-list span{font-size:15.5px;color:var(--muted)}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.visit-info h3{font-family:'Newsreader',Georgia,serif;font-size:24px;color:var(--spruce);margin:28px 0 8px;font-weight:600}
+.visit-info h3:first-child{margin-top:0}
+.visit-info p,.visit-info a{font-size:17px}
+.big-phone{font-family:'Newsreader',Georgia,serif;font-size:40px;color:var(--spruce);text-decoration:none;font-weight:600}
+.big-phone:hover{color:var(--clay)}
+.hours-table{width:100%;border-collapse:collapse;margin-top:8px}
+.hours-table td{padding:10px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+.hours-table td:last-child{text-align:right;color:var(--muted)}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px 38px;box-shadow:0 14px 40px rgba(12,42,36,.08)}
+.form-card h3{font-family:'Newsreader',Georgia,serif;font-size:26px;color:var(--spruce);margin-bottom:8px;font-weight:600}
+.form-card>p{font-size:15.5px;color:var(--muted);margin-bottom:26px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:14px;font-weight:600;margin-bottom:7px;color:var(--spruce)}
+.field input,.field textarea,.field select{
+  width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:16px;background:var(--paper);color:var(--ink);
+}
+.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid var(--sage);border-color:var(--sage)}
+.form-note{font-size:13.5px;color:var(--muted);margin-top:16px}
+.form-msg{display:none;padding:14px 18px;border-radius:8px;font-size:15.5px;margin-bottom:18px}
+.form-msg.ok{display:block;background:var(--sage-soft);color:var(--spruce-deep);border:1px solid var(--sage)}
+.form-msg.err{display:block;background:#F7E4DC;color:#7A3A1F;border:1px solid #E3B89F}
+details.insurance{margin-top:26px;border:1px solid var(--line);border-radius:10px;padding:18px 22px;background:#fff}
+details.insurance summary{cursor:pointer;font-weight:600;color:var(--spruce);font-size:16px}
+details.insurance ul{columns:2;list-style:none;margin-top:14px;font-size:15px;color:var(--muted)}
+details.insurance li{padding:4px 0}
+
+/* ---------- before recreation ---------- */
+.before-frame{
+  background:#fff;border:1px solid #d8d2c2;border-radius:6px;overflow:hidden;
+  box-shadow:0 10px 34px rgba(30,30,30,.10);position:relative;
+}
+.before-bar{background:#2b4a6f;color:#fff;padding:10px 18px;font-size:13px;font-family:Arial,sans-serif}
+.before-head{padding:26px 30px;border-bottom:3px solid #2b4a6f;font-family:Georgia,serif}
+.before-head h4{font-size:24px;color:#1a1a1a;letter-spacing:.02em}
+.before-banner{background:#fff3cd;border:1px solid #e0c36a;color:#7a5c00;padding:10px 18px;font-size:14px;font-family:Arial,sans-serif;text-align:center}
+.before-body{padding:30px;font-family:Georgia,serif;color:#333;position:relative}
+.before-body h5{font-size:20px;color:#2b4a6f;margin:22px 0 8px}
+.before-body h5:first-child{margin-top:0}
+.before-body p{font-size:15.5px;margin-bottom:12px;line-height:1.7}
+.before-body a{color:#1a5fb4}
+.before-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.before-kw{background:#f4f1e8;border:1px dashed #b9b09a;padding:16px 20px;font-family:Arial,sans-serif;font-size:13.5px;color:#555}
+.before-kw li{margin:6px 0;list-style:disc inside}
+.flaw{
+  display:inline-grid;place-items:center;vertical-align:3px;
+  background:#A9602F;color:#fff;font-size:11px;font-weight:700;
+  width:22px;height:22px;border-radius:50%;
+  box-shadow:0 0 0 4px rgba(169,96,47,.22);cursor:default;margin-left:8px;
+}
+.flaw-note{
+  background:#FFF9F0;border:1px solid #E3B89F;border-radius:10px;padding:22px 24px;margin-top:26px;
+  font-size:15px;color:#6b4a2f;
+}
+.flaw-note strong{color:#7A3A1F}
+.flaw-list{list-style:none;margin-top:14px;display:grid;gap:12px}
+.flaw-list li{display:flex;gap:14px;align-items:flex-start;font-size:15.5px}
+.flaw-list .n{
+  flex:0 0 26px;height:26px;border-radius:50%;background:#A9602F;color:#fff;
+  font-size:12px;font-weight:700;display:grid;place-items:center;margin-top:2px;
+}
+
+/* ---------- slider ---------- */
+.ba{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 70px rgba(12,42,36,.20);user-select:none;touch-action:none}
+.ba-layer{position:absolute;inset:0}
+.ba-after-pane{background:var(--spruce);color:#EDE7D6;display:flex;flex-direction:column;justify-content:center;padding:56px}
+.ba-after-pane .eyebrow{margin-bottom:16px}
+.ba-after-pane h3{font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,4vw,52px);line-height:1.08;font-weight:500;color:#fff;max-width:12em;margin-bottom:18px}
+.ba-after-pane p{color:#CFC8B0;max-width:30em;font-size:17px}
+.ba-before-pane{background:#fff;overflow:hidden;border-right:0}
+.ba-before-clip{position:absolute;top:0;bottom:0;left:0;overflow:hidden}
+.ba-before-pane{position:absolute;top:0;bottom:0;left:0;background:#fff;overflow:hidden}
+.ba-tag{
+  position:absolute;top:18px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px 14px;border-radius:5px;z-index:5;
+}
+.ba-tag.before{left:18px;background:#7A3A1F;color:#fff}
+.ba-tag.after{right:18px;background:rgba(18,58,50,.85);color:#fff}
+.ba-handle{
+  position:absolute;top:0;bottom:0;width:3px;background:#fff;z-index:6;cursor:ew-resize;
+  box-shadow:0 0 0 1px rgba(0,0,0,.12);
+}
+.ba-knob{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:58px;height:58px;border-radius:50%;background:#fff;color:var(--spruce);
+  display:grid;place-items:center;font-size:20px;font-weight:700;
+  box-shadow:0 6px 22px rgba(0,0,0,.25);border:0;cursor:ew-resize;font-family:'Inter',sans-serif;
+}
+.ba-hint{text-align:center;margin-top:18px;color:var(--muted);font-size:15px}
+
+/* ---------- walkthrough ---------- */
+.walk-item{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:44px 0;border-top:1px solid var(--line);align-items:start}
+.walk-item:last-child{border-bottom:1px solid var(--line)}
+.walk-item h3{font-family:'Newsreader',Georgia,serif;font-size:27px;color:var(--spruce);font-weight:600;margin-bottom:12px}
+.walk-item .why{font-size:16.5px;color:var(--ink)}
+.walk-item .why strong{color:var(--spruce)}
+.walk-item .label{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:10px}
+
+/* ---------- final cta ---------- */
+.final{background:var(--spruce-deep);color:#EDE7D6;padding:110px 0;text-align:center}
+.final h2{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(36px,4.6vw,60px);line-height:1.1;color:#fff;margin-bottom:20px}
+.final p{color:#B9B49C;font-size:18.5px;max-width:34em;margin:0 auto 38px}
+.final .btn{background:var(--paper);color:var(--spruce-deep);font-size:18px;padding:18px 40px}
+.final .btn:hover{background:#fff}
+.final .addr{margin-top:26px;font-size:15px;color:#8F8A73}
+footer{background:#0A201C;color:#8F8A73;padding:34px 0;font-size:13.5px}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#B9B49C}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero-grid,.doctor-grid,.visit-grid,.walk-item{grid-template-columns:1fr}
+  .before-cols{grid-template-columns:1fr}
+  .doctor-card{position:static}
+  .care-list{columns:1}
+  .nav-links{
+    display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);
+    flex-direction:column;padding:18px 28px 26px;gap:18px;border-bottom:1px solid var(--line);
+  }
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+  .nav-cta{display:none}
+  .section{padding:64px 0}
+  .hero{padding:64px 0 48px}
+  .principle{grid-template-columns:32px 1fr;gap:16px}
+  .principle-num{font-size:32px}
+  .ba-after-pane{padding:34px 26px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><strong>Concept rebuild</strong> for McDougall DDS, Tulsa OK, prepared by Revamps Studio. All facts below are real and verifiable.</div>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="McDougall DDS home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span class="brand-name">McDougall<small>DDS, Tulsa</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#approach">The calm approach</a></li>
+      <li><a href="#doctor">Dr. McDougall</a></li>
+      <li><a href="#care">Care</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+19187428775">(918) 742-8775</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============ BEFORE ============ -->
+<section class="section" id="before">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What patients find today</h2>
+      <p>This is a faithful recreation of the current mcdougalldds.com homepage, flaws and all. A remarkable practice is hiding behind it.</p>
+    </div>
+
+    <div class="before-frame" aria-label="Recreation of the current website">
+      <div class="before-bar">mcdougalldds.com</div>
+      <div class="before-head"><h4>HUGH MCDOUGALL, PHD, DDS, PLLC</h4></div>
+      <div class="before-banner">Now Accepting Dr. Archer&rsquo;s Patients!</div>
+      <div class="before-body">
+        <h5>Your Dental Office</h5>
+        <p>Are you looking for an efficient and excellent dental office to provide you and your family with regular cleanings and dental maintenance?</p>
+        <h5>Our Staff</h5>
+        <p>Our team is dedicated to being your guide when it comes to dental health. We don&rsquo;t think that going to the dentist&rsquo;s office should be stressful.</p>
+        <div class="before-cols">
+          <div>
+            <h5>What we offer</h5>
+            <p>Our team&rsquo;s expertise is in beautifying <a href="https://link.springer.com">smiles</a><span class="flaw" title="Flaw 2: stray academic link">2</span>, maintaining your dental health, and helping you have a comfortable dentist appointment.</p>
+            <p><strong>If you want to be part of the McDoughall PhD, DDS Family<span class="flaw" title="Flaw 1: typo of his own name">1</span>, call us today.</strong></p>
+          </div>
+          <div class="before-kw">
+            <p style="margin-bottom:8px"><strong>Hours (homepage):</strong> Mon to Thu, 8:00am to 4:00pm</p>
+            <p style="margin-bottom:12px"><strong>Hours (footer, same page):</strong> Mon to Fri, 7:50am to 3:00pm<span class="flaw" title="Flaw 3: conflicting hours">3</span></p>
+            <ul>
+              <li>Efficient and comfortable Tulsa dental cleanings and exams</li>
+              <li>Preventive Tulsa dental care</li>
+              <li>Cosmetic Tulsa dental care</li>
+              <li>Comprehensive Tulsa dental care</li>
+              <li>Tulsa family dental care</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flaw-note">
+      <strong>What is wrong here, concretely:</strong>
+      <ul class="flaw-list">
+        <li><span class="n">1</span><span><strong>His own name is misspelled</strong> ("McDoughall") in the closing pitch. If the practice cannot spell the doctor&rsquo;s name, patients wonder what else is careless.</span></li>
+        <li><span class="n">2</span><span><strong>A stray academic link</strong> (link.springer.com) sits mid-sentence in the marketing copy, a leftover nobody removed.</span></li>
+        <li><span class="n">3</span><span><strong>Two different sets of hours</strong> on the same page. A patient deciding whether to call should never have to guess.</span></li>
+        <li><span class="n">4</span><span><strong>Every hero image is stock photography</strong>, and the copy is keyword-stuffed for Google ("Tulsa dental care" five ways) instead of written for a nervous human.</span></li>
+        <li><span class="n">5</span><span><strong>The one remarkable fact is buried:</strong> the only dentist in Oklahoma also licensed in psychology. The site never leads with it.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDER ============ -->
+<section class="section alt" id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Same practice. Different first impression.</h2>
+      <p>Slide the handle. On the left, the site as it stands. On the right, the rebuild, opening with the one thing no competitor can copy.</p>
+    </div>
+
+    <div class="ba" id="baSlider" style="height:520px">
+      <div class="ba-layer ba-after-pane">
+        <span class="eyebrow">Tulsa, Oklahoma</span>
+        <h3>Dentistry that understands fear.</h3>
+        <p>Dr. Hugh McDougall holds a PhD in clinical psychology and a DDS. His practice is built around a simple idea: you should feel calm here.</p>
+        <p style="margin-top:22px"><span style="display:inline-block;background:#F7F3EA;color:#123A32;font-weight:700;padding:13px 26px;border-radius:6px;font-size:15.5px">Call (918) 742-8775</span></p>
+      </div>
+      <div class="ba-layer ba-before-clip" id="baClip" style="width:50%">
+        <div class="ba-before-pane" id="baPane"><div style="padding:56px;height:100%">
+          <p style="font-family:Georgia,serif;font-size:13px;color:#888;letter-spacing:.06em">MCDOUGALLDDS.COM TODAY</p>
+          <p style="font-family:Georgia,serif;font-size:34px;color:#1a1a1a;margin:14px 0;line-height:1.2">Your Dental<br>Office</p>
+          <p style="font-family:Georgia,serif;font-size:15.5px;color:#444;max-width:26em">Are you looking for an efficient and excellent dental office to provide you and your family with regular cleanings and dental maintenance?</p>
+          <p style="font-family:Georgia,serif;font-size:15.5px;color:#444;margin-top:16px;max-width:26em">If you want to be part of the <strong>McDoughall</strong> PhD, DDS Family, call us today.</p>
+          <p style="font-family:Arial,sans-serif;font-size:13px;color:#999;margin-top:26px">Mon to Thu 8am to 4pm, or is it Mon to Fri 7:50am to 3pm?</p>
+        </div></div>
+      </div>
+      <span class="ba-tag before">Before</span>
+      <span class="ba-tag after">After</span>
+      <div class="ba-handle" id="baHandle" style="left:50%">
+        <button class="ba-knob" id="baKnob" role="slider" aria-label="Compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">&#10218;&#10219;</button>
+      </div>
+    </div>
+    <p class="ba-hint">Drag the handle, or focus it and use your arrow keys.</p>
+  </div>
+</section>
+
+<!-- ============ AFTER: HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Tulsa, Oklahoma</span>
+      <h1>Dentistry that <em>understands</em> fear.</h1>
+      <p class="lede">Most people do not avoid the dentist because of their teeth. They avoid it because of how it feels. <strong>Dr. Hugh McDougall is a dentist and a licensed psychologist</strong>, one of about ten in the country holding both licenses, and his whole practice is built around a simple idea: you should feel calm here.</p>
+      <div class="hero-actions">
+        <a class="btn" href="tel:+19187428775">Call (918) 742-8775</a>
+        <a class="text-link" href="#visit">What a first visit feels like</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="Calm abstract artwork">
+      <span class="hero-blob blob-1"></span>
+      <span class="hero-blob blob-2"></span>
+      <div class="quote-card">
+        <p>"We ask every new patient about bad dental experiences. Then we talk it through, at length, before the first appointment."</p>
+        <cite>Dr. Hugh McDougall, PhD, DDS</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-inner">
+    <div class="trust-item"><strong>Ranked #1 Tulsa dentist</strong>by discovertulsa.net, October 2026</div>
+    <div class="trust-item"><strong>Now welcoming Dr. Archer&rsquo;s patients</strong>continuity of care, handled gently</div>
+    <div class="trust-item"><strong>Se habla espa&ntilde;ol</strong>appointments available in Spanish</div>
+  </div>
+</div>
+
+<!-- ============ AFTER: APPROACH ============ -->
+<section class="section" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The calm approach</span>
+      <h2>Built for people who dread the dentist</h2>
+      <p>These are not slogans. They are how this office actually runs, described by Dr. McDougall himself in an interview with Dental Economics.</p>
+    </div>
+
+    <div class="principle">
+      <div class="principle-dot" aria-hidden="true"></div>
+      <div>
+        <h3>We listen first</h3>
+        <p>Dr. McDougall practices <em>reflective listening</em>: he listens to what you say, then repeats it back, so you know for certain you were heard. Many patients arrive braced for a lecture. Here the first appointment starts with a conversation.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="principle-dot" aria-hidden="true"></div>
+      <div>
+        <h3>You stay in control</h3>
+        <p>Raise a hand and everything stops, no questions asked. His assistant keeps a quiet dialogue with you through every procedure and warns you before you feel anything, even pressure. Patients who once needed sedation have <em>graduated from it entirely</em>.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="principle-dot" aria-hidden="true"></div>
+      <div>
+        <h3>Comfort is the vocabulary</h3>
+        <p>The word "pain" is barely used in this office, on purpose. The team talks about <em>comfort</em> instead, because the words in the room shape how the visit feels. Small choice, enormous difference for an anxious patient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFTER: DOCTOR ============ -->
+<section class="section alt" id="doctor">
+  <div class="wrap doctor-grid">
+    <div class="doctor-card">
+      <div class="initials">HM</div>
+      <h3>Hugh M. McDougall</h3>
+      <div class="creds">PhD, DDS, Tulsa, OK</div>
+      <p>The only dentist in Oklahoma licensed to practice psychology, and one of about ten in the nation dually licensed in dentistry and clinical psychology.</p>
+      <p class="src">As reported by Dental Economics (DentistryIQ).</p>
+    </div>
+    <div class="doctor-copy">
+      <div class="section-head" style="margin-bottom:32px">
+          <h2>Two licenses. One unhurried chair.</h2>
+      </div>
+      <p class="lead">A PhD in clinical psychology changes what happens in a dental chair. Fear stops being an inconvenience and becomes the thing the whole visit is designed around.</p>
+      <p>Dr. McDougall practices the full scope of general and cosmetic dentistry: cleanings and exams, fillings, porcelain veneers and complete smile redesigns, root canals, crowns and bridges, partial dentures, dental implants, and Invisalign.</p>
+      <div class="pullquote">"We want to understand their thoughts, feelings, and behaviors, and we do that by focusing on listening to them. People will often hear what a person is saying, but will they really listen?"</div>
+      <p>Digital imaging and soft-tissue lasers keep visits quick and gentle. Metal-free dentistry throughout. And if you have been putting this off for years, you are exactly who this practice is for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFTER: CARE ============ -->
+<section class="section" id="care">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Everything under one roof</h2>
+      <p>General, cosmetic, and restorative dentistry for the whole family, from six-month cleanings to full smile redesigns.</p>
+    </div>
+    <ul class="care-list">
+      <li><div><strong>Cleanings and exams</strong><span>Gentle, unhurried, and explained as we go</span></div></li>
+      <li><div><strong>Porcelain veneers and smile design</strong><span>Natural-looking cosmetic work, planned with you</span></div></li>
+      <li><div><strong>Dental implants</strong><span>Permanent replacements that feel like your own teeth</span></div></li>
+      <li><div><strong>Invisalign</strong><span>Straightening without brackets or wires</span></div></li>
+      <li><div><strong>Root canals</strong><span>Comfort-first, with sedation options if you want them</span></div></li>
+      <li><div><strong>Crowns and bridges</strong><span>Strong, metal-free restorations</span></div></li>
+      <li><div><strong>Dentures and partials</strong><span>Fitted carefully, adjusted until they feel right</span></div></li>
+      <li><div><strong>Emergency dentistry</strong><span>When it hurts now, call now</span></div></li>
+      <li><div><strong>Sedation options</strong><span>For the visits you have been dreading</span></div></li>
+      <li><div><strong>Family dentistry</strong><span>From the youngest patients to grandparents</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ AFTER: VISIT ============ -->
+<section class="section alt" id="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>It starts with a conversation, not a chair</h2>
+      <p>Tell us about your past dental experiences, good or bad. We listen, we plan together, and we move at your pace. Nothing happens before you are ready.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <h3>Call or text the office</h3>
+        <p><a class="big-phone" href="tel:+19187428775">(918) 742-8775</a></p>
+        <p style="margin-top:6px"><a href="mailto:info@mcdougalldds.com">info@mcdougalldds.com</a></p>
+        <h3>Find us</h3>
+        <p>4433 S Harvard Ave<br>Tulsa, OK 74135</p>
+        <p style="margin-top:10px;color:var(--muted);font-size:15.5px">Serving Broken Arrow, Tulsa, Jenks, Bixby, Owasso, and Coweta.</p>
+        <h3>Hours</h3>
+        <table class="hours-table">
+          <tr><td>Monday</td><td>8:00am to 4:00pm</td></tr>
+          <tr><td>Tuesday</td><td>8:00am to 4:00pm</td></tr>
+          <tr><td>Wednesday</td><td>8:00am to 4:00pm</td></tr>
+          <tr><td>Thursday</td><td>8:00am to 4:00pm</td></tr>
+          <tr><td>Friday to Sunday</td><td>Closed</td></tr>
+        </table>
+        <details class="insurance">
+          <summary>Insurance and payment options</summary>
+          <ul>
+            <li>Aetna</li><li>Delta Dental</li><li>Cigna</li>
+            <li>Blue Cross Blue Shield</li><li>Humana</li><li>MetLife</li>
+            <li>UnitedHealthcare</li><li>Guardian</li><li>Ameritas</li>
+            <li>Principal</li><li>Aflac</li><li>GEHA</li>
+            <li>Dentaquest</li><li>HealthChoice</li><li>Mutual of Omaha</li>
+            <li>Physicians Mutual</li><li>Sun Life</li><li>Careington</li>
+            <li>Best Life</li><li>Unum</li><li>United Concordia / Tricare</li>
+            <li>Veterans by VA referral</li>
+          </ul>
+          <p style="margin-top:14px;font-size:14.5px">0% APR payment plans available through Cherry. Coverage always depends on your individual plan.</p>
+        </details>
+      </div>
+      <div class="form-card">
+        <h3>Request an appointment</h3>
+        <p>Leave your number and we will call you back. Usually the same day.</p>
+        <div class="form-msg" id="formMsg" role="status"></div>
+        <form id="apptForm" novalidate>
+          <div class="field">
+            <label for="fName">Your name</label>
+            <input id="fName" name="name" type="text" autocomplete="name" placeholder="Jane Miller">
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone number</label>
+            <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="(918) 555-0142">
+          </div>
+          <div class="field">
+            <label for="fReason">What brings you in?</label>
+            <select id="fReason" name="reason">
+              <option>Cleaning and checkup</option>
+              <option>Something hurts</option>
+              <option>Cosmetic work or veneers</option>
+              <option>Implants or dentures</option>
+              <option>I am nervous and want to talk first</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <button class="btn" type="submit" style="width:100%">Request my appointment</button>
+          <p class="form-note">This is a concept demo, so the form does not send anywhere yet. On the live site it would go straight to the office.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WALKTHROUGH ============ -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why this wins patients</span>
+      <h2>Every change, and the reason behind it</h2>
+      <p>Nothing here is decoration. Each decision answers a question a nervous patient is asking before they ever call.</p>
+    </div>
+
+    <div class="walk-item">
+      <div>
+        <div class="label">Positioning</div>
+        <h3>Lead with the fear, not the services</h3>
+      </div>
+      <p class="why">Dental anxiety is the highest-value patient segment: these are people who have avoided care for years and need the most work. The psychology license is the one story no Tulsa competitor can copy, and the old site buried it. <strong>The rebuild opens with it in the first sentence.</strong></p>
+    </div>
+    <div class="walk-item">
+      <div>
+        <div class="label">Trust</div>
+        <h3>One voice, one set of hours</h3>
+      </div>
+      <p class="why">The current page shows two different hours and misspells the doctor's name. A patient deciding whether to trust you with their mouth notices. <strong>The rebuild has one consistent schedule, the name spelled right everywhere, and no stray links.</strong></p>
+    </div>
+    <div class="walk-item">
+      <div>
+        <div class="label">Proof</div>
+        <h3>Real evidence, attributed honestly</h3>
+      </div>
+      <p class="why">No invented star ratings, no fake testimonials. The #1 Tulsa ranking from discovertulsa.net and the Dental Economics interview are <strong>real, recent, and verifiable</strong>, and both are named as sources. Real proof converts. Fabricated proof destroys trust the moment anyone checks.</p>
+    </div>
+    <div class="walk-item">
+      <div>
+        <div class="label">Design</div>
+        <h3>A visual system that feels like the promise</h3>
+      </div>
+      <p class="why">Deep spruce, warm paper, soft sage: colors that lower a heart rate instead of the usual clinical blue. Editorial serif type that reads like a calm conversation. <strong>If the site feels anxious, the anxious patient leaves.</strong></p>
+    </div>
+    <div class="walk-item">
+      <div>
+        <div class="label">Conversion</div>
+        <h3>Every path ends at the phone</h3>
+      </div>
+      <p class="why">The phone number is tappable everywhere, the email is a real mailto link, and the request form confirms instead of vanishing into the void. <strong>Friction is where appointments go to die.</strong> The old site's "Request Appointment" was a dead end with no feedback.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2>Ready when you are.</h2>
+    <p>No lecture, no rush, no judgment. Just a conversation about your teeth, with someone trained to understand the rest of you too.</p>
+    <a class="btn" href="tel:+19187428775">Call (918) 742-8775</a>
+    <p class="addr">4433 S Harvard Ave, Tulsa, OK 74135, Mon to Thu 8am to 4pm</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>Copyright 2026 McDougall DDS, Tulsa OK. Concept rebuild prepared by <a href="https://revamps.studio">Revamps Studio</a>.</span>
+    <span><a href="tel:+19187428775">(918) 742-8775</a>, <a href="mailto:info@mcdougalldds.com">info@mcdougalldds.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- mobile nav ---------- */
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+  });
+
+  /* ---------- before/after slider ---------- */
+  var slider = document.getElementById('baSlider');
+  var clip = document.getElementById('baClip');
+  var handle = document.getElementById('baHandle');
+  var knob = document.getElementById('baKnob');
+  var pane = document.getElementById('baPane');
+  var pos = 50, dragging = false;
+
+  function fitPane(){ pane.style.width = slider.offsetWidth + 'px'; }
+  window.addEventListener('resize', fitPane);
+
+  function setPos(p){
+    pos = Math.max(4, Math.min(96, p));
+    clip.style.width = pos + '%';
+    handle.style.left = pos + '%';
+    knob.setAttribute('aria-valuenow', Math.round(pos));
+  }
+  function posFromEvent(e){
+    var r = slider.getBoundingClientRect();
+    var x = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+    return ((x - r.left) / r.width) * 100;
+  }
+  function startDrag(e){ dragging = true; setPos(posFromEvent(e)); e.preventDefault(); }
+  function moveDrag(e){ if(dragging){ setPos(posFromEvent(e)); } }
+  function endDrag(){ dragging = false; }
+
+  slider.addEventListener('pointerdown', startDrag);
+  window.addEventListener('pointermove', moveDrag);
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
+  knob.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowLeft'){ setPos(pos - 4); e.preventDefault(); }
+    if(e.key === 'ArrowRight'){ setPos(pos + 4); e.preventDefault(); }
+    if(e.key === 'Home'){ setPos(4); e.preventDefault(); }
+    if(e.key === 'End'){ setPos(96); e.preventDefault(); }
+  });
+  fitPane();
+  setPos(50);
+
+  /* ---------- appointment form ---------- */
+  var form = document.getElementById('apptForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fName').value.trim();
+    var phone = document.getElementById('fPhone').value.trim();
+    msg.className = 'form-msg';
+    if(!name || !phone){
+      msg.classList.add('err');
+      msg.textContent = 'Please add your name and phone number so the office can call you back.';
+      return;
+    }
+    msg.classList.add('ok');
+    var first = name.split(' ')[0];
+    msg.textContent = 'Thanks, ' + first + '. This is a concept demo so nothing was sent, but on the live site the office would call you back at ' + phone + ', usually the same day.';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>

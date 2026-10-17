@@ -3,919 +3,699 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Southridge Dental | Family Dentist in Nampa, ID</title>
-<meta name="description" content="Southridge Dental in Nampa, Idaho. Same-day CEREC crowns, gentle family and pediatric dentistry, and 400+ five-star reviews. Call (208) 466-2458.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173A2E'/%3E%3Cpath d='M20 13c-4.5 0-7.5 3.2-7.5 7.5 0 8.5 6.5 10.5 6.5 18.5 0 5.5 2.5 11.5 6.5 11.5 3.2 0 3.2-6.5 6.5-6.5s3.3 6.5 6.5 6.5c4 0 6.5-6 6.5-11.5 0-8 6.5-10 6.5-18.5 0-4.3-3-7.5-7.5-7.5-4 0-5 3.5-12 3.5s-8-3.5-12-3.5z' fill='%23FCFBF7'/%3E%3C/svg%3E">
+<title>A Nurse's Touch Skin Care and Medspa | Website Concept, Fort Worth TX</title>
+<meta name="description" content="A premium website concept for A Nurse's Touch Skin Care & Medspa in Fort Worth, Texas: nurse-led Botox, facials, laser, and permanent makeup. Call (682) 200-3278.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314312a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23f3f5f2' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts/local-fonts.css">
 <style>
-/* ============ Southridge Dental concept redesign ============
-   Design read: warm modern family dental for Nampa families,
-   Tend-style warm consumer editorial. DIALS 7/4/4.
-   Palette lock: pine + terracotta + warm neutrals. No exceptions.
-   Shape lock: buttons 12px, cards and media 18px, chips pill. */
-@font-face{
-  font-family:'Bricolage Grotesque';
-  src:url('assets/BricolageGrotesque-latin.woff2') format('woff2');
-  font-weight:400 800; font-display:swap;
-}
-@font-face{
-  font-family:'Bricolage Grotesque';
-  src:url('assets/BricolageGrotesque-latin-ext.woff2') format('woff2');
-  font-weight:400 800; font-display:swap; unicode-range:U+0100-02BA,U+02BD-02C5;
-}
-@font-face{
-  font-family:'DM Sans';
-  src:url('assets/DMSans-latin.woff2') format('woff2');
-  font-weight:400 700; font-display:swap;
-}
-@font-face{
-  font-family:'DM Sans';
-  src:url('assets/DMSans-latin-ext.woff2') format('woff2');
-  font-weight:400 700; font-display:swap; unicode-range:U+0100-02BA,U+02BD-02C5;
-}
+/* ============ TOKENS ============ */
 :root{
-  --paper:#FCFBF7;
-  --ink:#173A2E;
-  --pine:#0F2A21;
-  --accent:#C2703E;
-  --accent-deep:#9E5627;
-  --accent-soft:#F6E8D4;
-  --sage:#E9EFE7;
-  --line:#E5DFD0;
-  --muted:#5B6A61;
-  --radius:18px;
-  --display:'Bricolage Grotesque','DM Sans',system-ui,sans-serif;
-  --body:'DM Sans',system-ui,-apple-system,sans-serif;
+  --pine-950:#0e2721; --pine-900:#14312a; --pine-700:#1e4a3e; --pine-600:#2a5c4d;
+  --porcelain:#f3f5f2; --paper:#fafbfa; --card:#ffffff;
+  --ink:#1c2b26; --muted:#5d7168; --faint:#8aa097;
+  --line:#dfe5df; --line-soft:#e9eeea;
+  --amber:#b97f35; --amber-soft:#f4ead6;
+  --radius:16px;
+  --font-d:'Cabinet Grotesk',system-ui,sans-serif;
+  --font-b:'Satoshi',system-ui,sans-serif;
+  --max:1200px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--body); background:var(--paper); color:var(--ink);
-  line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
-}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--font-b);color:var(--ink);background:var(--porcelain);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-0.01em;font-weight:700}
-
-/* ---------- demo framing bar ---------- */
-.demo-bar{
-  background:var(--pine); color:#F2EFE4; font-size:13px;
-  padding:10px 0; position:static;
-}
-.demo-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.demo-bar strong{font-weight:600;letter-spacing:0.02em}
-.demo-bar nav{display:flex;gap:20px}
-.demo-bar nav a{color:#F2EFE4;text-decoration:none;opacity:0.85;font-size:13px}
-.demo-bar nav a:hover{opacity:1;text-decoration:underline}
-
-/* ---------- section scaffolding ---------- */
+::selection{background:var(--pine-700);color:#fff}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:-0.015em;font-weight:700}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:var(--amber);font-weight:700;margin-bottom:14px}
+/* Buttons: pill is the single interactive shape */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;
+  padding:14px 30px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;
+  transition:transform .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease;white-space:nowrap;cursor:pointer}
+.btn:active{transform:scale(.98)}
+.btn-dark{background:var(--pine-900);color:#fff}
+.btn-dark:hover{background:var(--pine-700);box-shadow:0 8px 24px rgba(20,49,42,.25)}
+.btn-light{background:#fff;color:var(--pine-900);border-color:var(--line)}
+.btn-light:hover{border-color:var(--pine-700)}
+.btn-amber{background:var(--amber);color:#0e2721}
+.btn-amber:hover{background:#c89645;box-shadow:0 8px 24px rgba(185,127,53,.35)}
+/* ============ DEMO BAR ============ */
+.demo-bar{background:var(--pine-950);color:#cfe0d6;font-size:13px}
+.demo-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.demo-bar strong{color:#fff;font-weight:700}
+.demo-bar .by{color:#9db8aa}
+/* ============ SECTION SCAFFOLD ============ */
 section{padding:96px 0}
-.sec-head{max-width:640px;margin-bottom:48px}
-.sec-head h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}
-.sec-head p{color:var(--muted);font-size:17px}
-.eyebrow{
-  display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.18em;
-  text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px;
-}
-
-/* ---------- BEFORE ---------- */
-#problem{background:#fff;border-bottom:1px solid var(--line)}
-.flaws{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 32px}
-.flaw{
-  font-size:13px;font-weight:600;color:var(--accent-deep);
-  border:1px solid var(--accent);border-radius:999px;padding:7px 14px;
-  background:var(--accent-soft);
-}
-.before-frame{
-  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-  background:#fff;box-shadow:0 24px 60px -30px rgba(23,58,46,0.25);
-}
-.before-bar{
-  background:#f4f4f4;border-bottom:1px solid var(--line);padding:10px 16px;
-  display:flex;align-items:center;gap:8px;font-size:12px;color:#888;
-}
-.before-bar .dot{width:10px;height:10px;border-radius:50%;background:#ddd}
-.before-bar .url{
-  flex:1;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:4px 12px;color:#666;font-size:12px;
-}
-/* faithful recreation of the current site, deliberately dated */
-.old-site{font-family:Arial,Helvetica,sans-serif;color:#333}
-.old-top{background:#1b75bb;color:#fff;text-align:center;font-size:13px;padding:8px}
-.old-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:14px 28px;border-bottom:1px solid #eee;flex-wrap:wrap;gap:8px;
-}
-.old-nav b{color:#1b75bb;font-size:20px}
-.old-nav .links{display:flex;gap:18px;font-size:14px;color:#555}
-.old-hero{background:#eef3f7;text-align:center;padding:56px 24px}
-.old-hero .k{color:#1b75bb;font-size:15px;letter-spacing:2px;text-transform:uppercase}
-.old-hero h3{font-family:Arial;font-size:38px;color:#222;margin:10px 0 18px;letter-spacing:0}
-.old-btn{
-  display:inline-block;background:#1b75bb;color:#fff;text-decoration:none;
-  padding:12px 28px;border-radius:4px;font-size:14px;
-}
-.old-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid #eee}
-.old-trio div{padding:32px 28px;border-right:1px solid #eee}
-.old-trio div:last-child{border-right:0}
-.old-trio h4{color:#1b75bb;font-size:17px;margin-bottom:8px}
-.old-trio p{font-size:13.5px;color:#666;line-height:1.55}
-.old-docs{padding:48px 28px;text-align:center;border-bottom:1px solid #eee}
-.old-docs h3{font-family:Arial;font-size:26px;color:#222;margin-bottom:24px}
-.old-doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:720px;margin:0 auto;text-align:left}
-.old-doc-grid h4{color:#1b75bb;font-size:17px;margin-bottom:6px}
-.old-doc-grid p{font-size:13.5px;color:#666}
-.old-svcs{padding:48px 28px;border-bottom:1px solid #eee}
-.old-svcs h3{font-family:Arial;font-size:26px;color:#222;text-align:center;margin-bottom:8px}
-.old-svcs .sub{text-align:center;color:#777;font-size:14px;margin-bottom:28px}
-.old-svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.old-svc-grid div{border:1px solid #eee;border-radius:8px;padding:20px}
-.old-svc-grid h4{color:#1b75bb;font-size:15px;margin-bottom:6px}
-.old-svc-grid p{font-size:13px;color:#666}
-.old-quote{background:#f7f7f7;padding:40px 28px;text-align:center;border-bottom:1px solid #eee}
-.old-quote p{font-style:italic;color:#555;max-width:640px;margin:0 auto 10px;font-size:15px}
-.old-quote b{color:#1b75bb;font-size:14px}
-.old-foot{background:#2b2b2b;color:#bbb;padding:36px 28px;font-size:13.5px}
-.old-foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto}
-.old-foot h4{color:#fff;font-size:15px;margin-bottom:10px}
-.before-note{
-  padding:14px 20px;background:var(--accent-soft);border-top:1px solid var(--line);
-  font-size:13.5px;color:#7c4a1d;
-}
-
-/* ---------- COMPARE slider (signature interaction) ---------- */
-#compare{background:var(--paper)}
-.ba{
-  position:relative;border-radius:var(--radius);overflow:hidden;
-  height:480px;box-shadow:0 30px 70px -30px rgba(23,58,46,0.35);
-  border:1px solid var(--line);touch-action:pan-y;
-}
-.ba-pane{position:absolute;inset:0}
-.ba-after{background:var(--paper)}
-.ba-before{position:absolute;top:0;bottom:0;left:0;width:50%;overflow:hidden;background:#fff}
-.ba-before-inner{position:absolute;top:0;bottom:0;left:0}
-.ba-tag{
-  position:absolute;top:16px;font-size:12px;font-weight:700;letter-spacing:0.14em;
-  text-transform:uppercase;padding:7px 14px;border-radius:999px;z-index:3;
-}
-.ba-tag.before{left:16px;background:#1b75bb;color:#fff}
-.ba-tag.after{right:16px;background:var(--ink);color:#fff}
-.ba-handle{
-  position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;z-index:2;
-  box-shadow:0 0 0 1px rgba(23,58,46,0.2);pointer-events:none;
-}
-.ba-knob{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:52px;height:52px;border-radius:50%;background:#fff;z-index:2;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 20px rgba(23,58,46,0.3);pointer-events:none;
-  font-size:15px;font-weight:700;color:var(--ink);letter-spacing:0;
-}
-.ba input[type=range]{
-  position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0;
-}
-/* mini hero recreations inside the slider */
-.mini{height:100%;display:flex;flex-direction:column;justify-content:center;padding:48px;gap:14px}
-.mini-old{background:#eef3f7;text-align:center;align-items:center}
-.mini-old .k{color:#1b75bb;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-family:Arial}
-.mini-old h3{font-family:Arial,Helvetica,sans-serif;font-size:clamp(26px,4vw,44px);color:#222}
-.mini-old .b{display:inline-block;background:#1b75bb;color:#fff;font-family:Arial;font-size:14px;padding:12px 26px;border-radius:4px;margin-top:8px}
-.mini-new{background:var(--paper)}
-.mini-new h3{font-size:clamp(30px,4.6vw,52px);color:var(--ink);max-width:520px}
-.mini-new h3 em{font-style:normal;color:var(--accent-deep)}
-.mini-new p{color:var(--muted);max-width:440px;font-size:16px}
-.mini-new .b{
-  display:inline-block;background:var(--ink);color:#fff;text-decoration:none;
-  font-weight:600;padding:14px 30px;border-radius:12px;margin-top:6px;width:fit-content;
-}
-.compare-hint{text-align:center;color:var(--muted);font-size:14px;margin-top:16px}
-
-/* ---------- AFTER: site nav ---------- */
-.site{border-top:1px solid var(--line)}
-.site-nav{
-  position:sticky;top:0;z-index:50;background:rgba(252,251,247,0.92);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-}
-.site-nav .wrap{
-  display:flex;align-items:center;justify-content:space-between;
-  height:72px;gap:20px;
-}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:19px}
-.brand svg{width:34px;height:34px;flex:none}
-.site-links{display:flex;gap:28px;align-items:center}
-.site-links a.nl{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink)}
-.site-links a.nl:hover{color:var(--accent-deep)}
-.btn{
-  display:inline-block;background:var(--ink);color:#fff;text-decoration:none;
-  font-weight:600;font-size:15px;padding:13px 26px;border-radius:12px;
-  transition:transform 0.16s ease, background 0.16s ease;white-space:nowrap;
-}
-.btn:hover{background:var(--pine);transform:translateY(-1px)}
-.btn:active{transform:translateY(1px) scale(0.98)}
-.btn small{font-weight:500;opacity:0.75}
-.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(30px,4vw,46px);margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:17px;max-width:60ch}
+/* Reveal on scroll: transform + opacity only, reduced-motion safe */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+/* ============ BEFORE (recreated current site) ============ */
+.before-sec{background:#eceff1}
+.before-frame{background:#fff;border:1px solid #d5dbe0;border-radius:8px;overflow:hidden;box-shadow:0 24px 60px rgba(30,50,45,.12);position:relative}
+.before-scope{font-family:Arial,Helvetica,sans-serif;color:#333;font-size:15px;line-height:1.55}
+.before-scope .b-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;border-bottom:1px solid #e3e7ea;background:#fff;flex-wrap:wrap}
+.before-scope .b-brand{font-weight:700;font-size:17px;color:#1a1a1a}
+.before-scope .b-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13.5px;color:#444}
+.before-scope .b-links span{cursor:default}
+.before-scope .b-book{background:#2b6cb0;color:#fff;border-radius:4px;padding:9px 18px;font-size:13.5px;font-weight:700}
+.before-scope .b-hero{text-align:center;padding:52px 24px 40px;background:#f7f9fa}
+.before-scope .b-hero h1{font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;color:#1a1a1a;letter-spacing:0;margin-bottom:12px;line-height:1.25}
+.before-scope .b-hero p{color:#555;max-width:640px;margin:0 auto}
+.before-scope .b-team{padding:40px 24px;text-align:center;border-top:1px solid #eef1f3}
+.before-scope .b-team h2{font-family:Arial,Helvetica,sans-serif;font-size:22px;margin-bottom:8px;letter-spacing:0}
+.before-scope .b-typo{background:#fff8e1;border:1px dashed #d9a821;border-radius:6px;padding:12px 16px;display:inline-block;margin:10px 0 4px;position:relative}
+.before-scope .b-staff{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.before-scope .b-staff span{background:#eef2f5;border-radius:4px;padding:8px 14px;font-size:13.5px}
+.before-scope .b-clutter{padding:36px 24px;background:#f7f9fa;border-top:1px solid #eef1f3;text-align:center}
+.before-scope .b-clutter h3{font-family:Arial,Helvetica,sans-serif;font-size:19px;margin-bottom:6px;letter-spacing:0}
+.before-scope .b-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:860px;margin:22px auto 0}
+.before-scope .b-cell{background:#fff;border:1px solid #e3e7ea;border-radius:6px;padding:16px 10px;font-size:13px;color:#555}
+.before-scope .b-cell b{display:block;color:#222;margin-bottom:4px;font-size:13.5px}
+.before-scope .b-badges{display:flex;justify-content:center;align-items:center;gap:22px;padding:30px 24px;border-top:1px solid #eef1f3;flex-wrap:wrap;background:#fff}
+.before-scope .b-badges img{width:120px;height:120px;object-fit:contain}
+.before-scope .b-badge-note{font-size:13px;color:#777;max-width:280px;text-align:left}
+.before-scope .b-foot{background:#2d3748;color:#cbd5e0;padding:30px 24px;text-align:center;font-size:13.5px}
+.before-scope .b-foot .b-book{margin-top:12px;display:inline-block}
+.before-scope .b-offsite{display:block;margin-top:8px;font-size:12.5px;color:#9aa7b5}
+/* annotation flags */
+.flag{position:absolute;width:26px;height:26px;border-radius:50%;background:#c0392b;color:#fff;font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(192,57,43,.4);z-index:3}
+.flag-legend{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;margin-top:26px}
+.flag-legend div{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:#3d4a44}
+.flag-legend .n{flex:none;width:24px;height:24px;border-radius:50%;background:#c0392b;color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.flag-legend b{color:var(--ink)}
+@media(max-width:760px){.before-scope .b-grid{grid-template-columns:repeat(2,1fr)}.flag-legend{grid-template-columns:1fr}}
+/* ============ SLIDER ============ */
+.slider-sec{background:var(--paper)}
+.ba{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 70px rgba(20,49,42,.18);
+  aspect-ratio:16/8.5;user-select:none;touch-action:pan-y;background:#fff}
+.ba-pane{position:absolute;inset:0;overflow:hidden}
+.ba-after{z-index:1}
+.ba-before{z-index:2;width:100%}
+.ba-inner{position:absolute;inset:0}
+.ba-tag{position:absolute;top:18px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px 16px;border-radius:999px;z-index:4;background:rgba(255,255,255,.92);color:var(--ink);box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.ba-before .ba-tag{left:18px}
+.ba-after .ba-tag{right:18px;background:var(--pine-900);color:#fff}
+.ba-handle{position:absolute;top:0;bottom:0;width:3px;background:#fff;z-index:3;box-shadow:0 0 20px rgba(0,0,0,.35);cursor:ew-resize}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;
+  background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);
+  font-size:18px;color:var(--pine-900);font-weight:700}
+.ba-hint{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
+/* mini before hero (generic) */
+.mini-before{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:#f7f9fa;font-family:Arial,Helvetica,sans-serif;padding:24px}
+.mini-before h3{font-family:Arial,Helvetica,sans-serif;font-size:clamp(18px,2.6vw,30px);color:#1a1a1a;max-width:520px;line-height:1.3;margin-bottom:10px;letter-spacing:0}
+.mini-before p{color:#666;font-size:clamp(12px,1.4vw,15px);max-width:460px;margin-bottom:18px}
+.mini-before .mb-btn{background:#2b6cb0;color:#fff;border-radius:4px;padding:10px 26px;font-weight:700;font-size:14px}
+/* mini after hero (premium) */
+.mini-after{height:100%;display:grid;grid-template-columns:1.05fr 1fr;background:var(--porcelain)}
+.mini-after .ma-copy{padding:clamp(20px,4vw,54px);display:flex;flex-direction:column;justify-content:center}
+.mini-after .ma-copy h3{font-size:clamp(22px,3.2vw,42px);margin-bottom:12px}
+.mini-after .ma-copy p{color:var(--muted);font-size:clamp(12px,1.4vw,15.5px);max-width:38ch;margin-bottom:20px}
+.mini-after .ma-copy .btn{padding:12px 26px;font-size:14px}
+.mini-after .ma-img{position:relative;overflow:hidden}
+.mini-after .ma-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:640px){.ba{aspect-ratio:4/4.6}.mini-after{grid-template-columns:1fr}.mini-after .ma-img{display:none}}
+/* ============ WALKTHROUGH ============ */
+.walk-sec{background:var(--porcelain)}
+.change{padding:64px 0;border-top:1px solid var(--line)}
+.change:first-of-type{border-top:none}
+.ch-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ch-split.flip .ch-before{order:2}
+.ch-label{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.ch-before .ch-label{color:#c0392b}
+.ch-after .ch-label{color:var(--pine-600)}
+.ch-before{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;color:#6b7a72;font-size:15px}
+.ch-before .old{font-size:17px;color:#3d4a44}
+.ch-after h3{font-size:clamp(24px,3vw,34px);margin-bottom:12px}
+.ch-after p{color:var(--muted);font-size:16.5px;max-width:52ch}
+.ch-after p b{color:var(--ink)}
+.ch-band{background:var(--pine-900);border-radius:var(--radius);color:#e8f0ea;padding:56px clamp(28px,5vw,64px);display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.ch-band h3{color:#fff;font-size:clamp(24px,3vw,34px);margin-bottom:12px}
+.ch-band p{color:#b9cdc1;font-size:16.5px;max-width:52ch}
+.ch-band p b{color:#fff}
+.ch-band .old{color:#e8c9c9;background:rgba(192,57,43,.18);border:1px dashed #c0392b;border-radius:12px;padding:22px 24px;font-size:15px}
+.ch-quote{max-width:820px;margin:0 auto;text-align:center}
+.ch-quote .big{font-family:var(--font-d);font-size:clamp(24px,3.4vw,38px);line-height:1.25;margin-bottom:18px}
+.ch-quote .big s{color:#b04a3a;text-decoration-thickness:2px}
+.ch-quote .big em{font-style:normal;color:var(--pine-700)}
+.ch-quote p{color:var(--muted);font-size:16.5px;max-width:56ch;margin:0 auto}
+.ch-quote p b{color:var(--ink)}
+@media(max-width:860px){.ch-split{grid-template-columns:1fr;gap:28px}.ch-split.flip .ch-before{order:0}.ch-band{grid-template-columns:1fr;gap:28px}}
+/* ============ AFTER: SITE CONCEPT ============ */
+.after-sec{background:var(--paper);padding-bottom:0}
+.site{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--porcelain);box-shadow:0 40px 90px rgba(20,49,42,.16)}
+.site-nav{position:sticky;top:0;z-index:20;background:rgba(250,251,250,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.site-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.wordmark{font-family:var(--font-d);font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-0.01em}
+.wordmark small{display:block;font-family:var(--font-b);font-weight:500;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:500;color:#3d4a44}
+.nav-links a{text-decoration:none;position:relative}
+.nav-links a:hover{color:var(--pine-700)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{font-weight:700;font-size:15px;text-decoration:none}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px}
-
-/* ---------- AFTER: hero ---------- */
-.hero{padding:72px 0 64px;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(40px,5.4vw,68px);margin:0 0 18px;max-width:520px}
-.hero h1 em{font-style:normal;color:var(--accent-deep)}
-.hero .sub{font-size:18px;color:var(--muted);max-width:46ch;margin-bottom:30px}
-.hero-cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.hero-cta .ghost{font-weight:600;font-size:15px;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
-.hero-cta .ghost:hover{color:var(--accent-deep)}
-.hero-blob{
-  position:absolute;right:-140px;top:-80px;width:520px;height:520px;
-  background:var(--sage);border-radius:50%;z-index:-1;
-}
-.hero-blob2{
-  position:absolute;right:300px;bottom:-120px;width:260px;height:260px;
-  background:var(--accent-soft);border-radius:50%;z-index:-1;
-}
-.hero-visual{position:relative;min-height:420px}
-.arch{
-  position:absolute;right:24px;top:0;width:min(340px,72%);height:440px;
-  background:var(--sage);border-radius:200px 200px var(--radius) var(--radius);
-  overflow:hidden;
-}
-.arch img{
-  position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:top center;
-}
-.arch .arch-inner{
-  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:28px;color:var(--ink);
-  background:linear-gradient(180deg,rgba(23,58,46,0) 40%,rgba(23,58,46,0.55) 100%);
-}
-.arch .arch-inner b{font-family:var(--display);font-size:22px;color:#fff;line-height:1.25}
-.arch .arch-inner span{color:#EDE9DB;font-size:14px;margin-top:6px}
-.review-card{
-  position:absolute;left:0;bottom:56px;max-width:330px;background:#fff;
-  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
-  box-shadow:0 20px 50px -20px rgba(23,58,46,0.3);
-}
-.review-card .stars{color:var(--accent);font-size:15px;letter-spacing:3px;margin-bottom:10px}
-.review-card p{font-size:14.5px;line-height:1.55;color:var(--ink)}
-.review-card cite{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:10px;font-weight:600}
-.rating-badge{
-  position:absolute;left:36px;top:24px;background:var(--ink);color:#fff;
-  border-radius:14px;padding:12px 18px;font-size:14px;font-weight:600;
-  box-shadow:0 14px 34px -12px rgba(23,58,46,0.5);
-}
-.rating-badge b{color:#F2C66D}
-
-/* ---------- trust strip ---------- */
-.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:26px;padding-bottom:26px}
-.trust div{padding:6px 24px;border-left:1px solid var(--line)}
-.trust div:first-child{border-left:0;padding-left:0}
-.trust b{display:block;font-family:var(--display);font-size:19px;margin-bottom:2px}
-.trust span{font-size:13.5px;color:var(--muted)}
-
-/* ---------- services ---------- */
-.svc-feature{
-  display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
-  border-radius:var(--radius);overflow:hidden;margin-bottom:40px;background:#fff;
-}
-.svc-feature .copy{padding:52px}
-.svc-feature .copy h3{font-size:clamp(26px,3vw,34px);margin-bottom:14px}
-.svc-feature .copy p{color:var(--muted);font-size:16.5px;margin-bottom:22px;max-width:44ch}
-.svc-feature .visual{background:var(--ink);color:#F2EFE4;padding:52px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.svc-feature .visual .big{font-family:var(--display);font-size:clamp(40px,4.6vw,58px);line-height:1;color:#fff}
-.svc-feature .visual .big em{font-style:normal;color:#F2C66D}
-.svc-feature .visual p{color:#C9CFC6;font-size:15.5px;max-width:36ch}
-.svc-list{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
-.svc-list article{padding:26px 0;border-top:1px solid var(--line)}
-.svc-list h3{font-size:21px;margin-bottom:8px}
-.svc-list p{color:var(--muted);font-size:15.5px;max-width:52ch}
-
-/* ---------- doctors ---------- */
-#doctors{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.doc{
-  display:grid;grid-template-columns:170px 1fr;gap:28px;align-items:center;
-  border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:var(--paper);
-}
-.doc img{width:170px;height:170px;object-fit:cover;border-radius:14px}
-.doc h3{font-size:23px;margin-bottom:8px}
-.doc p{font-size:15px;color:var(--muted)}
-.doc .creds{display:block;margin-top:12px;font-size:13.5px;color:var(--accent-deep);font-weight:600}
-
-/* ---------- loyalty ---------- */
-.loyal{background:var(--sage);border-radius:calc(var(--radius) + 8px);padding:64px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:48px;align-items:center}
-.loyal h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px}
-.loyal p{color:#3E4A44;font-size:16.5px;max-width:52ch}
-.loyal .card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:32px;
-}
-.loyal .card b{font-family:var(--display);font-size:19px;display:block;margin-bottom:8px}
-.loyal .card p{font-size:14.5px;color:var(--muted);margin-bottom:18px}
-
-/* ---------- reviews ---------- */
-.rev-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:28px}
-.rev-main{
-  border:1px solid var(--line);border-radius:var(--radius);padding:44px;background:#fff;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.rev-main .stars{color:var(--accent);letter-spacing:4px;margin-bottom:16px;font-size:17px}
-.rev-main blockquote{font-family:var(--display);font-size:clamp(21px,2.6vw,28px);line-height:1.35;font-weight:500}
-.rev-main cite{display:block;font-style:normal;margin-top:18px;font-size:14px;color:var(--muted);font-weight:600}
-.rev-side{display:grid;gap:28px}
-.rev{
-  border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;
-}
-.rev .stars{color:var(--accent);letter-spacing:4px;margin-bottom:12px;font-size:14px}
-.rev blockquote{font-size:16.5px;line-height:1.55}
-.rev cite{display:block;font-style:normal;margin-top:14px;font-size:13.5px;color:var(--muted);font-weight:600}
-.rev-note{margin-top:22px;font-size:13.5px;color:var(--muted)}
-
-/* ---------- visit ---------- */
-#visit{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.visit-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:start}
+@media(max-width:900px){.nav-links{display:none}.nav-cta .btn{display:none}.burger{display:block}
+  .site-nav.open .nav-links{display:flex;position:absolute;top:72px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 24px 28px;gap:18px;border-bottom:1px solid var(--line)}}
+/* hero */
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:0;align-items:stretch;min-height:560px}
+.hero-copy{padding:clamp(40px,6vw,88px) clamp(28px,5vw,72px);display:flex;flex-direction:column;justify-content:center;background:var(--porcelain)}
+.hero-copy h1{font-size:clamp(38px,5vw,64px);font-weight:800;margin-bottom:18px}
+.hero-copy h1 em{font-style:italic;font-weight:700;color:var(--pine-700)}
+.hero-copy .sub{color:var(--muted);font-size:17.5px;max-width:42ch;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:22px;font-size:13.5px;color:var(--faint)}
+.hero-img{position:relative;overflow:hidden;min-height:420px}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-img figcaption{position:absolute;left:20px;bottom:18px;background:rgba(14,39,33,.82);color:#eef4ef;font-size:12.5px;
+  padding:9px 16px;border-radius:999px;letter-spacing:.02em}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-img{min-height:320px}}
+/* trust strip */
+.trust{background:var(--pine-900);color:#e8f0ea}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding-top:34px;padding-bottom:34px}
+.trust div{padding:6px 34px;border-left:1px solid rgba(255,255,255,.16)}
+.trust div:first-child{border-left:none;padding-left:0}
+.trust b{display:block;font-family:var(--font-d);font-size:21px;color:#fff;margin-bottom:4px}
+.trust span{font-size:14px;color:#a9bfb2}
+@media(max-width:760px){.trust .wrap{grid-template-columns:1fr;gap:20px}.trust div{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,.16);padding-top:20px}.trust div:first-child{border-top:none;padding-top:6px}}
+/* treatments */
+.treat{background:var(--porcelain);padding:96px 0}
+.treat-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.treat-cell{padding:38px 34px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.treat-cell:nth-child(3n){border-right:none}
+.treat-cell h3{font-size:21px;margin-bottom:6px}
+.treat-cell .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:14px}
+.treat-cell ul{list-style:none}
+.treat-cell li{padding:9px 0;border-top:1px solid var(--line-soft);font-size:15.5px;color:#3d4a44}
+.treat-cell li:first-child{border-top:none}
+.treat-cell.feature{background:var(--pine-900);color:#e8f0ea;border-radius:0}
+.treat-cell.feature h3{color:#fff}
+.treat-cell.feature li{color:#b9cdc1;border-top-color:rgba(255,255,255,.14)}
+.treat-cell.feature .tag{color:#e3b96a}
+@media(max-width:900px){.treat-grid{grid-template-columns:1fr 1fr}.treat-cell:nth-child(3n){border-right:1px solid var(--line)}.treat-cell:nth-child(2n){border-right:none}}
+@media(max-width:600px){.treat-grid{grid-template-columns:1fr}.treat-cell{border-right:none}}
+/* daisy */
+.daisy{background:var(--paper);padding:96px 0}
+.daisy-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(36px,6vw,88px);align-items:center}
+.daisy-grid figure{border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px rgba(20,49,42,.16)}
+.daisy-grid figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.4}
+.daisy-grid figcaption{font-size:13px;color:var(--muted);padding:14px 4px 0}
+.daisy-copy h2{font-size:clamp(30px,4vw,44px);margin-bottom:18px}
+.daisy-copy p{color:var(--muted);font-size:17px;margin-bottom:16px;max-width:54ch}
+.daisy-copy p b{color:var(--ink)}
+.daisy-creds{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.daisy-creds span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:500;color:#3d4a44}
+@media(max-width:900px){.daisy-grid{grid-template-columns:1fr}}
+/* membership */
+.member{background:var(--pine-900);border-radius:20px;color:#e8f0ea;padding:clamp(48px,6vw,84px) clamp(28px,6vw,80px);
+  display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin:0 0 96px}
+.member h2{color:#fff;font-size:clamp(30px,4vw,44px);margin-bottom:16px}
+.member .lede{color:#b9cdc1;font-size:17px;max-width:48ch;margin-bottom:28px}
+.member ul{list-style:none;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.16)}
+.member li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15.5px;color:#d7e3da}
+.member li b{color:#fff}
+.member .offer{background:var(--amber-soft);border-radius:var(--radius);padding:38px 34px;color:var(--ink)}
+.member .offer .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:10px}
+.member .offer h3{font-size:26px;margin-bottom:10px}
+.member .offer p{font-size:15.5px;color:#4a5a52;margin-bottom:22px}
+@media(max-width:900px){.member{grid-template-columns:1fr;gap:36px}}
+/* visit */
+.visit{background:var(--porcelain);padding:96px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);align-items:start}
 .visit-info h2{font-size:clamp(30px,4vw,44px);margin-bottom:20px}
-.vrow{padding:18px 0;border-top:1px solid var(--line);font-size:16px}
-.vrow b{display:block;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:6px}
-.vrow a.tel{font-family:var(--display);font-size:26px;font-weight:700;text-decoration:none}
-.vrow a.tel:hover{color:var(--accent-deep)}
-.vrow a.mail{color:var(--ink);font-weight:600}
-.hours-table{width:100%;font-size:15.5px}
-.hours-table div{display:flex;justify-content:space-between;padding:5px 0}
-.map-frame{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-height:420px;background:var(--sage)}
-.map-frame iframe{width:100%;height:420px;border:0;display:block}
-
-/* ---------- final CTA + footer ---------- */
-.final{background:var(--paper);text-align:center}
-.final h2{font-size:clamp(32px,4.6vw,52px);margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto}
-.final p{color:var(--muted);font-size:17px;margin-bottom:30px}
-.final .btn{font-size:17px;padding:16px 38px}
-footer{background:var(--pine);color:#D8D4C4;padding:64px 0 32px}
-.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:44px}
-.foot-grid .brand{color:#fff;margin-bottom:14px}
-.foot-grid p{font-size:14.5px;color:#A9A596;max-width:34ch}
-.foot-grid h4{color:#fff;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;font-family:var(--body)}
-.foot-grid a,.foot-grid span{display:block;font-size:14.5px;color:#C9C5B4;text-decoration:none;margin-bottom:8px}
-.foot-grid a:hover{color:#fff;text-decoration:underline}
-.foot-base{border-top:1px solid rgba(255,255,255,0.14);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8E8A78}
-
-/* ---------- WHY section ---------- */
-#why{background:#fff;border-top:1px solid var(--line)}
-.why-row{
-  display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px;
-  padding:30px 0;border-top:1px solid var(--line);align-items:start;
-}
-.why-row:last-child{border-bottom:1px solid var(--line)}
-.why-row h3{font-size:21px}
-.why-row h3 .fix{display:block;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px;font-family:var(--body)}
-.why-row p{color:var(--muted);font-size:16px;max-width:62ch}
-.closing{background:var(--paper);text-align:center;padding:72px 0}
-.closing p{color:var(--muted);font-size:15.5px;max-width:60ch;margin:0 auto}
-.closing b{color:var(--ink)}
-
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s cubic-bezier(0.16,1,0.3,1)}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
-  *{transition:none !important}
-}
-
-/* ---------- responsive ---------- */
-@media (max-width:960px){
-  section{padding:72px 0}
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .hero-visual{min-height:380px}
-  .trust .wrap{grid-template-columns:1fr 1fr;gap:18px}
-  .trust div{padding:6px 0 6px 18px}
-  .trust div:nth-child(odd){border-left:0;padding-left:0}
-  .svc-feature{grid-template-columns:1fr}
-  .svc-feature .copy,.svc-feature .visual{padding:36px}
-  .svc-list{grid-template-columns:1fr}
-  .doc-grid{grid-template-columns:1fr}
-  .loyal{grid-template-columns:1fr;padding:40px 28px;gap:32px}
-  .rev-grid{grid-template-columns:1fr}
-  .visit-grid{grid-template-columns:1fr}
-  .why-row{grid-template-columns:1fr;gap:10px}
-  .foot-grid{grid-template-columns:1fr;gap:32px}
-  .old-trio{grid-template-columns:1fr}
-  .old-trio div{border-right:0;border-bottom:1px solid #eee}
-  .old-svc-grid{grid-template-columns:1fr}
-  .old-doc-grid{grid-template-columns:1fr}
-  .old-foot-grid{grid-template-columns:1fr}
-  .ba{height:560px}
-}
-@media (max-width:760px){
-  .site-links{
-    display:none;position:absolute;top:72px;left:0;right:0;background:var(--paper);
-    flex-direction:column;align-items:flex-start;padding:20px 24px 28px;gap:18px;
-    border-bottom:1px solid var(--line);
-  }
-  .site-links.open{display:flex}
-  .burger{display:block}
-  .demo-bar nav{display:none}
-  .arch{height:360px}
-  .hero-visual{min-height:440px}
-  .review-card{bottom:20px}
-}
-
+.v-rows{border-top:1px solid var(--line)}
+.v-row{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.v-row .k{color:var(--faint);font-weight:500}
+.v-row a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--amber)}
+.v-row a:hover{color:var(--pine-700)}
+.visit-photo{border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px rgba(20,49,42,.14)}
+.visit-photo img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+@media(max-width:900px){.visit-grid{grid-template-columns:1fr}}
+/* final CTA */
+.final{background:var(--pine-950);color:#e8f0ea;text-align:center;padding:110px 0}
+.final h2{color:#fff;font-size:clamp(34px,5vw,58px);margin-bottom:16px;font-weight:800}
+.final p{color:#a9bfb2;font-size:17.5px;max-width:52ch;margin:0 auto 34px}
+.final .big-call{display:inline-flex}
+.final .meta{margin-top:26px;font-size:14px;color:#7e978a}
+/* footer */
+footer{background:var(--pine-950);border-top:1px solid rgba(255,255,255,.1);color:#8fa79a;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:26px;padding-bottom:26px;flex-wrap:wrap}
+footer nav{display:flex;gap:22px}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:#fff}
+footer a.tel{color:#fff;font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
 
-<!-- demo framing -->
+<!-- DEMO BAR -->
 <div class="demo-bar">
   <div class="wrap">
-    <strong>Concept redesign for Southridge Dental, Nampa ID, by Revamps Studio</strong>
-    <nav>
-      <a href="#problem">The problem</a>
-      <a href="#compare">Compare</a>
-      <a href="#redesign">The redesign</a>
-      <a href="#why">Why it wins</a>
-    </nav>
+    <div><strong>Website concept</strong> for A Nurse's Touch Skin Care &amp; Medspa · Fort Worth, TX</div>
+    <div class="by">Prepared by Revamps Studio · October 2026</div>
   </div>
 </div>
 
 <!-- ============ BEFORE ============ -->
-<section id="problem">
+<section class="before-sec" id="before">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head rv">
+      <div class="eyebrow">The starting point</div>
       <h2>Their site today</h2>
-      <p>A faithful recreation of southridge-dental.com as it stands: 421 Google reviews sitting behind a homepage that has not been touched in over two years.</p>
+      <p>Recreated from anursestouchfortworth.com, October 2026. A generic AI-built template holding a 500+ review business. Four things are quietly costing them clients.</p>
     </div>
-    <div class="flaws reveal">
-      <span class="flaw">Homepage untouched 787+ days</span>
-      <span class="flaw">Blog silent since Aug 2024</span>
-      <span class="flaw">Booking means calling, no online option</span>
-      <span class="flaw">Two phone numbers in the wild</span>
-      <span class="flaw">Title tag says Dr. Leeb, page says Dr. Howard</span>
-    </div>
-    <div class="before-frame reveal">
-      <div class="before-bar">
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="url">southridge-dental.com</span>
-      </div>
-      <div class="old-site">
-        <div class="old-top">Call: (208) 466-2458</div>
-        <div class="old-nav">
-          <b>Southridge Dental</b>
-          <div class="links"><span>Home</span><span>About</span><span>Services</span><span>Blog</span><span>Contact Us</span></div>
+    <div class="before-frame rv">
+      <div class="before-scope">
+        <div class="b-nav">
+          <span class="b-brand">A Nurses Touch Skin Care &amp; Med Spa</span>
+          <div class="b-links"><span>Home</span><span>Services</span><span>Location</span><span>Team</span><span>Financing</span><span>About</span><span>Membership</span></div>
+          <span class="b-book">Book online</span>
         </div>
-        <div class="old-hero">
-          <div class="k">Put Your Trust In</div>
-          <div class="k" style="margin-top:6px">Welcome To</div>
-          <h3>Southridge Dental</h3>
-          <span class="old-btn">Contact Us Today</span>
+        <div class="b-hero">
+          <h1>Welcome to A Nurses Touch Skin Care &amp; Med Spa in Fort Worth, Texas</h1>
+          <p>An award-winning spa in Fort Worth offering unparalleled service, quality, and expertise on exclusive services.</p>
         </div>
-        <div class="old-trio">
-          <div>
-            <h4>Advanced Technology</h4>
-            <p>Our office utilizes state-of-the-art dental technology to better suit your needs. Nothing beats an easier, more comfortable dental visit.</p>
+        <div class="b-team">
+          <h2>Meet A Nurses Touch Skin care &amp; Medspa</h2>
+          <div class="b-typo">We are a team of <b>specialitlty</b> trained Nurses and estheticians
+            <span class="flag" style="top:-13px;right:-13px">1</span>
           </div>
-          <div>
-            <h4>Your Comfort</h4>
-            <p>At Southridge Dental, we make your experience at our office enjoyable and convenient, and we give each patient our personal attention.</p>
-          </div>
-          <div>
-            <h4>Patient Loyalty Program</h4>
-            <p>We created an in-house insurance program because a large number of our loyal patients found themselves without dental insurance.</p>
+          <div class="b-staff"><span>Daisy: Master Nurse Injector, Electrologist Trainer, Areola Artist, Permanent Makeup Specialist &amp; owner</span><span>Marlow: Esthetician, Laser tech, Electrologist, Scalp Pigmentation Artist</span><span>Stephanie: Permanent Makeup Specialist, Esthetician, Laser tech, Electrologist</span><span>Ryann: Esthetician, Laser tech, Experienced Electrologist</span><span>Kaitlyn: Office Manager</span></div>
+        </div>
+        <div class="b-clutter">
+          <h3>Save thousands &amp; join our Membership savings account!</h3>
+          <p style="color:#666;font-size:14px">Check our website for monthly sales!! Plus $50 off your 1st injection of Botox or Filler (purchase of $250 or more)</p>
+          <div class="b-grid">
+            <div class="b-cell"><b>Savings account</b>A monthly savings account makes big bills affordable.</div>
+            <div class="b-cell"><b>Discounts</b>Special discounted pricing for members on all treatments.</div>
+            <div class="b-cell"><b>Shareable</b>You can share the balance with family or friends.</div>
+            <div class="b-cell"><b>Flexible</b>Life happens, so you can always freeze this membership.</div>
           </div>
         </div>
-        <div class="old-docs">
-          <h3>Meet Your Dentists</h3>
-          <div class="old-doc-grid">
-            <div>
-              <h4>Dr. Squires</h4>
-              <p>Undergraduate training at Brigham Young University, dental degree from Creighton University School of Dentistry in Omaha, Nebraska. With Southridge Dental since 2015.</p>
-            </div>
-            <div>
-              <h4>Dr. Howard</h4>
-              <p>Undergraduate degree in biochemistry from Ball State University, doctorate from the University of Minnesota School of Dentistry, class of 1998.</p>
-            </div>
-          </div>
+        <div class="b-badges">
+          <img src="assets/img/award2023.jpg" alt="Best of 2023 award badge still displayed on the site in late 2026">
+          <span class="flag" style="position:static">2</span>
+          <p class="b-badge-note"><b style="color:#222">A 2023 badge, still up in October 2026.</b><br>Their 2024, 2025, and 2026 Fort Worth Magazine honors never made it onto the homepage.</p>
         </div>
-        <div class="old-svcs">
-          <h3>Our Services</h3>
-          <p class="sub">Dentistry for the whole family</p>
-          <div class="old-svc-grid">
-            <div><h4>CEREC Crowns</h4><p>One-day crowns in Nampa, Idaho. Ready in a matter of hours, fitted the same day.</p></div>
-            <div><h4>Smile Makeovers</h4><p>Veneers, whitening, bonding, crowns, or implants that fit your budget.</p></div>
-            <div><h4>Pediatric Dentistry</h4><p>The latest techniques in children's dentistry, delivered with thoughtful gentleness.</p></div>
-            <div><h4>Family Dentistry</h4><p>General, family, and cosmetic dentistry for patients of every age.</p></div>
-            <div><h4>Dental Implants</h4><p>Implants fit directly into your jawbone, mimicking regular teeth.</p></div>
-            <div><h4>Teeth Whitening</h4><p>Professional whitening, the most popular cosmetic service of the moment.</p></div>
-          </div>
-        </div>
-        <div class="old-quote">
-          <p>"This is the absolute best dentist's office I've ever been to. Shannon is by far the best to work with, from scheduling to follow up, she's on top of everything."</p>
-          <b>M.D.</b>
-        </div>
-        <div class="old-foot">
-          <div class="old-foot-grid">
-            <div>
-              <h4>Contact Us</h4>
-              2811 12th Ave Rd, Nampa, ID 83686<br>
-              Call: (208) 466-2458<br>
-              help@southridgesmiles.com
-            </div>
-            <div>
-              <h4>Hours</h4>
-              Monday to Thursday: 7:00am to 3:00pm<br>
-              Friday to Sunday: Closed
-            </div>
-            <div>
-              <h4>Directions</h4>
-              Find us on 12th Ave Rd in Nampa.<br>
-              Call: (208) 466-2458
-            </div>
-          </div>
+        <div class="b-foot">
+          4255 Bryant Irvin Rd, Suite 211 · Fort Worth, TX 76109<br>(682) 200-3278 · anursestouchfortworth@gmail.com<br>
+          <span class="b-book">Book online</span>
+          <span class="b-offsite">Booking opens na02.patientnow.com, a different website <span class="flag" style="position:static;display:inline-flex;width:22px;height:22px;font-size:11px">3</span></span>
         </div>
       </div>
-      <div class="before-note">Recreated from the live site for comparison. Nothing here is invented: the copy, the doctors, the hours, and the phone number are theirs.</div>
+    </div>
+    <div class="flag-legend rv">
+      <div><span class="n">1</span><span><b>A typo on the homepage.</b> "Specialitlty" has been live for months on the page that introduces the team.</span></div>
+      <div><span class="n">2</span><span><b>Proof is stale.</b> The newest award shown is from 2023, while the 2024-2026 honors sit unused.</span></div>
+      <div><span class="n">3</span><span><b>Booking leaves the site.</b> "Book online" jumps to a PatientNow subdomain with a different look, then asks the client to start over.</span></div>
+      <div><span class="n">4</span><span><b>Everything shouts at once.</b> Membership, sales, gift certificates, and thirteen services compete on one long page, so nothing lands.</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ COMPARE ============ -->
-<section id="compare">
+<!-- ============ SLIDER ============ -->
+<section class="slider-sec" id="compare">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <h2>Drag to compare</h2>
-      <p>Same practice. Same phone number. A different first impression.</p>
+    <div class="sec-head rv">
+      <h2>Drag the handle</h2>
+      <p>The same business, two websites. Left is the template they have. Right is the concept below. One of these looks like it charges for Botox by the unit and earns it.</p>
     </div>
-    <div class="ba reveal" id="ba">
+    <div class="ba rv" id="ba" role="slider" aria-label="Before and after comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
       <div class="ba-pane ba-after">
-        <div class="mini mini-new">
-          <h3>A <em>calmer</em> kind of dental visit.</h3>
-          <p>Same-day crowns, gentle care for kids and grandparents, and 400+ five-star reviews from your Nampa neighbors.</p>
-          <span class="b">Call (208) 466-2458</span>
-        </div>
-      </div>
-      <div class="ba-before" id="baBefore">
-        <div class="ba-before-inner" id="baBeforeInner">
-          <div class="mini mini-old">
-            <div class="k">Put Your Trust In</div>
-            <div class="k">Welcome To</div>
-            <h3>Southridge Dental</h3>
-            <span class="b">Contact Us Today</span>
+        <div class="ba-inner">
+          <div class="mini-after">
+            <div class="ma-copy">
+              <h3>Skin care with a <em style="font-style:italic;color:var(--pine-700)">nurse's</em> judgment.</h3>
+              <p>Botox, facials, and laser in Fort Worth, done by registered nurses who do this all day.</p>
+              <div><span class="btn btn-dark">Book a visit</span></div>
+            </div>
+            <div class="ma-img"><img src="assets/img/gal1.jpg" alt="Treatment room at A Nurse's Touch"></div>
           </div>
         </div>
+        <span class="ba-tag">After</span>
       </div>
-      <span class="ba-tag before">Before</span>
-      <span class="ba-tag after">After</span>
-      <div class="ba-handle" id="baHandle"><div class="ba-knob">&#8592;&#8594;</div></div>
-      <input type="range" id="baRange" min="2" max="98" value="50" aria-label="Drag to compare the old and new homepage">
+      <div class="ba-pane ba-before" id="baBefore">
+        <div class="ba-inner">
+          <div class="mini-before">
+            <h3>Welcome to A Nurses Touch Skin Care &amp; Med Spa in Fort Worth, Texas</h3>
+            <p>An award-winning spa in Fort Worth offering unparalleled service, quality, and expertise on exclusive services.</p>
+            <span class="mb-btn">Book online</span>
+          </div>
+        </div>
+        <span class="ba-tag">Before</span>
+      </div>
+      <div class="ba-handle" id="baHandle"><span class="ba-knob">&#10231;</span></div>
     </div>
-    <p class="compare-hint">Drag the handle, or use your arrow keys on the slider.</p>
+    <p class="ba-hint">Tip: it works with touch, mouse, and arrow keys.</p>
   </div>
 </section>
 
-<!-- ============ AFTER: the redesign ============ -->
-<div class="site" id="redesign">
-
-  <nav class="site-nav" aria-label="Southridge Dental">
-    <div class="wrap">
-      <a class="brand" href="#redesign" aria-label="Southridge Dental home">
-        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#173A2E"/><path d="M20 13c-4.5 0-7.5 3.2-7.5 7.5 0 8.5 6.5 10.5 6.5 18.5 0 5.5 2.5 11.5 6.5 11.5 3.2 0 3.2-6.5 6.5-6.5s3.3 6.5 6.5 6.5c4 0 6.5-6 6.5-11.5 0-8 6.5-10 6.5-18.5 0-4.3-3-7.5-7.5-7.5-4 0-5 3.5-12 3.5s-8-3.5-12-3.5z" fill="#FCFBF7"/></svg>
-        Southridge Dental
-      </a>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <div class="site-links" id="siteLinks">
-        <a class="nl" href="#services">Services</a>
-        <a class="nl" href="#doctors">Doctors</a>
-        <a class="nl" href="#reviews">Reviews</a>
-        <a class="nl" href="#visit">Visit</a>
-        <a class="btn" href="tel:+12084662458">Call (208) 466-2458</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-blob" aria-hidden="true"></div>
-    <div class="hero-blob2" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">Family dentist in Nampa, Idaho</span>
-        <h1>A <em>calmer</em> kind of dental visit.</h1>
-        <p class="sub">Same-day crowns, gentle care for kids and grandparents, and 421 five-star reviews from your Nampa neighbors.</p>
-        <div class="hero-cta">
-          <a class="btn" href="tel:+12084662458">Call (208) 466-2458</a>
-          <a class="ghost" href="#services">See our services</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal" aria-hidden="false">
-        <div class="arch">
-          <img src="assets/team.jpg" alt="Dr. Squires of Southridge Dental, Nampa Idaho">
-          <div class="arch-inner">
-            <b>Dr. Squires and Dr. Howard</b>
-            <span>Your Nampa neighbors since 2015</span>
-          </div>
-        </div>
-        <div class="rating-badge"><b>4.9</b> &nbsp;421 Google reviews</div>
-        <div class="review-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Shannon is by far the best to work with. From scheduling to follow up, she's on top of everything."</p>
-          <cite>M.D., patient</cite>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="trust">
-    <div class="wrap">
-      <div><b>4.9 rating</b><span>from 421 Google reviews</span></div>
-      <div><b>Same-day CEREC crowns</b><span>no temporaries, no second visit</span></div>
-      <div><b>Loyalty plan</b><span>in-house option with no insurance</span></div>
-      <div><b>Mon to Thu</b><span>7:00am to 3:00pm</span></div>
-    </div>
-  </div>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>One office for the whole family.</h2>
-        <p>Cleanings for the kids, crowns for the grandparents, and everything in between, under one roof on 12th Ave.</p>
-      </div>
-      <div class="svc-feature reveal">
-        <div class="copy">
-          <h3>Same-day CEREC crowns</h3>
-          <p>Walk in with a damaged tooth and walk out with the crown. CEREC designs and mills it while you wait, so there is no temporary crown and no second appointment.</p>
-          <a class="btn" href="tel:+12084662458">Call (208) 466-2458</a>
-        </div>
-        <div class="visual">
-          <div class="big">One visit.<br><em>One crown.</em></div>
-          <p>Most offices need two appointments and two weeks. Ours needs an afternoon.</p>
-        </div>
-      </div>
-      <div class="svc-list">
-        <article class="reveal">
-          <h3>Smile makeovers</h3>
-          <p>Veneers, whitening, and bonding planned around your budget, for a smile you stop hiding in photos.</p>
-        </article>
-        <article class="reveal">
-          <h3>Pediatric dentistry</h3>
-          <p>Gentle first visits and the latest techniques for kids, with coaching on home care that actually sticks.</p>
-        </article>
-        <article class="reveal">
-          <h3>Family dentistry</h3>
-          <p>Checkups, cleanings, and fillings for every age, with personal attention at every appointment.</p>
-        </article>
-        <article class="reveal">
-          <h3>Dental implants</h3>
-          <p>A permanent answer to missing teeth, fitted directly into the jawbone to feel like the real thing.</p>
-        </article>
-        <article class="reveal">
-          <h3>Teeth whitening</h3>
-          <p>Professional whitening for a brighter smile, done right and done safely.</p>
-        </article>
-        <article class="reveal">
-          <h3>Dentures</h3>
-          <p>Comfortable, natural-looking dentures, fitted and adjusted by people who know your name.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="doctors">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>Meet your dentists.</h2>
-        <p>Real people, real training, real Nampa neighbors.</p>
-      </div>
-      <div class="doc-grid">
-        <div class="doc reveal">
-          <img src="assets/team.jpg" alt="Dr. Squires, dentist at Southridge Dental" width="170" height="170">
-          <div>
-            <h3>Dr. Squires</h3>
-            <p>Undergraduate training at Brigham Young University and a dental degree from Creighton University in Omaha. With Southridge Dental since 2015.</p>
-            <span class="creds">Creighton University School of Dentistry</span>
-          </div>
-        </div>
-        <div class="doc reveal">
-          <img src="assets/dr-howard.jpg" alt="Dr. Howard, dentist at Southridge Dental" width="170" height="170">
-          <div>
-            <h3>Dr. Howard</h3>
-            <p>A biochemistry degree from Ball State University and a doctorate from the University of Minnesota School of Dentistry, class of 1998.</p>
-            <span class="creds">University of Minnesota School of Dentistry</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="loyalty">
-    <div class="wrap">
-      <div class="loyal reveal">
-        <div>
-          <h2>No insurance? We built our own.</h2>
-          <p>The Patient Loyalty Program is our in-house plan for patients without dental insurance. It exists because too many of our loyal patients found themselves uncovered, and we refused to let that decide who gets care.</p>
-        </div>
-        <div class="card">
-          <b>Patient Loyalty Program</b>
-          <p>An in-house membership for the uninsured. Ask what it covers when you call.</p>
-          <a class="btn" href="tel:+12084662458">Call (208) 466-2458</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="reviews">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2>What Nampa says about us.</h2>
-        <p>4.9 stars across 421 Google reviews. Here is a taste, in their own words.</p>
-      </div>
-      <div class="rev-grid">
-        <div class="rev-main reveal">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"Dr. Squires was amazing. First time a dentist made me feel at ease. He explains everything in a language you can understand."</blockquote>
-          <cite>Paul B., patient</cite>
-        </div>
-        <div class="rev-side">
-          <div class="rev reveal">
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <blockquote>"This is the absolute best dentist's office I've ever been to. Shannon is by far the best to work with."</blockquote>
-            <cite>M.D., patient</cite>
-          </div>
-          <div class="rev reveal">
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <blockquote>"Been going here for over a decade. Super nice, high tech equipment, and they teach you things."</blockquote>
-            <cite>Honey I., patient</cite>
-          </div>
-        </div>
-      </div>
-      <p class="rev-note">Reviews shown as published on southridge-dental.com. The 4.9 rating reflects their Google listing.</p>
-    </div>
-  </section>
-
-  <section id="visit">
-    <div class="wrap visit-grid">
-      <div class="visit-info reveal">
-        <h2>Find us in Nampa.</h2>
-        <div class="vrow">
-          <b>Call us</b>
-          <a class="tel" href="tel:+12084662458">(208) 466-2458</a>
-        </div>
-        <div class="vrow">
-          <b>Visit us</b>
-          2811 12th Ave Rd<br>Nampa, ID 83686<br>
-          <a class="mail" href="https://www.google.com/maps/search/?api=1&amp;query=Southridge+Dental+Nampa+ID" target="_blank" rel="noopener">Get directions</a>
-        </div>
-        <div class="vrow">
-          <b>Hours</b>
-          <div class="hours-table">
-            <div><span>Monday</span><span>7:00am - 3:00pm</span></div>
-            <div><span>Tuesday</span><span>7:00am - 3:00pm</span></div>
-            <div><span>Wednesday</span><span>7:00am - 3:00pm</span></div>
-            <div><span>Thursday</span><span>7:00am - 3:00pm</span></div>
-            <div><span>Friday to Sunday</span><span>Closed</span></div>
-          </div>
-        </div>
-        <div class="vrow">
-          <b>Email</b>
-          <a class="mail" href="mailto:help@southridgesmiles.com">help@southridgesmiles.com</a>
-        </div>
-      </div>
-      <div class="map-frame reveal">
-        <iframe title="Map to Southridge Dental, 2811 12th Ave Rd, Nampa ID" src="https://www.google.com/maps?q=Southridge%20Dental%202811%2012th%20Ave%20Rd%20Nampa%20ID%2083686&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <section class="final">
-    <div class="wrap reveal">
-      <h2>Ready for a calmer dental visit?</h2>
-      <p>Call during office hours, Monday to Thursday, 7am to 3pm. We will take it from there.</p>
-      <a class="btn" href="tel:+12084662458">Call (208) 466-2458</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <a class="brand" href="#redesign">
-            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FCFBF7"/><path d="M20 13c-4.5 0-7.5 3.2-7.5 7.5 0 8.5 6.5 10.5 6.5 18.5 0 5.5 2.5 11.5 6.5 11.5 3.2 0 3.2-6.5 6.5-6.5s3.3 6.5 6.5 6.5c4 0 6.5-6 6.5-11.5 0-8 6.5-10 6.5-18.5 0-4.3-3-7.5-7.5-7.5-4 0-5 3.5-12 3.5s-8-3.5-12-3.5z" fill="#173A2E"/></svg>
-            Southridge Dental
-          </a>
-          <p>Family dentistry in Nampa, Idaho. Same-day crowns, gentle care, and neighbors who keep coming back.</p>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          <a href="#services">Services</a>
-          <a href="#doctors">Doctors</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#visit">Visit</a>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="tel:+12084662458">(208) 466-2458</a>
-          <a href="mailto:help@southridgesmiles.com">help@southridgesmiles.com</a>
-          <span>2811 12th Ave Rd, Nampa, ID 83686</span>
-          <span>Mon to Thu, 7:00am to 3:00pm</span>
-        </div>
-      </div>
-      <div class="foot-base">
-        <span>&copy; <span id="yr">2026</span> Southridge Dental. All rights reserved.</span>
-        <span>Concept redesign by Revamps Studio</span>
-      </div>
-    </div>
-  </footer>
-</div>
-
-<!-- ============ WHY IT WINS ============ -->
-<section id="why">
+<!-- ============ WALKTHROUGH ============ -->
+<section class="walk-sec" id="changes">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <h2>Why this wins patients.</h2>
-      <p>Every change below maps to a real flaw in the current site, and a real reason a visitor becomes a caller.</p>
+    <div class="sec-head rv">
+      <div class="eyebrow">The walkthrough</div>
+      <h2>Five changes, and why each one books clients</h2>
+      <p>Every change below is a business decision first and a design decision second.</p>
     </div>
-    <div class="reveal">
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>One number, everywhere</h3>
-        <p>(208) 466-2458 sits on every screen, one tap to call. Most new patients find you on a phone, and every extra step between reading and calling loses them.</p>
+
+    <div class="change rv">
+      <div class="ch-split">
+        <div class="ch-before">
+          <div class="ch-label">Before</div>
+          <p class="old">"Welcome to A Nurses Touch Skin Care &amp; Med Spa in Fort Worth, Texas"</p>
+        </div>
+        <div class="ch-after">
+          <div class="ch-label">After</div>
+          <h3>The headline says what they sell, not hello.</h3>
+          <p>Nobody ever chose a medspa because a website welcomed them. <b>"Skin care with a nurse's judgment"</b> tells a first-time visitor the one thing competitors cannot copy: the person holding the syringe is a registered nurse. That single line does the selling the old paragraph never did.</p>
+        </div>
       </div>
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>Proof before promises</h3>
-        <p>4.9 stars from 421 Google reviews now lives in the hero. Your reputation is the single strongest asset the practice has, and the old site buried it below the fold.</p>
+    </div>
+
+    <div class="change rv">
+      <div class="ch-band">
+        <div>
+          <div class="ch-label" style="color:#e3b96a">The proof</div>
+          <h3>Reviews and awards move to the top of the page.</h3>
+          <p>Injectables are a trust purchase. A client deciding between two medspas picks the one whose <b>500+ five-star reviews</b> and <b>Fort Worth Magazine honors</b> she saw before she scrolled. On the old site, the newest proof shown is a 2023 badge near the footer.</p>
+        </div>
+        <div class="old">"Best of 2023" badge, halfway down a long page, last updated three award cycles ago.</div>
       </div>
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>Booking with one tap</h3>
-        <p>Call buttons replace the old "contact us today" dead end. Phone-only booking is completely fine when the phone is one tap away at every scroll depth.</p>
+    </div>
+
+    <div class="change rv">
+      <div class="ch-quote">
+        <div class="ch-label" style="color:var(--pine-600)">The team</div>
+        <p class="big">Before: five first names in a bullet list.<br><em>After: Daisy, the oncology nurse who opened a medspa.</em></p>
+        <p>Clients do not book "Marlow: Esthetician, Laser tech, Electrologist, Scalp Pigmentation Artist." They book a person they trust. <b>Daisy's real story, critical care and oncology nursing before aesthetics,</b> is the most persuasive paragraph this business owns, and the old site never tells it.</p>
       </div>
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>Copy about the patient</h3>
-        <p>"Same-day crowns" and "gentle first visits" instead of practice-speak. People search for their problem, not your equipment, so the site now speaks their language.</p>
+    </div>
+
+    <div class="change rv">
+      <div class="ch-split flip">
+        <div class="ch-before">
+          <div class="ch-label">Before</div>
+          <p class="old">"Book online" opens na02.patientnow.com, a different site with a different look.</p>
+        </div>
+        <div class="ch-after">
+          <div class="ch-label">After</div>
+          <h3>Booking never leaves the page.</h3>
+          <p>The phone number sits in the header on every screen, tappable, and the booking button stays inside the same design. <b>Every step between "I want this" and "I booked" loses clients who were already convinced.</b> The old flow made a warm lead start over on a stranger's website.</p>
+        </div>
       </div>
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>Doctors with faces</h3>
-        <p>Real photos, real training, real bios for Dr. Squires and Dr. Howard. People choose people, not practices, and stock smiles choose no one.</p>
-      </div>
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>Nothing stale</h3>
-        <p>No dead blog, no 787-day-old pages. A site untouched for two years quietly tells visitors the practice is too, and first impressions do not get a second hearing.</p>
-      </div>
-      <div class="why-row">
-        <h3><span class="fix">Fixed</span>The name mismatch</h3>
-        <p>The title tag says Dr. Leeb while the page introduces Dr. Howard. Small conflicts like this cost trust with careful patients, so the redesign carries one true roster.</p>
+    </div>
+
+    <div class="change rv">
+      <div class="ch-split">
+        <div class="ch-before">
+          <div class="ch-label">Before</div>
+          <p class="old">"We are a team of <b>specialitlty</b> trained Nurses" · Suite 204 in one place, Suite 211 in another.</p>
+        </div>
+        <div class="ch-after">
+          <div class="ch-label">After</div>
+          <h3>Clean copy, one verified address.</h3>
+          <p>A medspa sells precision: steady hands, exact units, careful measurements. <b>A typo on the team page and two different suite numbers tell the opposite story.</b> The concept fixes both, because details are the product here.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="closing">
+<!-- ============ AFTER: SITE CONCEPT ============ -->
+<section class="after-sec" id="after">
   <div class="wrap">
-    <p><b>This concept was built for Southridge Dental by Revamps Studio.</b><br>Every word, photo, review, and phone number on this page is real and belongs to the practice. If you like what you see, reply to our email and we will make it live.</p>
+    <div class="sec-head rv">
+      <h2>The concept</h2>
+      <p>A complete homepage for A Nurse's Touch, rebuilt around the five changes above. Every photo is theirs. Every word is true.</p>
+    </div>
+    <div class="site rv">
+
+      <nav class="site-nav" id="siteNav" aria-label="Concept site navigation">
+        <div class="wrap">
+          <a class="wordmark" href="#after">A Nurse's Touch<small>Skin Care &amp; Medspa</small></a>
+          <div class="nav-links">
+            <a href="#treatments">Treatments</a>
+            <a href="#daisy">Daisy</a>
+            <a href="#membership">Membership</a>
+            <a href="#visit">Visit</a>
+          </div>
+          <div class="nav-cta">
+            <a class="nav-phone" href="tel:+16822003278">(682) 200-3278</a>
+            <a class="btn btn-dark" href="#visit">Book a visit</a>
+          </div>
+          <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <div class="hero-copy">
+          <h1>Skin care with a <em>nurse's</em> judgment.</h1>
+          <p class="sub">Botox, facials, and laser in Fort Worth, done by registered nurses who do this all day.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-dark" href="#visit">Book a visit</a>
+            <a class="btn btn-light" href="tel:+16822003278">Call (682) 200-3278</a>
+          </div>
+          <p class="hero-note">Evenings and Saturdays available · New location on Bryant Irvin Rd</p>
+        </div>
+        <figure class="hero-img">
+          <img src="assets/img/gal1.jpg" alt="Treatment room inside A Nurse's Touch Skin Care and Medspa">
+          <figcaption>Their remodeled Fort Worth location</figcaption>
+        </figure>
+      </header>
+
+      <div class="trust">
+        <div class="wrap">
+          <div><b>500+ five-star reviews</b><span>on Google, from real clients</span></div>
+          <div><b>Face of the Industry</b><span>Fort Worth Magazine, 2024 through 2026</span></div>
+          <div><b>Nurse-led, every visit</b><span>Founded and led by a registered nurse</span></div>
+        </div>
+      </div>
+
+      <div class="treat" id="treatments">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Treatments</h2>
+            <p>One menu, grouped the way clients actually think. No thirteen-item wall of links.</p>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="treat-grid">
+            <div class="treat-cell feature">
+              <div class="tag">Most booked</div>
+              <h3>Injectables</h3>
+              <ul>
+                <li>Botox, Jeuveau, Daxxify, Dysport</li>
+                <li>Dermal fillers</li>
+                <li>Sculptra</li>
+              </ul>
+            </div>
+            <div class="treat-cell">
+              <div class="tag">Skin</div>
+              <h3>Facials &amp; resurfacing</h3>
+              <ul>
+                <li>Hydrafacial</li>
+                <li>Custom facials</li>
+                <li>Microneedling</li>
+                <li>Chemical peels, BioRePeel</li>
+              </ul>
+            </div>
+            <div class="treat-cell">
+              <div class="tag">Laser</div>
+              <h3>Laser treatments</h3>
+              <ul>
+                <li>Laser hair removal</li>
+                <li>Laser tattoo removal</li>
+                <li>Laser skin tightening</li>
+              </ul>
+            </div>
+            <div class="treat-cell">
+              <div class="tag">Detail</div>
+              <h3>Permanent makeup</h3>
+              <ul>
+                <li>Powder and ombre brows</li>
+                <li>Lip blushing, eyeliner</li>
+                <li>Scalp micropigmentation</li>
+                <li>Areola tattooing</li>
+              </ul>
+            </div>
+            <div class="treat-cell">
+              <div class="tag">Smooth</div>
+              <h3>Hair removal</h3>
+              <ul>
+                <li>Electrolysis, all skin types</li>
+                <li>Full-body waxing</li>
+              </ul>
+            </div>
+            <div class="treat-cell">
+              <div class="tag">Ink</div>
+              <h3>Fine-line tattoos</h3>
+              <ul>
+                <li>Delicate fine-line work</li>
+                <li>Magnetic tattoo removal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="daisy" id="daisy">
+        <div class="wrap daisy-grid">
+          <figure>
+            <img src="assets/img/fb-team.jpg" alt="Daisy Williams featured in Fort Worth Magazine as the Face of Cosmetic and Spa Services">
+            <figcaption>Fort Worth Magazine, "Faces of Fort Worth" 2024</figcaption>
+          </figure>
+          <div class="daisy-copy">
+            <h2>Daisy Williams saw skin from the oncology ward first.</h2>
+            <p>Before she ever held a syringe for aesthetics, Daisy was a <b>critical care and oncology nurse</b>. She opened A Nurse's Touch to bring that standard of care to cosmetic work: careful consults, honest advice, and results that still look like you.</p>
+            <p>That background is why Fort Worth Magazine keeps naming her to its Faces list.</p>
+            <div class="daisy-creds">
+              <span>Master Nurse Injector</span>
+              <span>Registered Nurse</span>
+              <span>Electrologist Trainer</span>
+              <span>Permanent Makeup Specialist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="member rv" id="membership">
+          <div>
+            <h2>The membership that pays for itself.</h2>
+            <p class="lede">A monthly savings account for the treatments you already plan to get. The balance never pressures you, it just waits.</p>
+            <ul>
+              <li><b>Discounted pricing</b> on every treatment, including med spa services</li>
+              <li><b>Shareable balance</b> with family or friends</li>
+              <li><b>Freeze anytime,</b> because life happens</li>
+            </ul>
+          </div>
+          <div class="offer">
+            <div class="tag">New clients</div>
+            <h3>$50 off your first Botox or filler visit</h3>
+            <p>On treatments of $250 or more. Mention this page when you book.</p>
+            <a class="btn btn-amber" href="tel:+16822003278">Claim by phone</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit" id="visit">
+        <div class="wrap visit-grid">
+          <div class="visit-info">
+            <h2>Come see the room.</h2>
+            <div class="v-rows">
+              <div class="v-row"><span class="k">Address</span><span>4255 Bryant Irvin Rd, Suite 211<br>Fort Worth, TX 76109</span></div>
+              <div class="v-row"><span class="k">Phone</span><span><a href="tel:+16822003278">(682) 200-3278</a></span></div>
+              <div class="v-row"><span class="k">Email</span><span><a href="mailto:anursestouchfortworth@gmail.com">anursestouchfortworth@gmail.com</a></span></div>
+              <div class="v-row"><span class="k">Hours</span><span>Mon 9-5 · Tue 9-6 · Wed 9-6:30 · Thu 9-6<br>Fri 9-6:45 · Sat 9-4:45 · Sun 10-5</span></div>
+            </div>
+          </div>
+          <figure class="visit-photo">
+            <img src="assets/img/gal5.jpg" alt="Inside the A Nurse's Touch studio">
+          </figure>
+        </div>
+      </div>
+
+      <div class="final">
+        <div class="wrap">
+          <h2>Ready when you are.</h2>
+          <p>Call for a consult, or just call with questions. A nurse answers, and she has heard them all.</p>
+          <span class="big-call"><a class="btn btn-amber" href="tel:+16822003278" style="font-size:18px;padding:18px 44px">Call (682) 200-3278</a></span>
+          <p class="meta">A Nurse's Touch Skin Care &amp; Medspa · 4255 Bryant Irvin Rd, Suite 211, Fort Worth, TX 76109</p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="wrap">
+          <span>© 2026 A Nurse's Touch Skin Care &amp; Medspa · Website concept by Revamps Studio</span>
+          <nav aria-label="Footer">
+            <a href="#treatments">Treatments</a>
+            <a href="#daisy">Daisy</a>
+            <a href="#visit">Visit</a>
+            <a class="tel" href="tel:+16822003278">(682) 200-3278</a>
+          </nav>
+        </div>
+      </footer>
+
+    </div>
   </div>
-</div>
+</section>
 
 <script>
 (function(){
-  /* signature interaction: before/after drag */
-  var ba=document.getElementById('ba'),
-      before=document.getElementById('baBefore'),
-      inner=document.getElementById('baBeforeInner'),
-      handle=document.getElementById('baHandle'),
-      range=document.getElementById('baRange');
-  function sizeInner(){ inner.style.width=ba.offsetWidth+'px'; }
-  function setPos(v){
-    v=Math.max(2,Math.min(98,v));
-    before.style.width=v+'%';
-    handle.style.left=v+'%';
-    if(document.activeElement!==range) range.value=v;
-  }
-  sizeInner();
-  window.addEventListener('resize',sizeInner);
-  range.addEventListener('input',function(){ setPos(parseFloat(range.value)); });
-  setPos(50);
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* mobile menu */
-  var burger=document.getElementById('burger'), links=document.getElementById('siteLinks');
-  burger.addEventListener('click',function(){
-    var open=links.classList.toggle('open');
-    burger.setAttribute('aria-expanded',open?'true':'false');
-  });
-  links.addEventListener('click',function(e){
-    if(e.target.tagName==='A') links.classList.remove('open');
-  });
-
-  /* gentle reveal on scroll */
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduce && 'IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
-      });
-    },{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-  }else{
-    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  /* Reveal on scroll */
+  var els = document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    },{threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add("in"); });
   }
 
-  /* copyright year */
-  document.getElementById('yr').textContent=new Date().getFullYear();
+  /* Mobile menu */
+  var nav = document.getElementById("siteNav"), burger = document.getElementById("burger");
+  burger.addEventListener("click", function(){
+    var open = nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.querySelectorAll(".nav-links a").forEach(function(a){
+    a.addEventListener("click", function(){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); });
+  });
+
+  /* Before/after slider: the one signature interaction */
+  var ba = document.getElementById("ba"),
+      before = document.getElementById("baBefore"),
+      handle = document.getElementById("baHandle"),
+      pos = 50, dragging = false;
+
+  function render(){
+    pos = Math.max(4, Math.min(96, pos));
+    before.style.clipPath = "inset(0 " + (100 - pos) + "% 0 0)";
+    handle.style.left = pos + "%";
+    ba.setAttribute("aria-valuenow", Math.round(pos));
+  }
+  function fromEvent(e){
+    var r = ba.getBoundingClientRect();
+    var x = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX);
+    pos = ((x - r.left) / r.width) * 100;
+    render();
+  }
+  handle.addEventListener("pointerdown", function(e){ dragging = true; handle.setPointerCapture(e.pointerId); e.preventDefault(); });
+  window.addEventListener("pointermove", function(e){ if(dragging) fromEvent(e); });
+  window.addEventListener("pointerup", function(){ dragging = false; });
+  ba.addEventListener("keydown", function(e){
+    if(e.key === "ArrowLeft"){ pos -= 4; render(); e.preventDefault(); }
+    if(e.key === "ArrowRight"){ pos += 4; render(); e.preventDefault(); }
+  });
+  /* gentle intro nudge */
+  if(!reduce){
+    var t0 = null;
+    function nudge(ts){
+      if(t0 === null) t0 = ts;
+      var k = Math.min(1, (ts - t0) / 1400);
+      pos = 50 + Math.sin(k * Math.PI) * 7;
+      render();
+      if(k < 1 && !dragging) requestAnimationFrame(nudge); else { pos = 50; render(); }
+    }
+    var seen = false;
+    var io2 = new IntersectionObserver(function(en){
+      if(en[0].isIntersecting && !seen){ seen = true; requestAnimationFrame(nudge); io2.disconnect(); }
+    },{threshold:.4});
+    io2.observe(ba);
+  }
+  render();
 })();
 </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Packages &amp; Prices | The Little Red Day Spa, Seattle</title>
+<title>Packages &amp; Prices, Design Concept | The Little Red Day Spa, Seattle</title>
 <meta name="description" content="Couples getaway packages at The Little Red Day Spa, Seattle. Real prices from $648. Call or text (206) 963-0633.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/css/site.css">
@@ -26,12 +26,25 @@
   </div>
 </header>
 
-<section class="section">
+<section class="section" style="padding-bottom:0">
+  <div class="mega-bleed">
+    <h2 class="mega rv">Real prices.<span class="l2"><em>No mystery.</em></span></h2>
+  </div>
   <div class="wrap">
-    <p class="kicker rv">Packages</p>
-    <h2 class="head rv">Real prices.<br>No <em>mystery.</em></h2>
-    <p class="lede rv">Every package pairs a couples treatment with private suite time. Pick the shape of your evening, then pick the suite it happens in.</p>
-    <div class="pkg-list">
+    <p class="lede rv" style="margin-top:28px">Every package pairs a couples treatment with private suite time. Pick the shape of your evening, then pick the suite it happens in.</p>
+  </div>
+</section>
+
+<div class="mq-band flip"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>$648</span><span>$815</span><span>$1,016</span><span>Printed plainly</span><span>No mystery</span>
+    <span>$648</span><span>$815</span><span>$1,016</span><span>Printed plainly</span><span>No mystery</span>
+  </div>
+</div></div>
+
+<section class="section" style="padding-top:clamp(60px,8vw,110px)">
+  <div class="wrap">
+    <div class="pkg-list" style="margin-top:0">
       <a class="pkg-row rv" href="plan.html">
         <h3>Couple's Getaway<small>50-minute couples massage + 50 minutes in your private suite</small></h3>
         <span class="price">$648<small>per couple</small></span>
@@ -71,9 +84,8 @@
 
 <section class="book-band">
   <div class="wrap">
-    <p class="kicker rv" style="color:var(--gold-soft)">Ready?</p>
     <h2 class="rv">Pick a <em>package.</em><br>Pick a suite.</h2>
-    <p class="rv">Or let the builder do it for you.</p>
+    <p class="rv" style="margin-top:22px;max-width:52ch;color:#E8CFC0;font-size:18px">Or let the builder do it for you in sixty seconds.</p>
     <p class="rv" style="margin-top:28px"><a class="btn gold" href="plan.html">Plan Your Escape</a></p>
   </div>
 </section>
@@ -100,7 +112,7 @@
       </div>
     </div>
     <div class="foot-base">
-      <span>Tue&ndash;Sun, 10am&ndash;11:30pm</span>
+      <span>Tue-Sun, 10am-11:30pm</span>
       <span class="concept">Concept rebuild by Revamps Studio</span>
     </div>
   </div>
@@ -111,6 +123,53 @@ const nav=document.getElementById('nav');
 addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40)},{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* premium micro-interactions */
+(function(){
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  function splitWords(el){
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(node=>{
+      if(!node.textContent.trim())return;
+      const inRedEm=el.classList.contains('mega')&&node.parentElement&&node.parentElement.closest('em:not(.gold)');
+      const frag=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(part=>{
+        if(!part)return;
+        if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(' '));return;}
+        const wline=document.createElement('span');wline.className='wline';
+        const wword=document.createElement('span');wword.className='wword';
+        if(inRedEm)wword.classList.add('shimmer');
+        wword.textContent=part;wline.appendChild(wword);frag.appendChild(wline);
+      });
+      node.parentNode.replaceChild(frag,node);
+    });
+    el.querySelectorAll('.wword').forEach((w,i)=>w.style.setProperty('--d',(i*0.055).toFixed(3)+'s'));
+  }
+  if(!reduced)document.querySelectorAll('.mega,h2.head').forEach(splitWords);
+  if(fine&&!reduced)document.querySelectorAll('.si-row').forEach(row=>{
+    row.addEventListener('mousemove',e=>{
+      const r=row.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      row.style.transform='perspective(900px) rotateX('+(-y*4).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)';
+    });
+    row.addEventListener('mouseleave',()=>{row.style.transform=''});
+  });
+  const counters=document.querySelectorAll('.stat .num[data-count]');
+  if(counters.length){
+    const cio=new IntersectionObserver(es=>es.forEach(e=>{
+      if(!e.isIntersecting)return;cio.unobserve(e.target);
+      const elb=e.target,target=parseFloat(elb.dataset.count),dec=elb.dataset.dec==='1';
+      const set=v=>{elb.firstChild.nodeValue=dec?v.toFixed(1):Math.round(v).toLocaleString('en-US');};
+      if(reduced){set(target);return;}
+      const dur=1600,t0=performance.now();
+      requestAnimationFrame(function tick(t){const k=Math.min(1,(t-t0)/dur),ez=1-Math.pow(1-k,3);
+        set(target*ez);if(k<1)requestAnimationFrame(tick);});
+    }),{threshold:.4});
+    counters.forEach(c=>cio.observe(c));
+  }
+})();
 </script>
 </body>
 </html>

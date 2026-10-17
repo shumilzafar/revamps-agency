@@ -30,6 +30,17 @@
   <video autoplay muted loop playsinline poster="assets/video/candles-poster.jpg">
     <source src="assets/video/candles-hero.mp4" type="video/mp4">
   </video>
+  <svg class="sticker" viewBox="0 0 200 200" aria-hidden="true">
+    <defs><path id="stc" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+    <circle cx="100" cy="100" r="96" fill="#A31621"/>
+    <circle cx="100" cy="100" r="58" fill="none" stroke="#D4A853" stroke-width="2" stroke-dasharray="6 6"/>
+    <text><textPath href="#stc">EST. 2007 &middot; SEATTLE &middot; COUPLES ONLY &middot; </textPath></text>
+    <g stroke="#F5EDE3" stroke-width="6" stroke-linecap="round">
+      <path d="M100 78 L100 122"/>
+      <path d="M80 89 L120 111"/>
+      <path d="M120 89 L80 111"/>
+    </g>
+  </svg>
   <div class="hero-content">
     <p class="hero-kicker">Seattle &middot; Est. 2007 &middot; Couples only</p>
     <h1><span class="w">Your</span> <span class="w"><em>private</em></span> <span class="w">world.</span></h1>
@@ -38,12 +49,12 @@
       <a class="btn" href="plan.html">Plan Your Escape</a>
       <a class="btn ghost" href="suites.html">See the Suites</a>
     </div>
-    <p class="hero-note">Call or text <strong>(206) 963-0633</strong> &middot; Tue&ndash;Sun, 10am&ndash;11:30pm</p>
+    <p class="hero-note">Call or text <strong>(206) 963-0633</strong> &middot; Tue-Sun, 10am-11:30pm</p>
   </div>
   <span class="scroll-hint">Step inside</span>
 </section>
 
-<div class="marquee-clip"><div class="marquee" aria-hidden="true">
+<div class="mq-band"><div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span>Private suites</span><span>Couples massage</span><span>Candlelight</span><span>Copper tubs</span><span>Salt saunas</span><span>Overnight stays</span>
     <span>Private suites</span><span>Couples massage</span><span>Candlelight</span><span>Copper tubs</span><span>Salt saunas</span><span>Overnight stays</span>
@@ -51,65 +62,60 @@
 </div></div>
 
 <section class="section">
+  <div class="mega-bleed">
+    <h2 class="mega rv">Eight rooms.<span class="l2"><em>Eight evenings.</em></span></h2>
+  </div>
   <div class="wrap">
-    <p class="kicker rv">The suites</p>
-    <h2 class="head rv">Eight rooms.<br>Eight <em>different</em> evenings.</h2>
-    <p class="lede rv">Every suite is private, every suite has two massage tables, and no two suites feel alike. Pick the one that feels like you.</p>
-    <div class="suite-grid">
-      <a class="suite-card featured rv" href="suites.html#painters">
-        <img src="assets/real/painters-studio-400-267.jpg" alt="The Painter's Studio suite">
-        <div class="sc-body">
-          <p class="sc-tag">Most loved</p>
-          <h3>Painter's Studio</h3>
-          <p>The owner's former art studio. Two-person wooden bathtub, custom salt sauna, kitchenette, and a pull-down painting area to make your own art.</p>
-          <span class="sc-go">Step inside <i>&rarr;</i></span>
-        </div>
-      </a>
-      <a class="suite-card rv d1" href="suites.html#sunset">
-        <img src="assets/real/sunset-suite-for-thumbnail-400-267.jpg" alt="The Sunset Suite">
-        <div class="sc-body">
-          <p class="sc-tag">Overnight</p>
-          <h3>Sunset Suite</h3>
-          <p>Copper soaking tub for two, personal sauna, cold plunge, full bed. Stay the night, or the weekend.</p>
-          <span class="sc-go">Step inside <i>&rarr;</i></span>
-        </div>
-      </a>
-      <a class="suite-card rv d2" href="suites.html#moroccan">
-        <img src="assets/real/moroccan-suite-oct-2026-400-267.jpg" alt="The Moroccan Suite">
-        <div class="sc-body">
-          <p class="sc-tag">Just completed</p>
-          <h3>Moroccan Suite</h3>
-          <p>Kilim rugs, a Moroccan lounge, large copper bathtub, pink Himalayan salt sauna. Brand new.</p>
-          <span class="sc-go">Step inside <i>&rarr;</i></span>
-        </div>
-      </a>
-      <a class="suite-card rv" href="suites.html#stone">
-        <img src="assets/real/stone-carver-suite-2025-400-267.jpg" alt="The Stone Carver's Suite">
-        <div class="sc-body">
-          <p class="sc-tag">Remodeled 2025</p>
-          <h3>Stone Carver's Suite</h3>
-          <p>Salt-lit walls, open concept, carved stone details throughout. Remodeled this year.</p>
-          <span class="sc-go">Step inside <i>&rarr;</i></span>
-        </div>
-      </a>
-      <a class="suite-card rv d1" href="suites.html">
-        <img src="assets/real/tent-suite-apr-2026-400-267.jpg" alt="The Tent Suite">
-        <div class="sc-body">
-          <p class="sc-tag">Five more</p>
-          <h3>Art, Sky, Tent &amp; more</h3>
-          <p>Art Suite, Sky Suite, Tent Suite, and the Library Suite for facials. Each one its own world.</p>
-          <span class="sc-go">See all eight <i>&rarr;</i></span>
-        </div>
-      </a>
+    <p class="lede rv" style="margin-top:28px">Every suite is private, every suite has two massage tables, and no two feel alike. Pick the one that feels like you.</p>
+    <div class="suite-index">
+      <div class="si-item rv"><a class="si-row" href="suites.html#painters">
+        <span class="si-num">01</span><span class="si-name">Painter's <em>Studio</em></span><span class="si-tag">Most loved</span>
+      </a></div>
+      <div class="si-item rv"><a class="si-row" href="suites.html#sunset">
+        <span class="si-num">02</span><span class="si-name">Sunset <em>Suite</em></span><span class="si-tag">Overnight</span>
+      </a></div>
+      <div class="si-item rv"><a class="si-row" href="suites.html#moroccan">
+        <span class="si-num">03</span><span class="si-name">Moroccan <em>Suite</em></span><span class="si-tag">Just completed</span>
+      </a></div>
+      <div class="si-item rv"><a class="si-row" href="suites.html#stone">
+        <span class="si-num">04</span><span class="si-name">Stone Carver's <em>Suite</em></span><span class="si-tag">Remodeled 2025</span>
+      </a></div>
+      <div class="si-item rv"><a class="si-row" href="suites.html">
+        <span class="si-num">+4</span><span class="si-name">Four <em>more</em></span><span class="si-tag">See all eight</span>
+      </a></div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<div class="mq-band flip rev"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Step inside</span><span>Est. 2007</span><span>Seattle</span><span>Couples only</span><span>Private, always</span>
+    <span>Step inside</span><span>Est. 2007</span><span>Seattle</span><span>Couples only</span><span>Private, always</span>
+  </div>
+</div></div>
+
+<section class="stat-band">
+  <div class="stat-grid">
+    <div class="stat rv"><p class="num" data-count="4.8" data-dec="1">0.0</p><p class="lbl">Google rating</p></div>
+    <div class="stat rv"><p class="num" data-count="3000">0<span class="suffix">+</span></p><p class="lbl">Verified reviews</p></div>
+    <div class="stat rv"><p class="num" data-count="8">0</p><p class="lbl">Themed suites</p></div>
+    <div class="stat rv"><p class="num">2007</p><p class="lbl">Est. Seattle</p></div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
-    <p class="kicker rv">Packages</p>
-    <h2 class="head rv">Pick your <em>evening.</em></h2>
-    <p class="lede rv">Real prices, no mystery. Every package pairs a couples treatment with private suite time.</p>
+    <div class="rv" style="display:flex;align-items:center;gap:26px;margin-bottom:8px">
+      <svg class="asterisk" viewBox="0 0 100 100" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="8" stroke-linecap="round" fill="none">
+          <path d="M50 10 C 48 32, 52 66, 50 90"/>
+          <path d="M14 30 C 34 42, 64 60, 86 72"/>
+          <path d="M86 30 C 66 42, 36 60, 16 72"/>
+        </g>
+      </svg>
+      <h2 class="mega">Pick your <em>evening.</em></h2>
+    </div>
+    <p class="lede rv" style="margin-top:24px">Real prices, no mystery. Every package pairs a couples treatment with private suite time.</p>
     <div class="pkg-list">
       <a class="pkg-row rv" href="packages.html">
         <h3>Couple's Getaway<small>50-min couples massage + 50-min private suite time</small></h3>
@@ -128,34 +134,43 @@
         <span class="price">$950<small>per couple</small></span>
       </a>
     </div>
-    <p class="rv" style="margin-top:32px"><a class="btn ghost" href="packages.html">All packages</a></p>
+    <p class="rv" style="margin-top:36px"><a class="btn ghost" href="packages.html">All seven packages</a></p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<div class="tilt-clip"><figure class="tilt-moment rv">
+  <img src="assets/real/key-visual-upscaled-hand-bowl-flower-980x551.jpg" alt="Candlelight, water and flowers at the spa" loading="lazy">
+  <figcaption>Every detail is the experience</figcaption>
+</figure></div>
+
+<div class="mq-band"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>4.8 stars</span><span>3,000+ reviews</span><span>Couples keep coming back</span><span>One of a kind</span>
+    <span>4.8 stars</span><span>3,000+ reviews</span><span>Couples keep coming back</span><span>One of a kind</span>
+  </div>
+</div></div>
+
+<section class="section">
   <div class="wrap">
-    <p class="kicker rv">Word of mouth</p>
-    <h2 class="head rv">Couples keep<br><em>coming back.</em></h2>
-    <div class="rev-grid">
-      <div class="rev rv">
-        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        <blockquote>"This is a unique and intimate experience to have with your spouse... Will be returning in the future."</blockquote>
-        <cite>Google review</cite>
+    <div class="rev-feature rv">
+      <svg class="qmark" viewBox="0 0 120 90" aria-hidden="true">
+        <path d="M10 80 C 10 52, 22 30, 46 14 L 54 26 C 38 36, 30 50, 29 64 Z M64 80 C 64 52, 76 30, 100 14 L 108 26 C 92 36, 84 50, 83 64 Z" fill="currentColor"/>
+      </svg>
+      <blockquote style="margin-top:56px">"One of the best <em>investments</em> you can make as a couple."</blockquote>
+      <cite>Google review &middot; verified visit</cite>
+    </div>
+    <div class="rev-stack">
+      <div class="rev-line rv">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <div><blockquote>"This is a unique and intimate experience to have with your spouse... Will be returning in the future."</blockquote><cite>Google review</cite></div>
       </div>
-      <div class="rev rv d1">
-        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        <blockquote>"Once we were escorted to our amazing suite packed with beautiful art, everything else was like a dream. This experience is one of a kind for sure!!"</blockquote>
-        <cite>Google review</cite>
+      <div class="rev-line rv">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <div><blockquote>"Once we were escorted to our amazing suite packed with beautiful art, everything else was like a dream. This experience is one of a kind for sure!!"</blockquote><cite>Google review</cite></div>
       </div>
-      <div class="rev rv">
-        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        <blockquote>"One of the best investments you can make as a couple."</blockquote>
-        <cite>Google review</cite>
-      </div>
-      <div class="rev rv d1">
-        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        <blockquote>"Super cool place, unique, special date night."</blockquote>
-        <cite>Google review</cite>
+      <div class="rev-line rv">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <div><blockquote>"Super cool place, unique, special date night."</blockquote><cite>Google review</cite></div>
       </div>
     </div>
   </div>
@@ -163,8 +178,7 @@
 
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <p class="kicker rv">Before you ask</p>
-    <h2 class="head rv">Good <em>questions.</em></h2>
+    <h2 class="mega rv">Good <em>questions.</em></h2>
     <div class="faq">
       <div class="faq-item rv">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is the suite really private? <span class="pm">+</span></button>
@@ -186,13 +200,28 @@
   </div>
 </section>
 
+<div class="mq-band flip"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Your evening is waiting</span><span>Tell us the occasion</span><span>We handle the candles</span>
+    <span>Your evening is waiting</span><span>Tell us the occasion</span><span>We handle the candles</span>
+  </div>
+</div></div>
+
 <section class="book-band">
   <div class="wrap">
-    <p class="kicker rv" style="color:var(--gold-soft)">Your evening is waiting</p>
     <h2 class="rv">Step <em>inside.</em></h2>
-    <p class="rv">Tell us the occasion. We will handle the candles.</p>
-    <a class="tel-big rv" href="tel:+12069630633">(206) 963-0633</a>
-    <p class="rv"><a class="btn gold" href="plan.html">Plan Your Escape</a></p>
+    <div class="rv" style="margin-top:28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+      <a class="tel-big" href="tel:+12069630633" style="margin:0">(206) 963-0633</a>
+      <svg class="arrow-drawn" viewBox="0 0 140 70" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round">
+          <path d="M6 36 C 44 30, 84 40, 122 32"/>
+          <path d="M102 16 C 110 22, 116 27, 124 34"/>
+          <path d="M102 50 C 110 44, 116 39, 124 34"/>
+        </g>
+      </svg>
+      <a class="btn gold" href="plan.html">Plan Your Escape</a>
+    </div>
+    <p class="rv" style="margin-top:22px;max-width:52ch;color:#E8CFC0;font-size:18px">Tell us the occasion. We will handle the candles.</p>
   </div>
 </section>
 
@@ -218,7 +247,7 @@
       </div>
     </div>
     <div class="foot-base">
-      <span>Tue&ndash;Sun, 10am&ndash;11:30pm</span>
+      <span>Tue-Sun, 10am-11:30pm</span>
       <span class="concept">Concept rebuild by Revamps Studio</span>
     </div>
   </div>
@@ -229,6 +258,53 @@ const nav=document.getElementById('nav');
 addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40)},{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* premium micro-interactions */
+(function(){
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  function splitWords(el){
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(node=>{
+      if(!node.textContent.trim())return;
+      const inRedEm=el.classList.contains('mega')&&node.parentElement&&node.parentElement.closest('em:not(.gold)');
+      const frag=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(part=>{
+        if(!part)return;
+        if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(' '));return;}
+        const wline=document.createElement('span');wline.className='wline';
+        const wword=document.createElement('span');wword.className='wword';
+        if(inRedEm)wword.classList.add('shimmer');
+        wword.textContent=part;wline.appendChild(wword);frag.appendChild(wline);
+      });
+      node.parentNode.replaceChild(frag,node);
+    });
+    el.querySelectorAll('.wword').forEach((w,i)=>w.style.setProperty('--d',(i*0.055).toFixed(3)+'s'));
+  }
+  if(!reduced)document.querySelectorAll('.mega,h2.head').forEach(splitWords);
+  if(fine&&!reduced)document.querySelectorAll('.si-row').forEach(row=>{
+    row.addEventListener('mousemove',e=>{
+      const r=row.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      row.style.transform='perspective(900px) rotateX('+(-y*4).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)';
+    });
+    row.addEventListener('mouseleave',()=>{row.style.transform=''});
+  });
+  const counters=document.querySelectorAll('.stat .num[data-count]');
+  if(counters.length){
+    const cio=new IntersectionObserver(es=>es.forEach(e=>{
+      if(!e.isIntersecting)return;cio.unobserve(e.target);
+      const elb=e.target,target=parseFloat(elb.dataset.count),dec=elb.dataset.dec==='1';
+      const set=v=>{elb.firstChild.nodeValue=dec?v.toFixed(1):Math.round(v).toLocaleString('en-US');};
+      if(reduced){set(target);return;}
+      const dur=1600,t0=performance.now();
+      requestAnimationFrame(function tick(t){const k=Math.min(1,(t-t0)/dur),ez=1-Math.pow(1-k,3);
+        set(target*ez);if(k<1)requestAnimationFrame(tick);});
+    }),{threshold:.4});
+    counters.forEach(c=>cio.observe(c));
+  }
+})();
 </script>
 </body>
 </html>

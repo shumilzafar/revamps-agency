@@ -26,20 +26,33 @@
   </div>
 </header>
 
-<section class="section">
+<section class="section" style="padding-bottom:0">
+  <div class="mega-bleed">
+    <h2 class="mega rv">Come <em>find us.</em></h2>
+  </div>
   <div class="wrap">
-    <p class="kicker rv">Visit</p>
-    <h2 class="head rv">Come <em>find us.</em></h2>
-    <p class="lede rv">In Seattle's SODO district, ten minutes from downtown. Look for the red door.</p>
-    <div class="visit-grid">
+    <p class="lede rv" style="margin-top:28px">In Seattle's SODO district, ten minutes from downtown. Look for the red door.</p>
+  </div>
+</section>
+
+<div class="mq-band flip rev"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>SODO</span><span>Seattle</span><span>Ten minutes from downtown</span><span>Look for the red door</span>
+    <span>SODO</span><span>Seattle</span><span>Ten minutes from downtown</span><span>Look for the red door</span>
+  </div>
+</div></div>
+
+<section class="section" style="padding-top:clamp(60px,8vw,110px)">
+  <div class="wrap">
+    <div class="visit-grid" style="margin-top:0">
       <div class="rv">
         <table class="hours">
-          <tr><td>Tuesday</td><td>10am &ndash; 11:30pm</td></tr>
-          <tr><td>Wednesday</td><td>10am &ndash; 11:30pm</td></tr>
-          <tr><td>Thursday</td><td>10am &ndash; 11:30pm</td></tr>
-          <tr><td>Friday</td><td>10am &ndash; 11:30pm</td></tr>
-          <tr><td>Saturday</td><td>10am &ndash; 11:30pm</td></tr>
-          <tr><td>Sunday</td><td>10am &ndash; 11:30pm</td></tr>
+          <tr><td>Tuesday</td><td>10am - 11:30pm</td></tr>
+          <tr><td>Wednesday</td><td>10am - 11:30pm</td></tr>
+          <tr><td>Thursday</td><td>10am - 11:30pm</td></tr>
+          <tr><td>Friday</td><td>10am - 11:30pm</td></tr>
+          <tr><td>Saturday</td><td>10am - 11:30pm</td></tr>
+          <tr><td>Sunday</td><td>10am - 11:30pm</td></tr>
           <tr><td>Monday</td><td>Closed</td></tr>
         </table>
       </div>
@@ -63,8 +76,8 @@
 
 <section class="book-band">
   <div class="wrap">
-    <p class="kicker rv" style="color:var(--gold-soft)">See you soon</p>
     <h2 class="rv">The candles<br>are <em>lit.</em></h2>
+    <p class="rv" style="margin-top:22px;max-width:52ch;color:#E8CFC0;font-size:18px">Tue-Sun, 10am-11:30pm. Same-day bookings welcome.</p>
     <a class="tel-big rv" href="tel:+12069630633">(206) 963-0633</a>
   </div>
 </section>
@@ -91,7 +104,7 @@
       </div>
     </div>
     <div class="foot-base">
-      <span>Tue&ndash;Sun, 10am&ndash;11:30pm</span>
+      <span>Tue-Sun, 10am-11:30pm</span>
       <span class="concept">Concept rebuild by Revamps Studio</span>
     </div>
   </div>
@@ -102,6 +115,53 @@ const nav=document.getElementById('nav');
 addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40)},{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* premium micro-interactions */
+(function(){
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  function splitWords(el){
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(node=>{
+      if(!node.textContent.trim())return;
+      const inRedEm=el.classList.contains('mega')&&node.parentElement&&node.parentElement.closest('em:not(.gold)');
+      const frag=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(part=>{
+        if(!part)return;
+        if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(' '));return;}
+        const wline=document.createElement('span');wline.className='wline';
+        const wword=document.createElement('span');wword.className='wword';
+        if(inRedEm)wword.classList.add('shimmer');
+        wword.textContent=part;wline.appendChild(wword);frag.appendChild(wline);
+      });
+      node.parentNode.replaceChild(frag,node);
+    });
+    el.querySelectorAll('.wword').forEach((w,i)=>w.style.setProperty('--d',(i*0.055).toFixed(3)+'s'));
+  }
+  if(!reduced)document.querySelectorAll('.mega,h2.head').forEach(splitWords);
+  if(fine&&!reduced)document.querySelectorAll('.si-row').forEach(row=>{
+    row.addEventListener('mousemove',e=>{
+      const r=row.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      row.style.transform='perspective(900px) rotateX('+(-y*4).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)';
+    });
+    row.addEventListener('mouseleave',()=>{row.style.transform=''});
+  });
+  const counters=document.querySelectorAll('.stat .num[data-count]');
+  if(counters.length){
+    const cio=new IntersectionObserver(es=>es.forEach(e=>{
+      if(!e.isIntersecting)return;cio.unobserve(e.target);
+      const elb=e.target,target=parseFloat(elb.dataset.count),dec=elb.dataset.dec==='1';
+      const set=v=>{elb.firstChild.nodeValue=dec?v.toFixed(1):Math.round(v).toLocaleString('en-US');};
+      if(reduced){set(target);return;}
+      const dur=1600,t0=performance.now();
+      requestAnimationFrame(function tick(t){const k=Math.min(1,(t-t0)/dur),ez=1-Math.pow(1-k,3);
+        set(target*ez);if(k<1)requestAnimationFrame(tick);});
+    }),{threshold:.4});
+    counters.forEach(c=>cio.observe(c));
+  }
+})();
 </script>
 </body>
 </html>

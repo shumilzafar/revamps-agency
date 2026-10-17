@@ -1,7 +1,42 @@
-/* Self-hosted fonts (Fontshare, OFL). No third-party font servers. */
-@font-face{font-family:'Clash Display';src:url('clash-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Clash Display';src:url('clash-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Clash Display';src:url('clash-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'General Sans';src:url('general-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'General Sans';src:url('general-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'General Sans';src:url('general-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{
+  font-family:'Gambetta';
+  src:url('fs-dc82f201.woff2') format('woff2');
+  font-weight:500;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Gambetta';
+  src:url('fs-29e557dc.woff2') format('woff2');
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Gambetta';
+  src:url('fs-bb43a964.woff2') format('woff2');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Satoshi';
+  src:url('fs-a9beb6ca.woff2') format('woff2');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Satoshi';
+  src:url('fs-ee0f08b5.woff2') format('woff2');
+  font-weight:500;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Satoshi';
+  src:url('fs-020b9040.woff2') format('woff2');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}

@@ -220,12 +220,31 @@
 
     function renderResult() {
       var r = window.FrostPlan.recommend(answers.q1, answers.q2, answers.q3);
+      var IMG = {
+        "Botox": "assets/img/treat-botox.webp",
+        "Dermal fillers": "assets/img/treat-fillers.webp",
+        "Dysport / Jeuveau": "assets/img/treat-botox.webp",
+        "Moxi": "assets/img/treat-moxi.webp",
+        "BBL Heroic": "assets/img/treat-bbl.webp",
+        "CO2 laser": "assets/img/treat-co2.webp",
+        "Virtue RF series": "assets/img/treat-virtuerf.webp",
+        "Frost Glow Facial": "assets/img/treat-facial.webp",
+        "ZO Skin Health plan": "assets/img/treat-skincare.webp",
+        "Lip filler consult": "assets/img/treat-fillers.webp"
+      };
       steps.forEach(function (s) { s.hidden = true; });
       result.querySelector("[data-r-title]").textContent = r.title;
       var ul = result.querySelector("[data-r-items]");
       ul.innerHTML = "";
       r.treatments.forEach(function (t) {
         var li = document.createElement("li");
+        if (IMG[t]) {
+          var ph = document.createElement("span");
+          ph.className = "r-thumb";
+          var im = document.createElement("img");
+          im.src = IMG[t]; im.alt = t; im.loading = "lazy";
+          ph.appendChild(im); li.appendChild(ph);
+        }
         var name = document.createElement("span");
         name.textContent = t;
         var tick = document.createElement("span");

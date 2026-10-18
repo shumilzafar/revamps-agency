@@ -185,7 +185,7 @@ a{color:inherit}
 /* authority */
 .authority-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .portrait-frame{border-radius:20px;overflow:hidden;border:1px solid var(--hair-soft);box-shadow:0 30px 60px -40px rgba(34,28,23,.4)}
-.portrait-frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:2/3}
 .facts{display:grid;grid-template-columns:1fr 1fr}
 .fact{padding:1.8rem 1.8rem 1.8rem 0;border-top:1px solid var(--hair)}
 .fact:nth-child(odd){padding-left:0}
@@ -196,13 +196,16 @@ a{color:inherit}
 
 /* treatment index rows */
 .trow{
-  display:grid;grid-template-columns:3.5rem 1fr auto;gap:clamp(1rem,3vw,2.5rem);
-  align-items:center;padding:2.1rem 0;border-top:1px solid var(--hair);text-decoration:none;
+  display:grid;grid-template-columns:3.5rem 5.5rem 1fr auto;gap:clamp(1rem,3vw,2.5rem);
+  align-items:center;padding:1.6rem 0;border-top:1px solid var(--hair);text-decoration:none;
 }
 .trow:last-child{border-bottom:1px solid var(--hair)}
 .trow .num{font-size:.72rem;font-weight:500;letter-spacing:.2em;color:var(--gray)}
 .trow .name{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.15}
 .trow .sub{color:var(--gray);font-size:.95rem;max-width:52ch;margin-top:.4rem}
+.trow .thumb{width:5.5rem;height:6.5rem;border-radius:14px;overflow:hidden;border:1px solid var(--hair-soft);flex:none}
+.trow .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:620px){.mi{grid-template-columns:1fr}}
 .trow .go{
   width:3rem;height:3rem;border:1px solid var(--hair);border-radius:50%;
   display:grid;place-items:center;font-size:1.2rem;
@@ -295,6 +298,8 @@ a{color:inherit}
 }
 .plan-items li:last-child{border-bottom:1px solid var(--hair-soft)}
 .plan-items .tick{color:var(--gold);font-size:1.1rem}
+.plan-items .r-thumb{width:3.2rem;height:3.8rem;border-radius:10px;overflow:hidden;flex:none;border:1px solid var(--hair-soft)}
+.plan-items .r-thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .plan-typical{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
 .plan-typical .v{font-family:var(--display);font-size:1.9rem}
 .plan-why{color:var(--gray);max-width:60ch}
@@ -316,7 +321,7 @@ a{color:inherit}
 .mi-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 @media (max-width:620px){
   .mi{grid-template-columns:1fr}
-  .mi-img{aspect-ratio:16/9}
+  .mi-img{aspect-ratio:4/5;max-width:420px}
 }
 .mi h3{font-family:var(--display);font-weight:400;font-size:clamp(1.35rem,2.2vw,1.8rem)}
 .mi .range{font-weight:500;font-size:.86rem;letter-spacing:.04em;white-space:nowrap}
@@ -425,8 +430,9 @@ a{color:inherit}
   .f-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:767px){
-  .trow{grid-template-columns:1fr auto}
+  .trow{grid-template-columns:auto 1fr auto}
   .trow .num{display:none}
+  .trow .thumb{width:4.2rem;height:5rem}
   .trow .go{width:2.6rem;height:2.6rem}
   .proof-grid{grid-template-columns:1fr 1fr}
   .pf-1{grid-column:1/3;aspect-ratio:4/3}
@@ -447,7 +453,7 @@ a{color:inherit}
 /* Team */
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:2.5rem}
 .tm-card{margin:0}
-.tm-photo{border-radius:20px;overflow:hidden;border:1px solid var(--hair-soft);background:var(--card);aspect-ratio:3/4}
+.tm-photo{border-radius:20px;overflow:hidden;border:1px solid var(--hair-soft);background:var(--card);aspect-ratio:2/3}
 .tm-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .tm-card figcaption{padding:.9rem .2rem 0}
 .tm-card figcaption strong{display:block;font-size:1.02rem;letter-spacing:.01em}

@@ -452,3 +452,12 @@ a{color:inherit}
 .brand-moment img{width:100%;height:auto;border-radius:24px;border:1px solid var(--hair-soft);display:block}
 .brand-moment figcaption{padding:1rem .2rem 0;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
 .tm-photo img.tm-wide{object-position:top center}
+
+/* Studio film */
+.studio-split{display:grid;grid-template-columns:5fr 7fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.studio-video{margin:0}
+.studio-video video{width:100%;aspect-ratio:9/16;max-height:72vh;object-fit:cover;border-radius:24px;border:1px solid var(--hair-soft);display:block;background:#000}
+.studio-cap{display:block;margin-top:.8rem}
+.studio-copy .display-sm{margin:.9rem 0 1rem}
+.studio-copy .lede{margin-bottom:1.6rem}
+@media(max-width:900px){.studio-split{grid-template-columns:1fr}.studio-video video{max-height:60vh}}

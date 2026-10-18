@@ -5,13 +5,13 @@
   if(!root)return;
   var BOOK='https://phorest.com/book/salons/ladylashprofessional';
   var SETS=[
-    {id:'classic',name:'Classic',price:100,time:'1 hr 15 min',vibe:0},
-    {id:'classic2d',name:'Classic 2D',price:110,time:'1 hr 15 min',vibe:0},
-    {id:'hybrid',name:'Hybrid',price:120,time:'1 hr 30 min',vibe:1},
-    {id:'elegance',name:'Elegance',price:139,time:'1 hr 30 min',vibe:1},
-    {id:'volume',name:'Volume',price:150,time:'1 hr 45 min',vibe:2},
-    {id:'kimk',name:'Kim K / Wispy',price:180,time:'2 hr',vibe:2},
-    {id:'mega',name:'Mega Volume',price:200,time:'2 hr 15 min',vibe:3}
+    {id:'classic',name:'Classic',price:100,time:'1 hr 15 min',vibe:0,img:'assets/img/result-lash-2.webp'},
+    {id:'classic2d',name:'Classic 2D',price:110,time:'1 hr 15 min',vibe:0,img:'assets/img/result-lash-1.webp'},
+    {id:'hybrid',name:'Hybrid',price:120,time:'1 hr 30 min',vibe:1,img:'assets/img/result-lash-3.webp'},
+    {id:'elegance',name:'Elegance',price:139,time:'1 hr 30 min',vibe:1,img:'assets/img/result-lash-6.webp'},
+    {id:'volume',name:'Volume',price:150,time:'1 hr 45 min',vibe:2,img:'assets/img/hero-lash-macro.webp'},
+    {id:'kimk',name:'Kim K / Wispy',price:180,time:'2 hr',vibe:2,img:'assets/img/result-lash-4.webp'},
+    {id:'mega',name:'Mega Volume',price:200,time:'2 hr 15 min',vibe:3,img:'assets/img/result-lash-5.webp'}
   ];
   var VIBES={natural:0,polished:1,glam:2,dramatic:3};
   var VIBE_NAME={natural:'natural',polished:'polished',glam:'glam',dramatic:'dramatic'};
@@ -49,7 +49,8 @@
     var note=r.clamped?'This is the best match inside your '+CAP_LABEL[state.budget]+' budget. When you are ready to go bigger, the next step up is waiting.':'Right in your '+CAP_LABEL[state.budget]+' range.';
     root.querySelector('.fresult').innerHTML=
       '<div class="qlabel">Your match</div>'+
-      '<div class="plan">'+s.name+' <span style="font-size:.5em;color:#b9ae9c">$'+s.price+'</span></div>'+
+      '<div class="fmatch"><div class="fmatch-img"><img src="'+s.img+'" alt="'+s.name+' lash set"></div>'+
+      '<div class="plan">'+s.name+' <span style="font-size:.5em;color:#b9ae9c">$'+s.price+'</span></div></div>'+
       '<p class="why">'+why+'</p>'+
       '<ul><li><span>Full set</span><span>$'+s.price+'</span></li>'+
       '<li><span>Appointment</span><span>'+s.time+'</span></li>'+

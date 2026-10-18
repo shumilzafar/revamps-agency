@@ -58,7 +58,7 @@ h1 .gold{color:var(--gold);font-style:italic;font-weight:500}
 .strip-track{display:flex;gap:26px;padding:0 28px;width:max-content;will-change:transform}
 .card3d{width:300px;flex:0 0 auto;transform-style:preserve-3d;transition:transform .3s ease}
 .card3d .ph{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 50px -24px rgba(18,16,13,.35);background:#000}
-.card3d img{width:300px;height:380px;object-fit:cover;pointer-events:none}
+.card3d img{width:300px;height:400px;object-fit:cover;pointer-events:none}
 .card3d figcaption{margin-top:12px;display:flex;justify-content:space-between;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
 .card3d figcaption b{color:var(--gold);font-weight:500}
 /* sections */
@@ -81,6 +81,8 @@ h2 .gold{color:var(--gold);font-style:italic}
 .svc h3{font-family:var(--serif);font-size:32px;font-weight:600;margin-bottom:10px}
 .svc .price{color:var(--gold);font-weight:500;letter-spacing:.06em}
 .svc p{color:var(--gray);font-weight:300;margin:12px 0 20px}
+.svc-img{border-radius:16px;overflow:hidden;margin-bottom:22px;aspect-ratio:3/4;max-width:280px;border:1px solid var(--line)}
+.svc-img img{width:100%;height:100%;object-fit:cover;display:block}
 /* academy band */
 .band{background:var(--ink);color:#f5f1e8;border-radius:26px;padding:70px 60px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;overflow:hidden;position:relative}
 .band::after{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border:1px solid rgba(185,138,47,.4);border-radius:50%}
@@ -95,18 +97,20 @@ h2 .gold{color:var(--gold);font-style:italic}
 .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .ggrid figure{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform .3s ease,opacity .3s ease}
 .ggrid figure.hide{display:none}
-.ggrid img{width:100%;aspect-ratio:1;object-fit:cover}
+.ggrid img{width:100%;aspect-ratio:3/4;object-fit:cover}
 .ggrid figcaption{padding:14px 18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);display:flex;justify-content:space-between}
 .ggrid figcaption b{color:var(--gold);font-weight:500}
 /* price tables */
 .ptable{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;margin-bottom:26px}
 .ptable h3{font-family:var(--serif);font-size:26px;font-weight:600;padding:24px 28px 6px}
 .ptable .sub{padding:0 28px 14px;color:var(--gray);font-size:14px;font-weight:300}
-.prow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 28px;border-top:1px solid var(--line);font-size:15px}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 28px;border-top:1px solid var(--line);font-size:15px}
 .prow .nm{font-weight:400}
 .prow .dt{color:var(--gray);font-size:13px;font-weight:300}
 .prow .pr{font-weight:600;white-space:nowrap}
 .prow .pr.goldp{color:var(--gold)}
+.prow .pthumb{width:52px;height:64px;border-radius:10px;overflow:hidden;flex:none;border:1px solid var(--line)}
+.prow .pthumb img{width:100%;height:100%;object-fit:cover;display:block}
 /* finder */
 .finder{background:var(--ink);color:#f5f1e8;border-radius:26px;padding:64px 56px;max-width:860px;margin:0 auto}
 .finder h2{color:#f5f1e8;font-size:clamp(32px,4.5vw,52px)}
@@ -122,6 +126,9 @@ h2 .gold{color:var(--gold);font-style:italic}
 .fprogress{height:2px;background:rgba(255,255,255,.12);border-radius:2px;margin-bottom:34px;overflow:hidden}
 .fprogress i{display:block;height:100%;background:var(--gold);width:0;transition:width .4s ease}
 .fresult .plan{font-family:var(--serif);font-size:44px;color:var(--gold-soft);font-weight:600;margin:6px 0 10px}
+.fmatch{display:flex;align-items:center;gap:22px;margin:10px 0}
+.fmatch-img{width:110px;height:140px;border-radius:14px;overflow:hidden;flex:none;border:1px solid rgba(255,255,255,.15)}
+.fmatch-img img{width:100%;height:100%;object-fit:cover;display:block}
 .fresult ul{list-style:none;margin:20px 0}
 .fresult li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:14px}
 .fresult li span:last-child{color:var(--gold-soft);white-space:nowrap}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Doctors | Gulch Dental Studio, Nashville TN</title>
+<meta name="description" content="Meet Dr. Scott Harris and Dr. Clint Newman of Gulch Dental Studio. Accessible luxury dentistry in Nashville's Gulch district since 2015.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.doc-full{display:grid;grid-template-columns:340px 1fr;gap:3.5rem;align-items:start;margin-bottom:5rem}
+.doc-full .portrait{border-radius:6px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 24px 48px rgba(41,41,41,.12)}
+.doc-full .portrait img{width:100%;height:100%;object-fit:cover}
+.doc-full h2{font-size:2.8rem;margin-bottom:.3rem}
+.doc-full .role{font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem}
+.doc-full p{font-weight:300;color:var(--ink-soft);margin-bottom:1.1rem;max-width:38rem}
+.doc-full .creds{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.doc-full .creds span{font-size:.72rem;font-weight:600;letter-spacing:.1em;background:var(--paper-2);border:1px solid var(--line);padding:.45rem .9rem;border-radius:20px}
+.timeline{border-left:2px solid var(--teal);margin:2rem 0 0 0;padding-left:2rem}
+.timeline .t{margin-bottom:1.6rem;position:relative}
+.timeline .t::before{content:"";position:absolute;left:-2.65rem;top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--paper)}
+.timeline .yr{font-size:.75rem;font-weight:700;letter-spacing:.2em;color:var(--teal-deep)}
+.timeline p{font-weight:300;color:var(--ink-soft);font-size:.95rem}
+.group-photo{border-radius:6px;overflow:hidden;margin:3rem 0;box-shadow:0 24px 48px rgba(41,41,41,.1)}
+.group-photo img{width:100%;height:auto}
+@media(max-width:760px){.doc-full{grid-template-columns:1fr}.doc-full .portrait{max-width:280px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Gulch <em>Dental Studio</em></a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html" class="active">Our Doctors</a>
+      <a href="results.html">Smile Gallery</a>
+      <a href="visit.html">Visit</a>
+      <a href="visit.html" class="nav-cta">Book a Visit</a>
+    </div>
+    <a class="nav-phone" href="tel:+16159533068">(615) 953-3068</a>
+  </div>
+</nav>
+
+<section style="padding-top:10rem">
+  <div class="wrap">
+    <div class="eyebrow rv">The people behind the smiles</div>
+    <h1 class="hero-title rv">Doctors who treat you<br>like <span class="tone">family</span></h1>
+    <p class="lede rv">Two dentists, one belief: the smile is the window to the soul, and everyone deserves to love theirs.</p>
+
+    <div class="doc-full rv">
+      <div class="portrait"><img src="assets/img/dr-harris.jpg" alt="Dr. Scott Harris"></div>
+      <div>
+        <h2>Dr. Scott Harris</h2>
+        <div class="role">Dentist</div>
+        <p>An Arkansas native whose compassion and training make him the heart of the practice. Dr. Harris combines a lifelong enthusiasm for dentistry with a genuine passion for continued learning, constantly studying the latest innovations so his patients get the best modern dentistry can offer.</p>
+        <p>He is especially passionate about cosmetic dentistry, helping patients find confidence and a remarkable appearance through porcelain veneers and smile design. His approach is simple: treat every patient with the same gentle, thorough care he would give a member of his own family.</p>
+        <div class="creds">
+          <span>UTHSC College of Dentistry</span>
+          <span>Certified Invisalign Provider</span>
+          <span>Porcelain Veneer Specialist</span>
+          <span>Nashville Dental Society</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-full rv">
+      <div class="portrait"><img src="assets/img/dr-newman.jpg" alt="Dr. Clint Newman"></div>
+      <div>
+        <h2>Dr. Clint Newman</h2>
+        <div class="role">Founder</div>
+        <p>With fifteen years of experience transforming smiles, even in the most complex cases, Dr. Newman founded Gulch Dental Studio in 2015 on a conviction: a dental visit should feel like hospitality, not a chore. The studio's luxurious amenities and serene design are his answer to dental anxiety.</p>
+        <p>He is also the founder of an established practice in Green Hills, and brings deep roots across Tennessee to everything the studio does.</p>
+        <div class="creds">
+          <span>University of Tennessee</span>
+          <span>15+ Years Experience</span>
+          <span>Complex Case Specialist</span>
+          <span>American Dental Association</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rv">
+      <div class="eyebrow">The whole team</div>
+      <h2 class="sec-title">One studio, <span class="tone">one family</span></h2>
+      <p class="sec-sub">From the front desk to the hygienist's chair, everyone here is chosen for the same thing: making you feel at ease.</p>
+      <div class="group-photo">
+        <img src="assets/img/team-group.jpg" alt="The Gulch Dental Studio team together">
+      </div>
+    </div>
+
+    <div class="rv">
+      <div class="eyebrow">Our story</div>
+      <h2 class="sec-title">Accessible <span class="tone">luxury</span></h2>
+      <p class="sec-sub">Dr. Harris wrote about what those two words mean here. Premium care should never mean premium prices.</p>
+      <div class="timeline">
+        <div class="t">
+          <div class="yr">2015</div>
+          <p>Gulch Dental Studio opens its doors in Nashville's Gulch district, built around hospitality and comfort.</p>
+        </div>
+        <div class="t">
+          <div class="yr">Today</div>
+          <p>A full-service studio offering cosmetic, restorative, and general dentistry, with every level of sedation available for anxious patients.</p>
+        </div>
+        <div class="t">
+          <div class="yr">Always</div>
+          <p>Rates comparable to less modernized practices. Insurance accepted, CareCredit financing available. Quality care should never depend on budget.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rv" style="text-align:center;padding:3rem 0">
+      <div class="btn-row" style="justify-content:center">
+        <a href="visit.html" class="btn btn-teal">Meet Us In Person</a>
+        <a href="results.html" class="btn btn-ghost">See Their Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Gulch Dental Studio</div>
+        <p>Accessible luxury dentistry in Nashville's Gulch district. Premium care, honest prices, since 2015.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>224 11th Ave S<br>Nashville, TN 37203</p>
+        <a href="tel:+16159533068">(615) 953-3068</a>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon - Thu: 7:00 AM - 3:00 PM<br>Fri: 7:00 AM - 12:00 PM<br>Sat - Sun: Closed</p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Concept rebuild. Not affiliated with Gulch Dental Studio.</span>
+      <span>Results vary per individual. Consult your dentist.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

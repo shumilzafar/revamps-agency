@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smile Gallery | Gulch Dental Studio, Nashville TN</title>
+<meta name="description" content="Real porcelain veneer before-and-after results from Gulch Dental Studio, Nashville TN. Drag the slider to compare. (615) 953-3068.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.gallery-hero{border-radius:6px;overflow:hidden;margin:2.5rem 0 4rem;position:relative}
+.gallery-hero img{width:100%;height:auto}
+.gallery-hero .cap{position:absolute;bottom:0;left:0;right:0;padding:2.5rem;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff}
+.gallery-hero .cap h2{font-size:2rem}
+.hint{text-align:center;color:var(--ink-soft);font-size:.85rem;margin:-1rem 0 2.5rem;letter-spacing:.06em}
+.disclaimer{font-size:.78rem;color:var(--ink-soft);margin-top:3rem;padding:1.4rem;border:1px solid var(--line);border-radius:4px;background:var(--paper-2);font-weight:300}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Gulch <em>Dental Studio</em></a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">Our Doctors</a>
+      <a href="results.html" class="active">Smile Gallery</a>
+      <a href="visit.html">Visit</a>
+      <a href="visit.html" class="nav-cta">Book a Visit</a>
+    </div>
+    <a class="nav-phone" href="tel:+16159533068">(615) 953-3068</a>
+  </div>
+</nav>
+
+<section style="padding-top:10rem">
+  <div class="wrap">
+    <div class="eyebrow rv">Real patients, real veneers</div>
+    <h1 class="hero-title rv">Artistry. Precision.<br><span class="tone">Transformation.</span></h1>
+    <p class="lede rv">Every smile below was designed and placed by our doctors. Drag the slider on any photo to compare before and after.</p>
+
+    <div class="gallery-hero rv">
+      <img src="assets/img/gallery-hero.jpg" alt="A transformed smile at Gulch Dental Studio">
+      <div class="cap"><h2>Smiles we have transformed through veneers</h2></div>
+    </div>
+
+    <p class="hint rv">Drag the white handle left and right to compare</p>
+
+    <div class="results-grid" id="resultsGrid">
+      <!-- populated by main.js -->
+    </div>
+
+    <div class="disclaimer rv">
+      Results are not guaranteed, may not be permanent, and can vary per individual. Photos shown are of actual patients treated at Gulch Dental Studio.
+    </div>
+
+    <div class="rv" style="text-align:center;padding:3.5rem 0 1rem">
+      <h2 class="sec-title">Yours could be <span class="tone">next</span></h2>
+      <p class="sec-sub" style="margin-left:auto;margin-right:auto">It starts with a conversation and a wax-up preview of your new smile.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a href="visit.html" class="btn btn-teal">Book a Consultation</a>
+        <a href="tel:+16159533068" class="btn btn-ghost">Call (615) 953-3068</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Gulch Dental Studio</div>
+        <p>Accessible luxury dentistry in Nashville's Gulch district. Premium care, honest prices, since 2015.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>224 11th Ave S<br>Nashville, TN 37203</p>
+        <a href="tel:+16159533068">(615) 953-3068</a>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon - Thu: 7:00 AM - 3:00 PM<br>Fri: 7:00 AM - 12:00 PM<br>Sat - Sun: Closed</p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Concept rebuild. Not affiliated with Gulch Dental Studio.</span>
+      <span>Results vary per individual. Consult your dentist.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

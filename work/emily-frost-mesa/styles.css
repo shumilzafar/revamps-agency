@@ -229,6 +229,15 @@ a{color:inherit}
 .quote-text{font-family:var(--display);font-size:clamp(1.5rem,2.8vw,2.3rem);line-height:1.35;text-wrap:pretty}
 .quote-attr{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gray)}
 
+/* reviews */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem}
+.review-card{margin:0;padding:2rem 1.8rem;border:1px solid var(--hair-soft);border-radius:20px;background:var(--card);display:flex;flex-direction:column;gap:1.1rem}
+.review-card .stars{color:var(--gold);font-size:.95rem;letter-spacing:.18em}
+.review-card blockquote{margin:0;font-size:1.02rem;line-height:1.55;color:var(--ink);text-wrap:pretty;flex:1}
+.review-card figcaption{font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gray)}
+@media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.reviews-grid{grid-template-columns:1fr}}
+
 /* visit band */
 .band{
   background:var(--ink);color:var(--paper);border-radius:28px;

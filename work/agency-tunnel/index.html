@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revamps Studio — Revenue Recovery for Roofers</title>
+<meta name="description" content="We build the Revenue Recovery System for roofing companies: missed-call textback, quote follow-up, and dead-lead reactivation. You own it completely.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0a0e1a;
+    --navy-2:#0e1424;
+    --ink:#f2f4f8;
+    --muted:#9aa4b8;
+    --faint:#5c6678;
+    --orange:#f97316;
+    --orange-hot:#fb8b3c;
+    --line:rgba(242,244,248,.09);
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --disp:'Space Grotesk',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--navy);
+    color:var(--ink);
+    font-family:var(--body);
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  .hero{
+    height:100vh;
+    height:100svh;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  /* ---------- nav ---------- */
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px clamp(20px,4vw,56px);
+    z-index:5;flex:0 0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand-mark{
+    width:30px;height:30px;border-radius:7px;
+    background:linear-gradient(135deg,var(--orange),#c2410c);
+    display:grid;place-items:center;
+    font-family:var(--disp);font-weight:700;font-size:17px;color:#0a0e1a;
+  }
+  .brand-name{font-family:var(--disp);font-weight:700;letter-spacing:.02em;font-size:15px}
+  .brand-name span{color:var(--orange)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{
+    color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:500;
+    font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase;
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{
+    font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;
+    border:1px solid var(--line);border-radius:999px;padding:10px 20px;
+    transition:border-color .2s,color .2s;
+  }
+  .nav-cta:hover{border-color:var(--orange);color:var(--orange-hot)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* ---------- copy ---------- */
+  .copy{
+    text-align:center;z-index:5;flex:0 0 auto;
+    padding:clamp(8px,2.5vh,36px) 20px 0;
+    pointer-events:none;
+  }
+  .copy a{pointer-events:auto}
+  .eyebrow{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--orange);margin-bottom:18px;
+  }
+  h1{
+    font-family:var(--disp);font-weight:700;
+    font-size:clamp(2rem,5.2vw,4.3rem);
+    line-height:1.04;letter-spacing:-.03em;
+    max-width:16ch;margin:0 auto 18px;
+  }
+  h1 .accent{color:var(--orange)}
+  .lede{
+    color:var(--muted);font-size:clamp(.95rem,1.6vw,1.15rem);
+    max-width:56ch;margin:0 auto 30px;line-height:1.65;
+  }
+  .lede strong{color:var(--ink);font-weight:600}
+  .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+    text-decoration:none;border-radius:999px;padding:15px 30px;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s,color .18s,border-color .18s;
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .btn-solid{background:var(--orange);color:#0a0e1a;font-weight:600}
+  .btn-solid:hover{background:var(--orange-hot);transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(249,115,22,.5)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--orange);color:var(--orange-hot)}
+
+  /* ---------- tunnel ---------- */
+  .tunnel{
+    position:relative;flex:1 1 auto;min-height:0;z-index:1;
+    margin-top:clamp(10px,3vh,34px);
+  }
+  #gl{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
+  #gl.dragging{cursor:grabbing}
+  .tunnel-grade{
+    position:absolute;inset:0;pointer-events:none;z-index:2;
+    background:
+      linear-gradient(to bottom,var(--navy) 0%,transparent 22%),
+      linear-gradient(to top,var(--navy) 6%,transparent 30%),
+      radial-gradient(120% 90% at 50% 110%,transparent 55%,rgba(4,6,12,.55) 100%);
+  }
+  .tunnel-fallback{position:absolute;inset:0;display:none;z-index:1}
+  .tunnel-fallback img{width:100%;height:100%;object-fit:cover;opacity:.5}
+  .no-webgl .tunnel-fallback{display:block}
+  .no-webgl #gl{display:none}
+
+  .tunnel-hud{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px clamp(20px,4vw,56px);
+    pointer-events:none;
+  }
+  .hud-hint{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);
+  }
+  .hud-hint b{color:var(--muted);font-weight:500}
+  .hud-controls{display:flex;align-items:center;gap:10px;pointer-events:auto}
+  .hud-btn{
+    width:42px;height:42px;border-radius:50%;
+    border:1px solid var(--line);background:rgba(10,14,26,.6);backdrop-filter:blur(8px);
+    color:var(--ink);cursor:pointer;display:grid;place-items:center;
+    font-size:15px;transition:border-color .2s,color .2s;
+  }
+  .hud-btn:hover{border-color:var(--orange);color:var(--orange-hot)}
+  .hud-btn .icon-pause{display:none}
+  .tunnel.paused .hud-btn .icon-pause{display:block}
+  .tunnel.paused .hud-btn .icon-play{display:none}
+
+  .scroll-cue{
+    position:absolute;left:50%;transform:translateX(-50%);bottom:74px;z-index:3;pointer-events:none;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--faint);
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+    opacity:0;animation:cuein 1s ease 1.2s forwards;
+  }
+  .scroll-cue::after{content:"";width:1px;height:34px;background:linear-gradient(var(--orange),transparent);display:block}
+  @keyframes cuein{to{opacity:1}}
+  @media(max-width:760px){.scroll-cue{display:none}.hud-hint{display:none}}
+
+  @media(prefers-reduced-motion:reduce){
+    .scroll-cue{animation:none;opacity:0}
+    *{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="hero" id="hero">
+
+  <nav class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">R</span>
+      <span class="brand-name">REVAMPS<span>.</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">System</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <a class="nav-cta" href="#">Book a call</a>
+  </nav>
+
+  <div class="copy">
+    <div class="eyebrow">Revamps Studio &mdash; for roofing companies</div>
+    <h1>Every missed call is <span class="accent">a roof</span> you never sold.</h1>
+    <p class="lede">We install your <strong>Revenue Recovery System</strong>: missed-call textback, quote follow-up, and dead-lead reactivation. Done for you. <strong>You own it completely.</strong></p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="#">See it work &rarr;</a>
+      <a class="btn btn-ghost" href="#">How it works</a>
+    </div>
+  </div>
+
+  <div class="tunnel" id="tunnel">
+    <canvas id="gl"></canvas>
+    <div class="tunnel-fallback"><img src="img/hero.jpg" alt="Roofing work by Revamps clients"></div>
+    <div class="tunnel-grade"></div>
+    <div class="tunnel-hud">
+      <div class="hud-hint"><b>Drag</b> &nbsp;&middot;&nbsp; scroll &nbsp;&middot;&nbsp; arrow keys</div>
+      <div class="hud-controls">
+        <button class="hud-btn" id="pauseBtn" aria-label="Pause motion">
+          <span class="icon-play">&#10074;&#10074;</span>
+          <span class="icon-pause">&#9654;</span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </div>
+
+</div>
+
+<script type="importmap">
+{"imports":{"three":"./vendor/three.module.js"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const tunnelEl = document.getElementById('tunnel');
+const canvas = document.getElementById('gl');
+
+const PICS = [
+  'img/hero.jpg','img/svc-install.jpg','img/team1.jpg','img/before.jpg',
+  'img/t12.jpg','img/svc-repair.jpg','img/team2.jpg','img/after.jpg',
+  'img/t13.jpg','img/diff.jpg','img/team3.jpg','img/svc-gutter.jpg',
+  'img/t15.jpg','img/team4.jpg','img/t16.jpg','img/t17.webp'
+];
+
+let renderer = null;
+try {
+  renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+} catch(e){ renderer = null; }
+if(!renderer || !renderer.getContext()){
+  document.getElementById('hero').classList.add('no-webgl');
+} else {
+  initTunnel(renderer);
+}
+
+function initTunnel(renderer){
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x0a0e1a, 14, 30);
+
+  const camera = new THREE.PerspectiveCamera(46, 1, 0.1, 100);
+  camera.position.set(0, 0.55, 13);
+
+  renderer.setClearColor(0x0a0e1a, 1);
+
+  const loader = new THREE.TextureLoader();
+  const N = PICS.length;
+  const planes = [];
+  const PW = 4.4, PH = 2.75;           // picture size
+  const SPAN = 30;                     // track width in world units
+  const CURVE = 7.5;                   // how far edges recede
+
+  const geo = new THREE.PlaneGeometry(PW, PH);
+  PICS.forEach((src, i) => {
+    const tex = loader.load(src, t => {
+      t.colorSpace = THREE.SRGBColorSpace;
+    });
+    const mat = new THREE.MeshBasicMaterial({map:tex, fog:true});
+    const m = new THREE.Mesh(geo, mat);
+    m.userData.index = i;
+    scene.add(m);
+    planes.push(m);
+  });
+
+  // track: u in [0,1) -> position. x spans -SPAN/2..SPAN/2, z parabolas back at edges
+  function trackPos(u, out){
+    const x = (u - 0.5) * SPAN;
+    const edge = Math.abs(u - 0.5) * 2;          // 0 center -> 1 edge
+    const z = CURVE * edge * edge;
+    const y = 0.55 + Math.sin(u * Math.PI * 2) * 0.3;
+    out.set(x, y, z);
+    return out;
+  }
+
+  const v3 = new THREE.Vector3();
+  let offset = 0;                 // travel along track
+  let vel = REDUCED ? 0 : 0.028; // base cruise speed
+  let targetCruise = REDUCED ? 0 : 0.028;
+  let dragging = false, lastX = 0, dragVel = 0;
+  let paused = false;
+
+  const pauseBtn = document.getElementById('pauseBtn');
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    tunnelEl.classList.toggle('paused', paused);
+    targetCruise = (paused || REDUCED) ? 0 : 0.028;
+    pauseBtn.setAttribute('aria-label', paused ? 'Resume motion' : 'Pause motion');
+  });
+
+  canvas.addEventListener('pointerdown', e => {
+    dragging = true; lastX = e.clientX; dragVel = 0;
+    canvas.classList.add('dragging');
+    canvas.setPointerCapture(e.pointerId);
+  });
+  canvas.addEventListener('pointermove', e => {
+    if(!dragging) return;
+    const dx = e.clientX - lastX; lastX = e.clientX;
+    const d = -dx * 0.0016;
+    offset += d;
+    dragVel = dragVel * 0.7 + (-d * 60) * 0.3;
+  });
+  function endDrag(){ if(!dragging) return; dragging = false; canvas.classList.remove('dragging'); vel = THREE.MathUtils.clamp(dragVel, -0.6, 0.6); }
+  canvas.addEventListener('pointerup', endDrag);
+  canvas.addEventListener('pointercancel', endDrag);
+
+  // wheel: horizontal scroll or shift+wheel scrubs; vertical wheel nudges speed
+  tunnelEl.addEventListener('wheel', e => {
+    if(Math.abs(e.deltaX) > Math.abs(e.deltaY)){
+      offset += -e.deltaX * 0.0011;
+      vel = THREE.MathUtils.clamp(vel + -e.deltaX * 0.0004, -0.5, 0.5);
+    } else {
+      vel = THREE.MathUtils.clamp(vel + -e.deltaY * 0.00035, -0.5, 0.5);
+    }
+    if(Math.abs(e.deltaX) > 4) e.preventDefault();
+  }, {passive:false});
+
+  window.addEventListener('keydown', e => {
+    if(e.key === 'ArrowRight'){ vel = Math.min(vel + 0.09, 0.6); }
+    if(e.key === 'ArrowLeft'){ vel = Math.max(vel - 0.09, -0.6); }
+  });
+
+  function resize(){
+    const w = tunnelEl.clientWidth, h = tunnelEl.clientHeight;
+    renderer.setSize(w, h, false);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    camera.aspect = w / h;
+    // pull camera back on narrow screens so the tunnel still reads
+    camera.position.z = camera.aspect < 0.8 ? 17 : camera.aspect < 1.2 ? 14.5 : 13;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const clock = new THREE.Clock();
+  const camTarget = new THREE.Vector3();
+
+  function frame(){
+    requestAnimationFrame(frame);
+    const dt = Math.min(clock.getDelta(), 0.05);
+
+    if(!dragging){
+      // ease velocity toward cruise target
+      vel += (targetCruise - vel) * Math.min(1, dt * 1.6);
+      if(Math.abs(vel) < 0.0004 && targetCruise === 0) vel = 0;
+      offset += vel * dt;
+    }
+    offset = ((offset % 1) + 1) % 1;
+
+    const speed = Math.abs(vel);
+    // fold: pictures tip toward the viewer as speed rises (0..~0.85 rad)
+    const fold = REDUCED ? 0 : Math.min(0.85, speed * 2.4);
+    const skew = REDUCED ? 0 : THREE.MathUtils.clamp(vel * 1.4, -0.45, 0.45);
+
+    for(const m of planes){
+      const u = (m.userData.index / N + offset + 1) % 1;
+      trackPos(u, v3);
+      m.position.copy(v3);
+      // face the curve: yaw follows track tangent, pitch folds with speed
+      const tangent = -((u - 0.5) * 2) * 0.55;
+      m.rotation.set(0, 0, 0);
+      m.rotation.y = tangent;
+      m.rotation.x = -fold;
+      m.rotation.z = skew * 0.35;
+      // near-center pictures sit slightly proud
+      const edge = Math.abs(u - 0.5) * 2;
+      const s = 1 + (1 - edge) * 0.12;
+      m.scale.set(s, s, 1);
+    }
+
+    // camera drifts almost imperceptibly toward drag direction
+    camTarget.set(THREE.MathUtils.clamp(vel * -6, -1.2, 1.2), 0.55, camera.position.z);
+    camera.position.x += (camTarget.x - camera.position.x) * Math.min(1, dt * 2);
+    camera.lookAt(0, 0.35, 0);
+
+    renderer.render(scene, camera);
+  }
+  frame();
+}
+</script>
+</body>
+</html>

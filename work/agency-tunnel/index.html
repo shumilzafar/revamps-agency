@@ -264,18 +264,27 @@ function initTunnel(renderer){
   function trackPos(u, out){
     const x = (u - 0.5) * SPAN;
     const edge = Math.abs(u - 0.5) * 2;          // 0 center -> 1 edge
-    const z = CURVE * edge * edge;
+    const z = -CURVE * edge * edge;              // edges recede away from camera
     const y = 0.55 + Math.sin(u * Math.PI * 2) * 0.3;
     out.set(x, y, z);
     return out;
   }
 
   const v3 = new THREE.Vector3();
-  let offset = 0;                 // travel along track
-  let vel = REDUCED ? 0 : 0.028; // base cruise speed
-  let targetCruise = REDUCED ? 0 : 0.028;
+  const CRUISE = 0.028;                        // base cruise speed (u/sec)
+  let offset = 0;                              // travel along track
+  let vel = REDUCED ? 0 : CRUISE;
+  let smoothedVel = vel;                       // eased velocity (drives all motion)
+  let foldFactor = 0;                          // eased 0..1 fold amount
+  let targetCruise = REDUCED ? 0 : CRUISE;
   let dragging = false, lastX = 0, dragVel = 0;
   let paused = false;
+  // per-picture eased rotation state (this is what makes motion feel physical)
+  for(const m of planes){
+    m.userData.curPitch = 0;
+    m.userData.curYaw = 0;
+    m.userData.curRoll = 0;
+  }
 
   const pauseBtn = document.getElementById('pauseBtn');
   pauseBtn.addEventListener('click', () => {
@@ -295,7 +304,7 @@ function initTunnel(renderer){
     const dx = e.clientX - lastX; lastX = e.clientX;
     const d = -dx * 0.0016;
     offset += d;
-    dragVel = dragVel * 0.7 + (-d * 60) * 0.3;
+    dragVel = THREE.MathUtils.clamp(dragVel * 0.7 + (-d * 60) * 0.3, -0.6, 0.6);
   });
   function endDrag(){ if(!dragging) return; dragging = false; canvas.classList.remove('dragging'); vel = THREE.MathUtils.clamp(dragVel, -0.6, 0.6); }
   canvas.addEventListener('pointerup', endDrag);
@@ -334,20 +343,35 @@ function initTunnel(renderer){
 
   function frame(){
     requestAnimationFrame(frame);
-    const dt = Math.min(clock.getDelta(), 0.05);
+    const dt = Math.min(clock.getDelta(), 0.06);
+    const t = clock.elapsedTime;
 
     if(!dragging){
-      // ease velocity toward cruise target
-      vel += (targetCruise - vel) * Math.min(1, dt * 1.6);
-      if(Math.abs(vel) < 0.0004 && targetCruise === 0) vel = 0;
+      // exponential inertia damping (frame-rate independent)
+      vel *= Math.pow(0.935, dt * 60);
+      // blend back to cruise when slow
+      if(!paused && !REDUCED){
+        if(Math.abs(vel) < Math.abs(targetCruise) * 1.4){
+          vel += (targetCruise - vel) * Math.min(1, dt * 2.2);
+        }
+      } else if(Math.abs(vel) < 0.0004){
+        vel = 0;
+      }
       offset += vel * dt;
+    } else {
+      vel = dragVel; // fold reacts to drag speed while dragging
     }
     offset = ((offset % 1) + 1) % 1;
 
-    const speed = Math.abs(vel);
+    // double smoothing: raw vel -> smoothedVel -> foldFactor
+    smoothedVel += (vel - smoothedVel) * Math.min(1, dt * 8.4);
+    const aboveCruise = Math.max(0, Math.abs(smoothedVel) - CRUISE * 1.15);
+    const targetFold = REDUCED ? 0 : Math.min(1, aboveCruise * 3.2);
+    foldFactor += (targetFold - foldFactor) * Math.min(1, dt * 9.6);
+
     // fold: pictures tip toward the viewer as speed rises (0..~0.85 rad)
-    const fold = REDUCED ? 0 : Math.min(0.85, speed * 2.4);
-    const skew = REDUCED ? 0 : THREE.MathUtils.clamp(vel * 1.4, -0.45, 0.45);
+    const foldRad = foldFactor * 0.85;
+    const skew = REDUCED ? 0 : THREE.MathUtils.clamp(smoothedVel * 1.4, -0.45, 0.45);
 
     for(const m of planes){
       const u = (m.userData.index / N + offset + 1) % 1;
@@ -355,20 +379,35 @@ function initTunnel(renderer){
       m.position.copy(v3);
       // face the curve: yaw follows track tangent, pitch folds with speed
       const tangent = -((u - 0.5) * 2) * 0.55;
-      m.rotation.set(0, 0, 0);
-      m.rotation.y = tangent;
-      m.rotation.x = -fold;
-      m.rotation.z = skew * 0.35;
+      const ud = m.userData;
+      if(REDUCED){
+        m.rotation.set(0, tangent, 0);
+      } else {
+        const centerness = 1 - Math.abs(u - 0.5) * 2;
+        const tPitch = 0.035 + foldRad * (0.8 + centerness * 0.25);
+        const tYaw = tangent * (1 - foldFactor * 0.35) + (-smoothedVel * 0.8);
+        const tRoll = skew * 0.35;
+        const k = Math.min(1, dt * 10.8); // ease each picture toward its target
+        ud.curPitch += (tPitch - ud.curPitch) * k;
+        ud.curYaw += (tYaw - ud.curYaw) * k;
+        ud.curRoll += (tRoll - ud.curRoll) * k;
+        m.rotation.set(ud.curPitch, ud.curYaw, ud.curRoll);
+      }
       // near-center pictures sit slightly proud
       const edge = Math.abs(u - 0.5) * 2;
       const s = 1 + (1 - edge) * 0.12;
       m.scale.set(s, s, 1);
     }
 
-    // camera drifts almost imperceptibly toward drag direction
-    camTarget.set(THREE.MathUtils.clamp(vel * -6, -1.2, 1.2), 0.55, camera.position.z);
-    camera.position.x += (camTarget.x - camera.position.x) * Math.min(1, dt * 2);
-    camera.lookAt(0, 0.35, 0);
+    // camera: drifts with velocity, banks slightly, breathes at idle (all eased)
+    const camX = REDUCED ? 0 : THREE.MathUtils.clamp(smoothedVel * -8, -1.2, 1.2);
+    const camY = 0.55 + (REDUCED ? 0 : Math.sin(t * 1.1) * 0.04);
+    camera.position.x += (camX - camera.position.x) * Math.min(1, dt * 4.8);
+    camera.position.y += (camY - camera.position.y) * Math.min(1, dt * 4.8);
+    camera.lookAt(camX * 0.35, 0.35, 0);
+    if(!REDUCED){
+      camera.rotation.z += ((-smoothedVel * 0.6) - camera.rotation.z) * Math.min(1, dt * 6);
+    }
 
     renderer.render(scene, camera);
   }

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bluebird Roofing | Protect Your Nest | Mt. Juliet & Franklin, TN</title>
+<meta name="description" content="Middle Tennessee's GAF Master Elite roofer. 4,200+ happy clients, 4,562 roofs installed, 5.0 rating. Free inspections in Mt. Juliet, Franklin, Brentwood and beyond.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0e1a2e;
+  --navy-deep: #0a1322;
+  --amber: #e8821e;
+  --amber-dark: #c96a12;
+  --cream: #faf6ef;
+  --cream-dark: #f1e9da;
+  --ink: #1a2332;
+  --muted: #5d6b82;
+  --line: #e4dccb;
+  --white: #ffffff;
+  --radius: 14px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 5vw;
+  background: rgba(14, 26, 46, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: padding 0.3s ease;
+}
+.nav.scrolled { padding: 12px 5vw; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--white); }
+.brand-mark {
+  width: 42px; height: 42px; border-radius: 10px;
+  background: var(--amber);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 900; color: var(--navy);
+  font-family: 'Archivo', sans-serif;
+}
+.brand-name { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -0.02em; line-height: 1.1; }
+.brand-name small { display: block; font-size: 11px; font-weight: 500; color: var(--amber); letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-links { display: flex; gap: 32px; color: rgba(255,255,255,0.82); font-size: 14.5px; font-weight: 500; }
+.nav-links a:hover { color: var(--amber); }
+.nav-cta {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--amber); color: var(--navy-deep);
+  font-weight: 700; font-size: 15px;
+  padding: 12px 22px; border-radius: 100px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.nav-cta:hover { background: #f0922f; transform: translateY(-1px); }
+@media (max-width: 900px) { .nav-links { display: none; } }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative; min-height: 100svh;
+  display: flex; align-items: flex-end;
+  background: var(--navy-deep);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('img/hero.jpg') center/cover;
+  opacity: 0.55;
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--navy-deep) 4%, rgba(10,19,34,0.55) 45%, rgba(10,19,34,0.25) 100%);
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  width: 100%; padding: 140px 5vw 70px;
+  color: var(--white);
+}
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 22px;
+}
+.hero-kicker::before { content: ''; width: 34px; height: 2px; background: var(--amber); display: inline-block; }
+.hero h1 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900; font-stretch: 110%;
+  font-size: clamp(52px, 9vw, 124px);
+  line-height: 0.94; letter-spacing: -0.03em;
+  max-width: 12ch;
+}
+.hero h1 em {
+  font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400;
+  color: var(--amber); letter-spacing: 0;
+}
+.hero-sub {
+  margin-top: 26px; max-width: 52ch;
+  font-size: clamp(16px, 1.6vw, 19px); color: rgba(255,255,255,0.78);
+}
+.hero-actions { display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 17px 34px; border-radius: 100px;
+  font-weight: 700; font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  cursor: pointer; border: none;
+}
+.btn-solid { background: var(--amber); color: var(--navy-deep); }
+.btn-solid:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(232,130,30,0.35); background: #f0922f; }
+.btn-ghost { background: rgba(255,255,255,0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(6px); }
+.btn-ghost:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+.hero-proof {
+  display: flex; gap: 40px; margin-top: 56px; padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  flex-wrap: wrap;
+}
+.proof-item { display: flex; align-items: center; gap: 14px; }
+.proof-stars { color: var(--amber); font-size: 18px; letter-spacing: 2px; }
+.proof-item strong { display: block; font-size: 15px; color: var(--white); }
+.proof-item span { font-size: 13px; color: rgba(255,255,255,0.6); }
+.proof-badge {
+  width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+  background: rgba(232,130,30,0.14); border: 1px solid rgba(232,130,30,0.4);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Archivo', sans-serif; font-weight: 900; color: var(--amber); font-size: 13px;
+  text-align: center; line-height: 1.15;
+}
+
+/* ---------- MARQUEE ---------- */
+.marquee {
+  background: var(--amber); color: var(--navy-deep);
+  overflow: hidden; white-space: nowrap;
+  padding: 15px 0;
+  font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.marquee-track { display: inline-flex; gap: 48px; animation: scroll 28s linear infinite; padding-right: 48px; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+.marquee-track span::after { content: '★'; margin-left: 48px; opacity: 0.55; }
+
+/* ---------- SECTIONS ---------- */
+.section { padding: 110px 5vw; }
+.section-head { max-width: 720px; margin-bottom: 60px; }
+.eyebrow {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--amber-dark); margin-bottom: 18px; display: flex; align-items: center; gap: 10px;
+}
+.eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--amber); }
+h2 {
+  font-family: 'Archivo', sans-serif; font-weight: 850; font-stretch: 108%;
+  font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.025em;
+  color: var(--navy);
+}
+h2 em { font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400; color: var(--amber-dark); }
+.lede { margin-top: 20px; font-size: 18px; color: var(--muted); max-width: 58ch; }
+
+/* ---------- STATS ---------- */
+.stats { background: var(--navy); color: var(--white); }
+.stats .eyebrow { color: var(--amber); }
+.stats h2 { color: var(--white); }
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+  background: rgba(255,255,255,0.1); border-radius: var(--radius); overflow: hidden;
+  margin-top: 56px;
+}
+.stat { background: var(--navy); padding: 44px 32px; transition: background 0.3s ease; }
+.stat:hover { background: #13233d; }
+.stat-num {
+  font-family: 'Archivo', sans-serif; font-weight: 900;
+  font-size: clamp(40px, 4.5vw, 58px); color: var(--amber);
+  letter-spacing: -0.03em; line-height: 1;
+}
+.stat-label { margin-top: 12px; font-size: 14.5px; color: rgba(255,255,255,0.65); font-weight: 500; }
+@media (max-width: 800px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---------- BEFORE / AFTER (showpiece) ---------- */
+.ba-wrap { margin-top: 10px; }
+.ba-slider {
+  position: relative; border-radius: 20px; overflow: hidden;
+  aspect-ratio: 16/9; max-height: 640px; width: 100%;
+  user-select: none; cursor: ew-resize;
+  box-shadow: 0 30px 80px rgba(14,26,46,0.22);
+  touch-action: pan-y;
+}
+.ba-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.ba-after { z-index: 1; }
+.ba-before { position: absolute; top: 0; left: 0; bottom: 0; z-index: 2; width: 50%; overflow: hidden; border-right: 3px solid var(--white); }
+.ba-before .ba-img { position: absolute; top: 0; left: 0; bottom: 0; width: 100%; max-width: none; }
+.ba-handle {
+  position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; z-index: 3;
+  background: var(--white); transform: translateX(-50%);
+  pointer-events: none;
+}
+.ba-knob {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--white); color: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: 700;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+}
+.ba-tag {
+  position: absolute; top: 22px; z-index: 4;
+  padding: 9px 20px; border-radius: 100px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.ba-tag.before { left: 22px; background: rgba(14,26,46,0.85); color: var(--white); backdrop-filter: blur(4px); }
+.ba-tag.after { right: 22px; background: var(--amber); color: var(--navy-deep); }
+.ba-caption { text-align: center; margin-top: 22px; color: var(--muted); font-size: 15px; }
+.ba-caption strong { color: var(--navy); }
+
+/* ---------- SERVICES ---------- */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 20px; }
+@media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card {
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(14,26,46,0.12); }
+.service-img { height: 240px; background-size: cover; background-position: center; }
+.service-body { padding: 34px 30px 36px; }
+.service-body h3 {
+  font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 24px;
+  letter-spacing: -0.02em; color: var(--navy); margin-bottom: 14px;
+}
+.service-body p { color: var(--muted); font-size: 15.5px; margin-bottom: 22px; }
+.service-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 15px; color: var(--amber-dark);
+}
+.service-link:hover { gap: 12px; }
+.service-link { transition: gap 0.2s ease; }
+
+/* ---------- DIFFERENCE ---------- */
+.diff { background: var(--cream-dark); }
+.diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; margin-top: 20px; }
+@media (max-width: 900px) { .diff-grid { grid-template-columns: 1fr; } }
+.diff-img {
+  border-radius: 20px; overflow: hidden; aspect-ratio: 4/5;
+  background: url('img/diff.jpg') center/cover;
+  box-shadow: 0 30px 70px rgba(14,26,46,0.18);
+  position: relative;
+}
+.diff-img-badge {
+  position: absolute; bottom: 26px; left: 26px; right: 26px;
+  background: rgba(14,26,46,0.92); backdrop-filter: blur(8px);
+  border-radius: 14px; padding: 22px 24px; color: var(--white);
+}
+.diff-img-badge strong { font-family: 'Archivo', sans-serif; font-size: 17px; display: block; margin-bottom: 6px; }
+.diff-img-badge span { font-size: 13.5px; color: rgba(255,255,255,0.7); }
+.diff-list { display: flex; flex-direction: column; gap: 6px; margin-top: 36px; }
+.diff-item {
+  display: flex; gap: 20px; padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.diff-item:last-child { border-bottom: none; }
+.diff-num {
+  font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 15px;
+  color: var(--amber-dark); min-width: 36px; padding-top: 3px;
+}
+.diff-item h4 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.01em; }
+.diff-item p { color: var(--muted); font-size: 15px; }
+
+/* ---------- TEAM ---------- */
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 20px; }
+@media (max-width: 1000px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .team-grid { grid-template-columns: 1fr; } }
+.team-card {
+  background: var(--navy); border-radius: var(--radius); overflow: hidden; color: var(--white);
+  transition: transform 0.3s ease;
+}
+.team-card:hover { transform: translateY(-5px); }
+.team-photo { height: 300px; background-size: cover; background-position: center top; position: relative; }
+.team-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--navy) 2%, transparent 45%); }
+.team-info { padding: 8px 26px 30px; margin-top: -46px; position: relative; z-index: 2; }
+.team-info h4 { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+.team-info span { font-size: 13.5px; color: var(--amber); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.team-info p { font-size: 14px; color: rgba(255,255,255,0.65); margin-top: 10px; }
+
+/* ---------- REVIEWS ---------- */
+.reviews { background: var(--navy-deep); color: var(--white); overflow: hidden; }
+.reviews .eyebrow { color: var(--amber); }
+.reviews h2 { color: var(--white); }
+.reviews .lede { color: rgba(255,255,255,0.65); }
+.review-track-wrap { margin-top: 56px; overflow: hidden; }
+.review-track { display: flex; gap: 24px; animation: scroll 46s linear infinite; width: max-content; }
+.review-track:hover { animation-play-state: paused; }
+.review-card {
+  width: 420px; flex-shrink: 0;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 34px 30px;
+  backdrop-filter: blur(4px);
+}
+.review-stars { color: var(--amber); letter-spacing: 3px; margin-bottom: 18px; font-size: 16px; }
+.review-card p { font-size: 15.5px; color: rgba(255,255,255,0.85); font-style: italic; }
+.review-who { margin-top: 22px; display: flex; align-items: center; gap: 14px; }
+.review-avatar {
+  width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+  background: var(--amber); color: var(--navy-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 18px;
+}
+.review-who strong { display: block; font-size: 15px; }
+.review-who span { font-size: 13px; color: rgba(255,255,255,0.55); }
+.google-badge {
+  display: inline-flex; align-items: center; gap: 12px; margin-top: 44px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  padding: 16px 28px; border-radius: 100px;
+}
+.google-badge strong { font-size: 26px; font-family: 'Archivo', sans-serif; }
+.google-badge span { font-size: 14px; color: rgba(255,255,255,0.6); }
+
+/* ---------- AREAS ---------- */
+.areas-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.area-pill {
+  padding: 13px 26px; border-radius: 100px;
+  border: 1.5px solid var(--line); background: var(--white);
+  font-weight: 600; font-size: 15px; color: var(--navy);
+  transition: all 0.2s ease; cursor: default;
+}
+.area-pill:hover { border-color: var(--amber); color: var(--amber-dark); transform: translateY(-2px); }
+.area-pill.home { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+/* ---------- QUOTE / CONTACT ---------- */
+.quote { background: var(--navy); color: var(--white); }
+.quote .eyebrow { color: var(--amber); }
+.quote h2 { color: var(--white); }
+.quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; margin-top: 20px; align-items: start; }
+@media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; } }
+.quote-info p { color: rgba(255,255,255,0.7); font-size: 17px; margin-top: 20px; max-width: 44ch; }
+.contact-rows { margin-top: 36px; display: flex; flex-direction: column; gap: 4px; }
+.contact-row {
+  display: flex; align-items: center; gap: 18px; padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.contact-row:last-child { border: none; }
+.contact-icon {
+  width: 50px; height: 50px; border-radius: 12px; flex-shrink: 0;
+  background: rgba(232,130,30,0.14); border: 1px solid rgba(232,130,30,0.35);
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.contact-row strong { display: block; font-size: 16px; }
+.contact-row span { font-size: 14px; color: rgba(255,255,255,0.6); }
+.contact-row a:hover strong { color: var(--amber); }
+.quote-form {
+  background: var(--white); border-radius: 20px; padding: 44px 40px; color: var(--ink);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+}
+.quote-form h3 { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.02em; color: var(--navy); }
+.quote-form > p { color: var(--muted); font-size: 15px; margin: 10px 0 28px; }
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 15px 18px; border-radius: 10px;
+  border: 1.5px solid var(--line); font-size: 16px; font-family: inherit;
+  background: var(--cream); color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--amber); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
+.form-note { font-size: 13px; color: var(--muted); margin-top: 18px; text-align: center; }
+.form-note strong { color: var(--amber-dark); }
+
+/* ---------- FOOTER ---------- */
+footer { background: var(--navy-deep); color: rgba(255,255,255,0.6); padding: 60px 5vw 36px; font-size: 14px; }
+.footer-grid { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-grid h5 { color: var(--white); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+.footer-grid ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-grid a:hover { color: var(--amber); }
+.footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; }
+
+/* ---------- STICKY MOBILE CALL ---------- */
+.sticky-call {
+  display: none; position: fixed; bottom: 18px; left: 18px; right: 18px; z-index: 90;
+  background: var(--amber); color: var(--navy-deep);
+  padding: 17px; border-radius: 100px; text-align: center;
+  font-weight: 800; font-size: 17px;
+  box-shadow: 0 12px 40px rgba(232,130,30,0.45);
+}
+@media (max-width: 700px) { .sticky-call { display: block; } body { padding-bottom: 0; } }
+
+/* ---------- REVEAL ---------- */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .marquee-track, .review-track { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark">B</span>
+    <span class="brand-name">Bluebird Roofing<small>Mt. Juliet · Franklin</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="#work">Our Work</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Areas</a>
+  </div>
+  <a class="nav-cta" href="tel:+16157589101">☎ (615) 758-9101</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <span class="hero-kicker">GAF Master Elite · Middle Tennessee</span>
+    <h1>Protect your <em>nest.</em></h1>
+    <p class="hero-sub">The roof over your head deserves a crew that treats it like their own. 4,562 roofs installed, a 5.0-star reputation, and in-house craftsmen who show up on time and clean up like they were never there.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#quote">Get my free inspection →</a>
+      <a class="btn btn-ghost" href="tel:+16157589101">☎ Call (615) 758-9101</a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item">
+        <div class="proof-badge">GAF<br>ELITE</div>
+        <div><strong>GAF Master Elite</strong><span>Top 2% of roofers nationwide</span></div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-stars">★★★★★</div>
+        <div><strong>5.0 across 409 reviews</strong><span>Real neighbors, real roofs</span></div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-badge" style="font-size:18px">10</div>
+        <div><strong>10 years in business</strong><span>4,200+ satisfied clients</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Free inspections</span><span>GAF Master Elite</span><span>5.0 star rated</span><span>In-house crews, no subcontractors</span><span>Insurance claim experts</span><span>Free inspections</span><span>GAF Master Elite</span><span>5.0 star rated</span><span>In-house crews, no subcontractors</span><span>Insurance claim experts</span>
+  </div>
+</div>
+
+<section class="section" id="work">
+  <div class="section-head reveal">
+    <div class="eyebrow">Drag to compare</div>
+    <h2>See the <em>difference.</em></h2>
+    <p class="lede">Every roof below was done by our own in-house crew. Drag the handle to see what a Bluebird roof looks like against an aging one.</p>
+  </div>
+  <div class="ba-wrap reveal">
+    <div class="ba-slider" id="baSlider">
+      <div class="ba-img ba-after" style="background-image:url('img/after.jpg')"></div>
+      <div class="ba-before" id="baBefore">
+        <div class="ba-img" id="baBeforeImg" style="background-image:url('img/before.jpg')"></div>
+      </div>
+      <span class="ba-tag before">Before</span>
+      <span class="ba-tag after">After · Bluebird</span>
+      <div class="ba-handle" id="baHandle"><div class="ba-knob">↔</div></div>
+    </div>
+    <p class="ba-caption"><strong>Actual project, Mt. Juliet.</strong> Full tear-off and replacement, completed in two days. Try the slider.</p>
+  </div>
+</section>
+
+<section class="section stats">
+  <div class="section-head reveal">
+    <div class="eyebrow">By the numbers</div>
+    <h2>Ten years. <em>Zero</em> shortcuts.</h2>
+  </div>
+  <div class="stats-grid reveal">
+    <div class="stat"><div class="stat-num" data-count="4562">0</div><div class="stat-label">Beautiful new roofs installed</div></div>
+    <div class="stat"><div class="stat-num" data-count="4200">0</div><div class="stat-label">Satisfied clients and counting</div></div>
+    <div class="stat"><div class="stat-num" data-count="409">0</div><div class="stat-label">Five-star Google reviews</div></div>
+    <div class="stat"><div class="stat-num" data-count="10">0</div><div class="stat-label">Years protecting Middle Tennessee</div></div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-head reveal">
+    <div class="eyebrow">What we do</div>
+    <h2>Roofs, done <em>right.</em></h2>
+    <p class="lede">Three things, done better than anyone else in Wilson County. Every project gets a dedicated project manager and our in-house crew, never day labor.</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card reveal">
+      <div class="service-img" style="background-image:url('img/svc-install.jpg')"></div>
+      <div class="service-body">
+        <h3>Roof Installation</h3>
+        <p>We partner with you on the look you want, then craft a roof that is beautiful, long-lasting, and leak-free. GAF Timberline shingles backed by the industry's strongest warranties.</p>
+        <a class="service-link" href="#quote">Get an estimate →</a>
+      </div>
+    </article>
+    <article class="service-card reveal">
+      <div class="service-img" style="background-image:url('img/svc-repair.jpg')"></div>
+      <div class="service-body">
+        <h3>Repair & Maintenance</h3>
+        <p>Storm damage, mystery leaks, worn flashing. We inspect in person or by drone, show you exactly what we find, and fix only what needs fixing.</p>
+        <a class="service-link" href="#quote">Book an inspection →</a>
+      </div>
+    </article>
+    <article class="service-card reveal">
+      <div class="service-img" style="background-image:url('img/svc-gutter.jpg')"></div>
+      <div class="service-body">
+        <h3>Gutters & Siding</h3>
+        <p>Water has to go somewhere. Our gutter and siding work directs every drop away from your foundation, protecting the structure underneath the roof.</p>
+        <a class="service-link" href="#quote">Protect my home →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section diff">
+  <div class="diff-grid">
+    <div class="diff-img reveal">
+      <div class="diff-img-badge">
+        <strong>Our branded fleet, your neighborhood.</strong>
+        <span>You will recognize us before we knock. Uniformed crews, marked trucks, yard signs you can verify.</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Why Bluebird</div>
+      <h2>Not your average roofing company.</h2>
+      <div class="diff-list">
+        <div class="diff-item">
+          <span class="diff-num">01</span>
+          <div><h4>GAF Master Elite, Three-Star President's Club</h4><p>Fewer than 2% of roofers in North America earn this. It means factory-certified installation and warranties the other guys cannot offer.</p></div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-num">02</span>
+          <div><h4>In-house crews, zero subcontractors</h4><p>The people on your roof work for Bluebird. Trained by us, accountable to us, on every single job.</p></div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-num">03</span>
+          <div><h4>Insurance claim guidance, start to finish</h4><p>Hail season is our season. We document the damage, meet the adjuster with you, and make sure nothing gets missed.</p></div>
+        </div>
+        <div class="diff-item">
+          <span class="diff-num">04</span>
+          <div><h4>Clean enough to eat off your lawn</h4><p>Magnetic nail sweeps, tarped landscaping, a walkthrough before we leave. Review after review mentions the cleanup.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="team">
+  <div class="section-head reveal">
+    <div class="eyebrow">The people</div>
+    <h2>Meet the <em>crew.</em></h2>
+    <p class="lede">Homeowners ourselves. We know what it feels like to hand your keys to a contractor, so we built the team we would want showing up at our own doors.</p>
+  </div>
+  <div class="team-grid">
+    <article class="team-card reveal">
+      <div class="team-photo" style="background-image:url('img/team1.jpg')"></div>
+      <div class="team-info"><h4>Terry</h4><span>Project Manager</span><p>The name in half our five-star reviews. Runs your job like it is his own house.</p></div>
+    </article>
+    <article class="team-card reveal">
+      <div class="team-photo" style="background-image:url('img/team2.jpg')"></div>
+      <div class="team-info"><h4>Chenequa</h4><span>Office & Scheduling</span><p>Your first call and your last update. Keeps every project on schedule.</p></div>
+    </article>
+    <article class="team-card reveal">
+      <div class="team-photo" style="background-image:url('img/team3.jpg')"></div>
+      <div class="team-info"><h4>Isaiah</h4><span>Sales Consultant</span><p>Honest inspections, straight answers. Will tell you when you do not need a new roof.</p></div>
+    </article>
+    <article class="team-card reveal">
+      <div class="team-photo" style="background-image:url('img/team4.jpg')"></div>
+      <div class="team-info"><h4>Curtis</h4><span>Project Manager</span><p>Insurance claim specialist. The guy you want when hail season hits.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="section-head reveal">
+    <div class="eyebrow">Word on the street</div>
+    <h2>409 reviews. <em>5.0 stars.</em></h2>
+    <p class="lede">We could brag. We would rather let Mt. Juliet do it.</p>
+  </div>
+  <div class="review-track-wrap reveal">
+    <div class="review-track" id="reviewTrack">
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Would use them again, but with the roof they provided I doubt that will be necessary. Their team was outstanding from start to finish and beyond."</p><div class="review-who"><div class="review-avatar">B</div><div><strong>Barry</strong><span>Mt. Juliet</span></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Mike and Vince came to our home in Franklin for an inspection and could not have been more professional. Every job was performed in a clean and professional manner."</p><div class="review-who"><div class="review-avatar">K</div><div><strong>Keith</strong><span>Franklin</span></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"An absolutely awesome job done on our roof. It was amazing to watch this crew work. The professionalism from first sales call to last man leaving was A+."</p><div class="review-who"><div class="review-avatar">L</div><div><strong>Lynne</strong><span>Mt. Juliet</span></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Terry and the team were extremely helpful, responsive, and flexible. I would gladly recommend this team, and I already have to several others."</p><div class="review-who"><div class="review-avatar">J</div><div><strong>Joey</strong><span>Wilson County</span></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Curtis went above and beyond helping us with our insurance company to get the roof, gutters, and downspouts replaced from hail damage. Everything looked fantastic."</p><div class="review-who"><div class="review-avatar">L</div><div><strong>Long</strong><span>Mt. Juliet</span></div></div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><p>"Things could not have gone smoother. The crew was highly skilled, very polite, and exceptionally efficient. We could ask for nothing more."</p><div class="review-who"><div class="review-avatar">V</div><div><strong>Van</strong><span>Franklin</span></div></div></div>
+    </div>
+  </div>
+  <div style="text-align:center" class="reveal">
+    <div class="google-badge"><strong>5.0</strong><span>★★★★★ · 409 Google reviews<br>Verified local business</span></div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="section-head reveal">
+    <div class="eyebrow">Where we work</div>
+    <h2>Your neighborhood is <em>our</em> neighborhood.</h2>
+    <p class="lede">Two offices, one standard. If you are inside this map, your free inspection is one call away.</p>
+  </div>
+  <div class="areas-grid reveal">
+    <span class="area-pill home">Mt. Juliet (HQ)</span>
+    <span class="area-pill home">Franklin</span>
+    <span class="area-pill">Brentwood</span>
+    <span class="area-pill">Murfreesboro</span>
+    <span class="area-pill">Nashville</span>
+    <span class="area-pill">Hermitage</span>
+    <span class="area-pill">Lebanon</span>
+    <span class="area-pill">Spring Hill</span>
+    <span class="area-pill">Nolensville</span>
+    <span class="area-pill">Wilson County</span>
+  </div>
+</section>
+
+<section class="section quote" id="quote">
+  <div class="quote-grid">
+    <div class="quote-info reveal">
+      <div class="eyebrow">Free inspection</div>
+      <h2>Let's look at your <em>roof.</em></h2>
+      <p>No pressure, no obligation. We will inspect, photograph everything, and give you a straight answer, usually within 24 hours.</p>
+      <div class="contact-rows">
+        <a class="contact-row" href="tel:+16157589101">
+          <span class="contact-icon">☎</span>
+          <div><strong>(615) 758-9101</strong><span>Mt. Juliet · Mon–Fri, 7am–5pm</span></div>
+        </a>
+        <a class="contact-row" href="tel:+16159201767">
+          <span class="contact-icon">☎</span>
+          <div><strong>(615) 920-1767</strong><span>Franklin office</span></div>
+        </a>
+        <div class="contact-row">
+          <span class="contact-icon">📍</span>
+          <div><strong>615 Rutland Dr, Mt. Juliet, TN 37122</strong><span>2550 Meridian Blvd Ste 290, Franklin, TN 37067</span></div>
+        </div>
+      </div>
+    </div>
+    <form class="quote-form reveal" onsubmit="event.preventDefault(); this.innerHTML='<h3>Request received.</h3><p style=\'margin-top:12px\'>Thanks, we will call you within one business day to schedule your free inspection. For anything urgent, call <a href=\'tel:+16157589101\' style=\'color:var(--amber-dark);font-weight:700\'>(615) 758-9101</a>.</p>';">
+      <h3>Book your free inspection</h3>
+      <p>Takes 60 seconds. We call back within one business day.</p>
+      <div class="field-row">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" required placeholder="Jane Miller"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" required type="tel" placeholder="(615) 555-0100"></div>
+      </div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="jane@email.com"></div>
+      <div class="field"><label for="f-service">What do you need?</label>
+        <select id="f-service">
+          <option>Full roof replacement</option>
+          <option>Roof repair</option>
+          <option>Storm / hail damage check</option>
+          <option>Gutters or siding</option>
+          <option>Not sure, just take a look</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-msg">Anything we should know? (optional)</label><textarea id="f-msg" rows="3" placeholder="Age of roof, leaks, insurance claim in progress..."></textarea></div>
+      <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center">Request my free inspection →</button>
+      <p class="form-note">Prefer to talk? Call <strong>(615) 758-9101</strong>, Mon–Fri 7am–5pm.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h5>Bluebird Roofing</h5>
+      <ul><li>615 Rutland Dr, Mt. Juliet, TN 37122</li><li>2550 Meridian Blvd Ste 290, Franklin, TN</li><li>Mon–Fri, 7:00am–5:00pm</li></ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul><li><a href="tel:+16157589101">(615) 758-9101</a></li><li><a href="tel:+16159201767">(615) 920-1767</a></li><li>Operations@bluebirdroofing.com</li></ul>
+    </div>
+    <div>
+      <h5>Certifications</h5>
+      <ul><li>GAF Master Elite</li><li>GAF Three-Star President's Club</li><li>Carlisle Certified</li></ul>
+    </div>
+    <div>
+      <h5>Follow</h5>
+      <ul><li><a href="https://www.instagram.com/bluebirdroofing_/">Instagram</a></li><li><a href="https://www.facebook.com/BluebirdRoofing/">Facebook</a></li><li><a href="https://www.youtube.com/@bluebirdroofing1">YouTube</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Bluebird Roofing. All rights reserved.</span>
+    <span>Concept rebuild for demonstration purposes.</span>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+16157589101">☎ Call (615) 758-9101</a>
+
+<script>
+// Nav shrink
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+
+// Before/After slider
+(function(){
+  const slider = document.getElementById('baSlider');
+  const before = document.getElementById('baBefore');
+  const beforeImg = document.getElementById('baBeforeImg');
+  const handle = document.getElementById('baHandle');
+  function sizeBeforeImg(){ beforeImg.style.width = slider.offsetWidth + 'px'; }
+  sizeBeforeImg(); addEventListener('resize', sizeBeforeImg);
+  function setPos(clientX){
+    const r = slider.getBoundingClientRect();
+    let pct = ((clientX - r.left) / r.width) * 100;
+    pct = Math.max(4, Math.min(96, pct));
+    before.style.width = pct + '%';
+    handle.style.left = pct + '%';
+  }
+  let dragging = false;
+  slider.addEventListener('pointerdown', e => { dragging = true; slider.setPointerCapture(e.pointerId); setPos(e.clientX); });
+  slider.addEventListener('pointermove', e => { if (dragging) setPos(e.clientX); });
+  slider.addEventListener('pointerup', () => dragging = false);
+  slider.addEventListener('pointercancel', () => dragging = false);
+})();
+
+// Animated counters
+(function(){
+  const els = document.querySelectorAll('.stat-num');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target, target = +el.dataset.count, dur = 1600, t0 = performance.now();
+      (function tick(t){
+        const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * e).toLocaleString();
+        if (p < 1) requestAnimationFrame(tick);
+      })(t0);
+      io.unobserve(el);
+    });
+  }, {threshold: 0.4});
+  els.forEach(el => io.observe(el));
+})();
+
+// Scroll reveals
+(function(){
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+
+// Duplicate review track for seamless loop
+(function(){
+  const track = document.getElementById('reviewTrack');
+  track.innerHTML += track.innerHTML;
+})();
+</script>
+</body>
+</html>

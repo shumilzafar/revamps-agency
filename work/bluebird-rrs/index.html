@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bluebird Roofing: Revenue Recovery Demo</title>
 <style>
-:root{--navy:#0B1F3A;--navy2:#102A4C;--ink:#07142A;--orange:#E8742A;--orange2:#CC5500;--cream:#F3E9DC;--mute:#A9B6C9;--green:#2ECC71;--red:#E74C3C;--amber:#F39C12}
+:root{--navy:#FFFFFF;--navy2:#EFEAE1;--ink:#F4F1EC;--orange:#D9481C;--orange2:#B93A14;--cream:#16181D;--mute:#6E7278;--green:#1E7D46;--red:#C0392B;--amber:#A86E0C}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;min-height:100vh}
 .wrap{max-width:1240px;margin:0 auto;padding:36px 18px 60px}
@@ -13,10 +13,10 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 .hero h1{font-size:clamp(1.9rem,4.6vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
 .hero h1 span{color:var(--orange)}
 .hero p{color:var(--mute);font-size:1.08rem;max-width:680px;margin:0 auto;line-height:1.6}
-.badge{display:inline-block;background:rgba(232,116,42,.15);border:1px solid var(--orange);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.82rem;font-weight:700;margin-bottom:18px;letter-spacing:.04em}
+.badge{display:inline-block;background:rgba(217,72,28,.09);border:1px solid var(--orange);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.82rem;font-weight:700;margin-bottom:18px;letter-spacing:.04em}
 .modes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 auto 22px;max-width:1080px}
 @media(max-width:860px){.modes{grid-template-columns:1fr}}
-.mode{background:var(--navy);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px;text-align:left;cursor:pointer;color:var(--cream);transition:all .2s;width:100%}
+.mode{background:var(--navy);border:1px solid rgba(22,24,29,.14);border-radius:16px;padding:18px;text-align:left;cursor:pointer;color:var(--cream);transition:all .2s;width:100%;box-shadow:0 1px 3px rgba(22,24,29,.05)}
 .mode:hover{border-color:var(--orange);transform:translateY(-2px)}
 .mode:disabled{opacity:.45;cursor:default;transform:none}
 .mode .tag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
@@ -24,21 +24,21 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 .mode h3{font-size:1.02rem;margin-bottom:5px}
 .mode p{font-size:.85rem;color:var(--mute);line-height:1.5}
 .mode .dur{margin-top:8px;font-size:.75rem;color:var(--orange);font-weight:700}
-.scenebar{max-width:1080px;margin:0 auto 18px;background:var(--navy2);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.scenebar{max-width:1080px;margin:0 auto 18px;background:#16181D;color:#F4F1EC;border-radius:14px;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
 .scenebar .when{font-weight:800;font-size:1rem}
-.scenebar .when small{display:block;font-weight:500;color:var(--mute);font-size:.78rem;margin-top:2px}
+.scenebar .when small{display:block;font-weight:500;color:#A9ADB5;font-size:.78rem;margin-top:2px}
 .scenebar .resp{text-align:right}
-.scenebar .resp .lab{font-size:.72rem;color:var(--mute);text-transform:uppercase;letter-spacing:.07em}
-.scenebar .resp .val{font-size:1.35rem;font-weight:800;color:var(--orange);font-variant-numeric:tabular-nums}
+.scenebar .resp .lab{font-size:.72rem;color:#A9ADB5;text-transform:uppercase;letter-spacing:.07em}
+.scenebar .resp .val{font-size:1.35rem;font-weight:800;color:#FF8A5C;font-variant-numeric:tabular-nums}
 .stage{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1080px;margin:0 auto}
 @media(max-width:860px){.stage{grid-template-columns:1fr}}
-.panel{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
+.panel{background:var(--navy);border:1px solid rgba(22,24,29,.12);border-radius:20px;padding:22px;box-shadow:0 1px 3px rgba(22,24,29,.05)}
 .panel h2{font-size:1.02rem;font-weight:700;margin-bottom:3px;display:flex;align-items:center;gap:9px}
 .panel .sub{color:var(--mute);font-size:.86rem;margin-bottom:18px;line-height:1.5}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .phone{width:305px;max-width:100%;margin:0 auto;background:#000;border-radius:42px;padding:11px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
-.screen{background:#10101d;border-radius:33px;overflow:hidden;height:560px;display:flex;flex-direction:column;position:relative}
+.screen{background:#10101d;border-radius:33px;overflow:hidden;height:560px;display:flex;flex-direction:column;position:relative;color:#EDF0F5;--mute:#9AA3B2;--orange:#F0764A}
 .statusbar{display:flex;justify-content:space-between;padding:9px 18px 4px;font-size:.72rem;color:#cfd4e4;font-weight:600}
 .view{flex:1;display:none;flex-direction:column;min-height:0}
 .view.on{display:flex}
@@ -89,7 +89,7 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 .notif.urgent{background:rgba(231,76,60,.22);border-color:var(--red)}
 .notif.good{background:rgba(46,204,113,.16);border-color:var(--green)}
 .lockhint{margin-top:auto;color:var(--mute);font-size:.74rem;text-align:center;line-height:1.5}
-.office{max-width:1080px;margin:22px auto 0;background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
+.office{max-width:1080px;margin:22px auto 0;background:var(--navy);border:1px solid rgba(22,24,29,.12);border-radius:20px;padding:22px;box-shadow:0 1px 3px rgba(22,24,29,.05)}
 .office h2{font-size:1.02rem;font-weight:700;margin-bottom:16px;display:flex;gap:9px;align-items:center}
 .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
 @media(max-width:860px){.statgrid{grid-template-columns:1fr 1fr}}
@@ -101,11 +101,11 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 @media(max-width:860px){.offgrid{grid-template-columns:1fr}}
 .cal,.leadlog{background:var(--navy2);border-radius:14px;padding:16px}
 .cal h4,.leadlog h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:11px}
-.calrow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85rem}
+.calrow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(22,24,29,.08);font-size:.85rem}
 .calrow:last-child{border-bottom:none}
-.calrow .appt{background:rgba(46,204,113,.15);border:1px solid var(--green);color:#bdf0d2;border-radius:8px;padding:3px 10px;font-size:.76rem;font-weight:700;animation:slideIn .4s ease}
+.calrow .appt{background:rgba(30,125,70,.12);border:1px solid var(--green);color:#14532D;border-radius:8px;padding:3px 10px;font-size:.76rem;font-weight:700;animation:slideIn .4s ease}
 .calrow .free{color:var(--mute);font-size:.78rem}
-.leaditem{border-left:4px solid var(--green);background:rgba(255,255,255,.03);border-radius:8px;padding:10px 12px;margin-bottom:9px;animation:slideIn .4s ease}
+.leaditem{border-left:4px solid var(--green);background:rgba(22,24,29,.04);border-radius:8px;padding:10px 12px;margin-bottom:9px;animation:slideIn .4s ease}
 .leaditem.hot{border-left-color:var(--red)}
 .leaditem.lost{border-left-color:var(--red);opacity:.75}
 .leaditem .ln{font-weight:700;font-size:.88rem}
@@ -113,17 +113,17 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 .empty{color:var(--mute);font-size:.84rem}
 .banner{max-width:1080px;margin:20px auto 0;border-radius:16px;padding:18px 22px;display:none;line-height:1.55;font-size:.98rem}
 .banner.show{display:block;animation:slideIn .4s ease}
-.banner.win{background:rgba(46,204,113,.12);border:1px solid var(--green)}
-.banner.lose{background:rgba(231,76,60,.12);border:1px solid var(--red)}
+.banner.win{background:rgba(30,125,70,.08);border:1px solid var(--green)}
+.banner.lose{background:rgba(192,57,43,.07);border:1px solid var(--red)}
 .banner strong{display:block;font-size:1.08rem;margin-bottom:3px}
-.report{max-width:1080px;margin:20px auto 0;background:var(--navy);border:1px dashed rgba(232,116,42,.55);border-radius:20px;padding:22px;display:none}
+.report{max-width:1080px;margin:20px auto 0;background:var(--navy);border:1px dashed rgba(217,72,28,.55);border-radius:20px;padding:22px;display:none}
 .report.show{display:block;animation:slideIn .4s ease}
 .report h3{font-size:1.05rem;margin-bottom:6px}
 .report p{color:var(--mute);line-height:1.6;font-size:.92rem}
 .report .big{color:var(--cream);font-weight:700}
 .controls{max-width:1080px;margin:22px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .btn{background:transparent;border:2px solid var(--orange);color:var(--orange);padding:11px 26px;border-radius:99px;font-size:.92rem;font-weight:700;cursor:pointer}
-.btn:hover{background:rgba(232,116,42,.12)}
+.btn:hover{background:rgba(217,72,28,.08)}
 .explainer{max-width:760px;margin:38px auto 0;text-align:center;color:var(--mute);line-height:1.7;font-size:.95rem}
 .explainer strong{color:var(--cream)}
 @media (prefers-reduced-motion: reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
@@ -134,7 +134,7 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <div class="hero">
 <div class="badge">PREPARED FOR BLUEBIRD ROOFING</div>
 <h1>One Missed Call. <span>One Roof Gone.</span></h1>
-<p>Built for Justin Rogers and the Bluebird team. Three short stories below. Run them in order and watch what a missed call is worth, with the Revenue Recovery System off, and with it on. In stories two and three, you play Sarah. Tap her replies yourself.</p>
+<p>Three short stories. The first shows what a missed call costs Bluebird today. The other two run with the system on, and you answer as the customer.</p>
 </div>
 
 <div class="modes">
@@ -166,7 +166,7 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <div class="stage">
 <div class="panel">
 <h2><span class="dot"></span> Sarah's Phone</h2>
-<p class="sub">The customer. A Mt. Juliet homeowner whose roof took hail damage in last week's storm.</p>
+<p class="sub">The customer, in Mt. Juliet. Her roof took hail damage in last week's storm.</p>
 <div class="phone"><div class="screen">
 <div class="statusbar"><span id="custClock">12:04 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
 
@@ -195,8 +195,7 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 
 <div class="view" id="vSms">
 <div class="smshead"><div class="n" id="smsName">Bluebird Roofing</div><div class="s">Text Message</div></div>
-<div class="msgs" id="msgs"></div>
-<div class="typing" id="typing"><span></span><span></span><span></span></div>
+<div class="msgs" id="msgs"><div class="typing" id="typing"><span></span><span></span><span></span></div></div>
 <div class="chips" id="chips"><div class="clab">Sarah replies (tap one, or type below)</div><div id="chipRow" style="display:flex;flex-direction:column;gap:7px"></div></div>
 <div class="inputbar"><input id="smsInput" placeholder="Text message" autocomplete="off"><button id="smsSend" title="Send">↑</button></div>
 </div>
@@ -206,7 +205,7 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 
 <div class="panel">
 <h2><span class="dot"></span> Justin's Phone</h2>
-<p class="sub">The owner. Locked most of the day, because he is on roofs, in attics, and across kitchen tables.</p>
+<p class="sub">The owner. His phone sits in his pocket while he works on roofs.</p>
 <div class="phone"><div class="screen">
 <div class="statusbar"><span id="ownClock">12:04 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
 <div class="lock">
@@ -251,9 +250,6 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <button class="btn" onclick="location.reload()">Reset the demo</button>
 </div>
 
-<div class="explainer">
-<p><strong>What you just watched is the whole product.</strong> A homeowner calls. Bluebird cannot answer, because roofs are not fixed from a desk. Today that job quietly goes to whoever picks up next. With the Revenue Recovery System on, a text goes out in about four seconds, the conversation qualifies the job, emergencies buzz Justin's phone in the same minute, and everything else books itself into the calendar. No app for the customer. No change to Bluebird's number. Nothing installed on the website.</p>
-</div>
 </div>
 
 <script>
@@ -324,15 +320,15 @@ async function ringCall(name, num, note, rings, autoMiss){
 }
 
 /* ------- customer phone: sms ------- */
-function noteMsg(text){ const d=document.createElement('div'); d.className='note'; d.textContent=text; $('msgs').appendChild(d); $('msgs').scrollTop=$('msgs').scrollHeight; }
+function noteMsg(text){ const d=document.createElement('div'); d.className='note'; d.textContent=text; $('msgs').insertBefore(d, $('typing')); $('msgs').scrollTop=$('msgs').scrollHeight; }
 function addMsg(text, who, showRead){
   const d=document.createElement('div'); d.className='msg '+who;
   d.innerHTML=text+'<span class="time">'+fmtAP(clockMin)+'</span>'+(showRead?'<span class="read">Read</span>':'');
-  $('msgs').appendChild(d); $('msgs').scrollTop=$('msgs').scrollHeight; clockMin+=1;
+  $('msgs').insertBefore(d, $('typing')); $('msgs').scrollTop=$('msgs').scrollHeight; clockMin+=1;
   $('custClock').textContent=fmtAP(clockMin); $('ownClock').textContent=fmtAP(clockMin);
   if(who==='them') ding();
 }
-function typing(on){ $('typing').classList.toggle('on',on); $('msgs').appendChild($('typing')); $('msgs').scrollTop=$('msgs').scrollHeight; }
+function typing(on){ const t=$('typing'); if(!t) return; t.classList.toggle('on',on); $('msgs').scrollTop=$('msgs').scrollHeight; }
 async function botSay(text, thinkMs){
   typing(true); await wait(thinkMs||1100); typing(false); addMsg(text,'them');
 }
@@ -357,7 +353,9 @@ $('smsSend').onclick=()=>{ const v=$('smsInput').value.trim(); if(v && inputReso
 $('smsInput').addEventListener('keydown',e=>{ if(e.key==='Enter'){ const v=$('smsInput').value.trim(); if(v && inputResolve) resolveSarah(v); } });
 
 function resetStage(){
-  $('msgs').innerHTML=''; $('notifs').innerHTML=''; $('lockHint').style.display='';
+  [...$('msgs').children].forEach(c=>{ if(c.id!=='typing') c.remove(); });
+  typing(false);
+  $('notifs').innerHTML=''; $('lockHint').style.display='';
   $('chipRow').innerHTML=''; $('chips').classList.remove('on'); $('smsInput').value='';
   clearBanner();
 }
@@ -386,7 +384,7 @@ async function runWithout(){
   notif('Phone','Missed calls this week','3 calls rang out. 0 voicemail messages. There is nothing to call back.','urgent');
   S.lost+=1; S.lostVal+=14500; updStats();
   addLead('Unknown caller · Tue 12:04 PM','Never identified. Booked with Tim Leeper Roofing, Thu 9:00 AM. Estimated job value $14,500.','lost');
-  banner('<strong>Job lost, and Bluebird never knew it existed.</strong>One hail-damaged roof in Mt. Juliet, worth about $14,500, booked with a competitor on the same Tuesday. Not because Bluebird does bad work. Because at 12:04 PM, nobody could answer, and nothing else answered for them. Run Story 2 to see the same call with the system on.','lose');
+  banner('<strong>Job lost, and Bluebird never knew it existed.</strong>A $14,500 roof, booked with a competitor the same day. At 12:04 PM nobody could answer, and nothing answered for them. Run Story 2 to see the same call with the system on.','lose');
   showReport(); running=false; setModes(false);
 }
 
@@ -439,7 +437,7 @@ async function runRoutine(){
   if(priority && navigator.vibrate) navigator.vibrate(120);
   S.booked+=1; S.pipe+=14500; updStats();
   addLead('Sarah M. · 4520 Stonebridge Dr, Mt. Juliet',(priority?'PRIORITY · ceiling stain. ':'')+'Hail damage. Booked '+slot+'. Score 9/10.', priority?'hot':'');
-  banner('<strong>Job saved, in under two minutes, with zero human effort.</strong>The same call from Story 1. This time Sarah never dialed Leeper, because Bluebird answered her in 4 seconds, at the exact moment Bluebird could not. Now run Story 3. It is the one Justin will ask about.','win');
+  banner('<strong>Job saved, in under two minutes, with nobody lifting a finger.</strong>The same call from Story 1. This time Bluebird answered in 4 seconds, so Sarah never dialed anyone else. Now run Story 3.','win');
   showReport(); running=false; setModes(false);
 }
 
@@ -476,7 +474,7 @@ async function runUrgent(){
   noteMsg('Full conversation and address sent to Justin and the office lead log.');
   S.booked+=1; S.pipe+=18000; updStats();
   addLead('Sarah M. · Mt. Juliet','SATURDAY 9:47 PM · '+(active?'ACTIVE LEAK · owner alerted in under a minute. ':'Leak, stopped. ')+'Booked Mon 9:00 AM priority. Likely replacement, about $18,000.','hot');
-  banner('<strong>An emergency handled at 9:47 PM on a Saturday, by a company that was closed.</strong>Justin did not fix a roof that night. Nobody does. What he won was the job: Sarah stopped dialing, her Monday 9 AM was locked in, and the owner had her number in under a minute. On Bluebird\u2019s current setup, this call is a voicemail nobody hears until Monday, for a customer who is no longer theirs.','win');
+  banner('<strong>Handled at 9:47 PM on a Saturday, by a company that was closed.</strong>Justin did not fix a roof that night. Nobody does. He won the job instead: Sarah stopped dialing, Monday 9 AM was locked in, and he had her number inside a minute. Without the system, this is a voicemail nobody hears until Monday, from a customer who is no longer his.','win');
   showReport(); running=false; setModes(false);
 }
 </script>

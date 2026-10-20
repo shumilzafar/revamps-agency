@@ -14,8 +14,27 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 .hero h1 span{color:var(--orange)}
 .hero p{color:var(--mute);font-size:1.08rem;max-width:680px;margin:0 auto;line-height:1.6}
 .badge{display:inline-block;background:rgba(217,72,28,.09);border:1px solid var(--orange);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.82rem;font-weight:700;margin-bottom:18px;letter-spacing:.04em}
-.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 auto 22px;max-width:1080px}
+.modes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:0 auto 14px;max-width:1080px}
 @media(max-width:860px){.modes{grid-template-columns:1fr}}
+.builder{max-width:1080px;margin:0 auto 22px;background:var(--navy);border:1px solid rgba(22,24,29,.12);border-radius:16px;padding:18px;box-shadow:0 1px 3px rgba(22,24,29,.05)}
+.builder h3{font-size:1rem;margin-bottom:4px}
+.builder p{font-size:.85rem;color:var(--mute);margin-bottom:13px;line-height:1.5}
+.builder .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.builder label{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);display:block;margin-bottom:5px}
+.builder select{background:#fff;border:1.5px solid rgba(22,24,29,.25);border-radius:10px;padding:10px 12px;font-size:.92rem;color:var(--cream);outline:none}
+.builder select:focus{border-color:var(--orange)}
+.builder .run{background:var(--orange);color:#fff;border:none;border-radius:99px;padding:11px 24px;font-size:.92rem;font-weight:700;cursor:pointer}
+.builder .run:disabled{opacity:.45;cursor:default}
+.lock{overflow-y:auto}
+.ownchoices{display:none;width:100%;flex-direction:column;gap:8px;margin-top:4px}
+.ownchoices.on{display:flex}
+.ownchoices .clab{font-size:.68rem;color:#c3cbdd;text-transform:uppercase;letter-spacing:.06em;text-align:left}
+.ownbtn{background:rgba(240,244,252,.12);border:1.5px solid rgba(255,255,255,.35);color:#fff;border-radius:12px;padding:11px 14px;font-size:.88rem;cursor:pointer;text-align:left;transition:all .15s}
+.ownbtn:hover{border-color:var(--orange);background:rgba(240,118,74,.18)}
+.ownthread{display:none;width:100%;text-align:left;margin-top:6px}
+.ownthread.on{display:block}
+.ownthread .msgs2{display:flex;flex-direction:column;gap:8px;max-height:230px;overflow-y:auto;padding:4px 0}
+.ownchips{display:flex;flex-direction:column;gap:7px;margin-top:8px}
 .mode{background:var(--navy);border:1px solid rgba(22,24,29,.14);border-radius:16px;padding:18px;text-align:left;cursor:pointer;color:var(--cream);transition:all .2s;width:100%;box-shadow:0 1px 3px rgba(22,24,29,.05)}
 .mode:hover{border-color:var(--orange);transform:translateY(-2px)}
 .mode:disabled{opacity:.45;cursor:default;transform:none}
@@ -134,7 +153,7 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <div class="hero">
 <div class="badge">PREPARED FOR BLUEBIRD ROOFING</div>
 <h1>One Missed Call. <span>One Roof Gone.</span></h1>
-<p>Three short stories. The first shows what a missed call costs Bluebird today. The other two run with the system on, and you answer as the customer.</p>
+<p>Four stories and a build-your-own. The first shows what a missed call costs Bluebird today. The rest run with the system on.</p>
 </div>
 
 <div class="modes">
@@ -156,6 +175,30 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <p>9:47 PM on a Saturday. Water coming through a ceiling. The office has been closed since Friday at 5. Watch the triage work.</p>
 <div class="dur">About 75 seconds · interactive</div>
 </button>
+<button class="mode" id="mOwner" onclick="runOwner()">
+<div class="tag t3">Story 4 · System ON</div>
+<h3>You are Justin</h3>
+<p>Same Saturday night, from the owner's pocket. The urgent alert lands on his phone and the next move is yours: call her, text her, or leave it till Monday. Each choice ends differently.</p>
+<div class="dur">About 60 seconds · you decide</div>
+</button>
+</div>
+
+<div class="builder">
+<h3>Or build the call yourself</h3>
+<p>Pick a moment when Bluebird cannot answer and a problem to throw at it. The demo runs your version on both phones.</p>
+<div class="row">
+<div><label>When she calls</label><select id="cWhen">
+<option value="lunch">Tuesday, 12:04 PM (lunch)</option>
+<option value="evening">Tuesday, 6:40 PM (closed at 5)</option>
+<option value="night">Saturday, 9:47 PM (closed since Friday)</option>
+</select></div>
+<div><label>Her problem</label><select id="cProb">
+<option value="hail">Hail damage</option>
+<option value="leak">Active leak</option>
+<option value="quote">She wants a price</option>
+</select></div>
+<button class="run" id="btnCustom" onclick="runCustom()">Run my scenario</button>
+</div>
 </div>
 
 <div class="scenebar">
@@ -212,6 +255,12 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <div class="lt" id="lockTime">12:04</div>
 <div class="ld" id="lockDate">Tuesday, October 20</div>
 <div id="notifs" style="width:100%"></div>
+<div class="ownchoices" id="ownChoices"><div class="clab">Justin's move (yours)</div><div id="ownChoiceBtns" style="display:flex;flex-direction:column;gap:8px"></div></div>
+<div class="ownthread" id="ownThread">
+<div class="smshead" style="border-bottom:1px solid rgba(255,255,255,.12);border-top:1px solid rgba(255,255,255,.12)"><div class="n">Sarah M.</div><div class="s">Conversation handled by the system, taken over by Justin</div></div>
+<div class="msgs2" id="ownMsgs"></div>
+<div class="ownchips" id="ownChips"></div>
+</div>
 <div class="lockhint" id="lockHint">Nothing yet. When something needs Justin, it lands here, on the phone in his pocket.</div>
 </div>
 </div></div>
@@ -275,7 +324,7 @@ function setClock(min, dateLabel){
 function wait(ms){ return new Promise(r=>setTimeout(r,ms)); }
 
 function showView(id){ ['vIdle','vCall','vSms'].forEach(v=>$(v).classList.toggle('on', v===id)); }
-function setModes(dis){ ['mWithout','mRoutine','mUrgent'].forEach(m=>$(m).disabled=dis); }
+function setModes(dis){ ['mWithout','mRoutine','mUrgent','mOwner'].forEach(m=>$(m).disabled=dis); $('btnCustom').disabled=dis; if(dis && !soundOn){ soundOn=true; $('soundBtn').textContent='Sound: on'; } }
 function banner(html, kind){ const b=$('banner'); b.className='banner show '+kind; b.innerHTML=html; }
 function clearBanner(){ $('banner').className='banner'; $('banner').innerHTML=''; }
 
@@ -356,6 +405,8 @@ function resetStage(){
   [...$('msgs').children].forEach(c=>{ if(c.id!=='typing') c.remove(); });
   typing(false);
   $('notifs').innerHTML=''; $('lockHint').style.display='';
+  $('ownChoices').classList.remove('on'); $('ownChoiceBtns').innerHTML='';
+  $('ownThread').classList.remove('on'); $('ownMsgs').innerHTML=''; $('ownChips').innerHTML='';
   $('chipRow').innerHTML=''; $('chips').classList.remove('on'); $('smsInput').value='';
   clearBanner();
 }
@@ -403,7 +454,7 @@ async function runRoutine(){
   respTimerStop('4.0s · answered by text');
   S.caught+=1; updStats();
   await botSay('Hi Sarah, sorry we missed your call. This is Bluebird Roofing. What happened, is it storm damage, a repair, or are you thinking full replacement?',900);
-  let a1 = await askSarah(['Storm damage from last week\u2019s hail','I think I need a full replacement','Just a small repair, I hope']);
+  let a1 = await askQ(['Storm damage from last week\u2019s hail','I think I need a full replacement','Just a small repair, I hope']);
   let low = a1.toLowerCase();
   if(low.includes('replacement')){
     await botSay('Understood. A replacement starts with a free inspection and satellite measurements, so you get an exact number before deciding anything. Is there any leaking inside right now?',1200);
@@ -412,7 +463,7 @@ async function runRoutine(){
   } else {
     await botSay('Sorry to hear that. Since that storm, hail is half the calls we get. Is there any leaking inside, or is it damage you can see from the ground?',1200);
   }
-  let a2 = await askSarah(['No leak, just shingles in the yard','There is a stain spreading on my ceiling']);
+  let a2 = await askQ(['No leak, just shingles in the yard','There is a stain spreading on my ceiling']);
   let priority = a2.toLowerCase().includes('stain');
   if(priority){
     await botSay('A stain means water is already getting in, so I am marking this priority. Justin, our owner, will see it the moment we finish booking you.',1200);
@@ -420,9 +471,9 @@ async function runRoutine(){
     await botSay('Good, that means we are ahead of it. Catching hail damage early is what keeps a repair from becoming a replacement.',1100);
   }
   await botSay('Can I get the address? I will pull your roof up on satellite before anyone comes out.',1000);
-  let a3 = await askSarah(['4520 Stonebridge Dr, Mt. Juliet']);
+  let a3 = await askQ(['4520 Stonebridge Dr, Mt. Juliet']);
   await botSay('Got it, I can see the roof clearly. I have Thursday at 10:00 AM or Friday at 2:00 PM for a free inspection, and we send you photos of everything we find, for your insurance file either way. Which works?',1300);
-  let a4 = await askSarah(['Thursday 10 works','Friday 2 is better']);
+  let a4 = await askQ(['Thursday 10 works','Friday 2 is better']);
   let fri = a4.toLowerCase().includes('friday');
   let slot = fri ? 'Friday 2:00 PM' : 'Thursday 10:00 AM';
   (fri ? $('calFri') : $('calThu')).outerHTML = '<span class="appt" id="'+(fri?'calFri':'calThu')+'">Sarah M. · inspection</span>';
@@ -456,9 +507,9 @@ async function runUrgent(){
   respTimerStop('4.0s · answered by text');
   S.caught+=1; updStats();
   await botSay('Hi, this is Bluebird Roofing. Sorry we missed your call. What is going on at the house?',900);
-  let a1 = await askSarah(['Water is coming through my ceiling','My roof is leaking badly','A tree branch came through our roof']);
+  let a1 = await askQ(['Water is coming through my ceiling','My roof is leaking badly','A tree branch came through our roof']);
   await botSay('I am sorry, that sounds like a stressful night. Is water actively dripping right now?',1000);
-  let a2 = await askSarah(['Yes, steady drip, getting worse','It stopped for now, thank God']);
+  let a2 = await askQ(['Yes, steady drip, getting worse','It stopped for now, thank God']);
   let active = a2.toLowerCase().includes('yes') || a2.toLowerCase().includes('steady');
   if(active){
     buzzSnd(); if(navigator.vibrate) navigator.vibrate([180,90,180]);
@@ -475,6 +526,208 @@ async function runUrgent(){
   S.booked+=1; S.pipe+=18000; updStats();
   addLead('Sarah M. · Mt. Juliet','SATURDAY 9:47 PM · '+(active?'ACTIVE LEAK · owner alerted in under a minute. ':'Leak, stopped. ')+'Booked Mon 9:00 AM priority. Likely replacement, about $18,000.','hot');
   banner('<strong>Handled at 9:47 PM on a Saturday, by a company that was closed.</strong>Justin did not fix a roof that night. Nobody does. He won the job instead: Sarah stopped dialing, Monday 9 AM was locked in, and he had her number inside a minute. Without the system, this is a voicemail nobody hears until Monday, from a customer who is no longer his.','win');
+  showReport(); running=false; setModes(false);
+}
+</script>
+</body>
+</html>
+
+<script>
+/* ============ OFF-SCRIPT ANSWERS ============ */
+const FAQS = [
+ {k:['insurance','insurer','claim'], a:'Yes, we work with insurance claims all the time. The inspection includes photos and a written damage report your insurer will ask for, and we can meet your adjuster at the house.'},
+ {k:['cost','price','how much','charge'], a:'Fair question. The inspection and the written quote are free. The price of the work itself depends on what we find up there, and you see it in writing before you agree to anything.'},
+ {k:['free','really free'], a:'Completely free. The inspection, the photos, and the quote. You only pay if you hire us to do the work.'},
+ {k:['warranty','guarantee'], a:'Every roof we install carries our workmanship warranty, and the shingles carry the manufacturer warranty on top. Both are spelled out in the inspection report.'},
+ {k:['how long','how soon','when can'], a:'An inspection takes about 45 minutes at the house. Most repairs happen the same week you approve the quote.'},
+ {k:['who are you','where are you','real person','a robot','an ai'], a:'This is Bluebird Roofing\u2019s after-hours line in Mt. Juliet. I catch the calls the office cannot, and everything you tell me goes straight to Justin and the team.'}
+];
+function matchFAQ(t){ const s=' '+t.toLowerCase()+' '; for(const f of FAQS){ for(const k of f.k){ if(s.includes(k)) return f.a; } } return null; }
+async function askQ(chips){
+  for(let i=0;i<3;i++){
+    const a = await askSarah(chips);
+    if(chips.includes(a)) return a;
+    const f = matchFAQ(a);
+    if(f){ await botSay(f,1200); await botSay('Back to where we were:',600); continue; }
+    return a;
+  }
+  return await askSarah(chips);
+}
+
+/* ============ OWNER PHONE HELPERS ============ */
+function ownMsg(text, who){
+  const d=document.createElement('div'); d.className='msg '+who; d.textContent=text;
+  $('ownMsgs').appendChild(d); $('ownMsgs').scrollTop=$('ownMsgs').scrollHeight;
+  if(who==='them') ding();
+}
+let ownResolve=null;
+function ownAsk(chips){
+  return new Promise(res=>{
+    ownResolve=res;
+    const row=$('ownChips'); row.innerHTML='';
+    chips.forEach(c=>{ const b=document.createElement('button'); b.className='chip'; b.textContent=c;
+      b.onclick=()=>{ $('ownChips').innerHTML=''; ownMsg(c,'me'); const r=ownResolve; ownResolve=null; r(c); }; row.appendChild(b); });
+  });
+}
+function ownerChoice(){
+  return new Promise(res=>{
+    const wrap=$('ownChoiceBtns'); wrap.innerHTML='';
+    [['call','Call her back now'],['text','Text her myself'],['monday','Leave it till Monday']].forEach(([v,lab])=>{
+      const b=document.createElement('button'); b.className='ownbtn'; b.textContent=lab;
+      b.onclick=()=>{ $('ownChoices').classList.remove('on'); res(v); }; wrap.appendChild(b);
+    });
+    $('ownChoices').classList.add('on');
+  });
+}
+
+/* ============ STORY 4: YOU ARE JUSTIN ============ */
+async function runOwner(){
+  if(running) return; running=true; setModes(true); resetStage();
+  setClock(21*60+52,'Saturday, October 24');
+  $('sceneWhen').textContent='Saturday, 9:52 PM · five minutes after Story 3 began';
+  $('sceneSub').textContent='Story 4 of 4 · You hold Justin\u2019s phone now. His next move is yours.';
+  $('smsName').textContent='Bluebird Roofing';
+  respTimerStop('Caught · 4.0s');
+  showView('vSms');
+  await botSay('Hi, this is Bluebird Roofing. Sorry we missed your call. What is going on at the house?',800);
+  await wait(900); addMsg('Water is coming through my ceiling, it is getting worse','me',true);
+  await wait(700);
+  await botSay('I have alerted Justin, our owner, directly. Stay on this thread.',900);
+  noteMsg('On Sarah\u2019s side, the system did its job. Now look at the other phone.');
+  S.caught+=1; updStats();
+  buzzSnd(); if(navigator.vibrate) navigator.vibrate([180,90,180]);
+  notif('Revenue Recovery','URGENT LEAD: active leak','Sarah M., Mt. Juliet. Called 5 minutes ago. Water actively coming through the ceiling. The system has her talking. She is waiting on a human.','urgent');
+  await wait(1200);
+  const choice = await ownerChoice();
+  if(choice==='call'){
+    const n=document.createElement('div'); n.className='notif good';
+    n.innerHTML='<div class="nh"><span>Phone</span><span>now</span></div><div class="nt">Calling Sarah M....</div><div class="nb" id="ownCallStat">Connected · 0:00</div>';
+    $('notifs').appendChild(n);
+    for(let s=1;s<=8;s++){ await wait(650); const el=$('ownCallStat'); if(el) el.textContent='Connected · 0:0'+s; }
+    noteMsg('9:52 PM: Justin calls her back himself. Four minutes. He promises a man out Sunday at 10 AM to tarp the spot, and keeps her Monday inspection.');
+    await wait(1400);
+    setClock(9*60+20,'Tuesday, October 27');
+    notif('Google Review','New 5 star review','\u201COwner called me back on a Saturday night, crew tarped us Sunday morning. This is why everyone in Mt. Juliet uses Bluebird.\u201D','good');
+    S.booked+=1; S.pipe+=18000; updStats();
+    addLead('Sarah M. · Mt. Juliet','Owner called back in the minute. Sunday tarp visit + Monday inspection booked. About $18,000.','hot');
+    banner('<strong>That is what the alert is for.</strong>The system caught the call and kept her calm. The owner\u2019s four minutes turned a nightmare into a five star review and an $18,000 job. Automation books. Humans close emergencies.','win');
+  } else if(choice==='text'){
+    $('ownThread').classList.add('on'); $('lockHint').style.display='none';
+    ownMsg('Justin, it is Sarah, water still dripping through the ceiling','them');
+    await wait(600);
+    const j1 = await ownAsk(['Sarah, it is Justin. I am sorry about this. Bucket under it for tonight, I have a man at your house tomorrow at 10 to tarp it.','We open Monday at 7, someone will call you then.']);
+    await wait(900);
+    if(j1.startsWith('Sarah, it is Justin')){
+      ownMsg('Thank you. Tomorrow at 10 works. I was about to call someone else','them');
+      await wait(800);
+      const j2 = await ownAsk(['Stay off the roof tonight, we have you from here. Keeping your Monday 9 AM inspection too.']);
+      await wait(700);
+      ownMsg('Okay. See you tomorrow','them');
+      S.booked+=1; S.pipe+=18000; updStats();
+      addLead('Sarah M. · Mt. Juliet','Owner texted within minutes. Sunday tarp visit + Monday inspection. About $18,000.','hot');
+      banner('<strong>Handled from his couch, in his own words.</strong>Ninety seconds of texting kept the job, the customer, and the weekend. She was one more unanswered minute from dialing the next name on Google.','win');
+    } else {
+      ownMsg('...okay','them');
+      await wait(1100);
+      setClock(11*60+5,'Sunday, October 25');
+      ownMsg('Update: another company came out this morning and tarped it. We are getting the roof quote from them. Thanks anyway','them');
+      S.lost+=1; S.lostVal+=18000; updStats();
+      addLead('Sarah M. · Mt. Juliet','Owner answered cold and late. Rival tarped Sunday and took the quote. About $18,000 lost.','lost');
+      banner('<strong>Words matter, even at 10 PM.</strong>The system bought Justin all the time in the world. A brush-off spent it. She did not need a crew that night. She needed to feel like someone cared.','lose');
+    }
+  } else {
+    await wait(1200);
+    setClock(11*60+5,'Sunday, October 25');
+    notif('Messages','Sarah M.','\u201CAnother company came out this morning and tarped it. We are getting the roof quote from them. Thanks anyway.\u201D','urgent');
+    showView('vSms'); addMsg('Update: another company came out Sunday and tarped it. We are going with them for the roof. Thanks anyway.','me',true);
+    S.lost+=1; S.lostVal+=18000; updStats();
+    addLead('Sarah M. · Mt. Juliet','Alert ignored until Monday. Rival tarped Sunday, took the job. About $18,000 lost.','lost');
+    banner('<strong>The alert is not the save. The response is.</strong>The system did everything right and the job still walked, because on Sunday morning a competitor showed up in person while Bluebird\u2019s owner had not even called. This is the one ending the system cannot fix for him. It can only make sure he always gets the choice.','lose');
+  }
+  showReport(); running=false; setModes(false);
+}
+
+/* ============ BUILD YOUR OWN CALL ============ */
+async function runCustom(){
+  if(running) return; running=true; setModes(true); resetStage();
+  const when=$('cWhen').value, prob=$('cProb').value;
+  const scenes={
+    lunch:{min:12*60+4,date:'Tuesday, October 20',when:'Tuesday, 12:04 PM · lunch hour', note:'The office is at lunch. Nobody is near this phone.'},
+    evening:{min:18*60+40,date:'Tuesday, October 20',when:'Tuesday, 6:40 PM · office closed at 5:00 PM', note:'The office closed 100 minutes ago. The building is dark.'},
+    night:{min:21*60+47,date:'Saturday, October 24',when:'Saturday, 9:47 PM · office closed since Friday, 5:00 PM', note:'The office has been dark since Friday afternoon.'}
+  };
+  const sc=scenes[when];
+  setClock(sc.min, sc.date);
+  $('sceneWhen').textContent=sc.when;
+  $('sceneSub').textContent='Your scenario · System ON · You play Sarah.';
+  $('smsName').textContent='Bluebird Roofing';
+  respTimerStart();
+  await ringCall('Bluebird Roofing','(615) 758-9101',sc.note,11,true);
+  $('callStatus').textContent='Missed call';
+  showView('vSms');
+  await wait(3900);
+  respTimerStop('4.0s · answered by text');
+  S.caught+=1; updStats();
+  if(prob==='hail'){
+    await botSay('Hi Sarah, sorry we missed your call. This is Bluebird Roofing. I hear the storm got you. Is it damage you can see, or is water getting in?',1000);
+    let a1=await askQ(['Shingles all over the yard','There is a stain on the ceiling']);
+    let pr=a1.toLowerCase().includes('stain');
+    if(pr) await botSay('A stain means water is in, so this goes to the top of the list and Justin sees it as soon as we book.',1100);
+    else await botSay('Good that it is not leaking yet. That is exactly when to catch it.',1000);
+    await botSay('Your address, so I can pull the roof up on satellite?',900);
+    await askQ(['4520 Stonebridge Dr, Mt. Juliet']);
+    await botSay('I have Thursday 10:00 AM or Friday 2:00 PM for the free inspection, photos included for your insurance file. Which one?',1200);
+    let a4=await askQ(['Thursday 10 works','Friday 2 is better']);
+    let fri=a4.toLowerCase().includes('friday');
+    let slot=fri?'Friday 2:00 PM':'Thursday 10:00 AM';
+    (fri?$('calFri'):$('calThu')).outerHTML='<span class="appt" id="'+(fri?'calFri':'calThu')+'">Sarah M. · inspection</span>';
+    await botSay('Booked for '+slot+'. We text you when the inspector is on his way.',1000);
+    notif('Revenue Recovery','Estimate booked','Sarah M., Mt. Juliet. '+(pr?'Priority: ceiling stain. ':'Hail damage. ')+'Inspection '+slot+'.', pr?'urgent':'good');
+    S.booked+=1; S.pipe+=14500; updStats();
+    addLead('Sarah M. · Mt. Juliet',(pr?'PRIORITY · ':'')+'Hail damage (your scenario). Booked '+slot+'.', pr?'hot':'');
+    banner('<strong>Your scenario, saved.</strong>While the office could not answer, the job got caught, qualified, and booked. Sarah never opened Google again.','win');
+  } else if(prob==='leak'){
+    await botSay('Hi, this is Bluebird Roofing. Sorry we missed your call. What is happening at the house?',900);
+    let a1=await askQ(['Water coming through the ceiling','Leak over the kitchen']);
+    await botSay('Is it actively dripping right now?',900);
+    let a2=await askQ(['Yes, getting worse','It has slowed down']);
+    let act=a2.toLowerCase().includes('yes');
+    if(act){ buzzSnd(); if(navigator.vibrate) navigator.vibrate([180,90,180]);
+      notif('Revenue Recovery','URGENT LEAD: active leak','Sarah M., Mt. Juliet. Water actively coming in. Tap to call her back.','urgent');
+      await botSay('I have alerted Justin directly, he has your number and this conversation. I am also booking you the first working slot so a crew is locked in either way.',1200);
+    } else {
+      await botSay('Then we have a little room, but not much. I am marking this priority and booking the first working slot.',1100);
+    }
+    await askQ(['Book it']);
+    let slot = when==='night' ? 'Monday 9:00 AM' : 'tomorrow 9:00 AM';
+    $('calMon').outerHTML='<span class="appt" id="calMon">Sarah M. · priority</span>';
+    await botSay('You are booked, '+slot+'. Bucket under the drip tonight, nothing valuable left in that room, and do not climb up there yourself.',1200);
+    S.booked+=1; S.pipe+=18000; updStats();
+    addLead('Sarah M. · Mt. Juliet','LEAK (your scenario) · '+(act?'Owner alerted in the minute. ':'')+'Booked '+slot+'. About $18,000.','hot');
+    banner('<strong>Your scenario, and the emergency held.</strong>Nobody fixed a roof in the dark. The job was won anyway, in the first four seconds.','win');
+  } else {
+    await botSay('Hi Sarah, sorry we missed your call. This is Bluebird Roofing. Happy to talk numbers. Two quick things so I do not quote you nonsense: how old is the roof, roughly?',1100);
+    await askQ(['About 12 years','Over 20 years','No idea, honestly']);
+    await botSay('And the house size, roughly?',800);
+    let sz=await askQ(['Around 1,500 sq ft','Around 2,200 sq ft','Around 3,200 sq ft']);
+    let range = sz.includes('1,500') ? 'roughly $7,500 to $11,000' : sz.includes('3,200') ? 'roughly $16,000 to $24,000' : 'roughly $11,000 to $16,500';
+    await botSay('For a full architectural shingle replacement on a house that size, Mt. Juliet runs '+range+' installed. That is a ballpark, not a quote. Anyone who gives you an exact number without seeing the roof is guessing with your money.',1400);
+    await botSay('The exact number is free: a 45 minute inspection, satellite measurements, photos of everything. Thursday 10:00 AM or Friday 2:00 PM?',1200);
+    let a4=await askQ(['Thursday 10 works','Friday 2 is better','Just send me info']);
+    if(a4.toLowerCase().includes('info')){
+      await botSay('I can, and I will send the inspection details to this number. Fair warning: the ballpark is all anyone can honestly give you by text. The free inspection is where the real number comes from. Thursday 10 is still open if you change your mind.',1300);
+      await askQ(['Okay, Thursday 10 then']);
+      a4='Thursday 10 works';
+    }
+    let fri=a4.toLowerCase().includes('friday');
+    let slot=fri?'Friday 2:00 PM':'Thursday 10:00 AM';
+    (fri?$('calFri'):$('calThu')).outerHTML='<span class="appt" id="'+(fri?'calFri':'calThu')+'">Sarah M. · inspection</span>';
+    await botSay('Booked for '+slot+'. You will get the written number after the inspection, photos included, no pressure either way.',1100);
+    notif('Revenue Recovery','Estimate booked','Sarah M., Mt. Juliet. Price shopper, converted to a free inspection. '+slot+'.','good');
+    S.booked+=1; S.pipe+=12000; updStats();
+    addLead('Sarah M. · Mt. Juliet','Price shopper (your scenario). Honest ballpark, booked the free inspection '+slot+'.');
+    banner('<strong>The price shopper is the hardest save, and it still booked.</strong>She came for a number, got an honest one instead of a fake one, and the inspection did the rest. That conversation happened with the office empty.','win');
+  }
   showReport(); running=false; setModes(false);
 }
 </script>

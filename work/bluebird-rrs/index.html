@@ -5,75 +5,128 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bluebird Roofing: Revenue Recovery Demo</title>
 <style>
-:root{--navy:#0B1F3A;--navy2:#102A4C;--ink:#07142A;--orange:#E8742A;--orange2:#CC5500;--cream:#F3E9DC;--mute:#A9B6C9;--green:#2ECC71}
+:root{--navy:#0B1F3A;--navy2:#102A4C;--ink:#07142A;--orange:#E8742A;--orange2:#CC5500;--cream:#F3E9DC;--mute:#A9B6C9;--green:#2ECC71;--red:#E74C3C;--amber:#F39C12}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;min-height:100vh}
-.wrap{max-width:1200px;margin:0 auto;padding:40px 20px}
-.hero{text-align:center;margin-bottom:50px}
-.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.wrap{max-width:1240px;margin:0 auto;padding:36px 18px 60px}
+.hero{text-align:center;margin-bottom:28px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
 .hero h1 span{color:var(--orange)}
-.hero p{color:var(--mute);font-size:1.15rem;max-width:640px;margin:0 auto;line-height:1.6}
-.badge{display:inline-block;background:rgba(232,116,42,.15);border:1px solid var(--orange);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.85rem;font-weight:700;margin-bottom:20px}
-.demo{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:40px}
-@media(max-width:800px){.demo{grid-template-columns:1fr}}
-.panel{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;position:relative}
-.panel h2{font-size:1.1rem;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:10px}
-.panel .sub{color:var(--mute);font-size:.9rem;margin-bottom:24px}
-.dot{width:10px;height:10px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-/* Phone */
-.phone{width:300px;max-width:100%;margin:0 auto;background:#000;border-radius:36px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.screen{background:#1a1a2e;border-radius:28px;overflow:hidden;min-height:520px;display:flex;flex-direction:column}
-.notch{text-align:center;padding:8px;color:#666;font-size:.7rem}
-.call-screen{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;transition:opacity .5s}
-.call-screen.hidden{opacity:0;pointer-events:none;position:absolute}
-.avatar{width:80px;height:80px;border-radius:50%;background:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:16px}
-.caller{font-size:1.3rem;font-weight:700;margin-bottom:4px}
-.call-status{color:var(--mute);font-size:.95rem;margin-bottom:30px}
-.call-btns{display:flex;gap:20px}
-.call-btn{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;cursor:pointer;border:none;color:#fff}
-.decline{background:#e74c3c}.accept{background:var(--green)}
-.sms-screen{flex:1;display:none;flex-direction:column;padding:16px;overflow:hidden}
-.sms-screen.active{display:flex}
-.sms-header{text-align:center;padding:10px;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;margin-bottom:12px}
-.msgs{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:4px}
-.msg{max-width:80%;padding:10px 14px;border-radius:18px;font-size:.92rem;line-height:1.45;animation:slideIn .4s ease}
-@keyframes slideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.msg.in{background:#2a2a4a;align-self:flex-start;border-bottom-left-radius:4px}
-.msg.out{background:var(--orange);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-.msg .time{font-size:.68rem;opacity:.7;margin-top:4px}
-.typing{align-self:flex-start;background:#2a2a4a;padding:12px 16px;border-radius:18px;display:none}
-.typing.active{display:block}
-.typing span{width:8px;height:8px;background:#888;border-radius:50%;display:inline-block;margin:0 2px;animation:blink 1.2s infinite}
-.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+.hero p{color:var(--mute);font-size:1.08rem;max-width:680px;margin:0 auto;line-height:1.6}
+.badge{display:inline-block;background:rgba(232,116,42,.15);border:1px solid var(--orange);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.82rem;font-weight:700;margin-bottom:18px;letter-spacing:.04em}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 auto 22px;max-width:1080px}
+@media(max-width:860px){.modes{grid-template-columns:1fr}}
+.mode{background:var(--navy);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px;text-align:left;cursor:pointer;color:var(--cream);transition:all .2s;width:100%}
+.mode:hover{border-color:var(--orange);transform:translateY(-2px)}
+.mode:disabled{opacity:.45;cursor:default;transform:none}
+.mode .tag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.mode .t1{color:var(--red)}.mode .t2{color:var(--green)}.mode .t3{color:var(--amber)}
+.mode h3{font-size:1.02rem;margin-bottom:5px}
+.mode p{font-size:.85rem;color:var(--mute);line-height:1.5}
+.mode .dur{margin-top:8px;font-size:.75rem;color:var(--orange);font-weight:700}
+.scenebar{max-width:1080px;margin:0 auto 18px;background:var(--navy2);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.scenebar .when{font-weight:800;font-size:1rem}
+.scenebar .when small{display:block;font-weight:500;color:var(--mute);font-size:.78rem;margin-top:2px}
+.scenebar .resp{text-align:right}
+.scenebar .resp .lab{font-size:.72rem;color:var(--mute);text-transform:uppercase;letter-spacing:.07em}
+.scenebar .resp .val{font-size:1.35rem;font-weight:800;color:var(--orange);font-variant-numeric:tabular-nums}
+.stage{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1080px;margin:0 auto}
+@media(max-width:860px){.stage{grid-template-columns:1fr}}
+.panel{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
+.panel h2{font-size:1.02rem;font-weight:700;margin-bottom:3px;display:flex;align-items:center;gap:9px}
+.panel .sub{color:var(--mute);font-size:.86rem;margin-bottom:18px;line-height:1.5}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.phone{width:305px;max-width:100%;margin:0 auto;background:#000;border-radius:42px;padding:11px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.screen{background:#10101d;border-radius:33px;overflow:hidden;height:560px;display:flex;flex-direction:column;position:relative}
+.statusbar{display:flex;justify-content:space-between;padding:9px 18px 4px;font-size:.72rem;color:#cfd4e4;font-weight:600}
+.view{flex:1;display:none;flex-direction:column;min-height:0}
+.view.on{display:flex}
+.callscreen{align-items:center;text-align:center;padding:26px 18px}
+.avatar{width:78px;height:78px;border-radius:50%;background:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:1.9rem;margin:18px auto 14px;border:2px solid rgba(255,255,255,.15)}
+.caller{font-size:1.28rem;font-weight:700}
+.callnum{color:var(--mute);font-size:.88rem;margin-top:2px}
+.callstatus{color:var(--orange);font-size:.95rem;margin-top:14px;font-variant-numeric:tabular-nums;min-height:1.3em}
+.callnote{color:var(--mute);font-size:.8rem;line-height:1.55;margin-top:16px;max-width:230px}
+.callbtns{display:flex;gap:44px;justify-content:center;margin-top:auto;padding-bottom:14px}
+.callbtn{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;cursor:pointer;border:none;color:#fff;transition:transform .15s}
+.callbtn:hover{transform:scale(1.07)}
+.decline{background:var(--red)}.accept{background:var(--green)}
+.ringing{animation:ringpulse 1.1s infinite}
+@keyframes ringpulse{0%,100%{box-shadow:0 0 0 0 rgba(231,76,60,.55)}50%{box-shadow:0 0 0 15px rgba(231,76,60,0)}}
+.smshead{text-align:center;padding:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+.smshead .n{font-weight:700;font-size:.95rem}
+.smshead .s{font-size:.7rem;color:var(--mute)}
+.msgs{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:9px;padding:14px 12px}
+.msg{max-width:82%;padding:10px 14px;border-radius:19px;font-size:.9rem;line-height:1.45;animation:slideIn .35s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.msg.them{background:#2b2b40;align-self:flex-start;border-bottom-left-radius:5px}
+.msg.me{background:#0B84FE;align-self:flex-end;border-bottom-right-radius:5px;color:#fff}
+.msg .time{display:block;font-size:.64rem;opacity:.65;margin-top:4px}
+.msg .read{display:block;font-size:.62rem;opacity:.55;margin-top:2px;text-align:right}
+.note{align-self:center;background:rgba(255,255,255,.07);color:var(--mute);font-size:.74rem;padding:6px 12px;border-radius:99px;text-align:center;line-height:1.4;max-width:92%}
+.typing{align-self:flex-start;background:#2b2b40;padding:12px 16px;border-radius:19px;display:none}
+.typing.on{display:block}
+.typing span{width:7px;height:7px;background:#9a9ab0;border-radius:50%;display:inline-block;margin:0 2px;animation:blink 1.1s infinite}
+.typing span:nth-child(2){animation-delay:.18s}.typing span:nth-child(3){animation-delay:.36s}
 @keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
-.timer-bar{background:rgba(232,116,42,.12);border:1px solid rgba(232,116,42,.3);border-radius:12px;padding:12px 16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
-.timer-bar .label{font-size:.85rem;color:var(--mute)}
-.timer-bar .time{font-size:1.4rem;font-weight:800;color:var(--orange);font-variant-numeric:tabular-nums}
-/* Dashboard */
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
-.stat{background:var(--navy2);border-radius:14px;padding:18px}
-.stat .num{font-size:1.8rem;font-weight:800;color:var(--orange)}
-.stat .lbl{font-size:.82rem;color:var(--mute);margin-top:4px}
-.lead-card{background:var(--navy2);border-radius:14px;padding:18px;border-left:4px solid var(--green);margin-bottom:12px;opacity:0;transform:translateY(10px);transition:all .5s}
-.lead-card.show{opacity:1;transform:none}
-.lead-card .name{font-weight:700;margin-bottom:4px}
-.lead-card .detail{font-size:.88rem;color:var(--mute);line-height:1.5}
-.lead-card .score{display:inline-block;background:var(--green);color:#000;font-weight:800;font-size:.75rem;padding:2px 10px;border-radius:99px;margin-top:8px}
-.alert{background:rgba(46,204,113,.1);border:1px solid var(--green);border-radius:12px;padding:14px 16px;margin-bottom:16px;display:none}
-.alert.show{display:block;animation:slideIn .4s ease}
-.alert strong{color:var(--green)}
-.controls{text-align:center;margin:30px 0}
-.btn{display:inline-block;background:var(--orange);color:#fff;border:none;padding:16px 40px;border-radius:99px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:transform .2s}
-.btn:hover{transform:translateY(-2px);background:var(--orange2)}
-.btn:disabled{opacity:.4;cursor:default;transform:none}
-.btn.secondary{background:transparent;border:2px solid var(--orange);color:var(--orange);margin-left:12px}
-.steps{display:flex;justify-content:center;gap:8px;margin:24px 0;flex-wrap:wrap}
-.step{font-size:.82rem;color:var(--mute);padding:6px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.15)}
-.step.active{color:#fff;border-color:var(--orange);background:rgba(232,116,42,.15)}
-.step.done{color:var(--green);border-color:var(--green)}
-.explainer{max-width:720px;margin:40px auto 0;text-align:center;color:var(--mute);line-height:1.7}
+.chips{display:none;flex-direction:column;gap:7px;padding:10px 12px 4px}
+.chips.on{display:flex}
+.chips .clab{font-size:.68rem;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
+.chip{background:transparent;border:1.5px solid var(--orange);color:var(--orange);border-radius:99px;padding:8px 14px;font-size:.85rem;cursor:pointer;text-align:left;transition:all .15s}
+.chip:hover{background:var(--orange);color:#fff}
+.inputbar{display:flex;gap:8px;padding:10px 12px 14px;border-top:1px solid rgba(255,255,255,.08)}
+.inputbar input{flex:1;background:#1d1d30;border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:9px 15px;color:#fff;font-size:.88rem;outline:none}
+.inputbar input:focus{border-color:var(--orange)}
+.inputbar button{background:var(--orange);border:none;color:#fff;border-radius:50%;width:38px;height:38px;font-size:1rem;cursor:pointer;flex:none}
+.lock{flex:1;display:flex;flex-direction:column;align-items:center;padding:30px 16px;background:linear-gradient(160deg,#16283f,#0a1526)}
+.lock .lt{font-size:2.9rem;font-weight:200;letter-spacing:-.01em}
+.lock .ld{font-size:.95rem;color:#dbe2f0;margin-bottom:22px}
+.notif{width:100%;background:rgba(240,244,252,.13);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(4px);border-radius:18px;padding:12px 14px;margin-bottom:10px;animation:slideIn .4s ease;text-align:left}
+.notif .nh{display:flex;justify-content:space-between;font-size:.66rem;color:#c3cbdd;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.notif .nt{font-weight:700;font-size:.88rem}
+.notif .nb{font-size:.82rem;color:#e6eaf4;line-height:1.45;margin-top:1px}
+.notif.urgent{background:rgba(231,76,60,.22);border-color:var(--red)}
+.notif.good{background:rgba(46,204,113,.16);border-color:var(--green)}
+.lockhint{margin-top:auto;color:var(--mute);font-size:.74rem;text-align:center;line-height:1.5}
+.office{max-width:1080px;margin:22px auto 0;background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:22px}
+.office h2{font-size:1.02rem;font-weight:700;margin-bottom:16px;display:flex;gap:9px;align-items:center}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+@media(max-width:860px){.statgrid{grid-template-columns:1fr 1fr}}
+.stat{background:var(--navy2);border-radius:14px;padding:15px}
+.stat .num{font-size:1.55rem;font-weight:800;color:var(--orange)}
+.stat .num.g{color:var(--green)}.stat .num.r{color:var(--red)}
+.stat .lbl{font-size:.78rem;color:var(--mute);margin-top:3px;line-height:1.4}
+.offgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:860px){.offgrid{grid-template-columns:1fr}}
+.cal,.leadlog{background:var(--navy2);border-radius:14px;padding:16px}
+.cal h4,.leadlog h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:11px}
+.calrow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85rem}
+.calrow:last-child{border-bottom:none}
+.calrow .appt{background:rgba(46,204,113,.15);border:1px solid var(--green);color:#bdf0d2;border-radius:8px;padding:3px 10px;font-size:.76rem;font-weight:700;animation:slideIn .4s ease}
+.calrow .free{color:var(--mute);font-size:.78rem}
+.leaditem{border-left:4px solid var(--green);background:rgba(255,255,255,.03);border-radius:8px;padding:10px 12px;margin-bottom:9px;animation:slideIn .4s ease}
+.leaditem.hot{border-left-color:var(--red)}
+.leaditem.lost{border-left-color:var(--red);opacity:.75}
+.leaditem .ln{font-weight:700;font-size:.88rem}
+.leaditem .ld2{font-size:.8rem;color:var(--mute);line-height:1.45;margin-top:2px}
+.empty{color:var(--mute);font-size:.84rem}
+.banner{max-width:1080px;margin:20px auto 0;border-radius:16px;padding:18px 22px;display:none;line-height:1.55;font-size:.98rem}
+.banner.show{display:block;animation:slideIn .4s ease}
+.banner.win{background:rgba(46,204,113,.12);border:1px solid var(--green)}
+.banner.lose{background:rgba(231,76,60,.12);border:1px solid var(--red)}
+.banner strong{display:block;font-size:1.08rem;margin-bottom:3px}
+.report{max-width:1080px;margin:20px auto 0;background:var(--navy);border:1px dashed rgba(232,116,42,.55);border-radius:20px;padding:22px;display:none}
+.report.show{display:block;animation:slideIn .4s ease}
+.report h3{font-size:1.05rem;margin-bottom:6px}
+.report p{color:var(--mute);line-height:1.6;font-size:.92rem}
+.report .big{color:var(--cream);font-weight:700}
+.controls{max-width:1080px;margin:22px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{background:transparent;border:2px solid var(--orange);color:var(--orange);padding:11px 26px;border-radius:99px;font-size:.92rem;font-weight:700;cursor:pointer}
+.btn:hover{background:rgba(232,116,42,.12)}
+.explainer{max-width:760px;margin:38px auto 0;text-align:center;color:var(--mute);line-height:1.7;font-size:.95rem}
 .explainer strong{color:var(--cream)}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
 </style>
 </head>
 <body>
@@ -81,169 +134,351 @@ body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-syste
 <div class="hero">
 <div class="badge">PREPARED FOR BLUEBIRD ROOFING</div>
 <h1>One Missed Call. <span>One Roof Gone.</span></h1>
-<p>Built for Justin Rogers and the Bluebird team. Watch what happens when your office misses a call at lunch hour today, and what happens when the Revenue Recovery System is on.</p>
+<p>Built for Justin Rogers and the Bluebird team. Three short stories below. Run them in order and watch what a missed call is worth, with the Revenue Recovery System off, and with it on. In stories two and three, you play Sarah. Tap her replies yourself.</p>
 </div>
 
-<div class="steps">
-<div class="step" id="st1">1. Missed call</div>
-<div class="step" id="st2">2. Instant textback</div>
-<div class="step" id="st3">3. AI qualifies lead</div>
-<div class="step" id="st4">4. Estimate booked</div>
-<div class="step" id="st5">5. Owner notified</div>
+<div class="modes">
+<button class="mode" id="mWithout" onclick="runWithout()">
+<div class="tag t1">Story 1 · System OFF</div>
+<h3>The call that got away</h3>
+<p>Tuesday, lunch hour. Sarah's roof took hail damage. She calls the 5 star company first. Watch what happens next.</p>
+<div class="dur">About 40 seconds</div>
+</button>
+<button class="mode" id="mRoutine" onclick="runRoutine()">
+<div class="tag t2">Story 2 · System ON</div>
+<h3>The lunch rush, handled</h3>
+<p>Same call, same Tuesday. This time the system is on. You answer as Sarah and watch it book her in.</p>
+<div class="dur">About 90 seconds · interactive</div>
+</button>
+<button class="mode" id="mUrgent" onclick="runUrgent()">
+<div class="tag t3">Story 3 · System ON</div>
+<h3>Saturday night emergency</h3>
+<p>9:47 PM on a Saturday. Water coming through a ceiling. The office has been closed since Friday at 5. Watch the triage work.</p>
+<div class="dur">About 75 seconds · interactive</div>
+</button>
 </div>
 
-<div class="demo">
-<!-- CUSTOMER PHONE -->
+<div class="scenebar">
+<div class="when"><span id="sceneWhen">Pick a story to begin</span><small id="sceneSub">Bluebird Roofing, Mt. Juliet, Tennessee</small></div>
+<div class="resp"><div class="lab">Time for Bluebird to respond</div><div class="val" id="respTimer">--</div></div>
+</div>
+
+<div class="stage">
 <div class="panel">
-<h2><span class="dot"></span> Customer's Phone</h2>
-<p class="sub">Sarah's roof took hail damage in last week's storm. She calls Bluebird at 12:04 PM, right in the lunch rush.</p>
-<div class="timer-bar">
-<span class="label">Time since missed call</span>
-<span class="time" id="timer">0.0s</span>
-</div>
+<h2><span class="dot"></span> Sarah's Phone</h2>
+<p class="sub">The customer. A Mt. Juliet homeowner whose roof took hail damage in last week's storm.</p>
 <div class="phone"><div class="screen">
-<div class="notch">12:04 PM</div>
-<div class="call-screen" id="callScreen">
-<div class="avatar">🏠</div>
-<div class="caller">Bluebird Roofing</div>
-<div class="call-status" id="callStatus">Calling...</div>
-<div class="call-btns">
-<button class="call-btn decline" onclick="missCall()">✕</button>
-<button class="call-btn accept" onclick="answerCall()">✓</button>
+<div class="statusbar"><span id="custClock">12:04 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
+
+<div class="view on" id="vIdle">
+<div class="callscreen" style="flex:1;display:flex;flex-direction:column">
+<div class="avatar">S</div>
+<div class="caller">Sarah M.</div>
+<div class="callnum">Mt. Juliet homeowner</div>
+<div class="callnote">Her story starts when you pick one above. She always calls Bluebird first. What happens after that is the whole demo.</div>
 </div>
-<p style="margin-top:20px;color:var(--mute);font-size:.8rem">Tap ✕ to simulate a missed call<br>(roofer is on a roof)</p>
 </div>
-<div class="sms-screen" id="smsScreen">
-<div class="sms-header">Bluebird Roofing</div>
+
+<div class="view" id="vCall">
+<div class="callscreen" style="flex:1;display:flex;flex-direction:column">
+<div class="avatar" id="callAvatar">B</div>
+<div class="caller" id="callName">Bluebird Roofing</div>
+<div class="callnum" id="callNum">(615) 758-9101</div>
+<div class="callstatus" id="callStatus">Calling...</div>
+<div class="callnote" id="callNote"></div>
+<div class="callbtns">
+<button class="callbtn decline" id="btnMiss" title="Let it ring out">✕</button>
+<button class="callbtn accept" id="btnAnswer" title="Answer">✓</button>
+</div>
+</div>
+</div>
+
+<div class="view" id="vSms">
+<div class="smshead"><div class="n" id="smsName">Bluebird Roofing</div><div class="s">Text Message</div></div>
 <div class="msgs" id="msgs"></div>
 <div class="typing" id="typing"><span></span><span></span><span></span></div>
+<div class="chips" id="chips"><div class="clab">Sarah replies (tap one, or type below)</div><div id="chipRow" style="display:flex;flex-direction:column;gap:7px"></div></div>
+<div class="inputbar"><input id="smsInput" placeholder="Text message" autocomplete="off"><button id="smsSend" title="Send">↑</button></div>
 </div>
+
 </div></div>
 </div>
 
-<!-- OWNER DASHBOARD -->
 <div class="panel">
-<h2><span class="dot"></span> Owner Dashboard</h2>
-<p class="sub">What Justin sees on his phone, in real time.</p>
-<div class="alert" id="ownerAlert">
-<strong>Hot lead for Justin:</strong> Sarah M., Mt. Juliet, hail damage. Score 9/10. Estimate booked for Thursday 10 AM.
+<h2><span class="dot"></span> Justin's Phone</h2>
+<p class="sub">The owner. Locked most of the day, because he is on roofs, in attics, and across kitchen tables.</p>
+<div class="phone"><div class="screen">
+<div class="statusbar"><span id="ownClock">12:04 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
+<div class="lock">
+<div class="lt" id="lockTime">12:04</div>
+<div class="ld" id="lockDate">Tuesday, October 20</div>
+<div id="notifs" style="width:100%"></div>
+<div class="lockhint" id="lockHint">Nothing yet. When something needs Justin, it lands here, on the phone in his pocket.</div>
 </div>
-<div class="stat-grid">
-<div class="stat"><div class="num" id="statCalls">0</div><div class="lbl">Missed calls caught</div></div>
-<div class="stat"><div class="num" id="statBooked">0</div><div class="lbl">Estimates booked</div></div>
-<div class="stat"><div class="num" id="statValue">$0</div><div class="lbl">Pipeline value</div></div>
-<div class="stat"><div class="num">4s</div><div class="lbl">Avg response time</div></div>
+</div></div>
 </div>
-<div id="leadFeed"></div>
 </div>
+
+<div class="office">
+<h2><span class="dot"></span> Bluebird Office View</h2>
+<div class="statgrid">
+<div class="stat"><div class="num" id="stCaught">0</div><div class="lbl">Missed calls caught by the system</div></div>
+<div class="stat"><div class="num g" id="stBooked">0</div><div class="lbl">Estimates booked</div></div>
+<div class="stat"><div class="num g" id="stPipe">$0</div><div class="lbl">Pipeline protected</div></div>
+<div class="stat"><div class="num r" id="stLost">$0</div><div class="lbl">Known lost while the system was off</div></div>
+</div>
+<div class="offgrid">
+<div class="cal"><h4>Estimate calendar</h4><div id="calRows">
+<div class="calrow"><span>Wed · Crew A</span><span class="free">Franklin re-roof, all day</span></div>
+<div class="calrow"><span>Thu 10:00 AM</span><span class="free" id="calThu">Open</span></div>
+<div class="calrow"><span>Fri 2:00 PM</span><span class="free" id="calFri">Open</span></div>
+<div class="calrow"><span>Mon 9:00 AM</span><span class="free" id="calMon">Open</span></div>
+</div></div>
+<div class="leadlog"><h4>Lead log</h4><div id="leadLog"><div class="empty">No leads yet in this demo. Run a story.</div></div></div>
+</div>
+</div>
+
+<div class="banner" id="banner"></div>
+
+<div class="report" id="report">
+<h3>Justin's Monday report</h3>
+<p id="reportBody"></p>
+<p style="margin-top:10px">This report lands every Monday at 7 AM. <span class="big">Judge the system on this, not on a pitch.</span></p>
 </div>
 
 <div class="controls">
-<button class="btn" id="startBtn" onclick="startDemo()">▶ Run the Demo</button>
-<button class="btn secondary" onclick="resetDemo()">Reset</button>
+<button class="btn" id="soundBtn" onclick="toggleSound()">Sound: off</button>
+<button class="btn" onclick="location.reload()">Reset the demo</button>
 </div>
 
 <div class="explainer">
-<p><strong>What you're watching:</strong> A homeowner calls Bluebird at lunch. The crews are on roofs, the office is at lunch, nobody can answer. Today, that job quietly goes to the next roofer she dials. With the Revenue Recovery System on, a text goes out in 4 seconds, the conversation qualifies her, books the estimate into the calendar, and alerts Justin, all without anyone picking up a phone.</p>
+<p><strong>What you just watched is the whole product.</strong> A homeowner calls. Bluebird cannot answer, because roofs are not fixed from a desk. Today that job quietly goes to whoever picks up next. With the Revenue Recovery System on, a text goes out in about four seconds, the conversation qualifies the job, emergencies buzz Justin's phone in the same minute, and everything else books itself into the calendar. No app for the customer. No change to Bluebird's number. Nothing installed on the website.</p>
 </div>
 </div>
 
 <script>
-let timerInt, startTime;
-const msgs = document.getElementById('msgs');
-const typing = document.getElementById('typing');
+let S = {caught:0, booked:0, lost:0, pipe:0, lostVal:0};
+let soundOn = false, actx = null, running = false;
+let clockMin = 12*60+4; // scene clock in minutes
+const $ = id => document.getElementById(id);
 
-function setStep(n){
-  for(let i=1;i<=5;i++){
-    const el=document.getElementById('st'+i);
-    el.classList.remove('active','done');
-    if(i<n)el.classList.add('done');
-    if(i===n)el.classList.add('active');
-  }
+function toggleSound(){ soundOn = !soundOn; $('soundBtn').textContent = 'Sound: ' + (soundOn?'on':'off'); if(soundOn) beep(880,.07); }
+function ac(){ if(!actx) actx = new (window.AudioContext||window.webkitAudioContext)(); return actx; }
+function beep(f,d,type){ if(!soundOn) return; try{ const a=ac(),o=a.createOscillator(),g=a.createGain(); o.type=type||'sine'; o.frequency.value=f; g.gain.setValueAtTime(.12,a.currentTime); g.gain.exponentialRampToValueAtTime(.001,a.currentTime+d); o.connect(g).connect(a.destination); o.start(); o.stop(a.currentTime+d);}catch(e){} }
+function ding(){ beep(1318,.12); setTimeout(()=>beep(1760,.14),110); }
+function buzzSnd(){ beep(180,.16,'square'); setTimeout(()=>beep(180,.16,'square'),230); }
+function ringSnd(){ beep(440,.35); setTimeout(()=>beep(480,.35),60); }
+
+function fmt(min){ let h=Math.floor(min/60)%12; if(h===0)h=12; let m=min%60; return h+':'+String(m).padStart(2,'0'); }
+function fmtAP(min){ const ap = Math.floor(min/60)>=12 && Math.floor(min/60)<24 ? 'PM':'AM'; return fmt(min)+' '+ap; }
+function setClock(min, dateLabel){
+  clockMin = min;
+  $('custClock').textContent = fmtAP(min); $('ownClock').textContent = fmtAP(min);
+  $('lockTime').textContent = fmt(min); if(dateLabel) $('lockDate').textContent = dateLabel;
 }
-function addMsg(text,who,delay){
-  return new Promise(res=>{
-    setTimeout(()=>{
-      const d=document.createElement('div');
-      d.className='msg '+who;
-      const now=new Date();
-      d.innerHTML=text+'<div class="time">'+now.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'</div>';
-      msgs.appendChild(d);
-      msgs.scrollTop=msgs.scrollHeight;
-      res();
-    },delay);
+function wait(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+function showView(id){ ['vIdle','vCall','vSms'].forEach(v=>$(v).classList.toggle('on', v===id)); }
+function setModes(dis){ ['mWithout','mRoutine','mUrgent'].forEach(m=>$(m).disabled=dis); }
+function banner(html, kind){ const b=$('banner'); b.className='banner show '+kind; b.innerHTML=html; }
+function clearBanner(){ $('banner').className='banner'; $('banner').innerHTML=''; }
+
+let respInt=null, respStart=0;
+function respTimerStart(label){ respStart=Date.now(); $('respTimer').textContent='0.0s'; clearInterval(respInt);
+  respInt=setInterval(()=>{ $('respTimer').textContent=((Date.now()-respStart)/1000).toFixed(1)+'s'; },90); }
+function respTimerStop(text){ clearInterval(respInt); if(text) $('respTimer').textContent=text; }
+
+function notif(app, title, body, kind){
+  const n=document.createElement('div'); n.className='notif '+(kind||'');
+  n.innerHTML='<div class="nh"><span>'+app+'</span><span>now</span></div><div class="nt">'+title+'</div><div class="nb">'+body+'</div>';
+  $('notifs').appendChild(n); $('lockHint').style.display='none';
+}
+function addLead(name, detail, cls){
+  const log=$('leadLog'); if(log.querySelector('.empty')) log.innerHTML='';
+  const d=document.createElement('div'); d.className='leaditem '+(cls||'');
+  d.innerHTML='<div class="ln">'+name+'</div><div class="ld2">'+detail+'</div>'; log.prepend(d);
+}
+function updStats(){ $('stCaught').textContent=S.caught; $('stBooked').textContent=S.booked;
+  $('stPipe').textContent='$'+S.pipe.toLocaleString(); $('stLost').textContent='$'+S.lostVal.toLocaleString(); }
+function showReport(){
+  if(S.caught===0 && S.lost===0) return;
+  $('report').classList.add('show');
+  $('reportBody').innerHTML='Missed calls the system caught: <span class="big">'+S.caught+'</span> · Estimates booked: <span class="big">'+S.booked+'</span> · Pipeline protected: <span class="big">$'+S.pipe.toLocaleString()+'</span> · Jobs known lost while it was off: <span class="big">'+S.lost+' ($'+S.lostVal.toLocaleString()+')</span>.';
+}
+
+/* ------- customer phone: call screen ------- */
+async function ringCall(name, num, note, rings, autoMiss){
+  showView('vCall');
+  $('callName').textContent=name; $('callNum').textContent=num; $('callNote').textContent=note||'';
+  $('callAvatar').textContent=name.charAt(0);
+  $('btnMiss').classList.add('ringing');
+  return new Promise(async res=>{
+    let done=false;
+    const finish=v=>{ if(done)return; done=true; $('btnMiss').classList.remove('ringing'); res(v); };
+    $('btnMiss').onclick=()=>finish('missed');
+    $('btnAnswer').onclick=()=>{ $('callStatus').textContent='The office cannot come to the phone right now.'; };
+    const t0=Date.now();
+    const iv=setInterval(()=>{ const s=((Date.now()-t0)/1000); $('callStatus').textContent='Calling... 0:'+String(Math.floor(s)).padStart(2,'0'); if(Math.floor(s)%4===0) ringSnd(); if(s>=rings){ clearInterval(iv); finish('missed'); } },250);
+    if(!autoMiss){ /* viewer may tap miss earlier; interval ends it at rings */ }
   });
 }
-function showTyping(show){
-  typing.classList.toggle('active',show);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-function startTimer(){
-  startTime=Date.now();
-  timerInt=setInterval(()=>{
-    document.getElementById('timer').textContent=((Date.now()-startTime)/1000).toFixed(1)+'s';
-  },100);
-}
-function stopTimer(){
-  clearInterval(timerInt);
-}
-function missCall(){
-  document.getElementById('callStatus').textContent='Missed call';
-  setTimeout(()=>runFlow(),800);
-}
-function answerCall(){
-  document.getElementById('callStatus').textContent='Connected... (demo: please tap ✕ for the missed-call flow)';
-}
-async function runFlow(){
-  document.getElementById('callScreen').classList.add('hidden');
-  document.getElementById('smsScreen').classList.add('active');
-  startTimer(); setStep(1);
-  document.getElementById('statCalls').textContent='1';
 
-  // Step 2: instant textback at ~4s
-  await new Promise(r=>setTimeout(r,3200));
-  stopTimer();
-  document.getElementById('timer').textContent='4.0s';
-  setStep(2);
-  await addMsg("Hi Sarah, sorry we missed your call. This is Bluebird Roofing. Are you looking for a repair, a full replacement, or a free inspection?",'out',0);
-
-  // Step 3: conversation
-  await new Promise(r=>setTimeout(r,2000));
-  await addMsg("Hi! We had hail last week and I think some shingles are damaged.",'in',0);
-  showTyping(true); setStep(3);
-  await new Promise(r=>setTimeout(r,1800)); showTyping(false);
-  await addMsg("Sorry to hear that. Hail damage is exactly what we handle most. Can I get your address so I can pull up your roof on satellite?",'out',0);
-  await new Promise(r=>setTimeout(r,2000));
-  await addMsg("4520 Stonebridge Dr, Mt Juliet",'in',0);
-  showTyping(true);
-  await new Promise(r=>setTimeout(r,1800)); showTyping(false);
-  await addMsg("Got it. And is there any active leaking inside, or is it just visible damage?",'out',0);
-  await new Promise(r=>setTimeout(r,2000));
-  await addMsg("No leaking yet but I want it checked before it gets worse",'in',0);
-  showTyping(true);
-  await new Promise(r=>setTimeout(r,1800)); showTyping(false);
-
-  // Step 4: booked
-  setStep(4);
-  await addMsg("Smart call. I have Thursday at 10 AM or Friday at 2 PM for a free inspection. Which works for you?",'out',0);
-  await new Promise(r=>setTimeout(r,2000));
-  await addMsg("Thursday 10 works!",'in',0);
-  showTyping(true);
-  await new Promise(r=>setTimeout(r,1500)); showTyping(false);
-  await addMsg("You are booked for Thursday 10 AM. We will text you when your inspector is on the way. Anything else I can help with?",'out',0);
-
-  // Step 5: owner notified
-  setStep(5);
-  document.getElementById('ownerAlert').classList.add('show');
-  document.getElementById('statBooked').textContent='1';
-  document.getElementById('statValue').textContent='$14,500';
-  const feed=document.getElementById('leadFeed');
-  feed.innerHTML='<div class="lead-card show"><div class="name">Sarah M., 4520 Stonebridge Dr, Mt. Juliet</div><div class="detail">Hail damage, no active leak. Wants inspection before it worsens. Booked: Thu 10 AM.</div><span class="score">9/10 HOT</span></div>';
-  document.getElementById('startBtn').disabled=true;
-  document.getElementById('startBtn').textContent='✓ Demo Complete';
+/* ------- customer phone: sms ------- */
+function noteMsg(text){ const d=document.createElement('div'); d.className='note'; d.textContent=text; $('msgs').appendChild(d); $('msgs').scrollTop=$('msgs').scrollHeight; }
+function addMsg(text, who, showRead){
+  const d=document.createElement('div'); d.className='msg '+who;
+  d.innerHTML=text+'<span class="time">'+fmtAP(clockMin)+'</span>'+(showRead?'<span class="read">Read</span>':'');
+  $('msgs').appendChild(d); $('msgs').scrollTop=$('msgs').scrollHeight; clockMin+=1;
+  $('custClock').textContent=fmtAP(clockMin); $('ownClock').textContent=fmtAP(clockMin);
+  if(who==='them') ding();
 }
-function startDemo(){ missCall(); document.getElementById('startBtn').disabled=true; }
-function resetDemo(){ location.reload(); }
+function typing(on){ $('typing').classList.toggle('on',on); $('msgs').appendChild($('typing')); $('msgs').scrollTop=$('msgs').scrollHeight; }
+async function botSay(text, thinkMs){
+  typing(true); await wait(thinkMs||1100); typing(false); addMsg(text,'them');
+}
+let chipResolve=null, inputResolve=null;
+function askSarah(chips){
+  return new Promise(res=>{
+    chipResolve=res; inputResolve=res;
+    const row=$('chipRow'); row.innerHTML='';
+    chips.forEach(c=>{ const b=document.createElement('button'); b.className='chip'; b.textContent=c;
+      b.onclick=()=>{ resolveSarah(c); }; row.appendChild(b); });
+    $('chips').classList.add('on'); $('smsInput').placeholder='Type Sarah\u2019s reply, or tap one above';
+    $('smsInput').focus(); $('msgs').scrollTop=$('msgs').scrollHeight;
+  });
+}
+function resolveSarah(val){
+  if(!chipResolve) return;
+  $('chips').classList.remove('on'); $('smsInput').placeholder='Text message'; $('smsInput').value='';
+  const r=chipResolve; chipResolve=null; inputResolve=null;
+  addMsg(val,'me',true); r(val);
+}
+$('smsSend').onclick=()=>{ const v=$('smsInput').value.trim(); if(v && inputResolve) resolveSarah(v); };
+$('smsInput').addEventListener('keydown',e=>{ if(e.key==='Enter'){ const v=$('smsInput').value.trim(); if(v && inputResolve) resolveSarah(v); } });
+
+function resetStage(){
+  $('msgs').innerHTML=''; $('notifs').innerHTML=''; $('lockHint').style.display='';
+  $('chipRow').innerHTML=''; $('chips').classList.remove('on'); $('smsInput').value='';
+  clearBanner();
+}
+</script>
+
+<script>
+/* ============ STORY 1: SYSTEM OFF ============ */
+async function runWithout(){
+  if(running) return; running=true; setModes(true); resetStage();
+  setClock(12*60+4,'Tuesday, October 20');
+  $('sceneWhen').textContent='Tuesday, 12:04 PM · lunch hour';
+  $('sceneSub').textContent='Story 1 of 3 · The system is OFF. This is Bluebird today.';
+  respTimerStart();
+  await ringCall('Bluebird Roofing','(615) 758-9101','The office is at lunch. The crews are on roofs across Mt. Juliet. Nobody is near this phone.',11,true);
+  $('callStatus').textContent='Voicemail';
+  respTimerStop('Never answered');
+  beep(620,.25);
+  noteMsg('Sarah reaches voicemail. She leaves no message. Most callers never do.');
+  await wait(2200);
+  showView('vCall');
+  await ringCall('Tim Leeper Roofing','(615) 555-0184','Leeper advertises 24/7. Sarah dials the next name on Google.',5,true);
+  $('callStatus').textContent='Connected · 0:47';
+  $('callNote').textContent='Leeper answered on the second ring. A person took her details, and booked her inspection for Thursday, 9:00 AM.';
+  await wait(2600);
+  setClock(7*60+2,'Monday, October 26');
+  notif('Phone','Missed calls this week','3 calls rang out. 0 voicemail messages. There is nothing to call back.','urgent');
+  S.lost+=1; S.lostVal+=14500; updStats();
+  addLead('Unknown caller · Tue 12:04 PM','Never identified. Booked with Tim Leeper Roofing, Thu 9:00 AM. Estimated job value $14,500.','lost');
+  banner('<strong>Job lost, and Bluebird never knew it existed.</strong>One hail-damaged roof in Mt. Juliet, worth about $14,500, booked with a competitor on the same Tuesday. Not because Bluebird does bad work. Because at 12:04 PM, nobody could answer, and nothing else answered for them. Run Story 2 to see the same call with the system on.','lose');
+  showReport(); running=false; setModes(false);
+}
+
+/* ============ STORY 2: SYSTEM ON, ROUTINE ============ */
+async function runRoutine(){
+  if(running) return; running=true; setModes(true); resetStage();
+  setClock(12*60+4,'Tuesday, October 20');
+  $('sceneWhen').textContent='Tuesday, 12:04 PM · lunch hour';
+  $('sceneSub').textContent='Story 2 of 3 · The system is ON. You play Sarah. Tap her replies.';
+  $('smsName').textContent='Bluebird Roofing';
+  respTimerStart();
+  await ringCall('Bluebird Roofing','(615) 758-9101','Same lunch hour. Same empty office. Tap the red button to let it ring out, the way it really happens.',11,true);
+  $('callStatus').textContent='Missed call';
+  showView('vSms');
+  await wait(3900); /* the famous 4 seconds */
+  respTimerStop('4.0s · answered by text');
+  S.caught+=1; updStats();
+  await botSay('Hi Sarah, sorry we missed your call. This is Bluebird Roofing. What happened, is it storm damage, a repair, or are you thinking full replacement?',900);
+  let a1 = await askSarah(['Storm damage from last week\u2019s hail','I think I need a full replacement','Just a small repair, I hope']);
+  let low = a1.toLowerCase();
+  if(low.includes('replacement')){
+    await botSay('Understood. A replacement starts with a free inspection and satellite measurements, so you get an exact number before deciding anything. Is there any leaking inside right now?',1200);
+  } else if(low.includes('repair') && !low.includes('storm')){
+    await botSay('Got it. Small repairs still start with a free inspection so we can see exactly what is going on up there. Is there any leaking inside right now?',1200);
+  } else {
+    await botSay('Sorry to hear that. Since that storm, hail is half the calls we get. Is there any leaking inside, or is it damage you can see from the ground?',1200);
+  }
+  let a2 = await askSarah(['No leak, just shingles in the yard','There is a stain spreading on my ceiling']);
+  let priority = a2.toLowerCase().includes('stain');
+  if(priority){
+    await botSay('A stain means water is already getting in, so I am marking this priority. Justin, our owner, will see it the moment we finish booking you.',1200);
+  } else {
+    await botSay('Good, that means we are ahead of it. Catching hail damage early is what keeps a repair from becoming a replacement.',1100);
+  }
+  await botSay('Can I get the address? I will pull your roof up on satellite before anyone comes out.',1000);
+  let a3 = await askSarah(['4520 Stonebridge Dr, Mt. Juliet']);
+  await botSay('Got it, I can see the roof clearly. I have Thursday at 10:00 AM or Friday at 2:00 PM for a free inspection, and we send you photos of everything we find, for your insurance file either way. Which works?',1300);
+  let a4 = await askSarah(['Thursday 10 works','Friday 2 is better']);
+  let fri = a4.toLowerCase().includes('friday');
+  let slot = fri ? 'Friday 2:00 PM' : 'Thursday 10:00 AM';
+  (fri ? $('calFri') : $('calThu')).outerHTML = '<span class="appt" id="'+(fri?'calFri':'calThu')+'">Sarah M. · inspection</span>';
+  await botSay('You are booked for '+slot+'. We will text you when your inspector is on the way. Anything else I can help with?',1100);
+  let a5 = await askSarah(['That is all, thanks','What does the inspection cost?']);
+  if(a5.toLowerCase().includes('cost')){
+    await botSay('The inspection is free, and so is the written quote. Nobody touches a shingle until you have seen the photos and the number and said yes. Anything else?',1200);
+    await askSarah(['That is all, thanks']);
+  }
+  noteMsg('Conversation saved to Bluebird\u2019s lead log.');
+  notif('Revenue Recovery','Estimate booked', 'Sarah M., Mt. Juliet. '+(priority?'Priority: ceiling stain reported. ':'Hail damage, no active leak. ')+'Inspection '+slot+'.', priority?'urgent':'good');
+  if(priority && navigator.vibrate) navigator.vibrate(120);
+  S.booked+=1; S.pipe+=14500; updStats();
+  addLead('Sarah M. · 4520 Stonebridge Dr, Mt. Juliet',(priority?'PRIORITY · ceiling stain. ':'')+'Hail damage. Booked '+slot+'. Score 9/10.', priority?'hot':'');
+  banner('<strong>Job saved, in under two minutes, with zero human effort.</strong>The same call from Story 1. This time Sarah never dialed Leeper, because Bluebird answered her in 4 seconds, at the exact moment Bluebird could not. Now run Story 3. It is the one Justin will ask about.','win');
+  showReport(); running=false; setModes(false);
+}
+
+/* ============ STORY 3: SYSTEM ON, SATURDAY EMERGENCY ============ */
+async function runUrgent(){
+  if(running) return; running=true; setModes(true); resetStage();
+  setClock(21*60+47,'Saturday, October 24');
+  $('sceneWhen').textContent='Saturday, 9:47 PM · office closed since Friday, 5:00 PM';
+  $('sceneSub').textContent='Story 3 of 3 · The system is ON. Nobody fixes a roof at night. Jobs are still won at night.';
+  $('smsName').textContent='Bluebird Roofing';
+  respTimerStart();
+  await ringCall('Bluebird Roofing','(615) 758-9101','The office has been dark for 28 hours. Sarah is standing in her kitchen watching water come through the ceiling.',11,true);
+  $('callStatus').textContent='Missed call';
+  showView('vSms');
+  await wait(3900);
+  respTimerStop('4.0s · answered by text');
+  S.caught+=1; updStats();
+  await botSay('Hi, this is Bluebird Roofing. Sorry we missed your call. What is going on at the house?',900);
+  let a1 = await askSarah(['Water is coming through my ceiling','My roof is leaking badly','A tree branch came through our roof']);
+  await botSay('I am sorry, that sounds like a stressful night. Is water actively dripping right now?',1000);
+  let a2 = await askSarah(['Yes, steady drip, getting worse','It stopped for now, thank God']);
+  let active = a2.toLowerCase().includes('yes') || a2.toLowerCase().includes('steady');
+  if(active){
+    buzzSnd(); if(navigator.vibrate) navigator.vibrate([180,90,180]);
+    notif('Revenue Recovery','URGENT LEAD: active leak','Sarah M., Mt. Juliet. Called 1 minute ago. Water actively coming through the ceiling. Tap to call her back now.','urgent');
+    await botSay('I have just alerted Justin, our owner, directly. He has your number and everything you have told me, and he will call you within a few minutes. Stay on this thread, I am not going anywhere.',1300);
+    await botSay('So a crew is locked in either way, I am booking you our first Monday slot, 9:00 AM. If Justin decides someone comes sooner, we move it up, never later. Is that okay?',1200);
+  } else {
+    await botSay('Good, that gives us a little room. I am still marking this priority, and booking you our first Monday slot, 9:00 AM, so a crew is locked in before the week fills up. Is that okay?',1200);
+  }
+  let a3 = await askSarah(['Yes, please','Please hurry']);
+  $('calMon').outerHTML='<span class="appt" id="calMon">Sarah M. · priority</span>';
+  await botSay('You are booked for Monday, 9:00 AM.'+(active?' Justin has everything and will call shortly.':'')+' For tonight: put a bucket under the drip, move anything valuable out of the room, and do not climb up there in the dark. We have you from here.',1300);
+  noteMsg('Full conversation and address sent to Justin and the office lead log.');
+  S.booked+=1; S.pipe+=18000; updStats();
+  addLead('Sarah M. · Mt. Juliet','SATURDAY 9:47 PM · '+(active?'ACTIVE LEAK · owner alerted in under a minute. ':'Leak, stopped. ')+'Booked Mon 9:00 AM priority. Likely replacement, about $18,000.','hot');
+  banner('<strong>An emergency handled at 9:47 PM on a Saturday, by a company that was closed.</strong>Justin did not fix a roof that night. Nobody does. What he won was the job: Sarah stopped dialing, her Monday 9 AM was locked in, and the owner had her number in under a minute. On Bluebird\u2019s current setup, this call is a voicemail nobody hears until Monday, for a customer who is no longer theirs.','win');
+  showReport(); running=false; setModes(false);
+}
 </script>
 </body>
 </html>

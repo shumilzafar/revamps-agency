@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bluebird Roofing: Revenue Recovery Demo</title>
+<style>
+:root{--navy:#0B1F3A;--navy2:#102A4C;--ink:#07142A;--orange:#E8742A;--orange2:#CC5500;--cream:#F3E9DC;--mute:#A9B6C9;--green:#2ECC71}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink);color:var(--cream);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;min-height:100vh}
+.wrap{max-width:1200px;margin:0 auto;padding:40px 20px}
+.hero{text-align:center;margin-bottom:50px}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.hero h1 span{color:var(--orange)}
+.hero p{color:var(--mute);font-size:1.15rem;max-width:640px;margin:0 auto;line-height:1.6}
+.badge{display:inline-block;background:rgba(232,116,42,.15);border:1px solid var(--orange);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.85rem;font-weight:700;margin-bottom:20px}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:40px}
+@media(max-width:800px){.demo{grid-template-columns:1fr}}
+.panel{background:var(--navy);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;position:relative}
+.panel h2{font-size:1.1rem;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.panel .sub{color:var(--mute);font-size:.9rem;margin-bottom:24px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+/* Phone */
+.phone{width:300px;max-width:100%;margin:0 auto;background:#000;border-radius:36px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.screen{background:#1a1a2e;border-radius:28px;overflow:hidden;min-height:520px;display:flex;flex-direction:column}
+.notch{text-align:center;padding:8px;color:#666;font-size:.7rem}
+.call-screen{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;transition:opacity .5s}
+.call-screen.hidden{opacity:0;pointer-events:none;position:absolute}
+.avatar{width:80px;height:80px;border-radius:50%;background:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:16px}
+.caller{font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.call-status{color:var(--mute);font-size:.95rem;margin-bottom:30px}
+.call-btns{display:flex;gap:20px}
+.call-btn{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;cursor:pointer;border:none;color:#fff}
+.decline{background:#e74c3c}.accept{background:var(--green)}
+.sms-screen{flex:1;display:none;flex-direction:column;padding:16px;overflow:hidden}
+.sms-screen.active{display:flex}
+.sms-header{text-align:center;padding:10px;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;margin-bottom:12px}
+.msgs{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:4px}
+.msg{max-width:80%;padding:10px 14px;border-radius:18px;font-size:.92rem;line-height:1.45;animation:slideIn .4s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.msg.in{background:#2a2a4a;align-self:flex-start;border-bottom-left-radius:4px}
+.msg.out{background:var(--orange);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg .time{font-size:.68rem;opacity:.7;margin-top:4px}
+.typing{align-self:flex-start;background:#2a2a4a;padding:12px 16px;border-radius:18px;display:none}
+.typing.active{display:block}
+.typing span{width:8px;height:8px;background:#888;border-radius:50%;display:inline-block;margin:0 2px;animation:blink 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+.timer-bar{background:rgba(232,116,42,.12);border:1px solid rgba(232,116,42,.3);border-radius:12px;padding:12px 16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
+.timer-bar .label{font-size:.85rem;color:var(--mute)}
+.timer-bar .time{font-size:1.4rem;font-weight:800;color:var(--orange);font-variant-numeric:tabular-nums}
+/* Dashboard */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.stat{background:var(--navy2);border-radius:14px;padding:18px}
+.stat .num{font-size:1.8rem;font-weight:800;color:var(--orange)}
+.stat .lbl{font-size:.82rem;color:var(--mute);margin-top:4px}
+.lead-card{background:var(--navy2);border-radius:14px;padding:18px;border-left:4px solid var(--green);margin-bottom:12px;opacity:0;transform:translateY(10px);transition:all .5s}
+.lead-card.show{opacity:1;transform:none}
+.lead-card .name{font-weight:700;margin-bottom:4px}
+.lead-card .detail{font-size:.88rem;color:var(--mute);line-height:1.5}
+.lead-card .score{display:inline-block;background:var(--green);color:#000;font-weight:800;font-size:.75rem;padding:2px 10px;border-radius:99px;margin-top:8px}
+.alert{background:rgba(46,204,113,.1);border:1px solid var(--green);border-radius:12px;padding:14px 16px;margin-bottom:16px;display:none}
+.alert.show{display:block;animation:slideIn .4s ease}
+.alert strong{color:var(--green)}
+.controls{text-align:center;margin:30px 0}
+.btn{display:inline-block;background:var(--orange);color:#fff;border:none;padding:16px 40px;border-radius:99px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px);background:var(--orange2)}
+.btn:disabled{opacity:.4;cursor:default;transform:none}
+.btn.secondary{background:transparent;border:2px solid var(--orange);color:var(--orange);margin-left:12px}
+.steps{display:flex;justify-content:center;gap:8px;margin:24px 0;flex-wrap:wrap}
+.step{font-size:.82rem;color:var(--mute);padding:6px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.15)}
+.step.active{color:#fff;border-color:var(--orange);background:rgba(232,116,42,.15)}
+.step.done{color:var(--green);border-color:var(--green)}
+.explainer{max-width:720px;margin:40px auto 0;text-align:center;color:var(--mute);line-height:1.7}
+.explainer strong{color:var(--cream)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="badge">PREPARED FOR BLUEBIRD ROOFING</div>
+<h1>One Missed Call. <span>One Roof Gone.</span></h1>
+<p>Built for Justin Rogers and the Bluebird team. Watch what happens when your office misses a call at lunch hour today, and what happens when the Revenue Recovery System is on.</p>
+</div>
+
+<div class="steps">
+<div class="step" id="st1">1. Missed call</div>
+<div class="step" id="st2">2. Instant textback</div>
+<div class="step" id="st3">3. AI qualifies lead</div>
+<div class="step" id="st4">4. Estimate booked</div>
+<div class="step" id="st5">5. Owner notified</div>
+</div>
+
+<div class="demo">
+<!-- CUSTOMER PHONE -->
+<div class="panel">
+<h2><span class="dot"></span> Customer's Phone</h2>
+<p class="sub">Sarah's roof took hail damage in last week's storm. She calls Bluebird at 12:04 PM, right in the lunch rush.</p>
+<div class="timer-bar">
+<span class="label">Time since missed call</span>
+<span class="time" id="timer">0.0s</span>
+</div>
+<div class="phone"><div class="screen">
+<div class="notch">12:04 PM</div>
+<div class="call-screen" id="callScreen">
+<div class="avatar">🏠</div>
+<div class="caller">Bluebird Roofing</div>
+<div class="call-status" id="callStatus">Calling...</div>
+<div class="call-btns">
+<button class="call-btn decline" onclick="missCall()">✕</button>
+<button class="call-btn accept" onclick="answerCall()">✓</button>
+</div>
+<p style="margin-top:20px;color:var(--mute);font-size:.8rem">Tap ✕ to simulate a missed call<br>(roofer is on a roof)</p>
+</div>
+<div class="sms-screen" id="smsScreen">
+<div class="sms-header">Bluebird Roofing</div>
+<div class="msgs" id="msgs"></div>
+<div class="typing" id="typing"><span></span><span></span><span></span></div>
+</div>
+</div></div>
+</div>
+
+<!-- OWNER DASHBOARD -->
+<div class="panel">
+<h2><span class="dot"></span> Owner Dashboard</h2>
+<p class="sub">What Justin sees on his phone, in real time.</p>
+<div class="alert" id="ownerAlert">
+<strong>Hot lead for Justin:</strong> Sarah M., Mt. Juliet, hail damage. Score 9/10. Estimate booked for Thursday 10 AM.
+</div>
+<div class="stat-grid">
+<div class="stat"><div class="num" id="statCalls">0</div><div class="lbl">Missed calls caught</div></div>
+<div class="stat"><div class="num" id="statBooked">0</div><div class="lbl">Estimates booked</div></div>
+<div class="stat"><div class="num" id="statValue">$0</div><div class="lbl">Pipeline value</div></div>
+<div class="stat"><div class="num">4s</div><div class="lbl">Avg response time</div></div>
+</div>
+<div id="leadFeed"></div>
+</div>
+</div>
+
+<div class="controls">
+<button class="btn" id="startBtn" onclick="startDemo()">▶ Run the Demo</button>
+<button class="btn secondary" onclick="resetDemo()">Reset</button>
+</div>
+
+<div class="explainer">
+<p><strong>What you're watching:</strong> A homeowner calls Bluebird at lunch. The crews are on roofs, the office is at lunch, nobody can answer. Today, that job quietly goes to the next roofer she dials. With the Revenue Recovery System on, a text goes out in 4 seconds, the conversation qualifies her, books the estimate into the calendar, and alerts Justin, all without anyone picking up a phone.</p>
+</div>
+</div>
+
+<script>
+let timerInt, startTime;
+const msgs = document.getElementById('msgs');
+const typing = document.getElementById('typing');
+
+function setStep(n){
+  for(let i=1;i<=5;i++){
+    const el=document.getElementById('st'+i);
+    el.classList.remove('active','done');
+    if(i<n)el.classList.add('done');
+    if(i===n)el.classList.add('active');
+  }
+}
+function addMsg(text,who,delay){
+  return new Promise(res=>{
+    setTimeout(()=>{
+      const d=document.createElement('div');
+      d.className='msg '+who;
+      const now=new Date();
+      d.innerHTML=text+'<div class="time">'+now.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'</div>';
+      msgs.appendChild(d);
+      msgs.scrollTop=msgs.scrollHeight;
+      res();
+    },delay);
+  });
+}
+function showTyping(show){
+  typing.classList.toggle('active',show);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+function startTimer(){
+  startTime=Date.now();
+  timerInt=setInterval(()=>{
+    document.getElementById('timer').textContent=((Date.now()-startTime)/1000).toFixed(1)+'s';
+  },100);
+}
+function stopTimer(){
+  clearInterval(timerInt);
+}
+function missCall(){
+  document.getElementById('callStatus').textContent='Missed call';
+  setTimeout(()=>runFlow(),800);
+}
+function answerCall(){
+  document.getElementById('callStatus').textContent='Connected... (demo: please tap ✕ for the missed-call flow)';
+}
+async function runFlow(){
+  document.getElementById('callScreen').classList.add('hidden');
+  document.getElementById('smsScreen').classList.add('active');
+  startTimer(); setStep(1);
+  document.getElementById('statCalls').textContent='1';
+
+  // Step 2: instant textback at ~4s
+  await new Promise(r=>setTimeout(r,3200));
+  stopTimer();
+  document.getElementById('timer').textContent='4.0s';
+  setStep(2);
+  await addMsg("Hi Sarah, sorry we missed your call. This is Bluebird Roofing. Are you looking for a repair, a full replacement, or a free inspection?",'out',0);
+
+  // Step 3: conversation
+  await new Promise(r=>setTimeout(r,2000));
+  await addMsg("Hi! We had hail last week and I think some shingles are damaged.",'in',0);
+  showTyping(true); setStep(3);
+  await new Promise(r=>setTimeout(r,1800)); showTyping(false);
+  await addMsg("Sorry to hear that. Hail damage is exactly what we handle most. Can I get your address so I can pull up your roof on satellite?",'out',0);
+  await new Promise(r=>setTimeout(r,2000));
+  await addMsg("4520 Stonebridge Dr, Mt Juliet",'in',0);
+  showTyping(true);
+  await new Promise(r=>setTimeout(r,1800)); showTyping(false);
+  await addMsg("Got it. And is there any active leaking inside, or is it just visible damage?",'out',0);
+  await new Promise(r=>setTimeout(r,2000));
+  await addMsg("No leaking yet but I want it checked before it gets worse",'in',0);
+  showTyping(true);
+  await new Promise(r=>setTimeout(r,1800)); showTyping(false);
+
+  // Step 4: booked
+  setStep(4);
+  await addMsg("Smart call. I have Thursday at 10 AM or Friday at 2 PM for a free inspection. Which works for you?",'out',0);
+  await new Promise(r=>setTimeout(r,2000));
+  await addMsg("Thursday 10 works!",'in',0);
+  showTyping(true);
+  await new Promise(r=>setTimeout(r,1500)); showTyping(false);
+  await addMsg("You are booked for Thursday 10 AM. We will text you when your inspector is on the way. Anything else I can help with?",'out',0);
+
+  // Step 5: owner notified
+  setStep(5);
+  document.getElementById('ownerAlert').classList.add('show');
+  document.getElementById('statBooked').textContent='1';
+  document.getElementById('statValue').textContent='$14,500';
+  const feed=document.getElementById('leadFeed');
+  feed.innerHTML='<div class="lead-card show"><div class="name">Sarah M., 4520 Stonebridge Dr, Mt. Juliet</div><div class="detail">Hail damage, no active leak. Wants inspection before it worsens. Booked: Thu 10 AM.</div><span class="score">9/10 HOT</span></div>';
+  document.getElementById('startBtn').disabled=true;
+  document.getElementById('startBtn').textContent='✓ Demo Complete';
+}
+function startDemo(){ missCall(); document.getElementById('startBtn').disabled=true; }
+function resetDemo(){ location.reload(); }
+</script>
+</body>
+</html>

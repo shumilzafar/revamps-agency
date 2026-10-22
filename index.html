@@ -3,391 +3,492 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revamps Studio | Website rebuilds for dentists, medspas, and local practices</title>
-<meta name="description" content="Revamps Studio rebuilds websites for dentists, medspas, and local practices that are too good for the site they have.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316130D'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23E8490F'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/css/site.css">
+<title>Always Answers | The AI receptionist for roofing companies, by Revamps Studio</title>
+<meta name="description" content="Always Answers by Revamps Studio is the AI receptionist for roofing companies, and it works by text. When your line misses a call, the caller gets a text in about four seconds, a real conversation, and a booked estimate on your calendar.">
+<meta property="og:title" content="Always Answers, by Revamps Studio">
+<meta property="og:description" content="A missed call is a job calling the next roofer. Always Answers texts the caller back in about four seconds and books the estimate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://revamps.studio/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html" aria-label="Revamps Studio home">
-      <span class="brand-mark">R</span><span class="brand-name">Revamps Studio</span>
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#main" aria-label="Revamps Studio home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0B1F18"/><text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#F3F5F2" text-anchor="middle">R</text><circle cx="47" cy="17" r="5" fill="#34A065"/></svg>
+      <span class="brand-name">Revamps <span>Studio</span></span>
     </a>
-    <div class="nav-links">
-      <a href="work/index.html">Work</a>
-      <a href="#pricing">Pricing</a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#system">The system</a>
+      <a href="#proof">Proof</a>
       <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="nav-right">
-      <span class="nav-status">Booking new rebuilds</span>
-      <a class="pill small" href="mailto:hello@revamps.studio">Start a project</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="hero-top">
-    <span class="eyebrow reveal"><span class="dot"></span>Website rebuilds for local practices</span>
-    <h1 class="reveal" data-d="1">Your website is<br><span class="verm">losing you customers.</span></h1>
-    <p class="hero-sub reveal" data-d="2">We rebuild websites for dentists, medspas, and local practices that are too good for the site they have.</p>
-    <div class="hero-ctas reveal" data-d="3">
-      <a class="pill" href="mailto:hello@revamps.studio">Get a rebuild <span class="arr">&rarr;</span></a>
-      <a class="textlink" href="work/index.html">See the work</a>
-    </div>
-  </div>
-
-  <div class="tunnel-zone reveal" data-d="4">
-    <div class="tunnel" id="tunnel" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Rebuild previews. Drag, or use left and right arrow keys to browse.">
-      <div class="tunnel-track" id="tunnelTrack">
-        <a class="tpanel" href="work/medspa-fortworth/"><span class="pcard p-medspa"><span class="pcard-kicker">Skin Care &amp; Medspa, Fort Worth</span><span class="pcard-title">A NURSE&rsquo;S<br><span class="oline">TOUCH</span></span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/southridge-nampa/"><span class="pcard p-south"><span class="g-num" aria-hidden="true">12</span><span class="pcard-kicker">Dental, Nampa</span><span class="pcard-title">SOUTH<br>RIDGE</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/mcdougall-tulsa/"><span class="pcard p-mcd"><span class="g-star" aria-hidden="true">*</span><span class="pcard-kicker">DDS, Tulsa</span><span class="pcard-title">McDOUGALL</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/karr-hardee-amarillo/"><span class="pcard p-karr"><span class="g-amp" aria-hidden="true">&amp;</span><span class="pcard-kicker">Dentistry, Amarillo</span><span class="pcard-title">KARR &amp;<br>HARDEE</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/redspa-seattle/"><span class="pcard p-red"><span class="g-glow" aria-hidden="true"></span><span class="pcard-kicker">Day Spa, Seattle</span><span class="pcard-title">LITTLE<br><span class="rred">RED</span></span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/medspa-fortworth/" aria-hidden="true" tabindex="-1"><span class="pcard p-medspa"><span class="pcard-kicker">Skin Care &amp; Medspa, Fort Worth</span><span class="pcard-title">A NURSE&rsquo;S<br><span class="oline">TOUCH</span></span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/southridge-nampa/" aria-hidden="true" tabindex="-1"><span class="pcard p-south"><span class="g-num" aria-hidden="true">12</span><span class="pcard-kicker">Dental, Nampa</span><span class="pcard-title">SOUTH<br>RIDGE</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/mcdougall-tulsa/" aria-hidden="true" tabindex="-1"><span class="pcard p-mcd"><span class="g-star" aria-hidden="true">*</span><span class="pcard-kicker">DDS, Tulsa</span><span class="pcard-title">McDOUGALL</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/karr-hardee-amarillo/" aria-hidden="true" tabindex="-1"><span class="pcard p-karr"><span class="g-amp" aria-hidden="true">&amp;</span><span class="pcard-kicker">Dentistry, Amarillo</span><span class="pcard-title">KARR &amp;<br>HARDEE</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/redspa-seattle/" aria-hidden="true" tabindex="-1"><span class="pcard p-red"><span class="g-glow" aria-hidden="true"></span><span class="pcard-kicker">Day Spa, Seattle</span><span class="pcard-title">LITTLE<br><span class="rred">RED</span></span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/medspa-fortworth/" aria-hidden="true" tabindex="-1"><span class="pcard p-medspa"><span class="pcard-kicker">Skin Care &amp; Medspa, Fort Worth</span><span class="pcard-title">A NURSE&rsquo;S<br><span class="oline">TOUCH</span></span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/southridge-nampa/" aria-hidden="true" tabindex="-1"><span class="pcard p-south"><span class="g-num" aria-hidden="true">12</span><span class="pcard-kicker">Dental, Nampa</span><span class="pcard-title">SOUTH<br>RIDGE</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/mcdougall-tulsa/" aria-hidden="true" tabindex="-1"><span class="pcard p-mcd"><span class="g-star" aria-hidden="true">*</span><span class="pcard-kicker">DDS, Tulsa</span><span class="pcard-title">McDOUGALL</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/karr-hardee-amarillo/" aria-hidden="true" tabindex="-1"><span class="pcard p-karr"><span class="g-amp" aria-hidden="true">&amp;</span><span class="pcard-kicker">Dentistry, Amarillo</span><span class="pcard-title">KARR &amp;<br>HARDEE</span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-        <a class="tpanel" href="work/redspa-seattle/" aria-hidden="true" tabindex="-1"><span class="pcard p-red"><span class="g-glow" aria-hidden="true"></span><span class="pcard-kicker">Day Spa, Seattle</span><span class="pcard-title">LITTLE<br><span class="rred">RED</span></span><span class="pcard-open">Open the rebuild &rarr;</span></span></a>
-      </div>
-      <span class="tunnel-tag tunnel-hint" id="tunnelHint">Drag to explore</span>
-      <span class="tunnel-tag tunnel-count">5 rebuilds</span>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-right">
+      <a class="header-phone" href="tel:+16156103902">+1 615-610-3902</a>
+      <a class="btn btn-primary btn-small" href="https://calendly.com/hello-revamps">Book a call</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<main>
-<section class="section wrap" id="work">
-  <div class="sec-head reveal">
-    <h2 class="sec-title">Recent rebuilds.</h2>
-    <p class="sec-lede">Concept rebuilds for real practices. Each one starts from their actual site, their real photos, their real reviews, and ends with a site that finally matches the business.</p>
-  </div>
+<main id="main">
 
-  <a class="wrow reveal" href="work/medspa-fortworth/">
-    <div>
-      <div class="wtag">Medspa, Fort Worth TX</div>
-      <h3>A Nurse's Touch Skin Care and Medspa</h3>
-      <p>500+ five-star reviews, an industry award three years running, and a homepage with a typo in it. We closed the gap between the reputation and the site.</p>
-      <span class="wlink">Open the rebuild <span class="arr">&rarr;</span></span>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Always Answers, the AI receptionist for roofing companies</p>
+        <h1 class="hero-title">A missed call is a job <span class="tone">calling the next roofer.</span></h1>
+        <p class="hero-sub">Always Answers stops it. A text back in about four seconds, the conversation handled, the estimate booked on your calendar.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="https://calendly.com/hello-revamps">Book a call</a>
+          <a class="text-link" href="#demo" id="watchLink">Watch it work</a>
+        </div>
+        <p class="hero-note">Built for roofing companies. Your number, your calendar, your customers. We run the system. You own every piece of it.</p>
+      </div>
     </div>
-    <div class="wthumb"><img src="assets/work-previews/medspa-fortworth.jpg" alt="A Nurse's Touch website rebuild preview" loading="lazy"></div>
-  </a>
+  </section>
 
-  <a class="wrow reveal" href="work/southridge-nampa/">
-    <div>
-      <div class="wtag">Dental practice, Nampa ID</div>
-      <h3>Southridge Dental</h3>
-      <p>421 Google reviews on a site untouched in two years, with a dead blog and phone-only booking. We made the site earn the reviews.</p>
-      <span class="wlink">Open the rebuild <span class="arr">&rarr;</span></span>
-    </div>
-    <div class="wthumb"><img src="assets/work-previews/southridge-nampa.jpg" alt="Southridge Dental website rebuild preview" loading="lazy"></div>
-  </a>
+  <!-- Demo: all three screens, one missed call -->
+  <section class="section" id="demo" style="padding-top:64px">
+    <div class="container">
+      <div class="demo-shell">
+        <div class="demo-top">
+          <div>
+            <h3>One missed call, three screens</h3>
+            <p>You play the homeowner on the first phone. Beside it, the two screens working on the company side: the owner&rsquo;s pocket and the office calendar. Pick a scene and watch all three answer together.</p>
+          </div>
+          <div class="scenarios" role="group" aria-label="Demo scenes">
+            <button class="scenario active" data-scene="leak" id="scLeak">Tuesday evening leak</button>
+            <button class="scenario" data-scene="storm" id="scStorm">Saturday storm damage</button>
+            <button class="scenario" data-scene="price" id="scPrice">The price question</button>
+          </div>
+        </div>
 
-  <a class="wrow reveal" href="work/mcdougall-tulsa/">
-    <div>
-      <div class="wtag">Dental practice, Tulsa OK</div>
-      <h3>McDougall DDS</h3>
-      <p>A dentist who is also a licensed psychologist, hiding behind stock photos and a misspelled name. We built the whole site around the one story nobody can copy.</p>
-      <span class="wlink">Open the rebuild <span class="arr">&rarr;</span></span>
-    </div>
-    <div class="wthumb"><img src="assets/work-previews/mcdougall-tulsa.jpg" alt="McDougall DDS website rebuild preview" loading="lazy"></div>
-  </a>
+        <div class="demo-grid">
+          <div class="demo-col demo-stage">
+            <p class="demo-col-label">The homeowner&rsquo;s phone</p>
+            <p class="stage-lede" id="stageLede">Tuesday, 6:40 PM. The office closed at 5. You are the homeowner, water is coming through your ceiling, and this is the company you called first.</p>
+            <div class="phone" id="phoneCustomer" aria-label="Interactive demo phone. You play the homeowner.">
+              <div class="screen">
+                <div class="statusbar"><span id="custClock">6:40 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
 
-  <a class="wrow reveal" href="work/karr-hardee-amarillo/">
-    <div>
-      <div class="wtag">Dental practice, Amarillo TX</div>
-      <h3>Karr and Hardee Dentistry</h3>
-      <p>274 five-star reviews and premium pricing, with no online booking at all. We put the front desk online.</p>
-      <span class="wlink">Open the rebuild <span class="arr">&rarr;</span></span>
-    </div>
-    <div class="wthumb"><img src="assets/work-previews/karr-hardee-amarillo.jpg" alt="Karr and Hardee Dentistry website rebuild preview" loading="lazy"></div>
-  </a>
+                <div class="view on" id="vIdle">
+                  <div class="callscreen">
+                    <div class="avatar">R</div>
+                    <div class="caller">Ridgeline Roofing</div>
+                    <div class="callnum">(615) 555-0147</div>
+                    <div class="callnote">Franklin, Tennessee</div>
+                    <div class="callbtns">
+                      <button class="callbtn accept" id="btnStartCall" title="Call Ridgeline Roofing" aria-label="Call Ridgeline Roofing"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></button>
+                    </div>
+                  </div>
+                </div>
 
-  <a class="wrow reveal" href="work/redspa-seattle/">
-    <div>
-      <div class="wtag">Couples spa, Seattle WA</div>
-      <h3>The Little Red Day Spa</h3>
-      <p>Eight themed private suites and 4.8 stars, on a site that buries the romance three clicks deep. We rebuilt it around stepping inside.</p>
-      <span class="wlink">Open the rebuild <span class="arr">&rarr;</span></span>
-    </div>
-    <div class="wthumb"><img src="assets/work-previews/redspa-seattle.jpg" alt="The Little Red Day Spa website rebuild preview" loading="lazy"></div>
-  </a>
-</section>
+                <div class="view" id="vCall">
+                  <div class="callscreen">
+                    <div class="avatar">R</div>
+                    <div class="caller">Ridgeline Roofing</div>
+                    <div class="callnum">(615) 555-0147</div>
+                    <div class="callstatus" id="callStatus">Calling...</div>
+                    <div class="callnote" id="callNote">The office is dark. The crew is home. Let it ring out, the way it really happens.</div>
+                    <div class="callbtns">
+                      <button class="callbtn decline" id="btnMiss" title="End call" aria-label="End call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform:rotate(135deg)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></button>
+                    </div>
+                    <div class="callhelp">Tap to skip the ringing</div>
+                  </div>
+                </div>
 
-<section class="section wrap" id="process">
-  <div class="sec-head reveal">
-    <h2 class="sec-title">How a rebuild goes.</h2>
-    <p class="sec-lede">Simple on purpose. You run a practice, you do not have time for agency theater.</p>
-  </div>
-  <div class="step reveal">
-    <h3>We study your practice</h3>
-    <p>We go through your site, your reviews, and your photos, and figure out what the site should have been saying all along.</p>
-  </div>
-  <div class="step reveal">
-    <h3>We rebuild it</h3>
-    <p>A full redesign around your real content. You review it in the middle, we revise until it feels like you.</p>
-  </div>
-  <div class="step reveal">
-    <h3>It goes live</h3>
-    <p>We launch it on your domain and hand over everything. The site, the files, the keys. All yours.</p>
-  </div>
-</section>
+                <div class="view" id="vSms">
+                  <div class="smshead"><div class="n">Ridgeline Roofing</div><div class="s">Text Message</div></div>
+                  <div class="msgs" id="msgs"><div class="typing" id="typing"><span></span><span></span><span></span></div></div>
+                  <div class="chips" id="chips"><div class="clab">You reply (tap one, or type below)</div><div id="chipRow" style="display:flex;flex-direction:column;gap:7px"></div></div>
+                  <div class="inputbar"><input id="smsInput" placeholder="Text message" autocomplete="off" aria-label="Type your reply as the homeowner"><button id="smsSend" title="Send" aria-label="Send">↑</button></div>
+                </div>
 
-<section class="section wrap" id="pricing">
-  <div class="sec-head reveal">
-    <h2 class="sec-title">Pricing.</h2>
-    <p class="sec-lede">One rebuild, done right.</p>
-  </div>
-  <div class="price-block reveal">
-    <div class="price-line">
-      <span class="price-amount">$297</span>
-      <span class="price-note">starting, for a full website rebuild</span>
-    </div>
-    <ul class="price-list">
-      <li><span class="ck">&#10003;</span>Full redesign, desktop and mobile</li>
-      <li><span class="ck">&#10003;</span>Your real photos and reviews, placed right</li>
-      <li><span class="ck">&#10003;</span>Words written like you talk</li>
-      <li><span class="ck">&#10003;</span>Booking and contact built to convert</li>
-      <li><span class="ck">&#10003;</span>Launched on your domain, you own everything</li>
-    </ul>
-    <p class="price-terms"><strong>50% to start, 50% when it launches.</strong> Larger builds get a custom quote.</p>
-    <a class="pill" href="mailto:hello@revamps.studio">Start a project <span class="arr">&rarr;</span></a>
-  </div>
-</section>
+              </div>
+            </div>
+            <p class="stage-caption"><strong>This phone is a working model.</strong> A sample company, running the same words, the same order, and the same timing your callers will get.</p>
+          </div>
+          <div class="demo-col">
+            <p class="demo-col-label">The owner&rsquo;s phone</p>
+            <div class="phone" aria-label="Owner phone demo">
+              <div class="screen">
+                <div class="statusbar"><span id="ownClock">6:40 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
+                <div class="lock">
+                  <div class="lt" id="lockTime">6:40</div>
+                  <div class="ld" id="lockDate">Tuesday, October 20</div>
+                  <div id="ownerZone" style="width:100%"></div>
+                  <div class="lockhint" id="lockHint">Nothing yet. When a job needs the owner, it lands here, on the phone in your pocket.</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<section class="section wrap" id="faq">
-  <div class="sec-head reveal">
-    <h2 class="sec-title">Fair questions.</h2>
-  </div>
-  <div class="reveal">
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">How long does a rebuild take?<span class="plus">+</span></button>
-      <div class="faq-a"><div><p>Usually two to three weeks from the day we start. You review the design in the middle, we revise, then we launch.</p></div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">What do you need from me?<span class="plus">+</span></button>
-      <div class="faq-a"><div><p>Your logo if you have one, any photos you like, and an hour of your time to talk through the practice. We handle the rest.</p></div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">Do I keep my domain and hosting?<span class="plus">+</span></button>
-      <div class="faq-a"><div><p>Yes. Everything stays in your accounts, on your card. We just build. You own the site outright when it launches.</p></div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">My site is fine, it just needs polish. Do you do that?<span class="plus">+</span></button>
-      <div class="faq-a"><div><p>Honestly, most sites we see need more than polish. But send the link and we will tell you straight what we would change, free.</p></div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">Why should I trust a studio I found online?<span class="plus">+</span></button>
-      <div class="faq-a"><div><p>Do not take our word for it. The work section is full of before and afters from real practices. Judge those.</p></div></div>
-    </div>
-  </div>
-</section>
+          <div class="demo-col office-col">
+            <p class="demo-col-label">The office view</p>
+            <div class="office-strip">
+              <div class="office-figures">
+                <div class="ofig"><div class="num" id="stCaught">0</div><div class="lbl">Missed calls caught</div></div>
+                <div class="ofig"><div class="num" id="stBooked">0</div><div class="lbl">Estimates booked</div></div>
+                <div class="ofig"><div class="num" id="stScore"><em>None yet</em></div><div class="lbl">Highest lead score this run</div></div>
+              </div>
+              <div class="calrows" id="calRows">
+                <div class="calrow"><span>Wed 8:00 AM</span><span class="free" id="calThu9">Open</span></div>
+                <div class="calrow"><span>Wed 11:30 AM</span><span class="free" id="calThu13">Open</span></div>
+                <div class="calrow"><span>Wed 2:00 PM</span><span class="free" id="calFri10">Open</span></div>
+                <div class="calrow" id="calRow4"><span>Sat 9:00 AM</span><span class="free" id="calRow4Status">Crew off. No estimates.</span></div>
+              </div>
+              <p style="margin-top:16px;font-size:.85rem;color:#B9C2B2;line-height:1.55" id="leadLine">The lead log is empty. Run a scene and watch the first entry land here, scored and written down.</p>
+            </div>
+          </div>
+        </div>
 
-<section class="contact-sec wrap" id="contact">
-  <h2 class="reveal">Let's talk about your practice.</h2>
-  <p class="reveal">Send an email with your website link. We will reply within a day with honest first impressions, free. If we are not the right fit, we will say so.</p>
-  <a class="mail-link reveal" href="mailto:hello@revamps.studio">hello@revamps.studio</a>
-</section>
+        <div class="scenebar">
+          <div class="when"><span id="sceneWhen">Tuesday, 6:40 PM. Office closed at 5.</span><small id="sceneSub">Scene one of three. You play the homeowner.</small></div>
+          <div class="resp"><div class="lab">Time for the company to respond</div><div class="val" id="respTimer">--</div></div>
+        </div>
+
+        <div class="demo-end" id="demoEnd">
+          <strong id="demoEndTitle">Booked, with the office closed.</strong>
+          <p id="demoEndBody">From missed call to a booked estimate, without one person in the office touching a phone. That is the whole product. The rest of this page shows how it works and what a missed call costs the business.</p>
+          <div class="demo-actions">
+            <a class="btn btn-light" href="https://calendly.com/hello-revamps">Book a call</a>
+            <button class="btn btn-outline-light" id="btnReplay">Run it again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works: the ten seconds -->
+  <section class="section" id="how" style="padding-top:20px">
+    <div class="container">
+      <div class="section-head rv">
+        <h2>The ten seconds that decide the job</h2>
+        <p class="section-sub">A homeowner with water coming through the ceiling does not leave a voicemail and wait. She calls the next name on Google. Here is what your number does in those ten seconds, and in the minute after. The clock starts when the call ends.</p>
+      </div>
+      <div class="seconds-grid">
+        <div class="timeline rv">
+          <div class="tl-row">
+            <div class="tl-when">0:00</div>
+            <div>
+              <h3>The caller hangs up</h3>
+              <p>Your crew is on a roof. The office is dark. The call hits voicemail. The homeowner hangs up without leaving a message. None of that is your fault, and none of it is the caller&rsquo;s problem.</p>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-when">0:04</div>
+            <div>
+              <h3>A text lands</h3>
+              <p>Sorry we missed you, from your own number, about four seconds after the call ends. The caller stops dialing. The job stays in the conversation.</p>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-when">0:40</div>
+            <div>
+              <h3>The job is qualified</h3>
+              <p>Problem, name, address, how urgent. She answers at her pace, in her own words. Nothing is asked twice, and everything is written down.</p>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-when">1:30</div>
+            <div>
+              <h3>The estimate is booked</h3>
+              <p>A real open time from your calendar, offered and locked. If the job scores hot, your phone is already buzzing with the full conversation.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="contrast rv">
+          <h3>Tonight, without it</h3>
+          <p class="c-sub">The same Tuesday, the same leak, the way it goes now.</p>
+          <ul>
+            <li>The call rings out to a <strong>voicemail box</strong> in an empty office.</li>
+            <li>She hangs up and <strong>dials the next name on Google</strong>, the one that picks up.</li>
+            <li>By Wednesday, <strong>another crew has a tarp on her roof</strong> and the estimate on their calendar.</li>
+          </ul>
+          <p class="c-end">The job was never lost on price, or on skill. It was lost in ten seconds of silence.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- The system -->
+  <section class="section section-tint" id="system">
+    <div class="container">
+      <div class="section-head rv">
+        <h2>One system, on your number, working both shifts</h2>
+        <p class="section-sub">Always Answers is not a call center, and it is not a new phone number. It sits on the number your customers already dial, and it works the hours your office cannot.</p>
+      </div>
+      <div class="system-groups">
+        <div class="sys-group rv">
+          <h3>While you are on a roof</h3>
+          <p class="g-sub">The hours your crew is working and nobody is near the phone.</p>
+          <div class="sys-item">
+            <h4>Instant textback <span class="tag">about 4 sec</span></h4>
+            <p>The moment a call ends unanswered, the caller gets a text from your number. Not a form to fill in. Not a promise to call back. A conversation, already started.</p>
+          </div>
+          <div class="sys-item">
+            <h4>The conversation <span class="tag">scored 1 to 10</span></h4>
+            <p>It asks what happened, where it is, and how bad it is, the way a good office manager would. Every answer is written down. Every caller is scored for urgency.</p>
+          </div>
+          <div class="sys-item">
+            <h4>Real booking <span class="tag">your calendar</span></h4>
+            <p>It offers only times that are actually open on your calendar, and locks the one the caller picks. No double booking. No phone tag the next morning.</p>
+          </div>
+          <div class="sys-item">
+            <h4>Owner alert <span class="tag">8 and up</span></h4>
+            <p>A hot job lands on your phone the second it is scored: name, address, problem, and the full conversation. Step in yourself, or let it ride. Your call.</p>
+          </div>
+        </div>
+        <div class="sys-group rv">
+          <h3>While the office is closed</h3>
+          <p class="g-sub">Nights, weekends, and the quotes that went quiet last week.</p>
+          <div class="sys-item">
+            <h4>Quote follow-up <span class="tag">in your voice</span></h4>
+            <p>A quote that goes quiet gets a short, polite text, written the way you would write it. Most owners mean to send it and never do. The system never forgets.</p>
+          </div>
+          <div class="sys-item">
+            <h4>Past customer reactivation <span class="tag">your old list</span></h4>
+            <p>Customers who had work done and never called again get a text offering an inspection. It is the cheapest work you will ever win, because they already trust you.</p>
+          </div>
+          <div class="sys-item">
+            <h4>Monday report <span class="tag">Mon 7 AM</span></h4>
+            <p>Every Monday, one short report lands: calls caught, estimates booked, quiet quotes that came back. Judge the system on that page, not on a sales pitch.</p>
+          </div>
+          <div class="sys-item">
+            <h4>The record <span class="tag">always on</span></h4>
+            <p>Every conversation is kept in your lead log with its score, so a job can be picked up by any human on your team at any point, with nothing lost.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="section" id="proof">
+    <div class="container">
+      <div class="section-head rv">
+        <p class="eyebrow">The numbers behind it</p>
+        <h2>Why the phone decides who gets the job</h2>
+        <p class="section-sub">None of these figures are ours. They come from the call-tracking platforms that measure home service phone traffic.</p>
+      </div>
+      <div class="proof-figures rv">
+        <div class="pfig">
+          <div class="num">69<em>%</em></div>
+          <p class="lbl">of missed calls never get a callback within 48 hours</p>
+          <p class="src">Quo (OpenPhone), business phone platform</p>
+        </div>
+        <div class="pfig">
+          <div class="num">44<em>%</em></div>
+          <p class="lbl">of home service calls never reach a person at all</p>
+          <p class="src">Invoca</p>
+        </div>
+        <div class="pfig">
+          <div class="num">9<em>%</em></div>
+          <p class="lbl">of after hours calls turn into bookings. At peak hours, the same figure is 26%</p>
+          <p class="src">ServiceTitan</p>
+        </div>
+        <div class="pfig">
+          <div class="num">41<em>%</em></div>
+          <p class="lbl">of weekend calls go unanswered. On weekdays it is 18%</p>
+          <p class="src">ServiceTitan</p>
+        </div>
+      </div>
+      <div class="case-block rv">
+        <p class="c-big">3,076 past customers texted. <em>39 jobs booked.</em> $43,182 in work.</p>
+        <div class="case-copy">
+          <p>A Texas roofing company sent one text campaign to customers already sitting in its own list. 135 of them replied. 39 booked jobs. $43,182 in revenue, and not a dollar spent on ads.</p>
+          <p>The average roof replacement runs $9,609 in the US, and $25,644 around Nashville. One saved job is not a rounding error. It is the month.</p>
+          <p class="c-note">The Texas figures are an industry case reported by Relentless Digital. They are not a Revamps client result, and we will not present them as one. We print them because they show what a sleeping customer list is worth when somebody finally answers it. Your Monday report will carry your own numbers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section-tint" id="process">
+    <div class="container">
+      <div class="section-head rv">
+        <h2>From first call to first caught call</h2>
+        <p class="section-sub">Four steps. There is one mandatory carrier wait in the middle, and we will not hide it from you.</p>
+      </div>
+      <div class="stack">
+        <article class="stack-card" style="top:88px">
+          <div>
+            <p class="card-kicker">The conversation</p>
+            <h3>Book a call</h3>
+          </div>
+          <div>
+            <p>Twenty minutes on the phone with us. We map the hours your line goes unanswered, the times you want estimates offered, and the towns you actually serve.</p>
+            <p>If your phones turn out to be covered already, we will tell you that on the call.</p>
+          </div>
+        </article>
+        <article class="stack-card" style="top:132px">
+          <div>
+            <p class="card-kicker">The build</p>
+            <h3>We build your system</h3>
+          </div>
+          <div>
+            <p>Textback, the conversation in your voice, your calendar connected, alerts pointed at your phone. You test the whole thing on your own number before it ever touches a customer.</p>
+            <p>You approve the words it uses. Nothing speaks for your company without your sign-off.</p>
+          </div>
+        </article>
+        <article class="stack-card" style="top:176px">
+          <div>
+            <p class="card-kicker">The registration</p>
+            <h3>Your number gets registered</h3>
+          </div>
+          <div>
+            <p>US carriers require every business to register before it can text customers. We prepare the whole filing with you: business details, sample messages, the privacy page your site needs.</p>
+            <p><span class="wait">Approval takes about two to three weeks.</span> Any company that promises your business texting tomorrow is skipping the step that keeps a number from being blocked.</p>
+          </div>
+        </article>
+        <article class="stack-card dark" style="top:220px">
+          <div>
+            <p class="card-kicker">The switch</p>
+            <h3>Then nobody waits again</h3>
+          </div>
+          <div>
+            <p>Forwarding turns on for the hours you cannot answer. From that night, a missed call gets a text in about four seconds, a conversation instead of a voicemail, and a place on your calendar.</p>
+            <p>And every Monday at 7, the report shows you what it caught.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container container-narrow" style="margin:0 auto">
+      <div class="section-head rv">
+        <h2>Asked plainly, answered plainly</h2>
+      </div>
+      <div class="faq-list rv">
+        <details class="faq-item">
+          <summary>What is Always Answers, exactly?</summary>
+          <div class="faq-body">
+            <p>Always Answers is an AI receptionist for roofing companies, and it works by text rather than voice. It sits on your existing number. When a call goes unanswered, it replies by text in about four seconds, holds a short conversation that qualifies the job, books the estimate on your calendar, and alerts you when the job is urgent. It also follows up on quiet quotes and wakes up past customers.</p>
+            <p>You own the number, the calendar, and the customer list. We build the system and run it.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Will my customers know they are talking to a system?</summary>
+          <div class="faq-body">
+            <p>It introduces itself as your office line and writes the way your office talks, in words you approved before it went live. Homeowners care that somebody answered and the job moved forward. If a caller asks directly, it answers plainly, and you can read every word of every conversation in your lead log.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How long before it is live on my number?</summary>
+          <div class="faq-body">
+            <p>The build itself takes days. The wait is carrier registration. US networks require every business to register before it can text customers, and approval runs about two to three weeks. We file it with you at the very start, so the clock runs while we build. We would rather give you the real number now than a fast one on a sales call.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I have to change my phone number?</summary>
+          <div class="faq-body">
+            <p>No. The number on your trucks and your Google listing stays your number, and customers keep dialing it. Calls your crew answers never change. When nobody can answer, the call rolls over to your system line and the conversation happens from there.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens with a real emergency at 2 AM?</summary>
+          <div class="faq-body">
+            <p>The system flags emergencies at once: water coming in, an active drip, a tree on the roof. It books the first available slot, gives the caller the practical first moves for the night, and sends you an urgent alert with the whole conversation attached. It keeps the job calm and booked. The human move after that is yours.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What do you need from me to start?</summary>
+          <div class="faq-body">
+            <p>One call to map your hours and your estimate windows. Access to the calendar your estimates live on. Your past customer list, if you want the reactivation run. That is the whole list. We handle the build, the registration paperwork, and the words, with your approval on each.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What does it cost?</summary>
+          <div class="faq-body">
+            <p>A setup figure and a monthly figure, set by your call volume and the size of your customer list. We put the exact number in front of you on the first call, once we can see both. It is one line, not a menu of packages, and it does not change later.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work with the CRM we already use?</summary>
+          <div class="faq-body">
+            <p>The system books into the calendar your office already uses. Every lead is also recorded in a structured sheet that belongs to you: name, address, problem, score, and status, with the full conversation attached. That sheet drops straight into whatever CRM you run, so your customer record stays yours and nothing is trapped inside our system.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I cancel?</summary>
+          <div class="faq-body">
+            <p>The engine switches off. Your number, your calendar, and your customer list stay exactly where they always were: with you. We built it that way on purpose. A system you cannot leave is a system you should not buy.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" style="padding-top:10px">
+    <div class="container">
+      <div class="contact-band rv">
+        <div>
+          <h2>See what your missed calls are worth</h2>
+          <p>Book a call. Bring your worst after hours story. We will show you the system running, and map what it would catch for your company.</p>
+          <div style="margin-top:30px">
+            <a class="btn btn-light btn-large" href="https://calendly.com/hello-revamps">Book a call</a>
+          </div>
+        </div>
+        <div class="contact-side">
+          <p class="c-lab">Call or text</p>
+          <a class="contact-phone" href="tel:+16156103902">+1 615-610-3902</a>
+          <p class="c-lab">Write</p>
+          <p><a class="contact-mail" href="mailto:hello@revamps.studio">hello@revamps.studio</a></p>
+          <p style="margin-top:22px;font-size:.92rem">On Instagram: <a class="contact-mail" href="https://www.instagram.com/revamps.studio/">@revamps.studio</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <a class="brand" href="index.html" aria-label="Revamps Studio home">
-      <span class="brand-mark">R</span><span class="brand-name">Revamps Studio</span>
-    </a>
-    <div class="foot-links">
-      <a href="work/index.html">Work</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#main" aria-label="Revamps Studio home">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0B1F18"/><text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#F3F5F2" text-anchor="middle">R</text><circle cx="47" cy="17" r="5" fill="#34A065"/></svg>
+          <span class="brand-name">Revamps <span>Studio</span></span>
+        </a>
+        <p>Revamps Studio builds Always Answers, the AI receptionist for roofing companies. Your callers get an answer. Your calendar gets the job.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="#system">The system</a>
+        <a href="#proof">Proof</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <a href="tel:+16156103902">+1 615-610-3902</a>
+        <a href="mailto:hello@revamps.studio">hello@revamps.studio</a>
+        <a href="https://www.instagram.com/revamps.studio/">Instagram</a>
+        <a href="https://calendly.com/hello-revamps">Book a call</a>
+      </div>
     </div>
-    <a class="foot-mail" href="mailto:hello@revamps.studio">hello@revamps.studio</a>
-    <span class="foot-copy">&copy; <span id="year">2026</span> Revamps Studio</span>
+    <div class="footer-base">
+      <p>&copy; 2026 Revamps Studio. All rights reserved.</p>
+      <p>Revamps Studio, +1 615-610-3902, hello@revamps.studio</p>
+      <p class="footer-legal"><a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a></p>
+    </div>
   </div>
 </footer>
 
-<script>
-(function(){
-"use strict";
-var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-var coarse = window.matchMedia("(pointer: coarse)").matches;
-
-/* footer year */
-var y = document.getElementById("year");
-if (y) y.textContent = new Date().getFullYear();
-
-/* nav hairline on scroll */
-var nav = document.getElementById("nav");
-function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 12); }
-window.addEventListener("scroll", onScroll, {passive:true});
-onScroll();
-
-/* reveal on intersection */
-if (!reduced){
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
-  },{threshold:.08,rootMargin:"0px 0px -4% 0px"});
-  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
-} else {
-  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
-}
-
-/* faq accordion */
-document.querySelectorAll(".faq-item").forEach(function(item){
-  var btn = item.querySelector(".faq-q");
-  btn.addEventListener("click", function(){
-    var open = item.classList.contains("open");
-    document.querySelectorAll(".faq-item.open").forEach(function(o){
-      o.classList.remove("open");
-      o.querySelector(".faq-q").setAttribute("aria-expanded","false");
-    });
-    if (!open){ item.classList.add("open"); btn.setAttribute("aria-expanded","true"); }
-  });
-});
-
-/* ---------- picture tunnel: pure CSS 3D + vanilla JS drag ---------- */
-var tunnel = document.getElementById("tunnel");
-var track = document.getElementById("tunnelTrack");
-var panels = Array.prototype.slice.call(track.querySelectorAll(".tpanel"));
-var hint = document.getElementById("tunnelHint");
-if (hint && coarse) hint.textContent = "Swipe to explore";
-
-if (reduced){
-  /* reduced motion: calm horizontal scroll row, no 3D, no drag physics */
-  tunnel.classList.add("static");
-  tunnel.removeAttribute("tabindex");
-} else {
-  var N = panels.length;
-  var pos = (N - 1) / 2;      /* fractional center position */
-  var target = pos;
-  var dragging = false, startX = 0, startPos = 0, moved = 0, downT = 0;
-  var raf = null;
-
-  /* gentle auto-cruise: slow drift while idle, like a showroom turntable */
-  var cruiseActive = true;
-  var cruiseDir = 1;
-  var CRUISE = 0.16;          /* panels per second: hypnotic-slow drift */
-  var resumeTO = null;
-  var lastT = 0;
-  function pauseCruise(){
-    cruiseActive = false;
-    if (resumeTO) clearTimeout(resumeTO);
-    resumeTO = setTimeout(function(){ cruiseActive = true; }, 4000);
-  }
-  function holdCruise(){
-    cruiseActive = false;
-    if (resumeTO) clearTimeout(resumeTO);
-  }
-
-  function geom(){
-    var w = window.innerWidth;
-    var R = Math.max(500, Math.min(830, w * 0.58));
-    return { R: R, STEP: 0.42 };
-  }
-  function render(){
-    var g = geom(), R = g.R, STEP = g.STEP, RAD = Math.PI / 180;
-    for (var i = 0; i < N; i++){
-      var d = i - pos, ad = Math.abs(d);
-      var th = d * STEP;                          /* angle on the arc */
-      var x = R * Math.sin(th);
-      var z = Math.min((R * (1 - Math.cos(th))) * 0.5, 600);  /* deep curve: edges sweep forward; capped so far panels never blow up */
-      var ry = Math.max(-80, Math.min(80, (th / RAD) * 1.3));  /* strong tilt on edge panels */
-      var s = 1 + Math.min(ad * 0.15, 0.9);       /* edges grow large as they approach */
-      var el = panels[i];
-      el.style.transform =
-        "translate(-50%,-50%)" +
-        " translateX(" + x.toFixed(1) + "px)" +
-        " translateZ(" + z.toFixed(1) + "px)" +
-        " rotateY(" + ry.toFixed(2) + "deg)" +
-        " scale(" + s.toFixed(3) + ")";
-      el.style.opacity = Math.max(0, 1 - ad * 0.14).toFixed(2);
-      el.style.zIndex = String(100 - Math.round(ad * 10));
-      el.style.pointerEvents = ad > 4.5 ? "none" : "";
-    }
-  }
-  function loop(t){
-    var dt = lastT ? Math.min(0.06, (t - lastT) / 1000) : 0.016;
-    lastT = t;
-    if (!dragging){
-      if (cruiseActive){
-        pos += cruiseDir * CRUISE * dt;
-        if (pos >= N - 1){ pos = N - 1; cruiseDir = -1; }
-        else if (pos <= 0){ pos = 0; cruiseDir = 1; }
-        target = pos;
-      } else {
-        var diff = target - pos;
-        if (Math.abs(diff) < 0.001){ pos = target; }
-        else { pos += diff * 0.16; }
-      }
-    }
-    render();
-    raf = requestAnimationFrame(loop);
-  }
-  function kick(){ if (!raf) raf = requestAnimationFrame(loop); }
-
-  tunnel.addEventListener("pointerdown", function(e){
-    dragging = true; moved = 0; downT = Date.now();
-    startX = e.clientX; startPos = pos;
-    pauseCruise();
-    try { tunnel.setPointerCapture(e.pointerId); } catch (err) { /* headless/edge: drag still works without capture */ }
-    kick();
-  });
-  tunnel.addEventListener("pointermove", function(e){
-    if (!dragging) return;
-    var dx = e.clientX - startX;
-    moved = Math.max(moved, Math.abs(dx));
-    var g = geom();
-    var np = startPos - dx / (g.R * g.STEP);
-    /* soft clamp with rubber band */
-    if (np < 0) np = np * 0.35;
-    if (np > N - 1) np = (N - 1) + (np - (N - 1)) * 0.35;
-    pos = np; target = np;
-    render();
-  });
-  function endDrag(){
-    if (!dragging) return;
-    dragging = false;
-    target = Math.max(0, Math.min(N - 1, Math.round(pos)));
-    pauseCruise();
-    kick();
-  }
-  tunnel.addEventListener("pointerup", endDrag);
-  tunnel.addEventListener("pointercancel", endDrag);
-  /* hover and focus hold the cruise; leaving resumes it after a beat */
-  tunnel.addEventListener("pointerenter", holdCruise);
-  tunnel.addEventListener("pointerleave", pauseCruise);
-  tunnel.addEventListener("focus", holdCruise);
-  tunnel.addEventListener("blur", pauseCruise);
-  /* a real click (no drag) follows the panel link; a drag never does */
-  track.addEventListener("click", function(e){
-    if (moved > 8){ e.preventDefault(); e.stopPropagation(); }
-  }, true);
-
-  tunnel.addEventListener("keydown", function(e){
-    var handled = true;
-    if (e.key === "ArrowRight"){ target = Math.min(N - 1, Math.round(target) + 1); }
-    else if (e.key === "ArrowLeft"){ target = Math.max(0, Math.round(target) - 1); }
-    else if (e.key === "Home"){ target = 0; }
-    else if (e.key === "End"){ target = N - 1; }
-    else { handled = false; }
-    if (handled){ pauseCruise(); kick(); e.preventDefault(); }
-  });
-
-  window.addEventListener("resize", render);
-  render();
-  kick(); /* start the loop: cruise begins once the hero settles */
-}
-})();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Revamps Studio v2: Always Answers.
+/* Revamps Studio v2: Harlan.
    Page behavior plus the working demo model.
    The demo is a model: a sample company, the same words, the same order,
    and the same timing a real caller gets. No libraries. */

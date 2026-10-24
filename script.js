@@ -1,4 +1,4 @@
-/* Revamps Studio v2: Harlan.
+/* Revamps Studio v3: Harlan.
    Page behavior plus the working demo model.
    The demo is a model: a sample company, the same words, the same order,
    and the same timing a real caller gets. No libraries. */
@@ -57,6 +57,8 @@
   var ownerZone = $("ownerZone"), lockHint = $("lockHint");
   var calRows = $("calRows").children;
 
+  var DISCLOSE = "Hi, this is Harlan, the AI assistant for Ridgeline Roofing. Sorry we missed your call. ";
+
   var SCENES = {
     leak: {
       clock: "6:40 PM", lockTime: "6:40", lockDate: "Tuesday, October 20",
@@ -65,7 +67,7 @@
       idleNote: "Tuesday, 6:40 PM. The office closed at 5. You are the homeowner, water is coming through your ceiling, and this is the company you called first.",
       callNote: "The office is dark. The crew is home. Let it ring out, the way it really happens.",
       town: "Franklin", score: 9, problemShort: "Active ceiling leak",
-      opener: "Hi, sorry we missed your call. This is Ridgeline Roofing, texting from the office line. What is going on with the roof?",
+      opener: DISCLOSE + "What is going on with the roof?",
       steps: [
         { store: "problem",
           chips: ["Water is dripping through my ceiling", "There is a wet stain spreading upstairs", "Shingles blew off in the wind last night"],
@@ -76,9 +78,9 @@
         { store: "name", chips: ["Elena Ruiz"] }
       ],
       slots: [
-        { id: "calThu9", label: "Wednesday 8:00 AM", short: "Wed 8:00 AM" },
-        { id: "calThu13", label: "Wednesday 11:30 AM", short: "Wed 11:30 AM" },
-        { id: "calFri10", label: "Wednesday 2:00 PM", short: "Wed 2:00 PM" }
+        { id: "calSlot1", label: "Wednesday 8:00 AM", short: "Wed 8:00 AM" },
+        { id: "calSlot2", label: "Wednesday 11:30 AM", short: "Wed 11:30 AM" },
+        { id: "calSlot3", label: "Wednesday 2:00 PM", short: "Wed 2:00 PM" }
       ],
       row4: "Sat 9:00 AM",
       row4Status: "Crew off. No estimates.",
@@ -97,7 +99,7 @@
       idleNote: "Saturday, 9:12 AM. A storm rolled through in the night, something hit your roof, and this is the company you called first. The crew is off. The office is shut.",
       callNote: "Saturday morning. The crew is off, the office is shut, and half the street is calling roofers. Let it ring out.",
       town: "Spring Hill", score: 10, problemShort: "Storm damage",
-      opener: "Hi, sorry we missed your call. This is Ridgeline Roofing, texting from the office line. Did the storm get you last night?",
+      opener: DISCLOSE + "Did the storm get you last night?",
       steps: [
         { store: "problem",
           chips: ["A tree limb came through the roof", "Half my shingles are in the yard", "Water is coming in around the chimney"],
@@ -111,9 +113,9 @@
       earlyAlert: { cls: "urgent", title: "Urgent lead, scored 10 of 10",
         body: function (a, sc) { return sc.problemShort + " at " + a.address + ". Booking the first estimate slot now. Full conversation is in the lead log."; } },
       slots: [
-        { id: "calThu9", label: "Monday 9:00 AM", short: "Mon 9:00 AM" },
-        { id: "calThu13", label: "Monday 1:30 PM", short: "Mon 1:30 PM" },
-        { id: "calFri10", label: "Tuesday 10:00 AM", short: "Tue 10:00 AM" }
+        { id: "calSlot1", label: "Monday 9:00 AM", short: "Mon 9:00 AM" },
+        { id: "calSlot2", label: "Monday 1:30 PM", short: "Mon 1:30 PM" },
+        { id: "calSlot3", label: "Tuesday 10:00 AM", short: "Tue 10:00 AM" }
       ],
       row4: "Today, Sat",
       row4Status: "Emergency dispatch only",
@@ -132,7 +134,7 @@
       idleNote: "Wednesday, 7:48 PM. You are pricing a new roof, and this is the third company you have called tonight. The first two went to voicemail.",
       callNote: "Evening. The office closed at 5, and a price question does not wait for morning. Let it ring out.",
       town: "Franklin", score: 6, problemShort: "Full replacement quote",
-      opener: "Hi, sorry we missed your call. This is Ridgeline Roofing, texting from the office line. What can we help with?",
+      opener: DISCLOSE + "What can we help with?",
       steps: [
         { store: "problem",
           chips: ["What does a new roof cost?", "I need a price on a full replacement", "Just checking prices for now"],
@@ -143,9 +145,9 @@
         { store: "name", chips: ["Greg Sanders"] }
       ],
       slots: [
-        { id: "calThu9", label: "Thursday 9:00 AM", short: "Thu 9:00 AM" },
-        { id: "calThu13", label: "Thursday 1:30 PM", short: "Thu 1:30 PM" },
-        { id: "calFri10", label: "Friday 10:00 AM", short: "Fri 10:00 AM" }
+        { id: "calSlot1", label: "Thursday 9:00 AM", short: "Thu 9:00 AM" },
+        { id: "calSlot2", label: "Thursday 1:30 PM", short: "Thu 1:30 PM" },
+        { id: "calSlot3", label: "Friday 10:00 AM", short: "Fri 10:00 AM" }
       ],
       row4: "Sat 9:00 AM",
       row4Status: "Crew off. No estimates.",
@@ -222,7 +224,7 @@
   function updateStats() {
     $("stCaught").textContent = stats.caught;
     $("stBooked").textContent = stats.booked;
-    $("stScore").innerHTML = stats.best ? stats.best + "<em> / 10</em>" : "<em>None yet</em>";
+    $("stScore").textContent = stats.best ? stats.best + " of 10" : "None yet";
   }
 
   function openSlots() {
@@ -263,7 +265,7 @@
       $("respTimer").textContent = "4.0 sec";
       setTyping(false);
       stats.caught++; updateStats();
-      addNote("Missed call · " + scene.clock + " · Auto-reply sent in 4.0s");
+      addNote("Missed call, " + scene.clock + ", auto-reply sent in 4.0s");
       addMsg("them", scene.opener);
       lastPrompt = scene.opener;
       stepIdx = 0;
@@ -335,12 +337,12 @@
     updateStats();
     var statusEl = $(slot.id);
     statusEl.className = "appt";
-    statusEl.textContent = answers.name + " · " + scene.problemShort;
+    statusEl.textContent = answers.name + ", " + scene.problemShort;
     notify(scene.alertCls, scene.alertTitle(scene), scene.alertBody(answers, slot, scene));
-    $("leadLine").textContent = scene.clock + " · " + answers.name + ", " + scene.town + " · " + scene.problemShort +
-      " · Score " + scene.score + " of 10 · Booked " + slot.short + ". The full conversation is in the record.";
+    $("leadLine").textContent = scene.clock + ", " + answers.name + ", " + scene.town + ", " + scene.problemShort +
+      ", Score " + scene.score + " of 10, Booked " + slot.short + ". The full conversation is in the record.";
     botSay(scene.confirm(answers, slot), function () {
-      addNote("Estimate booked · " + slot.label);
+      addNote("Estimate booked, " + slot.label);
       $("demoEndTitle").textContent = scene.endTitle;
       $("demoEndBody").textContent = scene.endBody;
       later(function () { $("demoEnd").classList.add("show"); }, 700);
@@ -453,7 +455,7 @@
     $("btnMiss").classList.remove("ringing");
     scene.slots.forEach(function (s) {
       var statusEl = $(s.id);
-      statusEl.className = "free"; statusEl.textContent = "Open";
+      statusEl.className = "open"; statusEl.textContent = "Open";
       statusEl.parentElement.firstElementChild.textContent = s.short;
     });
     var row4El = $("calRow4");
@@ -463,7 +465,7 @@
     else $("calRows").appendChild(row4El);
     $("leadLine").textContent = "The lead log is empty. Run a scene and watch the first entry land here, scored and written down.";
     $("demoEnd").classList.remove("show");
-    document.querySelectorAll(".scenario").forEach(function (b) {
+    document.querySelectorAll(".scene-tab").forEach(function (b) {
       b.classList.toggle("active", b.getAttribute("data-scene") === key);
     });
     showView("vIdle");
@@ -474,7 +476,7 @@
   $("smsSend").addEventListener("click", function () { userSay(smsInput.value); });
   smsInput.addEventListener("keydown", function (e) { if (e.key === "Enter") userSay(smsInput.value); });
   $("btnReplay").addEventListener("click", function () { resetRun(sceneKey); });
-  document.querySelectorAll(".scenario").forEach(function (b) {
+  document.querySelectorAll(".scene-tab").forEach(function (b) {
     b.addEventListener("click", function () { resetRun(b.getAttribute("data-scene")); });
   });
 

@@ -10,8 +10,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://revamps.studio/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,11 +21,12 @@
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a class="brand" href="#main" aria-label="Revamps Studio home">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0B1F18"/><text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#F3F5F2" text-anchor="middle">R</text><circle cx="47" cy="17" r="5" fill="#34A065"/></svg>
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0A2018"/><text x="32" y="45" font-family="Montserrat, Arial, sans-serif" font-size="32" font-weight="800" fill="#EDF0EB" text-anchor="middle">R</text><circle cx="47" cy="17" r="5" fill="#45B57E"/></svg>
       <span class="brand-name">Revamps <span>Studio</span></span>
     </a>
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
       <a href="#system">The system</a>
+      <a href="#harlan">Harlan</a>
       <a href="#proof">Proof</a>
       <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
@@ -47,241 +49,263 @@
       <div class="hero-copy">
         <p class="eyebrow">Harlan, the AI receptionist for roofing companies</p>
         <h1 class="hero-title">A missed call is a job <span class="tone">calling the next roofer.</span></h1>
-        <p class="hero-sub">Harlan stops it. A text back in about four seconds, the conversation handled, the estimate booked on your calendar.</p>
+        <p class="hero-sub">Harlan answers it. A text back in about four seconds, a conversation that qualifies the job, and an estimate on your calendar.</p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-large" href="https://calendly.com/hello-revamps">Book a call</a>
-          <a class="text-link" href="#demo" id="watchLink">Watch it work</a>
+          <a class="text-link" href="#demo">Watch it work</a>
         </div>
         <p class="hero-note">Built for roofing companies. Your number, your calendar, your customers. We run the system. You own every piece of it.</p>
       </div>
+      <aside class="first-text" aria-label="The first text a caller receives">
+        <p class="ft-kicker">The first text every caller gets</p>
+        <div class="ft-bubble">
+          <p>Hi, this is Harlan, the AI assistant for Ridgeline Roofing. Sorry we missed your call.</p>
+        </div>
+        <p class="ft-cap">Harlan says who it is before it asks anything. No caller is left guessing whether a person or a system picked up the conversation.</p>
+      </aside>
     </div>
   </section>
 
-  <!-- Demo: all three screens, one missed call -->
-  <section class="section" id="demo" style="padding-top:64px">
+  <!-- Demo -->
+  <section class="demo-field" id="demo">
     <div class="container">
-      <div class="demo-shell">
-        <div class="demo-top">
-          <div>
-            <h3>One missed call, three screens</h3>
-            <p>You play the homeowner on the first phone. Beside it, the two screens working on the company side: the owner&rsquo;s pocket and the office calendar. Pick a scene and watch all three answer together.</p>
-          </div>
-          <div class="scenarios" role="group" aria-label="Demo scenes">
-            <button class="scenario active" data-scene="leak" id="scLeak">Tuesday evening leak</button>
-            <button class="scenario" data-scene="storm" id="scStorm">Saturday storm damage</button>
-            <button class="scenario" data-scene="price" id="scPrice">The price question</button>
-          </div>
+      <div class="demo-head">
+        <div>
+          <h2>One missed call, three screens</h2>
+          <p>You play the homeowner on the first phone. Beside it, the two screens working on the company side: the owner&rsquo;s pocket and the office calendar. Pick a scene and watch all three answer together.</p>
         </div>
+        <div class="scenes" role="group" aria-label="Demo scenes">
+          <button class="scene-tab active" data-scene="leak" id="scLeak">Tuesday evening leak</button>
+          <button class="scene-tab" data-scene="storm" id="scStorm">Saturday storm damage</button>
+          <button class="scene-tab" data-scene="price" id="scPrice">The price question</button>
+        </div>
+      </div>
 
-        <div class="demo-grid">
-          <div class="demo-col demo-stage">
-            <p class="demo-col-label">The homeowner&rsquo;s phone</p>
-            <p class="stage-lede" id="stageLede">Tuesday, 6:40 PM. The office closed at 5. You are the homeowner, water is coming through your ceiling, and this is the company you called first.</p>
-            <div class="phone" id="phoneCustomer" aria-label="Interactive demo phone. You play the homeowner.">
-              <div class="screen">
-                <div class="statusbar"><span id="custClock">6:40 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
+      <div class="demo-grid">
+        <div class="demo-col demo-stage">
+          <p class="demo-col-label">The homeowner&rsquo;s phone</p>
+          <p class="stage-lede" id="stageLede">Tuesday, 6:40 PM. The office closed at 5. You are the homeowner, water is coming through your ceiling, and this is the company you called first.</p>
+          <div class="phone" id="phoneCustomer" aria-label="Interactive demo phone. You play the homeowner.">
+            <div class="screen">
+              <div class="statusbar"><span id="custClock">6:40 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
 
-                <div class="view on" id="vIdle">
-                  <div class="callscreen">
-                    <div class="avatar">R</div>
-                    <div class="caller">Ridgeline Roofing</div>
-                    <div class="callnum">(615) 555-0147</div>
-                    <div class="callnote">Franklin, Tennessee</div>
-                    <div class="callbtns">
-                      <button class="callbtn accept" id="btnStartCall" title="Call Ridgeline Roofing" aria-label="Call Ridgeline Roofing"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></button>
-                    </div>
+              <div class="view on" id="vIdle">
+                <div class="callscreen">
+                  <div class="avatar">R</div>
+                  <div class="caller">Ridgeline Roofing</div>
+                  <div class="callnum">(615) 555-0147</div>
+                  <div class="callnote">Franklin, Tennessee</div>
+                  <div class="callbtns">
+                    <button class="callbtn accept" id="btnStartCall" title="Call Ridgeline Roofing" aria-label="Call Ridgeline Roofing"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></button>
                   </div>
                 </div>
+              </div>
 
-                <div class="view" id="vCall">
-                  <div class="callscreen">
-                    <div class="avatar">R</div>
-                    <div class="caller">Ridgeline Roofing</div>
-                    <div class="callnum">(615) 555-0147</div>
-                    <div class="callstatus" id="callStatus">Calling...</div>
-                    <div class="callnote" id="callNote">The office is dark. The crew is home. Let it ring out, the way it really happens.</div>
-                    <div class="callbtns">
-                      <button class="callbtn decline" id="btnMiss" title="End call" aria-label="End call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform:rotate(135deg)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></button>
-                    </div>
-                    <div class="callhelp">Tap to skip the ringing</div>
+              <div class="view" id="vCall">
+                <div class="callscreen">
+                  <div class="avatar">R</div>
+                  <div class="caller">Ridgeline Roofing</div>
+                  <div class="callnum">(615) 555-0147</div>
+                  <div class="callstatus" id="callStatus">Calling...</div>
+                  <div class="callnote" id="callNote">The office is dark. The crew is home. Let it ring out, the way it really happens.</div>
+                  <div class="callbtns">
+                    <button class="callbtn decline" id="btnMiss" title="End call" aria-label="End call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="transform:rotate(135deg)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></button>
                   </div>
-                </div>
-
-                <div class="view" id="vSms">
-                  <div class="smshead"><div class="n">Ridgeline Roofing</div><div class="s">Text Message</div></div>
-                  <div class="msgs" id="msgs"><div class="typing" id="typing"><span></span><span></span><span></span></div></div>
-                  <div class="chips" id="chips"><div class="clab">You reply (tap one, or type below)</div><div id="chipRow" style="display:flex;flex-direction:column;gap:7px"></div></div>
-                  <div class="inputbar"><input id="smsInput" placeholder="Text message" autocomplete="off" aria-label="Type your reply as the homeowner"><button id="smsSend" title="Send" aria-label="Send">↑</button></div>
-                </div>
-
-              </div>
-            </div>
-            <p class="stage-caption"><strong>This phone is a working model.</strong> A sample company, running the same words, the same order, and the same timing your callers will get.</p>
-          </div>
-          <div class="demo-col">
-            <p class="demo-col-label">The owner&rsquo;s phone</p>
-            <div class="phone" aria-label="Owner phone demo">
-              <div class="screen">
-                <div class="statusbar"><span id="ownClock">6:40 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
-                <div class="lock">
-                  <div class="lt" id="lockTime">6:40</div>
-                  <div class="ld" id="lockDate">Tuesday, October 20</div>
-                  <div id="ownerZone" style="width:100%"></div>
-                  <div class="lockhint" id="lockHint">Nothing yet. When a job needs the owner, it lands here, on the phone in your pocket.</div>
+                  <div class="callhelp">Tap to skip the ringing</div>
                 </div>
               </div>
+
+              <div class="view" id="vSms">
+                <div class="smshead"><div class="n">Ridgeline Roofing</div><div class="s">Text Message</div></div>
+                <div class="msgs" id="msgs"><div class="typing" id="typing"><span></span><span></span><span></span></div></div>
+                <div class="chips" id="chips"><div class="clab">You reply (tap one, or type below)</div><div id="chipRow" style="display:flex;flex-direction:column;gap:7px"></div></div>
+                <div class="inputbar"><input id="smsInput" placeholder="Text message" autocomplete="off" aria-label="Type your reply as the homeowner"><button id="smsSend" title="Send" aria-label="Send">↑</button></div>
+              </div>
+
             </div>
           </div>
+          <p class="stage-caption"><strong>This phone is a working model.</strong> A sample company, running the same words, the same order, and the same timing your callers will get.</p>
+        </div>
 
-          <div class="demo-col office-col">
-            <p class="demo-col-label">The office view</p>
-            <div class="office-strip">
-              <div class="office-figures">
-                <div class="ofig"><div class="num" id="stCaught">0</div><div class="lbl">Missed calls caught</div></div>
-                <div class="ofig"><div class="num" id="stBooked">0</div><div class="lbl">Estimates booked</div></div>
-                <div class="ofig"><div class="num" id="stScore"><em>None yet</em></div><div class="lbl">Highest lead score this run</div></div>
+        <div class="demo-col">
+          <p class="demo-col-label">The owner&rsquo;s phone</p>
+          <div class="phone" aria-label="Owner phone demo">
+            <div class="screen">
+              <div class="statusbar"><span id="ownClock">6:40 PM</span><span>5G&nbsp;&nbsp;▰▰▰▱</span></div>
+              <div class="lock">
+                <div class="lt" id="lockTime">6:40</div>
+                <div class="ld" id="lockDate">Tuesday, October 20</div>
+                <div id="ownerZone" style="width:100%"></div>
+                <div class="lockhint" id="lockHint">Nothing yet. When a job needs the owner, it lands here, on the phone in your pocket.</div>
               </div>
-              <div class="calrows" id="calRows">
-                <div class="calrow"><span>Wed 8:00 AM</span><span class="free" id="calThu9">Open</span></div>
-                <div class="calrow"><span>Wed 11:30 AM</span><span class="free" id="calThu13">Open</span></div>
-                <div class="calrow"><span>Wed 2:00 PM</span><span class="free" id="calFri10">Open</span></div>
-                <div class="calrow" id="calRow4"><span>Sat 9:00 AM</span><span class="free" id="calRow4Status">Crew off. No estimates.</span></div>
-              </div>
-              <p style="margin-top:16px;font-size:.85rem;color:#B9C2B2;line-height:1.55" id="leadLine">The lead log is empty. Run a scene and watch the first entry land here, scored and written down.</p>
             </div>
           </div>
         </div>
 
-        <div class="scenebar">
-          <div class="when"><span id="sceneWhen">Tuesday, 6:40 PM. Office closed at 5.</span><small id="sceneSub">Scene one of three. You play the homeowner.</small></div>
-          <div class="resp"><div class="lab">Time for the company to respond</div><div class="val" id="respTimer">--</div></div>
-        </div>
-
-        <div class="demo-end" id="demoEnd">
-          <strong id="demoEndTitle">Booked, with the office closed.</strong>
-          <p id="demoEndBody">From missed call to a booked estimate, without one person in the office touching a phone. That is the whole product. The rest of this page shows how it works and what a missed call costs the business.</p>
-          <div class="demo-actions">
-            <a class="btn btn-light" href="https://calendly.com/hello-revamps">Book a call</a>
-            <button class="btn btn-outline-light" id="btnReplay">Run it again</button>
+        <div class="demo-col office-col">
+          <p class="demo-col-label">The office view</p>
+          <div class="office-panel">
+            <div class="ledger" id="ledger">
+              <div class="lrow"><span>Missed calls caught, this run</span><strong id="stCaught">0</strong></div>
+              <div class="lrow"><span>Estimates booked, this run</span><strong id="stBooked">0</strong></div>
+              <div class="lrow"><span>Highest lead score, this run</span><strong id="stScore">None yet</strong></div>
+            </div>
+            <div class="calrows" id="calRows">
+              <div class="calrow"><span>Wed 8:00 AM</span><span class="open" id="calSlot1">Open</span></div>
+              <div class="calrow"><span>Wed 11:30 AM</span><span class="open" id="calSlot2">Open</span></div>
+              <div class="calrow"><span>Wed 2:00 PM</span><span class="open" id="calSlot3">Open</span></div>
+              <div class="calrow" id="calRow4"><span>Sat 9:00 AM</span><span class="open" id="calRow4Status">Crew off. No estimates.</span></div>
+            </div>
+            <p class="lead-line" id="leadLine">The lead log is empty. Run a scene and watch the first entry land here, scored and written down.</p>
           </div>
+        </div>
+      </div>
+
+      <div class="scenebar">
+        <div class="when"><span id="sceneWhen">Tuesday, 6:40 PM. Office closed at 5.</span><small id="sceneSub">Scene one of three. You play the homeowner.</small></div>
+        <div class="resp"><div class="lab">Time for the company to respond</div><div class="val" id="respTimer">--</div></div>
+      </div>
+
+      <div class="demo-end" id="demoEnd">
+        <strong id="demoEndTitle">Booked, with the office closed.</strong>
+        <p id="demoEndBody">From missed call to a booked estimate, without one person in the office touching a phone. That is the whole product. The rest of this page shows how it works and what a missed call costs the business.</p>
+        <div class="demo-actions">
+          <a class="btn btn-light" href="https://calendly.com/hello-revamps">Book a call</a>
+          <button class="btn btn-outline-light" id="btnReplay">Run it again</button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How it works: the ten seconds -->
-  <section class="section" id="how" style="padding-top:20px">
+  <section class="section" id="how">
     <div class="container">
       <div class="section-head rv">
         <h2>The ten seconds that decide the job</h2>
         <p class="section-sub">A homeowner with water coming through the ceiling does not leave a voicemail and wait. She calls the next name on Google. Here is what your number does in those ten seconds, and in the minute after. The clock starts when the call ends.</p>
       </div>
-      <div class="seconds-grid">
-        <div class="timeline rv">
-          <div class="tl-row">
-            <div class="tl-when">0:00</div>
-            <div>
-              <h3>The caller hangs up</h3>
-              <p>Your crew is on a roof. The office is dark. The call hits voicemail. The homeowner hangs up without leaving a message. None of that is your fault, and none of it is the caller&rsquo;s problem.</p>
-            </div>
+      <div class="seconds-strip rv">
+        <div class="sec-step">
+          <div class="sec-time">0:00</div>
+          <h3>The caller hangs up</h3>
+          <p>Your crew is on a roof. The office is dark. The call hits voicemail. The homeowner hangs up without leaving a message. None of that is your fault, and none of it is the caller&rsquo;s problem.</p>
+        </div>
+        <div class="sec-step">
+          <div class="sec-time">0:04</div>
+          <h3>A text lands</h3>
+          <p>Sorry we missed you, from your own number, about four seconds after the call ends. The caller stops dialing. The job stays in the conversation.</p>
+        </div>
+        <div class="sec-step">
+          <div class="sec-time">0:40</div>
+          <h3>The job is qualified</h3>
+          <p>Problem, name, address, how urgent. She answers at her pace, in her own words. Nothing is asked twice, and everything is written down.</p>
+        </div>
+        <div class="sec-step">
+          <div class="sec-time">1:30</div>
+          <h3>The estimate is booked</h3>
+          <p>A real open time from your calendar, offered and locked. If the job scores hot, your phone is already buzzing with the full conversation.</p>
+        </div>
+      </div>
+      <aside class="without rv">
+        <h3>Tonight, without it</h3>
+        <p class="w-sub">The same Tuesday, the same leak, the way it goes now.</p>
+        <div class="w-rows">
+          <p>The call rings out to a <strong>voicemail box</strong> in an empty office.</p>
+          <p>She hangs up and <strong>dials the next name on Google</strong>, the one that picks up.</p>
+          <p>By Wednesday, <strong>another crew has a tarp on her roof</strong> and the estimate on their calendar.</p>
+        </div>
+        <p class="w-end">The job was never lost on price, or on skill. It was lost in ten seconds of silence.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Meet Harlan -->
+  <section class="section section-tint" id="harlan">
+    <div class="container">
+      <div class="section-head rv">
+        <h2>Meet Harlan</h2>
+        <p class="section-sub">Harlan is the AI receptionist for roofing companies, built by Revamps Studio. It is a name that talks like a person and reads like a firm: the voice your callers meet when nobody in the office can pick up.</p>
+      </div>
+      <div class="harlan-grid">
+        <div class="harlan-id rv">
+          <p class="h-kicker">What Harlan says first</p>
+          <blockquote>
+            <p>Hi, this is Harlan, the AI assistant for Ridgeline Roofing. Sorry we missed your call.</p>
+          </blockquote>
+          <p>That sentence opens every conversation. Harlan discloses itself before it asks anything, so no caller is ever misled about who answered. When a call is missed, Harlan texts the caller back in seconds, qualifies the job, and puts the estimate on your calendar.</p>
+          <p class="h-note">It is called Harlan. When a call is missed, Harlan texts the caller back in seconds, qualifies the job, and puts the estimate on your calendar.</p>
+        </div>
+        <div class="harlan-rules rv">
+          <div class="rule-col">
+            <h3>What Harlan always does</h3>
+            <ul>
+              <li>Answers in about four seconds, from your number.</li>
+              <li>Asks the job questions in order, and writes every answer down.</li>
+              <li>Offers only times that are actually open on your calendar.</li>
+              <li>Pages you at once when a job scores hot or urgent.</li>
+              <li>Stops, cleanly and for good, when a caller replies STOP.</li>
+            </ul>
           </div>
-          <div class="tl-row">
-            <div class="tl-when">0:04</div>
-            <div>
-              <h3>A text lands</h3>
-              <p>Sorry we missed you, from your own number, about four seconds after the call ends. The caller stops dialing. The job stays in the conversation.</p>
-            </div>
-          </div>
-          <div class="tl-row">
-            <div class="tl-when">0:40</div>
-            <div>
-              <h3>The job is qualified</h3>
-              <p>Problem, name, address, how urgent. She answers at her pace, in her own words. Nothing is asked twice, and everything is written down.</p>
-            </div>
-          </div>
-          <div class="tl-row">
-            <div class="tl-when">1:30</div>
-            <div>
-              <h3>The estimate is booked</h3>
-              <p>A real open time from your calendar, offered and locked. If the job scores hot, your phone is already buzzing with the full conversation.</p>
-            </div>
+          <div class="rule-col">
+            <h3>What Harlan never does</h3>
+            <ul>
+              <li>Never quotes a price by text. Pricing needs eyes on the roof.</li>
+              <li>Never claims to be a person when a caller asks directly.</li>
+              <li>Never texts a number that opted out, from any tool.</li>
+              <li>Never books a time your calendar does not actually have open.</li>
+              <li>Never speaks for your company in words you did not approve.</li>
+            </ul>
           </div>
         </div>
-        <aside class="contrast rv">
-          <h3>Tonight, without it</h3>
-          <p class="c-sub">The same Tuesday, the same leak, the way it goes now.</p>
-          <ul>
-            <li>The call rings out to a <strong>voicemail box</strong> in an empty office.</li>
-            <li>She hangs up and <strong>dials the next name on Google</strong>, the one that picks up.</li>
-            <li>By Wednesday, <strong>another crew has a tarp on her roof</strong> and the estimate on their calendar.</li>
-          </ul>
-          <p class="c-end">The job was never lost on price, or on skill. It was lost in ten seconds of silence.</p>
-        </aside>
       </div>
     </div>
   </section>
 
-  <!-- The system -->
-  <section class="section section-tint" id="system">
+  <!-- The system: one bundle -->
+  <section class="section" id="system">
     <div class="container">
       <div class="section-head rv">
-        <h2>One system, on your number, working both shifts</h2>
-        <p class="section-sub">Harlan is not a call center, and it is not a new phone number. It sits on the number your customers already dial, and it works the hours your office cannot.</p>
+        <h2>One bundle, on your number</h2>
+        <p class="section-sub">Harlan is not a call center, and it is not a new phone number. It sits on the number your customers already dial, and it works the hours your office cannot. Textback, conversation, booking, follow-up, and reactivation come as one named bundle, not five separate tools.</p>
       </div>
-      <div class="system-groups">
-        <div class="sys-group rv">
-          <h3>While you are on a roof</h3>
-          <p class="g-sub">The hours your crew is working and nobody is near the phone.</p>
-          <div class="sys-item">
-            <h4>Instant textback <span class="tag">about 4 sec</span></h4>
-            <p>The moment a call ends unanswered, the caller gets a text from your number. Not a form to fill in. Not a promise to call back. A conversation, already started.</p>
-          </div>
-          <div class="sys-item">
-            <h4>The conversation <span class="tag">scored 1 to 10</span></h4>
-            <p>It asks what happened, where it is, and how bad it is, the way a good office manager would. Every answer is written down. Every caller is scored for urgency.</p>
-          </div>
-          <div class="sys-item">
-            <h4>Real booking <span class="tag">your calendar</span></h4>
-            <p>It offers only times that are actually open on your calendar, and locks the one the caller picks. No double booking. No phone tag the next morning.</p>
-          </div>
-          <div class="sys-item">
-            <h4>Owner alert <span class="tag">8 and up</span></h4>
-            <p>A hot job lands on your phone the second it is scored: name, address, problem, and the full conversation. Step in yourself, or let it ride. Your call.</p>
-          </div>
+      <div class="bundle rv">
+        <div class="bundle-item">
+          <h3>Instant textback <span class="tag">about 4 sec</span></h3>
+          <p>The moment a call ends unanswered, the caller gets a text from your number. Not a form to fill in. Not a promise to call back. A conversation, already started.</p>
         </div>
-        <div class="sys-group rv">
-          <h3>While the office is closed</h3>
-          <p class="g-sub">Nights, weekends, and the quotes that went quiet last week.</p>
-          <div class="sys-item">
-            <h4>Quote follow-up <span class="tag">in your voice</span></h4>
-            <p>A quote that goes quiet gets a short, polite text, written the way you would write it. Most owners mean to send it and never do. The system never forgets.</p>
-          </div>
-          <div class="sys-item">
-            <h4>Past customer reactivation <span class="tag">your old list</span></h4>
-            <p>Customers who had work done and never called again get a text offering an inspection. It is the cheapest work you will ever win, because they already trust you.</p>
-          </div>
-          <div class="sys-item">
-            <h4>Monday report <span class="tag">Mon 7 AM</span></h4>
-            <p>Every Monday, one short report lands: calls caught, estimates booked, quiet quotes that came back. Judge the system on that page, not on a sales pitch.</p>
-          </div>
-          <div class="sys-item">
-            <h4>The record <span class="tag">always on</span></h4>
-            <p>Every conversation is kept in your lead log with its score, so a job can be picked up by any human on your team at any point, with nothing lost.</p>
-          </div>
+        <div class="bundle-item">
+          <h3>The conversation <span class="tag">scored 1 to 10</span></h3>
+          <p>It asks what happened, where it is, and how bad it is, the way a good office manager would. Every answer is written down. Every caller is scored for urgency, and a hot job lands on your phone the second it scores.</p>
+        </div>
+        <div class="bundle-item">
+          <h3>Real booking <span class="tag">your calendar</span></h3>
+          <p>It offers only times that are actually open on your calendar, and locks the one the caller picks. No double booking. No phone tag the next morning.</p>
+        </div>
+        <div class="bundle-item">
+          <h3>Quote follow-up <span class="tag">in your voice</span></h3>
+          <p>A quote that goes quiet gets a short, polite text, written the way you would write it. Most owners mean to send it and never do. The system never forgets.</p>
+        </div>
+        <div class="bundle-item">
+          <h3>Past customer reactivation <span class="tag">your old list</span></h3>
+          <p>Customers who had work done and never called again get a text offering an inspection. It is the cheapest work you will ever win, because they already trust you.</p>
+        </div>
+        <div class="bundle-item">
+          <h3>Monday report <span class="tag">Mon 7 AM</span></h3>
+          <p>Every Monday, one short report lands: calls caught, estimates booked, quiet quotes that came back. Judge the system on that page, not on a sales pitch.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Proof -->
-  <section class="section" id="proof">
+  <section class="section section-tint" id="proof">
     <div class="container">
       <div class="section-head rv">
         <p class="eyebrow">The numbers behind it</p>
         <h2>Why the phone decides who gets the job</h2>
         <p class="section-sub">None of these figures are ours. They come from the call-tracking platforms that measure home service phone traffic.</p>
       </div>
-      <div class="proof-figures rv">
+      <div class="proof-grid rv">
         <div class="pfig">
           <div class="num">69<em>%</em></div>
           <p class="lbl">of missed calls never get a callback within 48 hours</p>
@@ -303,13 +327,27 @@
           <p class="src">ServiceTitan</p>
         </div>
       </div>
-      <div class="case-block rv">
+      <div class="case-panel rv">
         <p class="c-big">3,076 past customers texted. <em>39 jobs booked.</em> $43,182 in work.</p>
         <div class="case-copy">
           <p>A Texas roofing company sent one text campaign to customers already sitting in its own list. 135 of them replied. 39 booked jobs. $43,182 in revenue, and not a dollar spent on ads.</p>
           <p>The average roof replacement runs $9,609 in the US, and $25,644 around Nashville. One saved job is not a rounding error. It is the month.</p>
           <p class="c-note">The Texas figures are an industry case reported by Relentless Digital. They are not a Revamps client result, and we will not present them as one. We print them because they show what a sleeping customer list is worth when somebody finally answers it. Your Monday report will carry your own numbers.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the studio -->
+  <section class="section" id="about">
+    <div class="container container-narrow" style="margin:0 auto">
+      <div class="section-head rv">
+        <h2>A small studio, one trade</h2>
+      </div>
+      <div class="about-body rv">
+        <p>Revamps Studio is a small, founder-led studio. We build one product, for one trade: the AI receptionist for roofing companies. We do not sell websites by the dozen, and we do not take on trades we have not studied.</p>
+        <p>Every system is built by hand for one company, tested on that company&rsquo;s own number, and approved word by word before it speaks to a customer. If your phones turn out to be covered already, we will tell you that on the first call.</p>
+        <p class="about-not">No call center. No new phone number. No lock-in. Your number, your calendar, and your customer list stay with you, and a system you cannot leave is a system you should not buy.</p>
       </div>
     </div>
   </section>
@@ -321,47 +359,35 @@
         <h2>From first call to first caught call</h2>
         <p class="section-sub">Four steps. There is one mandatory carrier wait in the middle, and we will not hide it from you.</p>
       </div>
-      <div class="stack">
-        <article class="stack-card" style="top:88px">
+      <div class="proc-list rv">
+        <div class="proc-row">
           <div>
             <p class="card-kicker">The conversation</p>
             <h3>Book a call</h3>
           </div>
-          <div>
-            <p>Twenty minutes on the phone with us. We map the hours your line goes unanswered, the times you want estimates offered, and the towns you actually serve.</p>
-            <p>If your phones turn out to be covered already, we will tell you that on the call.</p>
-          </div>
-        </article>
-        <article class="stack-card" style="top:132px">
+          <p>Twenty minutes on the phone with us. We map the hours your line goes unanswered, the times you want estimates offered, and the towns you actually serve. If your phones turn out to be covered already, we will tell you that on the call.</p>
+        </div>
+        <div class="proc-row">
           <div>
             <p class="card-kicker">The build</p>
             <h3>We build your system</h3>
           </div>
-          <div>
-            <p>Textback, the conversation in your voice, your calendar connected, alerts pointed at your phone. You test the whole thing on your own number before it ever touches a customer.</p>
-            <p>You approve the words it uses. Nothing speaks for your company without your sign-off.</p>
-          </div>
-        </article>
-        <article class="stack-card" style="top:176px">
+          <p>Textback, the conversation in your voice, your calendar connected, alerts pointed at your phone. You test the whole thing on your own number before it ever touches a customer. You approve the words it uses. Nothing speaks for your company without your sign-off.</p>
+        </div>
+        <div class="proc-row">
           <div>
             <p class="card-kicker">The registration</p>
             <h3>Your number gets registered</h3>
           </div>
-          <div>
-            <p>US carriers require every business to register before it can text customers. We prepare the whole filing with you: business details, sample messages, the privacy page your site needs.</p>
-            <p><span class="wait">Approval takes about two to three weeks.</span> Any company that promises your business texting tomorrow is skipping the step that keeps a number from being blocked.</p>
-          </div>
-        </article>
-        <article class="stack-card dark" style="top:220px">
+          <p>US carriers require every business to register before it can text customers. We prepare the whole filing with you: business details, sample messages, the privacy page your site needs. <span class="wait">Approval takes about two to three weeks.</span> Any company that promises your business texting tomorrow is skipping the step that keeps a number from being blocked.</p>
+        </div>
+        <div class="proc-row">
           <div>
             <p class="card-kicker">The switch</p>
             <h3>Then nobody waits again</h3>
           </div>
-          <div>
-            <p>Forwarding turns on for the hours you cannot answer. From that night, a missed call gets a text in about four seconds, a conversation instead of a voicemail, and a place on your calendar.</p>
-            <p>And every Monday at 7, the report shows you what it caught.</p>
-          </div>
-        </article>
+          <p>Forwarding turns on for the hours you cannot answer. From that night, a missed call gets a text in about four seconds, a conversation instead of a voicemail, and a place on your calendar. And every Monday at 7, the report shows you what it caught.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -383,7 +409,7 @@
         <details class="faq-item">
           <summary>Will my customers know they are talking to a system?</summary>
           <div class="faq-body">
-            <p>It introduces itself as your office line and writes the way your office talks, in words you approved before it went live. Homeowners care that somebody answered and the job moved forward. If a caller asks directly, it answers plainly, and you can read every word of every conversation in your lead log.</p>
+            <p>The first text introduces Harlan by name, as the AI assistant for your company, in words you approved before it went live. Homeowners care that somebody answered and the job moved forward. If a caller asks directly, it answers plainly, and you can read every word of every conversation in your lead log.</p>
           </div>
         </details>
         <details class="faq-item">
@@ -442,6 +468,7 @@
           <div style="margin-top:30px">
             <a class="btn btn-light btn-large" href="https://calendly.com/hello-revamps">Book a call</a>
           </div>
+          <p class="contact-legal">Reading the small print first? <a href="privacy.html">Privacy</a> and <a href="terms.html">Terms</a> are written in the same plain words as the rest of this page.</p>
         </div>
         <div class="contact-side">
           <p class="c-lab">Call or text</p>
@@ -461,7 +488,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="#main" aria-label="Revamps Studio home">
-          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0B1F18"/><text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#F3F5F2" text-anchor="middle">R</text><circle cx="47" cy="17" r="5" fill="#34A065"/></svg>
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0A2018"/><text x="32" y="45" font-family="Montserrat, Arial, sans-serif" font-size="32" font-weight="800" fill="#EDF0EB" text-anchor="middle">R</text><circle cx="47" cy="17" r="5" fill="#45B57E"/></svg>
           <span class="brand-name">Revamps <span>Studio</span></span>
         </a>
         <p>Revamps Studio builds Harlan, the AI receptionist for roofing companies. Your callers get an answer. Your calendar gets the job.</p>
@@ -469,6 +496,7 @@
       <div>
         <h4>Site</h4>
         <a href="#system">The system</a>
+        <a href="#harlan">Harlan</a>
         <a href="#proof">Proof</a>
         <a href="#process">Process</a>
         <a href="#faq">FAQ</a>
@@ -479,6 +507,11 @@
         <a href="mailto:hello@revamps.studio">hello@revamps.studio</a>
         <a href="https://www.instagram.com/revamps.studio/">Instagram</a>
         <a href="https://calendly.com/hello-revamps">Book a call</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
       </div>
     </div>
     <div class="footer-base">
